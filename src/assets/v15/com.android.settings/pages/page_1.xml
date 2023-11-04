@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ThemePage tag="设置" description="首页列表ICON">
+	<image description="我的设备" src="res/drawable-xxhdpi/ic_my_device.png"/>
+	<image description="WLAN" src="res/drawable-xxhdpi/ic_wifi_settings.png"/>
+	<image description="蓝牙" src="res/drawable-xxhdpi/ic_bluetooth_settings.png"/>
+	<image description="移动网络" src="res/drawable-xxhdpi/ic_settings_dualsim.png"/>
+	<image description="互联互通" src="res/drawable-xxhdpi/ic_interconnection.png"/>
+	<image description="个人热点" src="res/drawable-xxhdpi/ic_portable_wlan_hotspot_settings.png"/>
+	<image description="VPN" src="res/drawable-xxhdpi/ic_vpn.png"/>
+	<image description="更多连接" src="res/drawable-xxhdpi/ic_device_connection.png"/>
+	<image description="壁纸与个性化" src="res/drawable-xxhdpi/com_android_thememanager.png"/>
+	<image description="息屏与锁屏" src="res/drawable-xxhdpi/ic_unlock_set_settings.png"/>
+	<image description="显示" src="res/drawable-xxhdpi/ic_display_settings.png"/>
+	<image description="声音与震动" src="res/drawable-xxhdpi/ic_sound_settings.png"/>
+	<image description="控制与通知中心" src="res/drawable-xxhdpi/ic_notification_center.png"/>
+	<image description="桌面" src="res/drawable-xxhdpi/ic_miui_home_settings.png"/>
+	<image description="指纹人脸与密码" src="res/drawable-xxhdpi/ic_security_settings_settings.png"/>
+	<image description="安全" src="res/drawable-xxhdpi/ic_security_center_settings.png"/>
+	<image description="隐私保护" src="res/drawable-xxhdpi/ic_privacy_protection.png"/>
+	<image description="省电与电池" src="res/drawable-xxhdpi/ic_battery_settings.png"/>
+	<image description="应用设置" src="res/drawable-xxhdpi/ic_system_app_settings.png"/>
+	<image description="更多设置" src="res/drawable-xxhdpi/ic_other_advanced_settings.png"/>
+	<image description="背屏" src="res/drawable-xxhdpi/dynamic_item_icon.png"/>
+	<image description="小爱同学" src="res/drawable-xxhdpi/xiaoai.png"/>
+	<image description="钱包" src="res/drawable-xxhdpi/wallet_icon.png"/>
+	<image description="屏幕时间管理" src="res/drawable-xxhdpi/ic_app_timer.png"/>
+	<image description="账号与同步" src="res/drawable-xxhdpi/ic_account_settings.png"/>
+	<image description="问题反馈" src="res/drawable-xxhdpi/ic_bugreport_settings.png"/>
+	<image description="我的服务" src="res/drawable-xxhdpi/ic_vip_service_settings.png"/>
+</ThemePage>

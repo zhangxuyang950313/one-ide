@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ThemePage tag="桌面" description="全面屏手势">
+	<image description="返回手势 背景" src="res/drawable-xxhdpi/gesture_back_background.png"/>
+	<image description="返回手势 箭头" src="res/drawable-xxhdpi/gesture_back_arrow.png"/>
+</ThemePage>

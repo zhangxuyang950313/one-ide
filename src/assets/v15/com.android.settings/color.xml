@@ -1,0 +1,273 @@
+<Theme>
+
+    <colors title="主要颜色" value="#ff000000,#ffffffff">
+        <item name="miuix_appcompat_action_bar_title_text_color_light" description="标题文字颜色" />
+        <item name="miuix_appcompat_dialog_default_title_text_color_light" description="弹窗标题颜色" />
+        <item name="miuix_appcompat_bright_foreground_light" description="弹窗标题颜色（带复标题、MIUI版本文字、全部参数与信息参数文字颜色" />
+        <item name="miuix_preference_primary_text_color_light" description="列表主要文字颜色" />
+        <item name="miuix_preference_primary_text_color_disable_light" description="列表主要文字颜色（SIM卡状态" />
+        <item name="miuix_appcompat_action_mode_title_text_color_light" description="修改手机名称 上滑后颜色" />
+        <item name="miuix_appcompat_dim_foreground_light" description="弹窗列表主要文字" />
+        <item name="card_view_value_color" description="恢复出厂设置 列表文字颜色" />
+        <item name="miuix_appcompat_dialog_default_button_text_color_guide_normal_light" description="高亮按钮文字颜色" />
+        <item name="miuix_appcompat_dialog_default_button_text_color_light" description="普通按钮文字颜色" />
+        <item name="miuix_preference_connect_icon_disconnected_color_light" description="WIFI列表WIFI图标颜色" />
+        <item name="miuix_preference_connect_title_disconnected_color_light" description="WIFI列表文字" />
+        <item name="basic_info_item_title_color" description="WIFI详情文字颜色" />
+        <item name="wifi_detail_item_icon_color" description="WIFI详情icon颜色" />
+        <item name="card_style_title_normal_color" description="设备安全卡片主要文字" />
+        <item name="miuix_appcompat_dialog_default_list_text_color_normal_light" description="跟手弹窗常态文字" />
+        <item name="miuix_appcompat_dialog_default_list_text_color_pressed_light" description="跟手弹窗常态文字按下" />
+        <item name="card_view_title_color" description="锁屏与密码卡片主要文字" />
+        <item name="notification_card_text_color" description="通知栏与状态栏卡片文字" />
+        <item name="notch_radio_button_text" description="隐藏屏幕刘海未选中文字" />
+        <item name="font_bubble_left_font_color" description="文字大小常态对话框中文字颜色" />
+        <item name="accessibility_settings_action_bar_active_color" description="标题文字激活" />
+        <item name="ringtone_item_title_color" description="声音卡片中主要文字" />
+        <item name="miuix_appcompat_filter_sort_tab_view_text_normal_light" description="色温选项 文字颜色" />
+        <item name="miuix_appcompat_list_text_color_normal_light" description="跟手弹窗常态颜色" />
+        <item name="miuix_appcompat_list_text_color_pressed_light" description="跟手弹窗常态颜色" />
+        <item name="transparent_80_balck" description="无障碍/显示大小/联系人名称" />
+        <item name="font_size_view_small_color" description="无障碍/显示大小/文字大小指示器圆点" />
+        <item name="visual_check_textview_unchecked_text_color" description="安全键盘/未选中键盘文字" />
+        <item name="miuix_appcompat_immersion_text_color_normal_light" description="添加打印机文字" />
+        <item name="input_method_function_icon_color_unselected" description="添加打印机文字" />
+        <item name="confirm_password_header_text_color" description="输入密码提示文字" />
+        <item name="forget_password_dialog_title_text_color" description="忘记密码弹窗标题文字" />
+        <item name="forget_password_dialog_content_text_color" description="忘记密码弹窗内容文字" />
+        <item name="default_text_color" description="图案解锁提示文字" />
+        <item name="svg_icon_color_normal_light" description="底部重置设置icon常态" />
+        <item name="svg_icon_color_pressed_light" description="底部重置设置icon按下" />
+
+        <item name="action_bar_tab_text_color_normal_light" description="icon颜色" />
+        <item name="miuix_appcompat_blank_page_text_color_light" description="没有搜索到设置项" />
+        <item name="miui_face_detail_edittext_text_color" description="人脸数据输入框文字" />
+        <item name="emergency_contact_name_color" description="紧急联系人名称" />
+        <item name="emergency_contact_number_color" description="紧急联系人号码" />
+        <item name="my_device_params_item_big_title_color" description="我的设备名称文字" />
+        <item name="my_device_params_item_title_color" description="我的设备配置文字" />
+        <item name="external_ram_icon_fill_color" description="内存感叹号icon" />
+        <item name="device_icon_fill_color" description="我的设备/全部参数与信息 icon颜色" />
+        <item name="svg_ic_union_color" description="WLAN右上角扫一扫" />
+        <item name="headset_find_device_60" description="NFC感应区域提示文字" />
+        <item name="miuix_appcompat_dialog_default_edit_text_dialog_color_normal_light" description="wifi输入框文字" />
+        <item name="no_devices" description="搜索历史文字" />
+
+        <item name="dark_color_mode" description="外观模式 未选中文字" />
+
+        <item name="miuix_appcompat_list_text_color_disable_light" description="双WLAN加速 关闭 主WLAN颜色" />
+        <item name="miuix_preference_right_text_color_disable_light" description="双WLAN加速 关闭 主WLAN名称颜色" />
+
+
+        <item name="miuix_appcompat_action_button_text_color_normal_light" description="" />
+        <item name="miuix_appcompat_action_button_text_color_pressed_light" description="" />
+        <item name="miuix_appcompat_action_button_text_color_selected_light" description="" />
+        <item name="miuix_appcompat_action_mode_button_text_color_disable_light" description="" />
+        <item name="miuix_appcompat_action_mode_button_text_color_normal_light" description="" />
+        <item name="miuix_appcompat_action_mode_button_text_color_pressed_light" description="" />
+        <item name="miuix_appcompat_action_mode_button_text_color_selected_light" description="" />
+        <item name="miuix_appcompat_action_mode_title_default_button_text_color_disable_light" description="" />
+        <item name="miuix_appcompat_action_mode_title_default_button_text_color_normal_light" description="" />
+        <item name="miuix_appcompat_action_mode_title_default_button_text_color_pressed_light" description="" />
+        <item name="miuix_appcompat_action_title_color_light" description="" />
+        <item name="miuix_appcompat_activated_text_light" description="" />
+
+        <item name="unlock_text_title" description="设置-密码，隐私与安全-隐私密码-启用隐私密码" />
+        <item name="miuix_appcompat_filter_sort_tab_view2_text_activated_light" description="无障碍 tab 选中文字" />
+        <item name="sos_text_color" description="紧急求助 播放录音文字" />
+        <item name="sos_player_bg" description="紧急求助 播放录音icon" />
+
+        <item name="volume_icon_color" description="声音与震动 音量调节列表icon" />
+        <item name="svg_stroke_color" description="声音与震动 触感反馈icon" />
+        <item name="system_accent1_600" description="多用户 用户信息弹窗 按钮文字" package="android" />
+    </colors>
+
+    <colors title="次要颜色" value="#99000000,#99ffffff">
+        <item name="miuix_appcompat_edit_text_search_hint_color_light" description="搜索框提示文字颜色" />
+        <item name="restricted_screen_timeout_subtitle_textcolor" description="弹窗副标题颜色（带复标题" />
+        <item name="miuix_appcompat_dialog_default_message_text_color_light" description="弹窗次要文字颜色" />
+        <item name="account_info_summary" description="小米账号下方摘要文字颜色" />
+        <item name="miuix_preference_right_text_color_normal_light" description="列表右侧文字（已开启、已关闭等" />
+        <item name="instructions_text_color" description="MIUI版本号、全部参数与信息小标题（手机型号，运行内存等）颜色" />
+        <item name="instructions_text_color_append" description="MIUI版本号、全部参数与信息小标题（手机型号，运行内存等）颜色" />
+        <item name="prompt_text_color" description="修改手机名称界面提示文字颜色" />
+        <item name="miuix_preference_secondary_text_color_light" description="列表次要文字颜色" />
+        <item name="miuix_preference_category_text_color_light" description="列表分类小标题" />
+        <item name="miuix_appcompat_text_color_primary_light" description="输入框已输入文字、弹窗次要文字颜色" />
+        <item name="miuix_appcompat_hint_edit_text_color_light" description="输入框提示文字颜色" />
+        <item name="my_device_info_item_summary_color" description="我的设备次要文字颜色" />
+        <item name="miuix_preference_secondary_text_color_disable_light" description="备份与恢复请先插入U盘文字" />
+        <item name="detal_description_color" description="备份与恢复常见问题描述" />
+        <item name="reset_hint_content" description="恢复出厂设置次要文字" />
+        <item name="basic_info_item_summary_color" description="WIFI详情次要文字" />
+        <item name="miuix_appcompat_integrated_spinner_text_color_normal_light" description="可选列表右侧文字" />
+        <item name="miuix_appcompat_integrated_spinner_text_color_pressed_light" description="可选列表右侧文字" />
+        <item name="miuix_appcompat_list_secondary_text_color_normal_light" description="二级列表右侧文字" />
+        <item name="miuix_appcompat_list_secondary_text_color_pressed_light" description="二级列表右侧文字" />
+        <item name="card_style_summary_normal_color" description="设备安全卡片次要文字" />
+        <item name="recommend_title_color" description="其他设置项卡片次要文字颜色" />
+        <item name="accessibility_settings_action_bar_inactive_color" description="标题文字未激活" />
+        <item name="ringtone_item_value_color" description="声音卡片中次要文字" />
+        <item name="normal_summary_color" description="普通摘要颜色" />
+        <item name="transparent_40_balck" description="无障碍/显示大小/小标题" />
+        <item name="transparent_60_balck" description="键盘弹窗中未选中icon" />
+        <item name="miuix_appcompat_dialog_default_hint_edit_text_color_light" description="wifi输入框提示文字" />
+        <item name="miuix_preference_connect_summary_disconnected_color_light" description="蓝牙正在配对文字" />
+        <item name="face_detail_name_text_color" description="人脸名称提示文字" />
+        <item name="my_device_params_item_summary_color" description="我的设备信息小标题" />
+        <item name="wifi_signal_icon_color" description="wifi2.4G/5G，锁icon颜色" />
+        <item name="miuix_appcompat_action_bar_subtitle_text_light" description="切换分辨率提示文字" />
+        <item name="miuix_appcompat_arrow_right_normal_fill_color_light" description="列表右箭头normal颜色" />
+        <item name="miuix_appcompat_arrow_right_pressed_fill_color_light" description="列表右箭头pressed颜色" />
+        <item name="miuix_appcompat_arrow_right_disable_fill_color_light" description="列表右箭头disable颜色" />
+        <item name="anc_text_unselect_color" description="搜索历史小标题" />
+        <item name="miuix_appcompat_default_number_picker_hint_color" description="调整时间弹窗 未选中文字" />
+        <item name="gxzw_quick_open_summary" description="指纹快捷功能提示文字" />
+        <item name="miuix_appcompat_dialog_default_checkbox_text_color_light" description="屏幕指纹使用提示弹窗 单选列表文字" />
+        <item name="miuix_appcompat_action_button_text_color_disable_light" description="wifi黑名单 添加 确定icon下文字" />
+        <item name="list_secondary_text_color_normal_light" description="第二时钟提示文字" />
+        <item name="unlock_text_light" description="隐私密码 忘记密码？文字" />
+        <item name="unlock_text_tips" description="隐私密码 请输入隐私密码" />
+        <item name="miuix_appcompat_filter_sort_tab_view2_text_normal_light" description="无障碍 tab 常态文字" />
+        <item name="miuix_appcompat_dialog_default_button_disabled_text_light" description="弹窗 普通按钮文字 禁用状态颜色" />
+
+    </colors>
+
+    <!-- 3482ff -->
+    <colors title="高亮色 蓝" value="#ffFF3B00,#ff277AF7">
+        <item name="miuix_color_blue_light_primary_default" description="高亮色default" />
+        <item name="miuix_color_blue_light_primary_hover" description="高亮色hover" />
+        <item name="miuix_color_blue_light_primary_pressed" description="高亮色pressed" />
+        <item name="miuix_color_blue_light_secondary_hover" description="高亮色选中hover" />
+        <item name="miuix_color_blue_light_secondary_pressed" description="高亮色选中pressed" />
+        <item name="bt_refresh_color" description="WIFI更新图标" />
+        <item name="choose_unlock_item_bg_selected" description="设备安全卡片选中常态" />
+        <item name="choose_unlock_item_bg_selected_pressed" description="设备安全卡片选中按下" />
+        <item name="wifi_add_network_title_color" description="添加网络文字" />
+        <item name="card_view_checked_color" description="卡片开启" />
+        <item name="bubble_right_bg_color" description="文字大小高亮对话框" />
+        <item name="font_settings_view_big_color" description="文字大小选中" />
+        <item name="font_size_seekbar_big_pointer_blue" description="文字大小选中圆点" />
+        <item name="miuix_appcompat_filter_sort_tab_view_bg_color_light" description="色温选中背景" />
+        <item name="recommend_item_link" description="其他设置项卡片文字颜色" />
+        <item name="recommend_item_link_pressed" description="其他设置项卡片文字颜色按下" />
+        <item name="font_size_view_big_color" description="无障碍/显示大小/文字大小描述" />
+        <item name="new_version_text_color" description="无障碍开启/允许按钮文字" />
+        <item name="input_method_function_icon_color_selected" description="键盘弹窗中选中icon" />
+        <item name="wifi_detail_modify_color" description="wifi详情/修改网络文字" />
+        <item name="headset_find_device_blue" description="NFC感应区域提示文字高亮色" />
+        <item name="miuix_appcompat_sliding_button_bar_on_light" description="开关开启背景" />
+        <item name="dark_color_mode_outer" description="外观模式 选中描边" />
+        <item name="light_color_mode" description="外观模式 选中文字" />
+        <item name="search_result_highlight" description="搜索内容高亮文字" />
+    </colors>
+
+    <colors title="高亮色 蓝 不可用" value="#4dFF3B00,#4d277AF7">
+        <item name="miuix_color_blue_light_primary_disable" description="" />
+    </colors>
+
+    <colors title="高亮色 蓝 选中" value="#1aFF3B00,#1a277AF7">
+        <item name="miuix_color_blue_light_secondary_default" description="" />
+        <item name="miuix_color_blue_light_secondary_disable" description="" />
+        <item name="restricted_lock_item_select_bg" description="弹窗列表选中 " />
+        <item name="miuix_appcompat_dialog_default_list_item_bg_dialog_color_checked_light" description="弹窗列表选中 " />
+        <item name="miuix_preference_checkable_item_two_state_color_pressed_light" description="可选列表按下背景" />
+    </colors>
+
+    <colors title="高亮色 红" value="#fff22424,#ffD70015">
+        <item name="wifi_detail_delete_color" description="网络详情/删除Wi-Fi" />
+        <item name="miuix_color_deep_red_light_primary_default" description="紧急联系人删除按钮" />
+    </colors>
+
+    <colors title="弹窗背景" value="#ffffffff,#ff242424">
+        <item name="miuix_appcompat_dialog_default_bg_color_light" description="底部弹窗背景" />
+        <item name="miuix_appcompat_dropdown_popup_backgroud_color_light" description="跟手弹窗常态背景" />
+    </colors>
+
+    <colors title="底部弹窗 普通按钮" value="#0a000000,#14ffffff">
+        <item name="miuix_appcompat_button_bg_color_normal_light" description="底部弹窗普通按钮常态" />
+        <item name="miuix_appcompat_button_bg_color_pressed_light" description="底部弹窗普通按钮按下" />
+    </colors>
+
+    <colors title="底部编辑栏背景" value="#ffffffff,#ff121212">
+        <item name="miuix_appcompat_bottom_menu_bg_light" description="底部编辑栏背景" />
+    </colors>
+
+    <colors title="输入框填充色" value="#fff0f0f0,#ff202020">
+        <item name="miuix_appcompat_edit_text_bg_color_light" description="输入框填充颜色" />
+        <item name="miuix_appcompat_dialog_default_edit_text_bg_solid_light" description="输入框填充颜色" />
+    </colors>
+
+    <colors title="卡片/滑动条/低透明度列表颜色/分隔线" value="#0a000000,#14ffffff">
+        <item name="miuix_preference_checkable_item_fill_color_normal_light" description="可选列表常态背景" />
+        <item name="card_view_background_color" description="卡片常态" />
+
+        <item name="choose_unlock_item_bg_normal" description="设备安全卡片常态" />
+        <item name="choose_unlock_item_bg_pressed" description="设备安全卡片按下" />
+
+        <item name="recommend_region_color" description="其他设置项卡片" />
+
+        <item name="bubble_left_bg_color" description="文字大小常态对话框" />
+        <item name="font_settings_visual_box_border_color" description="文字大小 字体背景" />
+        <item name="font_size_view_background" description="文字大小滑动条背景" />
+        <item name="miuix_appcompat_progressBackground_light" description="滑动条背景" />
+        <item name="miuix_appcompat_filter_sort_view_bg_color_light" description="色温选项背景" />
+
+        <item name="my_device_info_item_background_color" description="我的设备卡片背景" />
+        <item name="device_card_background" description="我的设备/全部参数与信息 卡片背景" />
+        <item name="settings_banner_bg_color" description="设置提示banner背景颜色" />
+        <item name="miuix_appcompat_scrollbar_thumb_vertical_bg_light" description="列表滚动条颜色" />
+        <item name="bg_btn_normal_color" description="搜索历史背景" />
+
+        <item name="miuix_preference_connect_bg_disconnected_color_light" description="wifi连接状态过渡颜色" />
+
+        <item name="miuisettings_item_touch_color" description="首页列表按下背景颜色" />
+        <item name="miuix_appcompat_filter_sort_tab_view2_bg_color_selected_light" description="无障碍 tab 选中背景" />
+        <item name="sos_player_linear_bg" description="紧急求助播放录音背景" />
+        <item name="sos_player_linear_pressed_bg" description="紧急求助播放录音背景 按下" />
+
+        <item name="my_device_preference_divider_line_color" description="我的设备列表分隔线颜色" />
+        <item name="miuix_preference_first_last_divider_line_light" description="首页列表分隔线颜色" />
+        <item name="bt_refresh_circle_bg_color" description="WLAN刷新icon背景" />
+        <item name="bt_refresh_bg_color" description="蓝牙刷新icon背景" />
+    </colors>
+
+    <colors title="开关 关闭背景" value="#19000000,#19ffffff">
+        <item name="miuix_appcompat_checkbox_btn_disable_background_color_light" description="复选框 未选中背景色" />
+        <item name="miuix_appcompat_sliding_button_bar_off_disabled_color_light" description="开关不可用背景" />
+        <item name="miuix_appcompat_sliding_button_bar_off_normal_color_light" description="开关关闭背景" />
+    </colors>
+
+    <colors title="开关圆点" value="#ffffffff,#ffffffff">
+        <item name="miuix_appcompat_sliding_btn_slider_off_normal_color_light" description="开关圆点" />
+        <item name="miuix_appcompat_sliding_btn_slider_off_pressed_color_light" description="开关圆点" />
+        <item name="miuix_appcompat_sliding_btn_slider_on_normal_color_light" description="开关圆点" />
+        <item name="miuix_appcompat_sliding_btn_slider_on_pressed_color_light" description="开关圆点" />
+        <item name="miuix_appcompat_sliding_btn_slider_off_disable_color_light" description="开关圆点" />
+        <item name="miuix_appcompat_sliding_btn_slider_on_disable_color_light" description="开关圆点" />
+    </colors>
+
+    <colors title="隐私密码 大背景 颜色" value="#ffffffff,#ff121212">
+        <item name="main_page_background" description="" />
+    </colors>
+
+    <colors title="MIUIX点按过渡动画颜色" value="#14000000,#14ffffff">
+        <item name="miuix_folme_color_touch_tint" description="点按过渡动画颜色" />
+        <item name="miuix_folme_color_touch_tint_light" description="点按过渡动画颜色" />
+        <item name="miuix_folme_color_touch_tint_light_p1" description="点按过渡动画颜色p1" />
+        <item name="miuix_folme_color_touch_tint_light_p2" description="点按过渡动画颜色p2" />
+        <item name="miuix_folme_color_touch_tint_light_p3" description="点按过渡动画颜色p3" />
+        <item name="bg_spinner_parent" description="miuix按下和选中背景" />
+        <item name="emergency_contact_item_bg" description="紧急联系人列表背景" />
+    </colors>
+
+    <colors title="透明色（默认就行不要改" value="#00000000,#00ffffff">
+
+        <item name="miuix_appcompat_white" description="全局白色" />
+        <item name="my_device_background_color" description="我的设备背景" />
+        <item name="miuix_appcompat_spinner_item_normal_bg_color_light" description="跟手弹窗上层常态背景" />
+        <item name="font_settings_bg_color" description="文字大小背景" />
+        <item name="list_card_background" description="我的设备/全部参数与信息 列表卡片背景颜色" />
+        <item name="card_background_stroke_color" description="我的设备/全部参数与信息 卡片描边" />
+    </colors>
+</Theme>

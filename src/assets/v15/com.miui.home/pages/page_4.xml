@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ThemePage tag="桌面" description="大图标双开">
+	<image description="大图标应用双开 标记（普通图标双开icon在全局里）" src="res/drawable-xxhdpi/ic_corp_icon_xspace_single.png"/>
+</ThemePage>

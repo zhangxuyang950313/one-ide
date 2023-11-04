@@ -1,0 +1,71 @@
+<GeneralTemplate>
+    <ThemePage tag="桌面" description="全面屏手势">
+        <image description="返回手势 背景" src="res/drawable-xxhdpi/gesture_back_background.png" />
+        <image description="返回手势 箭头" src="res/drawable-xxhdpi/gesture_back_arrow.png" />
+    </ThemePage>
+    <ThemePage tag="桌面" description="内存清理">
+        <image description="一键清理缩略图（编辑模式-添加工具页面）" src="res/drawable-xxhdpi/gadget_clear_button.png" />
+        <image description="一键清理/强力清理 背景" src="res/drawable-xxhdpi/gadget_clear_button_bg.png" />
+        <image description="强力清理 icon（安全中心设置-添加桌快捷方式）" src="res/drawable-xxhdpi/gadget_power_clear_icon.png" />
+        <image description="扫把 0（下方是一键清理的扫把 图片序列帧）" src="res/drawable-xxhdpi/gadget_clear_broom_00000.png" />
+        <image description="扫把 1" src="res/drawable-xxhdpi/gadget_clear_broom_00001.png" />
+        <image description="扫把 2" src="res/drawable-xxhdpi/gadget_clear_broom_00002.png" />
+        <image description="扫把 3" src="res/drawable-xxhdpi/gadget_clear_broom_00003.png" />
+        <image description="扫把 4" src="res/drawable-xxhdpi/gadget_clear_broom_00004.png" />
+        <image description="扫把 5" src="res/drawable-xxhdpi/gadget_clear_broom_00005.png" />
+        <image description="扫把 6" src="res/drawable-xxhdpi/gadget_clear_broom_00006.png" />
+        <image description="扫把 7" src="res/drawable-xxhdpi/gadget_clear_broom_00007.png" />
+        <image description="扫把 8" src="res/drawable-xxhdpi/gadget_clear_broom_00008.png" />
+        <image description="扫把 9" src="res/drawable-xxhdpi/gadget_clear_broom_00009.png" />
+        <image description="扫把 10" src="res/drawable-xxhdpi/gadget_clear_broom_00010.png" />
+        <image description="扫把 11" src="res/drawable-xxhdpi/gadget_clear_broom_00011.png" />
+        <image description="扫把 12" src="res/drawable-xxhdpi/gadget_clear_broom_00012.png" />
+        <image description="扫把 13" src="res/drawable-xxhdpi/gadget_clear_broom_00013.png" />
+        <image description="扫把 14" src="res/drawable-xxhdpi/gadget_clear_broom_00014.png" />
+        <image description="扫把 15" src="res/drawable-xxhdpi/gadget_clear_broom_00015.png" />
+        <image description="扫把 16" src="res/drawable-xxhdpi/gadget_clear_broom_00016.png" />
+        <image description="扫把 17" src="res/drawable-xxhdpi/gadget_clear_broom_00017.png" />
+        <image description="扫把 18" src="res/drawable-xxhdpi/gadget_clear_broom_00018.png" />
+        <image description="扫把 19" src="res/drawable-xxhdpi/gadget_clear_broom_00019.png" />
+        <image description="扫把 20" src="res/drawable-xxhdpi/gadget_clear_broom_00020.png" />
+        <image description="扫把 21" src="res/drawable-xxhdpi/gadget_clear_broom_00021.png" />
+        <image description="扫把 22" src="res/drawable-xxhdpi/gadget_clear_broom_00022.png" />
+        <image description="扫把 23" src="res/drawable-xxhdpi/gadget_clear_broom_00023.png" />
+        <image description="扫把 24" src="res/drawable-xxhdpi/gadget_clear_broom_00024.png" />
+        <image description="扫把 25" src="res/drawable-xxhdpi/gadget_clear_broom_00025.png" />
+        <image description="扫把 26" src="res/drawable-xxhdpi/gadget_clear_broom_00026.png" />
+        <image description="扫把 27" src="res/drawable-xxhdpi/gadget_clear_broom_00027.png" />
+        <image description="扫把 28" src="res/drawable-xxhdpi/gadget_clear_broom_00028.png" />
+    </ThemePage>
+    <ThemePage tag="桌面" description="底部搜索框">
+        <image description="搜索框背景（深色壁纸）（支持调整颜色值）" src="res/drawable-xxhdpi/bg_search_bar_dark.9.png" />
+        <image description="搜索框背景（浅色壁纸）（支持调整颜色值）" src="res/drawable-xxhdpi/bg_search_bar_light.9.png" />
+        <image description="搜索icon （深色壁纸）" src="res/drawable-xxhdpi/icon_search_dark.png" />
+        <image description="搜索icon（浅色壁纸）" src="res/drawable-xxhdpi/icon_search_light.png" />
+        <image description="小爱icon（深色壁纸）" src="res/drawable-xxhdpi/icon_xiaoai_dark.png" />
+        <image description="小爱icon（浅色壁纸）" src="res/drawable-xxhdpi/icon_xiaoai_light.png" />
+    </ThemePage>
+    <ThemePage tag="桌面" description="任务管理">
+        <image description="小窗应用按钮内icon" src="res/drawable-xxhdpi/recent_tv_small_window_icon.png" />
+        <image description="应用菜单按钮圆背景" src="res/drawable-xxhdpi/recent_menu_bg.png" />
+        <image description="锁定" src="res/drawable-xxhdpi/ic_task_lock.png" />
+        <image description="取消锁定" src="res/drawable-xxhdpi/ic_task_unlock.png" />
+        <image description="分屏" src="res/drawable-xxhdpi/ic_task_multi.png" />
+        <image description="小窗" src="res/drawable-xxhdpi/ic_task_small_window.png" />
+        <image description="设置" src="res/drawable-xxhdpi/ic_task_setting.png" />
+        <image description="任务锁定icon" src="res/drawable-xxhdpi/icon_task_lock.png" />
+        <image description="清除按钮背景" src="res/drawable-xxhdpi/btn_clear_all.png" />
+        <image description="清除按钮" src="res/drawable-xxhdpi/notifications_clear_all.png" />
+    </ThemePage>
+    <ThemePage tag="桌面" description="大图标双开">
+        <image description="大图标应用双开 标记（普通图标双开icon在全局里）" src="res/drawable-xxhdpi/ic_corp_icon_xspace_single.png" />
+    </ThemePage>
+    <ThemePage tag="桌面" description="页面指示器">
+        <image description="负一屏指示点" src="res/drawable-xxhdpi/workspace_assistantpoint.png" />
+        <image description="负一屏指示点 深色" src="res/drawable-xxhdpi/workspace_assistantpoint_dark.png" />
+        <image description="页面指示点" src="res/drawable-xxhdpi/workspace_seekpoint_normal.png" />
+        <image description="页面指示点 选中态" src="res/drawable-xxhdpi/workspace_seekpoint_highlight.png" />
+        <image description="页面指示点（浅壁纸模式）" src="res/drawable-xxhdpi/workspace_seekpoint_normal_dark.png" />
+        <image description="页面指示点 选中态（浅壁纸模式）" src="res/drawable-xxhdpi/workspace_seekpoint_highlight_dark.png" />
+    </ThemePage>
+</GeneralTemplate>

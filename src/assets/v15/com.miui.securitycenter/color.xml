@@ -1,0 +1,16 @@
+<Theme>
+    <colors title="主要颜色" value="#ff000000,#ff000000">
+        <item name="notification_memory_text" description="警报通知主要文字" />
+        <item name="notification_title_text_color" description="安全中心 快捷方式文字" />
+    </colors>
+    <colors title="次要颜色" value="#99000000,#99000000">
+        <item name="notification_memory_summary" description="警报通知次要文字" />
+    </colors>
+    <!-- <colors title="主要颜色" value="#ff000000,#ffffffff">
+        <item name="notification_memory_text" description="警报通知主要文字" />
+        <item name="notification_title_text_color" description="安全中心 快捷方式文字" />
+    </colors>
+    <colors title="次要颜色" value="#99000000,#99ffffff">
+        <item name="notification_memory_summary" description="警报通知次要文字" />
+    </colors> -->
+</Theme>

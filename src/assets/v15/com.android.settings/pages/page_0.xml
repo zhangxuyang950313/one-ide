@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ThemePage tag="设置" description="全局">
+	<image description="大背景" src="res/drawable-xxhdpi/miuix_appcompat_settings_window_bg_light.9.png"/>
+	<image description="顶栏背景" src="res/drawable-xxhdpi/miuix_appcompat_search_mode_input_bg_light.9.png"/>
+	<image description="搜索条" src="res/drawable-xxhdpi/miuix_appcompat_search_mode_edit_text_bg_light.9.png"/>
+	<image description="搜索条 放大镜" src="res/drawable-xxhdpi/miuix_appcompat_ic_edit_text_search_light.png"/>
+	<image description="搜索条 删除按钮" src="res/drawable-xxhdpi/miuix_appcompat_edit_text_clear_btn_light.png"/>
+	<image description="点击搜索过渡背景" src="res/drawable-xxhdpi/miuix_appcompat_window_search_mask.9.png"/>
+	<image description="首页列表右箭头" src="res/drawable-xxhdpi/miuix_appcompat_intent_arrow_right.png"/>
+	<image description="列表右箭头（带圆圈 未连接wifi列表" src="res/drawable-xxhdpi/miuix_preference_ic_detail_disconnected_light.png"/>
+	<image description="列表右箭头disable（带圆圈 色彩风格" src="res/drawable-xxhdpi/miuix_appcompat_btn_inline_detail_disable_light.png"/>
+	<image description="列表右箭头normal（带圆圈 色彩风格" src="res/drawable-xxhdpi/miuix_appcompat_btn_inline_detail_normal_light.png"/>
+	<image description="列表右箭头pressed（带圆圈 色彩风格" src="res/drawable-xxhdpi/miuix_appcompat_btn_inline_detail_pressed_light.png"/>
+	<image description="我的设备 os logo（不允许修改，默认即可）" src="res/drawable-xxhdpi/xiaomi_os_logo.png"/>
+	<image description="我的设备 电池icon" src="res/drawable-xxhdpi/device_description_battery.png"/>
+	<image description="我的设备 相机icon" src="res/drawable-xxhdpi/device_description_camera.png"/>
+	<image description="我的设备 cpu icon" src="res/drawable-xxhdpi/device_description_cpu.png"/>
+	<image description="我的设备 设备icon" src="res/drawable-xxhdpi/device_description_model.png"/>
+	<image description="我的设备 ram icon" src="res/drawable-xxhdpi/device_description_ram.png"/>
+	<image description="我的设备 分辨率icon" src="res/drawable-xxhdpi/device_description_resolution.png"/>
+	<image description="我的设备 屏幕尺寸icon" src="res/drawable-xxhdpi/device_description_screen.png"/>
+	<image description="我的设备卡片 列表右箭头" src="res/drawable-xxhdpi/miuix_appcompat_arrow_right.png"/>
+	<image description="返回icon" src="res/drawable-xxhdpi/miuix_action_icon_back_light.png"/>
+	<image description="取消icon" src="res/drawable-xxhdpi/action_mode_title_button_cancel.png"/>
+	<image description="紧急联系人顶部取消icon" src="res/drawable-xxhdpi/miuix_action_icon_immersion_close_light.png"/>
+	<image description="确认icon" src="res/drawable-xxhdpi/action_mode_title_button_confirm.png"/>
+	<image description="紧急联系人顶部确认icon" src="res/drawable-xxhdpi/miuix_action_icon_immersion_done_light.png"/>
+	<image description="全选icon" src="res/drawable-xxhdpi/action_mode_title_button_select_all.png"/>
+	<image description="添加，新建icon" src="res/drawable-xxhdpi/action_button_new.png"/>
+	<image description="更多icon" src="res/drawable-xxhdpi/miuix_action_icon_more_light.png"/>
+	<image description="编辑icon" src="res/drawable-xxhdpi/action_button_edit.png"/>
+	<image description="设置icon" src="res/drawable-xxhdpi/miuix_action_icon_settings_light.png"/>
+	<image description="重置icon 常态" src="res/drawable-xxhdpi/action_button_clear_normal.png"/>
+	<image description="重置icon 按下" src="res/drawable-xxhdpi/action_button_clear_pressed.png"/>
+	<image description="扫一扫icon" src="res/drawable-xxhdpi/miuix_action_icon_scan_light.png"/>
+	<image description="搜索空页面icon" src="res/drawable-xxhdpi/search_list_empty.png"/>
+	<image description="蓝牙空页面icon" src="res/drawable-xxhdpi/blank_screen_icon.png"/>
+	<image description="加载圆圈" src="res/drawable-xxhdpi/miuix_appcompat_progressbar_indeterminate_circle_light.png"/>
+	<image description="系统打印服务 正在搜索打印机icon" src="res/drawable-xxhdpi/ic_printer_search.png"/>
+	<image description="状态栏电量样式 圆形方式（显示-控制中心与状态栏-状态栏电量样式）" src="res/drawable-xxhdpi/battery_indicator_graphic.png"/>
+	<image description="状态栏电量样式 数字方式（电池内部）" src="res/drawable-xxhdpi/battery_indicator_percent_in.png"/>
+	<image description="状态栏电量样式 数字方式（电池外部）" src="res/drawable-xxhdpi/battery_indicator_percent_out.png"/>
+</ThemePage>

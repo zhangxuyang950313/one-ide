@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ThemePage tag="电话" description="新建联系人">
+	<image description="标题箭头" src="res/drawable-xxhdpi/editor_dropdown_indicator_down.png"/>
+	<image description="标题箭头" src="res/drawable-xxhdpi/editor_dropdown_indicator_up.png"/>
+	<image description="头像" src="res/drawable-xxhdpi/contact_detail_circle_photo_edit.png"/>
+	<image description="展开箭头" src="res/drawable-xxhdpi/btn_inline_expand_normal_light_vector.png"/>
+	<image description="收起箭头" src="res/drawable-xxhdpi/btn_inline_shrink_normal_light_vector.png"/>
+	<image description="选项框右侧 删除按钮 常态" src="res/drawable-xxhdpi/btn_inline_delete_normal_light.png"/>
+	<image description="选项框右侧 删除按钮 二态" src="res/drawable-xxhdpi/btn_inline_delete_pressed_light.png"/>
+	<image description="上下箭头选择器" src="res/drawable-xxhdpi/spinner_bg_edit_light.9.png"/>
+	<image description="选择群组 底栏背景" src="res/drawable-xxhdpi/contact_detail_content_bg.9.png"/>
+</ThemePage>

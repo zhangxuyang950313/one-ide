@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ThemePage tag="SYSTEMUI" description="虚拟按键" page="framework-res">
+	<image description="菜单键（浅色模式）" src="res/drawable-xxhdpi/ic_sysbar_recent.png"/>
+	<image description="菜单键（深色模式）" src="res/drawable-xxhdpi/ic_sysbar_recent_darkmode.png"/>
+	<image description="桌面键（浅色模式）" src="res/drawable-xxhdpi/ic_sysbar_home.png"/>
+	<image description="桌面键（深色模式）" src="res/drawable-xxhdpi/ic_sysbar_home_darkmode.png"/>
+	<image description="返回（浅色模式）" src="res/drawable-xxhdpi/ic_sysbar_back.png"/>
+	<image description="返回（深色模式）" src="res/drawable-xxhdpi/ic_sysbar_back_darkmode.png"/>
+	<image description="横屏返回（浅色模式）" src="res/drawable-xxhdpi/ic_sysbar_back_ime.png"/>
+	<image description="横屏返回（深色模式）" src="res/drawable-xxhdpi/ic_sysbar_back_ime_darkmode.png"/>
+</ThemePage>

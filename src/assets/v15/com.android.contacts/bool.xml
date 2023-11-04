@@ -1,0 +1,5 @@
+<Theme>
+    <bool title="拨号盘的数字是字体。改为false后拨号盘数字是图片" name="default_theme" value="false,false" description="" />
+    <bool title="详情页状态栏样式由联系人控制；false 为主题控制，true 为联系人控制" name="status_bar_color_enable" value="false,false" description="" />
+    <bool title="详情页状态栏样式；false 为黑色，true 为白色。需要先将上面的status_bar_color_enable改为false" name="status_bar_color_white" value="false,true" description="" />
+</Theme>

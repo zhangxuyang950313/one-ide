@@ -1,0 +1,9 @@
+<Theme>
+    <integer title="状态栏样式" name="window_translucent_status" value="1,2" description="0 是黑色背景、白色图标；1 是透明背景、黑色图标；2 是透明背景、白色图标。" />
+    <integer title="复选框（未选）背景透明度 常态" name="checkwidget_background_normal_alpha_light" value="25,25" description="取值范围：0-255" />
+    <integer title="复选框（未选）背景透明度 常态" name="miuix_appcompat_checkwidget_background_normal_alpha_light" value="25,25" description="取值范围：0-255" />
+    <integer title="复选框（未选）背景透明度 不可用" name="checkwidget_background_disable_alpha_light" value="12,12" description="取值范围：0-255" />
+    <integer title="复选框（未选）描边透明度 常态" name="checkwidget_stroke_normal_alpha_light" value="50,50" description="取值范围：0-255" />
+    <integer title="复选框（未选）描边透明度 不可用" name="checkwidget_stroke_disable_alpha_light" value="25,25" description="取值范围：0-255" />
+
+</Theme>

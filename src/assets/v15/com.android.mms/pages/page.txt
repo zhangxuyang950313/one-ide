@@ -1,0 +1,118 @@
+<GeneralTemplate>
+    <ThemePage tag="短信" description="全局">
+        <image description="大背景" src="res/drawable-xxhdpi/conversation_bg.9.png" />
+        <image description="顶栏背景" src="res/drawable-xxhdpi/miuix_appcompat_action_bar_bg_light.9.png" />
+        <image description="搜索条背景" src="res/drawable-xxhdpi/miuix_appcompat_search_mode_bg_light.9.png" />
+        <image description="搜索条" src="res/drawable-xxhdpi/miuix_appcompat_search_mode_edit_text_bg_light.9.png" />
+        <image description="搜索放大镜" src="res/drawable-xxhdpi/miuix_appcompat_ic_edit_text_search_light.png" />
+        <image description="搜索清空icon" src="res/drawable-xxhdpi/miuix_appcompat_edit_text_clear_btn_on_light.png" />
+        <image description="空页面 没有短信" src="res/drawable-xxhdpi/ic_conversation_empty.png" />
+        <image description="加载圆圈" src="res/drawable-xxhdpi/miuix_appcompat_progressbar_indeterminate_circle_light.png" />
+
+        <image description="设置icon" src="res/drawable-xxhdpi/action_bar_setting.png" />
+        <image description="菜单icon" src="res/drawable-xxhdpi/miuix_action_icon_immersion_more_light.png" />
+        <image description="返回icon" src="res/drawable-xxhdpi/miuix_action_icon_back_light.png" />
+        <image description="标记已读icon" src="res/drawable-xxhdpi/action_button_all_read_light.png" />
+        <image description="miuix删除icon" src="res/drawable-xxhdpi/miuix_action_icon_delete_light.png" />
+        <image description="取消icon" src="res/drawable-xxhdpi/miuix_action_icon_cancel_light.png" />
+        <image description="弹窗回复取消icon" src="res/drawable-xxhdpi/miuix_actionbar_dismiss_icon.png" />
+        <image description="多选icon" src="res/drawable-xxhdpi/miuix_action_icon_select_all_light.png" />
+        <image description="全选icon" src="res/drawable-xxhdpi/miuix_action_icon_deselect_all_light.png" />
+        <image description="收藏icon" src="res/drawable-xxhdpi/miuix_action_icon_favorite_light.png" />
+        <image description="复制icon" src="res/drawable-xxhdpi/miuix_actionbar_copy_icon.png" />
+        <image description="移动icon" src="res/drawable-xxhdpi/miuix_actionbar_move_icon.png" />
+        <image description="转发icon" src="res/drawable-xxhdpi/actionbar_forward_icon.png" />
+        <image description="更多icon" src="res/drawable-xxhdpi/miuix_action_icon_more_light.png" />
+        <image description="新建常用语icon" src="res/drawable-xxhdpi/miuix_actionbar_new_icon.png" />
+        <image description="添加icon" src="res/drawable-xxhdpi/miuix_action_icon_new_light.png" />
+        <image description="详情icon" src="res/drawable-xxhdpi/action_button_detail_light.png" />
+        <image description="保存附件icon" src="res/drawable-xxhdpi/miuix_action_icon_save_light.png" />
+        <image description="关闭icon" src="res/drawable-xxhdpi/hybrid_action_bar_close.png" />
+        <image description="删除icon" src="res/drawable-xxhdpi/miuix_actionbar_delete_icon.png" />
+
+        <image description="底tab背景" src="res/drawable-xxhdpi/bottom_navigation_background.9.png" />
+        <image description="底tab 主要icon 形状" src="res/drawable-xxhdpi/tab_icon_sms.png" />
+        <image description="底tab 推广icon 形状" src="res/drawable-xxhdpi/tab_icon_promo.png" />
+    </ThemePage>
+
+    <ThemePage tag="短信" description="首页">
+        <image description="编辑icon" src="res/drawable-xxhdpi/conversation_draft_indicator.png" />
+        <image description="红色感叹号icon" src="res/drawable-xxhdpi/conversation_error_indicator.png" />
+        <image description="列表 sim1 icon" src="res/drawable-xxhdpi/sim1_indicator.png" />
+        <image description="列表 sim2 icon" src="res/drawable-xxhdpi/sim2_indicator.png" />
+        <image description="附件 icon" src="res/drawable-xxhdpi/conversation_attachment_indicator.png" />
+        <image description="列表右箭头" src="res/drawable-xxhdpi/miuix_appcompat_arrow_right.png" />
+        <image description="新建+号 背景" src="res/drawable-xxhdpi/miuix_appcompat_fab_empty_holder.png" />
+        <image description="新建+号" src="res/drawable-xxhdpi/miuix_appcompat_action_button_main_new.png" />
+    </ThemePage>
+
+    <ThemePage tag="短信" description="短信对话">
+        <image description="收到短信气泡" src="res/drawable-xxhdpi/message_bubble_in_bg_n.9.png" />
+        <image description="发送 普通短信气泡" src="res/drawable-xxhdpi/message_bubble_out_bg_n.9.png" />
+        <image description="发送 网络短信气泡" src="res/drawable-xxhdpi/mi_message_bubble_out_bg_n.9.png" />
+        <image description="发送 发送失败气泡" src="res/drawable-xxhdpi/message_bubble_out_last_bg.9.png" />
+        <!-- <image description="对话框旁发送失败 重发icon" src="res/drawable-xxhdpi/ic_sender_failed.png" /> -->
+        <image description="联系人联想背景，群发失败联系人背景" src="res/drawable-xxhdpi/recipient_bg.9.png" />
+        <image description="联系人联想,群发失败列表背景" src="res/drawable-xxhdpi/recipient_item_bg.9.png" />
+        <image description="群发失败 下拉箭头" src="res/drawable-xxhdpi/show_contact_info_unchecked.png" />
+        <image description="群发失败 收起箭头" src="res/drawable-xxhdpi/show_contact_info_checked.png" />
+        <image description="群发失败 重发/不发了按钮背景" src="res/drawable-xxhdpi/alert_btn.9.png" />
+    </ThemePage>
+
+    <ThemePage tag="短信" description="新建短信">
+
+        <image description="添加联系人icon" src="res/drawable-xxhdpi/ic_add_contact.png" />
+        <image description="输入号码后确定icon" src="res/drawable-xxhdpi/ic_confirm_recipient.png" />
+        <image description="收信人 按钮背景" src="res/drawable-xxhdpi/recipient_view_bg.9.png" />
+
+        <image description="气泡中语音icon 接收" src="res/drawable-xxhdpi/chat_icon_voice_in.png" />
+        <image description="气泡中语音icon 接收" src="res/drawable-xxhdpi/chat_icon_voice_in0.png" />
+        <image description="气泡中语音icon 接收" src="res/drawable-xxhdpi/chat_icon_voice_in1.png" />
+        <image description="气泡中语音icon 接收" src="res/drawable-xxhdpi/chat_icon_voice_in2.png" />
+
+        <image description="气泡中语音icon 发送" src="res/drawable-xxhdpi/chat_icon_voice_out.png" />
+        <image description="气泡中语音icon 发送" src="res/drawable-xxhdpi/chat_icon_voice_out0.png" />
+        <image description="气泡中语音icon 发送" src="res/drawable-xxhdpi/chat_icon_voice_out1.png" />
+        <image description="气泡中语音icon 发送" src="res/drawable-xxhdpi/chat_icon_voice_out2.png" />
+
+        <image description="输入框背景" src="res/drawable-xxhdpi/message_edit_bottom_panel.9.png" />
+        <image description="输入框" src="res/drawable-xxhdpi/compose_message_editor_bg.9.png" />
+        <image description="文字模式 icon" src="res/drawable-xxhdpi/message_edit_bottom_edit_mode.png" />
+        <image description="菜单模式 icon" src="res/drawable-xxhdpi/message_bottom_edit_mode.png" />
+        <image description="语音模式 icon" src="res/drawable-xxhdpi/ic_chat_icon_voice_n.png" />
+        <image description="添加附件 icon" src="res/drawable-xxhdpi/insert_attachment_button_n.png" />
+        <image description="输入框 幻灯片icon" src="res/drawable-xxhdpi/ic_attachment_slideshow.png" />
+
+        <image description="输入框中sim卡？ icon" src="res/drawable-xxhdpi/msg_edit_default.png" />
+        <image description="输入框中sim卡1 icon" src="res/drawable-xxhdpi/msg_edit_sim1.png" />
+        <image description="输入框中sim卡2 icon" src="res/drawable-xxhdpi/msg_edit_sim2.png" />
+
+        <image description="选择sim卡弹窗中sim卡1 icon" src="res/drawable-xxhdpi/sim1.png" />
+        <image description="选择sim卡弹窗中sim卡2 icon" src="res/drawable-xxhdpi/sim2.png" />
+
+        <image description="发送icon不可用" src="res/drawable-xxhdpi/ic_send_btn_disable.png" />
+        <image description="发送icon可用" src="res/drawable-xxhdpi/ic_send_btn_n.png" />
+
+        <image description="附件 表情" src="res/drawable-xxhdpi/ic_attach_smiley.png" />
+        <image description="附件 名片" src="res/drawable-xxhdpi/ic_attach_contact.png" />
+        <image description="附件 图片" src="res/drawable-xxhdpi/ic_attach_photo.png" />
+        <image description="附件 拍照" src="res/drawable-xxhdpi/ic_attach_take_photo.png" />
+        <image description="附件 我的收藏" src="res/drawable-xxhdpi/ic_attach_phrase.png" />
+        <image description="附件 定时" src="res/drawable-xxhdpi/ic_attach_timing.png" />
+        <image description="附件 主题" src="res/drawable-xxhdpi/ic_attach_subject.png" />
+        <image description="附件 音频" src="res/drawable-xxhdpi/ic_attach_sound.png" />
+        <image description="附件 视频" src="res/drawable-xxhdpi/ic_attach_video.png" />
+        <image description="附件 幻灯片" src="res/drawable-xxhdpi/ic_attach_slide_show.png" />
+
+        <image description="编辑幻灯片 列表幻灯片icon" src="res/drawable-xxhdpi/ic_attach_slide_show_new.png" />
+        <image description="编辑幻灯片 添加图片icon" src="res/drawable-xxhdpi/slide_image_empty.png" />
+    </ThemePage>
+
+    <ThemePage tag="短信" description="其他">
+        <image description="弹窗回复/弹窗背景" src="res/drawable-xxhdpi/new_message_popup_bg.9.png" />
+        <image description="高级设置 已读报告 自动下载sim卡1 icon" src="res/drawable-xxhdpi/sim_card_1.png" />
+        <image description="高级设置 已读报告 自动下载sim卡2 icon" src="res/drawable-xxhdpi/sim_card_2.png" />
+        <image description="通知类消息 上下箭头选择器" src="res/drawable-xxhdpi/dropdown_indicator_down.9.png" />
+    </ThemePage>
+
+</GeneralTemplate>

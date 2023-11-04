@@ -1,0 +1,174 @@
+<GeneralTemplate>
+    <ThemePage tag="电话" description="全局">
+        <image description="大背景" src="res/drawable-xxhdpi/miuix_appcompat_window_bg_light.9.png" />
+        <image description="顶栏背景" src="res/drawable-xxhdpi/miuix_appcompat_action_mode_bg_light.9.png" />
+        <!-- <image description="底栏背景" src="res/drawable-xxhdpi/miuix_appcompat_action_button_bg.9.png" /> -->
+        <image description="点击搜索后过渡背景" src="res/drawable-xxhdpi/miuix_appcompat_window_search_mask.9.png" />
+        <!-- <image description="搜索结果 顶栏背景 （不可透明；点9显示区域边距：底部左侧留70px、右侧底部留36px）" src="res/drawable-xxhdpi/miuix_appcompat_search_mode_input_bg_light.9.png" /> -->
+        <image description="搜索条背景" src="res/drawable-xxhdpi/miuix_appcompat_search_mode_bg_light.9.png" />
+        <image description="搜索条" src="res/drawable-xxhdpi/miuix_appcompat_search_mode_edit_text_bg_light.9.png" />
+        <image description="搜索条 放大镜" src="res/drawable-xxhdpi/miuix_appcompat_ic_edit_text_search_light.png" />
+        <image description="联系人 多选 搜索条 放大镜" src="res/drawable-xxhdpi/edit_text_search.png" />
+        <image description="搜索条 删除按钮" src="res/drawable-xxhdpi/miuix_appcompat_edit_text_clear_btn_light.png" />
+        <image description="搜索结果 删除图标" src="res/drawable-xxhdpi/ic_history_delete.png" />
+        <!-- <image description="联系人 多选 搜索条" src="res/drawable-xxhdpi/search_mode_edit_text_bg_light.9.png" /> -->
+
+        <image description="悬浮按钮背景" src="res/drawable-xxhdpi/contact_fab_bg.png" />
+        <image description="拨号盘展开 图标" src="res/drawable-xxhdpi/action_button_open_dialpad_normal_light.png" />
+        <image description="新建联系人 “+” 号" src="res/drawable-xxhdpi/miuix_appcompat_action_button_main_new.png" />
+
+        <image description="通话列表右箭头icon 常态" src="res/drawable-xxhdpi/miuix_appcompat_btn_inline_detail_normal_light.png" />
+        <image description="通话列表右箭头icon 按下" src="res/drawable-xxhdpi/miuix_appcompat_btn_inline_detail_pressed_light.png" />
+        <image description="SIM卡1 小图标" src="res/drawable-xxhdpi/sim1_new.png" />
+        <image description="SIM卡2 小图标" src="res/drawable-xxhdpi/sim2_new.png" />
+        <!-- <image description="近手弹窗、右上角 更多菜单背景（若无特殊设计，建议不替换素材资源）" src="res/drawable-xxhdpi/miuix_appcompat_immersion_window_bg_light.9.png" /> -->
+
+        <image description="联系人 空页面" src="res/drawable-xxhdpi/no_contact.png" />
+        <image description="通话记录 空页面" src="res/drawable-xxhdpi/no_call_log.png" />
+        <image description="营业厅充值记录 空页面" src="res/drawable-xxhdpi/bh_icon_order_no.png" />
+        <image description="无网络链接 空页面" src="res/drawable-xxhdpi/icon_network_failure.png" />
+
+        <image description="返回icon" src="res/drawable-xxhdpi/miuix_action_icon_back_light.png" />
+        <image description="右上角设置icon" src="res/drawable-xxhdpi/action_mode_immersion_setting.png" />
+        <image description="新建群组/添加icon" src="res/drawable-xxhdpi/miuix_action_icon_new_light.png" />
+        <image description="我的群组右上角新建icon" src="res/drawable-xxhdpi/action_icon_new_light.png" />
+        <image description="重命名icon" src="res/drawable-xxhdpi/miuix_action_icon_rename_light.png" />
+        <image description="删除icon" src="res/drawable-xxhdpi/miuix_action_icon_delete_light.png" />
+        <image description="取消全选icon" src="res/drawable-xxhdpi/miuix_action_icon_deselect_all_light.png" />
+        <image description="全选icon" src="res/drawable-xxhdpi/miuix_action_icon_select_all_light.png" />
+        <image description="取消icon" src="res/drawable-xxhdpi/action_mode_title_button_cancel.png" />
+        <image description="确认常态icon" src="res/drawable-xxhdpi/action_button_done_normal_light_v2.png" />
+        <image description="确认二态icon" src="res/drawable-xxhdpi/action_button_done_pressed_light_v2.png" />
+        <image description="新建联系人取消icon" src="res/drawable-xxhdpi/miuix_action_icon_cancel_light.png" />
+        <image description="新建联系人确认icon" src="res/drawable-xxhdpi/miuix_action_icon_confirm_light.png" />
+        <image description="通话录音常态icon" src="res/drawable-xxhdpi/action_button_call_record_normal_light.png" />
+        <image description="通话录音二态icon" src="res/drawable-xxhdpi/action_button_call_record_pressed_light.png" />
+        <image description="通话笔记常态icon" src="res/drawable-xxhdpi/action_button_call_notes_normal_light.png" />
+        <image description="通话笔记二态icon" src="res/drawable-xxhdpi/action_button_call_notes_pressed_light.png" />
+        <image description="群发短信icon" src="res/drawable-xxhdpi/ic_menu_group_sms.png" />
+        <image description="批量设铃声icon" src="res/drawable-xxhdpi/ic_menu_group_ringtone.png" />
+        <image description="云服务同步icon" src="res/drawable-xxhdpi/miuix_appcompat_unsync_light.png" />
+        <image description="右上角更多icon" src="res/drawable-xxhdpi/miuix_action_icon_immersion_more_light.png" />
+        <image description="编辑icon" src="res/drawable-xxhdpi/miuix_action_icon_edit_light.png" />
+        <image description="已收藏icon遮罩" src="res/drawable-xxhdpi/ic_contact_detail_option_lock.png" />
+        <image description="未收藏icon" src="res/drawable-xxhdpi/ic_contact_detail_option_unlock.png" />
+        <image description="多选联系人底部删除icon常态" src="res/drawable-xxhdpi/action_button_delete_normal_light_v2.png" />
+        <image description="多选联系人底部删除icon二态" src="res/drawable-xxhdpi/action_button_delete_pressed_light_v2.png" />
+        <image description="多选联系人底部删除icon不可用" src="res/drawable-xxhdpi/action_button_delete_disable_light_v2.png" />
+        <image description="合并联系人提示信息感叹号icon" src="res/drawable-xxhdpi/merge_contact_info.png" />
+        <image description="合并联系人icon" src="res/drawable-xxhdpi/action_button_merge_normal_light_v2.png" />
+        <image description="合并联系人icon" src="res/drawable-xxhdpi/action_button_merge_pressed_light_v2.png" />
+        <image description="导入联系人icon" src="res/drawable-xxhdpi/ic_edit_mode_sim_import.png" />
+
+        <image description="底tab背景" src="res/drawable-xxhdpi/bottom_navigation_background.9.png" />
+        <image description="底tab拨号icon 形状" src="res/drawable-xxhdpi/ic_bottom_tab_dial.png" />
+        <image description="底tab拨号icon 选中 形状" src="res/drawable-xxhdpi/ic_bottom_tab_dial_selected.png" />
+        <image description="底tab联系人icon 形状" src="res/drawable-xxhdpi/ic_bottom_tab_contacts.png" />
+        <image description="底tab联系人icon 选中 形状" src="res/drawable-xxhdpi/ic_bottom_tab_contacts_selected.png" />
+        <image description="底tab营业厅icon 形状" src="res/drawable-xxhdpi/ic_bottom_tab_business.png" />
+        <image description="底tab营业厅icon 选中 形状" src="res/drawable-xxhdpi/ic_bottom_tab_business_selected.png" />
+    </ThemePage>
+
+    <ThemePage tag="电话" description="单卡拨号盘">
+        <image description="输入号码 顶栏背景" src="res/drawable-xxhdpi/dialer_title_bg.9.png" />
+        <image description="拨号时电话号码背景" src="res/drawable-xxhdpi/dialerpad_background.9.png" />
+        <image description="清空按钮 常态" src="res/drawable-xxhdpi/dialer_digits_clear_btn_normal.png" />
+        <image description="清空按钮 二态" src="res/drawable-xxhdpi/dialer_digits_clear_btn_pressed.png" />
+
+        <image description="拨号按钮背景" src="res/drawable-xxhdpi/dialer_btn_call_bg.png" />
+        <image description="拨号按钮 常态" src="res/drawable-xxhdpi/dialer_btn_call_normal.png" />
+        <image description="拨号按钮 二态" src="res/drawable-xxhdpi/dialer_btn_call_pressed.png" />
+        <image description="菜单 常态" src="res/drawable-xxhdpi/dialer_btn_menu_dialpad_normal.9.png" />
+        <image description="菜单 二态" src="res/drawable-xxhdpi/dialer_btn_menu_dialpad_pressed.9.png" />
+        <image description="收起键盘 常态" src="res/drawable-xxhdpi/dialer_btn_close_dialpad_normal.9.png" />
+        <image description="收起键盘 二态" src="res/drawable-xxhdpi/dialer_btn_close_dialpad_pressed.9.png" />
+
+        <image description="拨号数字 0" src="res/drawable-xxhdpi/dial_num_0.png" />
+        <image description="拨号数字 1" src="res/drawable-xxhdpi/dial_num_1.png" />
+        <image description="拨号数字 2" src="res/drawable-xxhdpi/dial_num_2.png" />
+        <image description="拨号数字 3" src="res/drawable-xxhdpi/dial_num_3.png" />
+        <image description="拨号数字 4" src="res/drawable-xxhdpi/dial_num_4.png" />
+        <image description="拨号数字 5" src="res/drawable-xxhdpi/dial_num_5.png" />
+        <image description="拨号数字 6" src="res/drawable-xxhdpi/dial_num_6.png" />
+        <image description="拨号数字 7" src="res/drawable-xxhdpi/dial_num_7.png" />
+        <image description="拨号数字 8" src="res/drawable-xxhdpi/dial_num_8.png" />
+        <image description="拨号数字 9" src="res/drawable-xxhdpi/dial_num_9.png" />
+        <image description="拨号数字 *" src="res/drawable-xxhdpi/dial_num_star.png" />
+        <image description="拨号数字 #" src="res/drawable-xxhdpi/dial_num_pound.png" />
+        <image description="拨号数字 按下" src="res/drawable-xxhdpi/dialer_button_pressed.9.png" />
+
+        <image description="加载icon" src="res/drawable-xxhdpi/miuix_appcompat_progressbar_indeterminate_circle_light.png" />
+        <image description="VoLTE电话会议icon" src="res/drawable-xxhdpi/dialer_menu_volte_fixed.png" />
+        <image description="骚扰拦截icon" src="res/drawable-xxhdpi/dialer_menu_blocklist_fixed.png" />
+        <image description="AI通话icon" src="res/drawable-xxhdpi/dialer_menu_xiaoaiphone_fixed.png" />
+        <image description="设置icon" src="res/drawable-xxhdpi/miuix_action_icon_settings_light.png" />
+        <image description="号码识别图标icon" src="res/drawable-xxhdpi/dialer_menu_identify_numbers_fixed.png" />
+        <image description="菜单" src="res/drawable-xxhdpi/dialer_menu_business_fixed.png" />
+    </ThemePage>
+    <ThemePage tag="电话" description="双卡拨号盘">
+        <image description="卡 1 常态" src="res/drawable-xxhdpi/btn_call_sim1_normal.9.png" />
+        <image description="卡 1 二态" src="res/drawable-xxhdpi/btn_call_sim1_press.9.png" />
+        <image description="卡 2 常态" src="res/drawable-xxhdpi/btn_call_sim2_normal.9.png" />
+        <image description="卡 2 二态" src="res/drawable-xxhdpi/btn_call_sim2_press.9.png" />
+        <image description="双卡拨号键盘菜单 常态" src="res/drawable-xxhdpi/dual_dialer_btn_menu_dialpad_normal.9.png" />
+        <image description="双卡拨号键盘菜单 二态" src="res/drawable-xxhdpi/dual_dialer_btn_menu_dialpad_pressed.9.png" />
+        <image description="双卡拨号收起键盘 常态" src="res/drawable-xxhdpi/dual_dialer_btn_close_dialpad_normal.9.png" />
+        <image description="双卡拨号收起键盘 二态" src="res/drawable-xxhdpi/dual_dialer_btn_close_dialpad_pressed.9.png" />
+        <image description="拨号防火墙" src="res/drawable-xxhdpi/dialer_fire_wall.png" />
+        <image description="新建联系人icon" src="res/drawable-xxhdpi/dialer_ic_call_log_header_newcontact.png" />
+        <image description="语音信箱icon" src="res/drawable-xxhdpi/dialer_ic_call_log_header_voicemail.png" />
+        <image description="传出呼叫icon" src="res/drawable-xxhdpi/dialer_ic_call_log_header_outgoing_call.png" />
+        <image description="传入呼叫icon" src="res/drawable-xxhdpi/dialer_ic_call_log_header_incoming_call.png" />
+        <image description="传入呼叫转移icon" src="res/drawable-xxhdpi/dialer_ic_call_log_header_incoming_forwarding_call.png" />
+        <image description="传入未接呼叫icon" src="res/drawable-xxhdpi/dialer_ic_call_log_header_missed_call.png" />
+        <image description="传入未接呼叫转移icon" src="res/drawable-xxhdpi/dialer_ic_call_log_header_missed_forwarding_call.png" />
+    </ThemePage>
+    <ThemePage tag="电话" description="联系人列表">
+        <image description="无联系人时列表背景（无特殊设计不要修改）" src="res/drawable-xxhdpi/miuix_appcompat_window_bg_secondary_light.9.png" />
+        <image description="列表小标题背景" src="res/drawable-xxhdpi/list_view_item_group_header_bg_light.9.png" />
+        <image description="全部通话 展开提示icon" src="res/drawable-xxhdpi/miuix_appcompat_arrow_up_down.png" />
+        <image description="列表 文字头像背景" src="res/drawable-xxhdpi/word_photo_bg_light.png" />
+        <image description="列表头像 边框" src="res/drawable-xxhdpi/ic_contact_photo_fg.png" />
+        <image description="我的群组 公司" src="res/drawable-xxhdpi/company_group.png" />
+        <image description="我的群组 所在地" src="res/drawable-xxhdpi/location_group.png" />
+        <image description="我的群组 最近联系时间" src="res/drawable-xxhdpi/frequency_group.png" />
+        <image description="我的群组 头像背景" src="res/drawable-xxhdpi/group_photos_container_bg.png" />
+        <image description="多选 群组展开" src="res/drawable-xxhdpi/expander_open.png" />
+        <image description="多选 群组收起" src="res/drawable-xxhdpi/expander_close.png" />
+    </ThemePage>
+    <ThemePage tag="电话" description="联系人详情页">
+        <image description="详情页顶部大图(最大1080x918)" src="res/drawable-xxhdpi/contact_detail_default_photo.9.png" />
+        <image description="上滑后顶栏背景" src="res/drawable-xxhdpi/contact_detail_titlebar_cover_bg.9.png" />
+        <!-- <image description="详情页头像" src="res/drawable-xxhdpi/contact_detail_circle_photo.png" /> -->
+        <image description="详情页头像" src="res/drawable-xxhdpi/ic_contact_circle_photo.png" />
+        <image description="电话" src="res/drawable-xxhdpi/send_call_ic.png" />
+        <image description="短信" src="res/drawable-xxhdpi/send_sms_ic.png" />
+        <image description="视频" src="res/drawable-xxhdpi/send_video_ic.png" />
+        <!-- <image description="sim卡1" src="res/drawable-xxhdpi/sim1_new.png" /> -->
+        <!-- <image description="sim卡2" src="res/drawable-xxhdpi/sim2_new.png" /> -->
+    </ThemePage>
+    <ThemePage tag="电话" description="新建联系人">
+        <!-- <image description="新建联系人背景" src="res/drawable-xxhdpi/contact_edit_content_bg.9.png" /> -->
+        <image description="标题箭头" src="res/drawable-xxhdpi/editor_dropdown_indicator_down.png" />
+        <image description="标题箭头" src="res/drawable-xxhdpi/editor_dropdown_indicator_up.png" />
+        <image description="头像" src="res/drawable-xxhdpi/contact_detail_circle_photo_edit.png" />
+        <!-- <image description="头像下方背景" src="res/drawable-xxhdpi/contact_editor_photo_bg.png" /> -->
+        <image description="展开箭头" src="res/drawable-xxhdpi/btn_inline_expand_normal_light_vector.png" />
+        <image description="收起箭头" src="res/drawable-xxhdpi/btn_inline_shrink_normal_light_vector.png" />
+        <image description="选项框右侧 删除按钮 常态" src="res/drawable-xxhdpi/btn_inline_delete_normal_light.png" />
+        <image description="选项框右侧 删除按钮 二态" src="res/drawable-xxhdpi/btn_inline_delete_pressed_light.png" />
+        <image description="上下箭头选择器" src="res/drawable-xxhdpi/spinner_bg_edit_light.9.png" />
+        <image description="选择群组 底栏背景" src="res/drawable-xxhdpi/contact_detail_content_bg.9.png" />
+
+        <!-- <image description="标题箭头_n" src="res/drawable-xxhdpi/editor_dropdown_indicator_down_n.png" /> -->
+        <!-- <image description="标题箭头_p" src="res/drawable-xxhdpi/editor_dropdown_indicator_down_p.png" /> -->
+        <!-- <image description="标题箭头_n" src="res/drawable-xxhdpi/editor_dropdown_indicator_up_n.png" /> -->
+        <!-- <image description="标题箭头_p" src="res/drawable-xxhdpi/editor_dropdown_indicator_up_p.png" /> -->
+    </ThemePage>
+    <ThemePage tag="电话" description="营业厅">
+        <image description="sim卡1" src="res/drawable-xxhdpi/bh_ic_sim_one.png" />
+        <image description="sim卡2" src="res/drawable-xxhdpi/bh_ic_sim_two.png" />
+        <image description="流量卡片 设置icon" src="res/drawable-xxhdpi/bh_ic_setting.png" />
+        <image description="查余额右箭头 填写卡号右箭头mask" src="res/drawable-xxhdpi/bh_ic_goto.png" />
+    </ThemePage>
+</GeneralTemplate>

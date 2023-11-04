@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ThemePage tag="电话" description="营业厅">
+	<image description="sim卡1" src="res/drawable-xxhdpi/bh_ic_sim_one.png"/>
+	<image description="sim卡2" src="res/drawable-xxhdpi/bh_ic_sim_two.png"/>
+	<image description="流量卡片 设置icon" src="res/drawable-xxhdpi/bh_ic_setting.png"/>
+	<image description="查余额右箭头 填写卡号右箭头mask" src="res/drawable-xxhdpi/bh_ic_goto.png"/>
+</ThemePage>

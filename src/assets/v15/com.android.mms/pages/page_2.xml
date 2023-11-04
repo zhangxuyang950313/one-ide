@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ThemePage tag="短信" description="短信对话">
+	<image description="收到短信气泡" src="res/drawable-xxhdpi/message_bubble_in_bg_n.9.png"/>
+	<image description="发送 普通短信气泡" src="res/drawable-xxhdpi/message_bubble_out_bg_n.9.png"/>
+	<image description="发送 网络短信气泡" src="res/drawable-xxhdpi/mi_message_bubble_out_bg_n.9.png"/>
+	<image description="发送 发送失败气泡" src="res/drawable-xxhdpi/message_bubble_out_last_bg.9.png"/>
+	<image description="联系人联想背景，群发失败联系人背景" src="res/drawable-xxhdpi/recipient_bg.9.png"/>
+	<image description="联系人联想,群发失败列表背景" src="res/drawable-xxhdpi/recipient_item_bg.9.png"/>
+	<image description="群发失败 下拉箭头" src="res/drawable-xxhdpi/show_contact_info_unchecked.png"/>
+	<image description="群发失败 收起箭头" src="res/drawable-xxhdpi/show_contact_info_checked.png"/>
+	<image description="群发失败 重发/不发了按钮背景" src="res/drawable-xxhdpi/alert_btn.9.png"/>
+</ThemePage>

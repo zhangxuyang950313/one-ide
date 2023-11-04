@@ -1,0 +1,20 @@
+<GeneralTemplate>
+    <ThemePage tag="手机管家" description="常驻通知" page="framework-res">
+        <image description="内存清理 常态icon" src="res/drawable-xxhdpi/icon_optimize_normal_notification.png" />
+        <image description="内存清理 黄色icon" src="res/drawable-xxhdpi/icon_optimize_origan_notification.png" />
+        <image description="内存清理 红色icon" src="res/drawable-xxhdpi/icon_optimize_red_notification.png" />
+        <image description="垃圾清理 常态icon" src="res/drawable-xxhdpi/icon_cleaner_normal_notification.png" />
+        <image description="垃圾清理 红色icon" src="res/drawable-xxhdpi/icon_cleaner_red_notification.png" />
+        <image description="游戏加速 icon" src="res/drawable-xxhdpi/icon_gamebox_normal_notification.png" />
+    </ThemePage>
+    <ThemePage tag="手机管家" description="桌面快捷方式" page="framework-res">
+        <image description="垃圾清理" src="res/drawable-xxhdpi/ic_launcher_rubbish_clean.png" />
+        <image description="网络助手 " src="res/drawable-xxhdpi/ic_launcher_network_assistant.png" />
+        <image description="骚扰拦截 " src="res/drawable-xxhdpi/ic_launcher_anti_spam.png" />
+        <image description="省电优化 " src="res/drawable-xxhdpi/ic_launcher_power_optimize.png" />
+        <image description="病毒扫描 " src="res/drawable-xxhdpi/ic_launcher_virus_scan.png" />
+        <image description="网络诊断 " src="res/drawable-xxhdpi/ic_launcher_network_diagnostics.png" />
+        <image description="红包助手 " src="res/drawable-xxhdpi/hongbao_launcher.png" />
+        <image description="自动任务 " src="res/drawable-xxhdpi/auto_task_shortcut.png" />
+    </ThemePage>
+</GeneralTemplate>

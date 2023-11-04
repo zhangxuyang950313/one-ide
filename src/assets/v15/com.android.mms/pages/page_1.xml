@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ThemePage tag="短信" description="首页">
+	<image description="编辑icon" src="res/drawable-xxhdpi/conversation_draft_indicator.png"/>
+	<image description="红色感叹号icon" src="res/drawable-xxhdpi/conversation_error_indicator.png"/>
+	<image description="列表 sim1 icon" src="res/drawable-xxhdpi/sim1_indicator.png"/>
+	<image description="列表 sim2 icon" src="res/drawable-xxhdpi/sim2_indicator.png"/>
+	<image description="附件 icon" src="res/drawable-xxhdpi/conversation_attachment_indicator.png"/>
+	<image description="列表右箭头" src="res/drawable-xxhdpi/miuix_appcompat_arrow_right.png"/>
+	<image description="新建+号 背景" src="res/drawable-xxhdpi/miuix_appcompat_fab_empty_holder.png"/>
+	<image description="新建+号" src="res/drawable-xxhdpi/miuix_appcompat_action_button_main_new.png"/>
+</ThemePage>

@@ -1,0 +1,7 @@
+<Theme>
+    <integer title="状态栏样式" name="window_translucent_status" value="1,2" description="1 黑色图标、文字，透明背景；2 白色图标和文字，透明背景；0 白色图标，黑色背景" />
+    <integer title="复选框（未选）背景透明度 常态" name="checkwidget_background_normal_alpha_light" value="25,25" description="取值范围：0-255" />
+    <integer title="复选框（未选）背景透明度 不可用" name="checkwidget_background_disable_alpha_light" value="12,12" description="取值范围：0-255" />
+    <integer title="复选框（未选）描边透明度 常态" name="checkwidget_stroke_normal_alpha_light" value="50,50" description="取值范围：0-255" />
+    <integer title="复选框（未选）描边透明度 不可用" name="checkwidget_stroke_disable_alpha_light" value="25,25" description="取值范围：0-255" />
+</Theme>

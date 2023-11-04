@@ -1,0 +1,76 @@
+<Configuration name="小米主题">
+
+    <!-- 
+        文件模板 
+        type: 指定的编辑器，  info (工程信息编辑器)
+    -->
+    <FileTemplate output="./description.xml" type="info">
+        <Template>
+            <?xml version="1.0" encoding="utf-8"?>
+            <MIUI-Theme>
+                <title>${name}</title>
+                <designer>${designer}</designer>
+                <author>${author}</author>
+                <version>${version}</version>
+                <uiVersion>${uiVersion}</uiVersion>
+            </MIUI-Theme>
+        </Template>
+        <Items>
+            <Item name="name"       description="名称" type=""/>
+            <Item name="designer"   description="设计师"/>
+            <Item name="author"     description="制作者"/>
+            <Item name="version"    description="版本号"/>
+            <Item name="uiVersion"  description="UI版本" disabled="true" visible="false"/>
+        </Items>
+    </FileTemplate>
+
+    <!-- 编辑器资源配置 -->
+    <ResourceConfig src="xiaomi/miui12/description.xml"/>
+<!--    <ResourceConfig src="xiaomi/miui12/description.xml"/>-->
+<!--    <ResourceConfig src="xiaomi/miui12/description.xml"/>-->
+
+    <!-- 
+        打包配置 
+        format:         打包格式 zip | tar (默认 zip)
+        extname:        打包后扩展名 (默认 zip)
+        execute9patch:  处理.9信息 (默认 true)
+    -->
+    <PackageConfig extname="mtz" execute9patch="true">
+        <!-- 
+            匹配不打包的规则 
+            regex:      正则表达式
+            pattern:    匹配模式（暂不支持)
+        -->
+        <Exclude regex="^\..+" pattern=".DS_Store"/>
+        <!-- 
+            打包步骤
+            type:  pack | copy     打包文件类型标识， pack 打包，copy 复制
+            dir:                   内联打包目录
+            pattern:               匹配模式
+        -->
+        <Step type="pack" dir="clock_2x4"/>
+        <Step type="pack" dir="com.*"/>
+        <Step type="pack" dir="icons"/>
+        <Step type="pack" dir="framework*"/>
+        <Step type="pack" dir="lockscreen"/>
+        <Step type="copy" dir="wallpaper"/>
+        <Step type="copy" dir="." pattern="*.xml"/>
+    </PackageConfig>
+
+    <!-- 应用配置 -->
+    <ApplyConfig>
+        <!-- 
+            编辑器打包时包含环境变量：
+            packaged_path:      本地打包后的文件路径(固定写法，用于编辑器指定)
+            select_device_id:   当前选择应用的设备 id
+        -->
+        <Step 
+            description="推送到手机..." 
+            cmd="${adb_path} -s ${select_device_id} push ${packaged_path} /sdcard/mi-theme.mtz"
+        />
+        <Step 
+            description="应用到主题..." 
+            cmd="${adb_path} -s ${select_device_id} shell am start -n com.android.thememanager/com.android.thememanager.ApplyThemeForScreenshot -e theme_file_path /sdcard/mi-theme.mtz -e api_called_from OneThemeEditor"
+        />
+    </ApplyConfig>
+</Configuration>

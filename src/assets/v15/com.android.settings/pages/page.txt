@@ -1,0 +1,146 @@
+<GeneralTemplate>
+    <ThemePage tag="设置" description="全局">
+        <image description="大背景" src="res/drawable-xxhdpi/miuix_appcompat_settings_window_bg_light.9.png" />
+        <image description="顶栏背景" src="res/drawable-xxhdpi/miuix_appcompat_search_mode_input_bg_light.9.png" />
+        <image description="搜索条" src="res/drawable-xxhdpi/miuix_appcompat_search_mode_edit_text_bg_light.9.png" />
+        <image description="搜索条 放大镜" src="res/drawable-xxhdpi/miuix_appcompat_ic_edit_text_search_light.png" />
+        <image description="搜索条 删除按钮" src="res/drawable-xxhdpi/miuix_appcompat_edit_text_clear_btn_light.png" />
+        <image description="点击搜索过渡背景" src="res/drawable-xxhdpi/miuix_appcompat_window_search_mask.9.png" />
+
+        <image description="首页列表右箭头" src="res/drawable-xxhdpi/miuix_appcompat_intent_arrow_right.png" />
+        <image description="列表右箭头（带圆圈 未连接wifi列表" src="res/drawable-xxhdpi/miuix_preference_ic_detail_disconnected_light.png" />
+        <image description="列表右箭头disable（带圆圈 色彩风格" src="res/drawable-xxhdpi/miuix_appcompat_btn_inline_detail_disable_light.png" />
+        <image description="列表右箭头normal（带圆圈 色彩风格" src="res/drawable-xxhdpi/miuix_appcompat_btn_inline_detail_normal_light.png" />
+        <image description="列表右箭头pressed（带圆圈 色彩风格" src="res/drawable-xxhdpi/miuix_appcompat_btn_inline_detail_pressed_light.png" />
+
+        <image description="我的设备 os logo（不允许修改，默认即可）" src="res/drawable-xxhdpi/xiaomi_os_logo.png" />
+        <image description="我的设备 电池icon" src="res/drawable-xxhdpi/device_description_battery.png" />
+        <image description="我的设备 相机icon" src="res/drawable-xxhdpi/device_description_camera.png" />
+        <image description="我的设备 cpu icon" src="res/drawable-xxhdpi/device_description_cpu.png" />
+        <image description="我的设备 设备icon" src="res/drawable-xxhdpi/device_description_model.png" />
+        <image description="我的设备 ram icon" src="res/drawable-xxhdpi/device_description_ram.png" />
+        <image description="我的设备 分辨率icon" src="res/drawable-xxhdpi/device_description_resolution.png" />
+        <image description="我的设备 屏幕尺寸icon" src="res/drawable-xxhdpi/device_description_screen.png" />
+        <image description="我的设备卡片 列表右箭头" src="res/drawable-xxhdpi/miuix_appcompat_arrow_right.png" />
+
+        <image description="返回icon" src="res/drawable-xxhdpi/miuix_action_icon_back_light.png" />
+        <image description="取消icon" src="res/drawable-xxhdpi/action_mode_title_button_cancel.png" />
+        <image description="紧急联系人顶部取消icon" src="res/drawable-xxhdpi/miuix_action_icon_immersion_close_light.png" />
+        <image description="确认icon" src="res/drawable-xxhdpi/action_mode_title_button_confirm.png" />
+        <image description="紧急联系人顶部确认icon" src="res/drawable-xxhdpi/miuix_action_icon_immersion_done_light.png" />
+        <image description="全选icon" src="res/drawable-xxhdpi/action_mode_title_button_select_all.png" />
+        <image description="添加，新建icon" src="res/drawable-xxhdpi/action_button_new.png" />
+        <image description="更多icon" src="res/drawable-xxhdpi/miuix_action_icon_more_light.png" />
+        <image description="编辑icon" src="res/drawable-xxhdpi/action_button_edit.png" />
+        <image description="设置icon" src="res/drawable-xxhdpi/miuix_action_icon_settings_light.png" />
+        <image description="重置icon 常态" src="res/drawable-xxhdpi/action_button_clear_normal.png" />
+        <image description="重置icon 按下" src="res/drawable-xxhdpi/action_button_clear_pressed.png" />
+        <image description="扫一扫icon" src="res/drawable-xxhdpi/miuix_action_icon_scan_light.png" />
+
+        <image description="搜索空页面icon" src="res/drawable-xxhdpi/search_list_empty.png" />
+        <image description="蓝牙空页面icon" src="res/drawable-xxhdpi/blank_screen_icon.png" />
+
+        <image description="加载圆圈" src="res/drawable-xxhdpi/miuix_appcompat_progressbar_indeterminate_circle_light.png" />
+        <image description="系统打印服务 正在搜索打印机icon" src="res/drawable-xxhdpi/ic_printer_search.png" />
+        <image description="状态栏电量样式 圆形方式（显示-控制中心与状态栏-状态栏电量样式）" src="res/drawable-xxhdpi/battery_indicator_graphic.png" />
+        <image description="状态栏电量样式 数字方式（电池内部）" src="res/drawable-xxhdpi/battery_indicator_percent_in.png" />
+        <image description="状态栏电量样式 数字方式（电池外部）" src="res/drawable-xxhdpi/battery_indicator_percent_out.png" />
+    </ThemePage>
+
+    <ThemePage tag="设置" description="首页列表ICON">
+        <image description="我的设备" src="res/drawable-xxhdpi/ic_my_device.png" />
+        <image description="WLAN" src="res/drawable-xxhdpi/ic_wifi_settings.png" />
+        <image description="蓝牙" src="res/drawable-xxhdpi/ic_bluetooth_settings.png" />
+        <image description="移动网络" src="res/drawable-xxhdpi/ic_settings_dualsim.png" />
+        <image description="互联互通" src="res/drawable-xxhdpi/ic_interconnection.png" />
+        <image description="个人热点" src="res/drawable-xxhdpi/ic_portable_wlan_hotspot_settings.png" />
+        <image description="VPN" src="res/drawable-xxhdpi/ic_vpn.png" />
+        <image description="更多连接" src="res/drawable-xxhdpi/ic_device_connection.png" />
+        <image description="壁纸与个性化" src="res/drawable-xxhdpi/com_android_thememanager.png" />
+        <image description="息屏与锁屏" src="res/drawable-xxhdpi/ic_unlock_set_settings.png" />
+        <image description="显示" src="res/drawable-xxhdpi/ic_display_settings.png" />
+        <image description="声音与震动" src="res/drawable-xxhdpi/ic_sound_settings.png" />
+        <image description="控制与通知中心" src="res/drawable-xxhdpi/ic_notification_center.png" />
+        <image description="桌面" src="res/drawable-xxhdpi/ic_miui_home_settings.png" />
+        <image description="指纹人脸与密码" src="res/drawable-xxhdpi/ic_security_settings_settings.png" />
+        <image description="安全" src="res/drawable-xxhdpi/ic_security_center_settings.png" />
+        <image description="隐私保护" src="res/drawable-xxhdpi/ic_privacy_protection.png" />
+        <image description="省电与电池" src="res/drawable-xxhdpi/ic_battery_settings.png" />
+        <image description="应用设置" src="res/drawable-xxhdpi/ic_system_app_settings.png" />
+        <image description="更多设置" src="res/drawable-xxhdpi/ic_other_advanced_settings.png" />
+        <image description="背屏" src="res/drawable-xxhdpi/dynamic_item_icon.png" />
+        <image description="小爱同学" src="res/drawable-xxhdpi/xiaoai.png" />
+        <image description="钱包" src="res/drawable-xxhdpi/wallet_icon.png" />
+        <image description="屏幕时间管理" src="res/drawable-xxhdpi/ic_app_timer.png" />
+        <image description="账号与同步" src="res/drawable-xxhdpi/ic_account_settings.png" />
+        <image description="问题反馈" src="res/drawable-xxhdpi/ic_bugreport_settings.png" />
+        <image description="我的服务" src="res/drawable-xxhdpi/ic_vip_service_settings.png" />
+    </ThemePage>
+
+    <ThemePage tag="设置" description="指纹、面部与密码">
+        <!-- <image description="密码与安全卡片背景 未开启" src="res/drawable-xxhdpi/card_shape_corner.9.png" /> -->
+        <!-- <image description="密码与安全卡片背景 已开启" src="res/drawable-xxhdpi/card_checked_corner.9.png" /> -->
+
+        <image description="密码不可见" src="res/drawable-xxhdpi/miuix_appcompat_default_ic_invisible_light.png" />
+        <image description="密码可见" src="res/drawable-xxhdpi/miuix_appcompat_default_ic_visible_light.png" />
+
+        <image description="密码类型icon 密码解锁 关" src="res/drawable-xxhdpi/ic_password_unlock.png" />
+        <image description="密码类型icon 密码解锁 开" src="res/drawable-xxhdpi/ic_password_unlock_checked.png" />
+        <image description="密码类型icon 指纹解锁 关" src="res/drawable-xxhdpi/ic_finger_unlock.png" />
+        <image description="密码类型icon 指纹解锁 开" src="res/drawable-xxhdpi/ic_finger_unlock_checked.png" />
+        <image description="密码类型icon 人脸解锁 关" src="res/drawable-xxhdpi/ic_face_unlock.png" />
+        <image description="密码类型icon 人脸解锁 开" src="res/drawable-xxhdpi/ic_face_unlock_checked.png" />
+        <image description="密码类型icon 蓝牙解锁 关" src="res/drawable-xxhdpi/ic_bluetooth_unlock.png" />
+        <image description="密码类型icon 蓝牙解锁 开" src="res/drawable-xxhdpi/ic_bluetooth_unlock_checked.png" />
+        <image description="密码解锁 图案密码icon 未选（更换锁屏密码页面卡片内icon）" src="res/drawable-xxhdpi/ic_unlock_pattern_icon.png" />
+        <image description="密码解锁 图案密码icon 选中" src="res/drawable-xxhdpi/ic_unlock_pattern_icon_selected.png" />
+        <image description="密码解锁 数字密码icon 未选" src="res/drawable-xxhdpi/ic_unlock_pin_icon.png" />
+        <image description="密码解锁 数字密码icon 选中" src="res/drawable-xxhdpi/ic_unlock_pin_icon_selected.png" />
+        <image description="密码解锁 混合密码icon 未选" src="res/drawable-xxhdpi/ic_unlock_password_icon.png" />
+        <image description="密码解锁 混合密码icon 选中" src="res/drawable-xxhdpi/ic_unlock_password_icon_selected.png" />
+        <image description="紧急求助 操作示意图" src="res/drawable-xxhdpi/sos_direction_back.png" />
+        <image description="添加账号 +（账号与同步）" src="res/drawable-xxhdpi/ic_menu_add.png" />
+        <image description="指纹录入成功 图标（后置指纹）" src="res/drawable-xxhdpi/new_fingerprint_finish.png" />
+        <image description="设置icon（文字转语音（TTS）输出-首选引擎）" src="res/drawable-xxhdpi/ic_settings_accent.png" />
+        <image description="多用户 弹窗 头像选择背景（开发者选项-关闭MIUI优化-设置首页-多用户-个人资料信息弹窗-点击头像弹出）" src="res/drawable-xxhdpi/popup_background.9.png" />
+        <image description="图案密码 小圆点" src="res/drawable-xxhdpi/lock_pattern_code_lock_touched_holo.png" />
+    </ThemePage>
+
+    <ThemePage tag="设置" description="字体样式和大小">
+        <image description="右箭头 常态" src="res/drawable-xxhdpi/btn_inline_detail_normal_light.png" />
+        <image description="右箭头 二态" src="res/drawable-xxhdpi/btn_inline_detail_pressed_light.png" />
+        <image description="字体样式和大小 大" src="res/drawable-xxhdpi/ic_a_big.png" />
+        <image description="字体样式和大小 小" src="res/drawable-xxhdpi/ic_a_small.png" />
+        <image description="字体样式和大小 粗" src="res/drawable-xxhdpi/texticon_thick.png" />
+        <image description="字体样式和大小 细" src="res/drawable-xxhdpi/texticon_thin.png" />
+        <image description="字体大小 列表背景（调节至巨无霸大时“无障碍-显示大小”文字视图预览背景）" src="res/drawable-xxhdpi/font_view_call_background.9.png" />
+        <image description="字体大小 更小（无障碍-显示大小）" src="res/drawable-xxhdpi/ic_zoom_smaller.png" />
+        <image description="字体大小 更大（无障碍-显示大小）" src="res/drawable-xxhdpi/ic_zoom_bigger.png" />
+        <image description="设置-字体设置-右侧按钮icon" src="res/drawable-xxhdpi/points3_bg.png" />
+    </ThemePage>
+
+    <ThemePage tag="设置" description="声音与触感">
+        <image description="卡片 通知提醒icon" src="res/drawable-xxhdpi/ic_ringtone_notification.png" />
+        <image description="卡片 电话铃声icon" src="res/drawable-xxhdpi/ic_telephone_ring.png" />
+        <image description="卡片 闹钟铃声icon" src="res/drawable-xxhdpi/ic_alarms_ring.png" />
+        <image description="媒体 icon" src="res/drawable-xxhdpi/media_volume_icon.png" />
+        <image description="铃声 icon" src="res/drawable-xxhdpi/ring_volume_icon.png" />
+        <image description="闹钟 icon" src="res/drawable-xxhdpi/alarm_volume_icon.png" />
+        <image description="小爱同学 icon" src="res/drawable-xxhdpi/xiaoai_volume_icon.png" />
+        <!-- <image description="触感强度 icon" src="res/drawable-xxhdpi/ic_haptic_feedback.png" /> -->
+    </ThemePage>
+
+    <ThemePage tag="设置" description="通知栏与状态栏">
+        <image description="通知与控制中心-锁屏通知背景" src="res/drawable-xxhdpi/ic_lock_screen_notification.png" />
+        <image description="通知与控制中心-悬浮通知背景" src="res/drawable-xxhdpi/ic_float_notification.png" />
+        <image description="通知与控制中心-桌面角标背景" src="res/drawable-xxhdpi/ic_notification_badge.png" />
+        <image description="不隐藏刘海（状态栏-隐藏屏幕刘海）" src="res/drawable-xxhdpi/notch_style_show.png" />
+        <image description="隐藏后状态栏在刘海内（状态栏-隐藏屏幕刘海）" src="res/drawable-xxhdpi/notch_style_status_bar_inside.png" />
+        <image description="隐藏后状态栏在刘海外（状态栏-隐藏屏幕刘海，最新版本系统已去掉该选项）" src="res/drawable-xxhdpi/notch_style_status_bar_outside.png" />
+    </ThemePage>
+
+    <ThemePage tag="设置" description="护眼模式">
+        <image description="调节色温icon（护眼模式-经典护眼）" src="res/drawable-xxhdpi/temperature_icon.png" />
+        <image description="纸质纹理icon（护眼模式-经典护眼）" src="res/drawable-xxhdpi/texture_icon.png" />
+    </ThemePage>
+</GeneralTemplate>

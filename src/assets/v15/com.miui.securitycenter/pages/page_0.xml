@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ThemePage tag="手机管家" description="常驻通知" page="framework-res">
+	<image description="内存清理 常态icon" src="res/drawable-xxhdpi/icon_optimize_normal_notification.png"/>
+	<image description="内存清理 黄色icon" src="res/drawable-xxhdpi/icon_optimize_origan_notification.png"/>
+	<image description="内存清理 红色icon" src="res/drawable-xxhdpi/icon_optimize_red_notification.png"/>
+	<image description="垃圾清理 常态icon" src="res/drawable-xxhdpi/icon_cleaner_normal_notification.png"/>
+	<image description="垃圾清理 红色icon" src="res/drawable-xxhdpi/icon_cleaner_red_notification.png"/>
+	<image description="游戏加速 icon" src="res/drawable-xxhdpi/icon_gamebox_normal_notification.png"/>
+</ThemePage>

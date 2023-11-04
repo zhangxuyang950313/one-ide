@@ -1,0 +1,9 @@
+<Theme>
+    <!-- 其他文字 -->
+    <colors title="原生通知文字颜色《突然间的自我》" value="#ff000000,#ff000000">
+        <item name="system_neutral2_500" description="原生通知文字颜色《突然间的自我》" />
+    </colors>
+    <!-- <colors title="原生通知文字颜色《突然间的自我》" value="#66000000,#66ffffff">
+        <item name="system_neutral2_500" description="" />
+    </colors> -->
+</Theme>

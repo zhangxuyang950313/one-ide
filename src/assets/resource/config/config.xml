@@ -1,0 +1,10 @@
+<Scenarios>
+	<!-- 小米主题 -->
+    <Scenario src="./xiaomi.xml"/>
+    <!-- 小米AOD -->
+    <!-- <Scenario src="./xiaomi.aod.xml"/> -->
+    <!-- 小米小部件 -->
+    <!-- <Scenario src="./xiaomi.widget.xml"/> -->
+    <!-- 华为主题 -->
+    <Scenario src="./huawei.xml"/>
+</Scenarios>

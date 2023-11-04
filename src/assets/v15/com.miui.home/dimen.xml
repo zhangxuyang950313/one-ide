@@ -1,0 +1,6 @@
+<Theme>
+    <dimen title="文件夹缩略图宽度（默认：45.0dp）" name="folder_preview_width" value="45.0dp,45.0dp" description="" />
+    <dimen title="文件夹缩略图高度（默认：45.0dp）" name="folder_preview_height" value="45.0dp,45.0dp" description="" />
+    <dimen title="文件夹缩略图中图标的间隔（默认：0.3dp）" name="folder_preview_item_padding" value="0.3dp,0.3dp" description="" />
+
+</Theme>

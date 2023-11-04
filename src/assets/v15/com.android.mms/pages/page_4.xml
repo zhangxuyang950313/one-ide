@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ThemePage tag="短信" description="其他">
+	<image description="弹窗回复/弹窗背景" src="res/drawable-xxhdpi/new_message_popup_bg.9.png"/>
+	<image description="高级设置 已读报告 自动下载sim卡1 icon" src="res/drawable-xxhdpi/sim_card_1.png"/>
+	<image description="高级设置 已读报告 自动下载sim卡2 icon" src="res/drawable-xxhdpi/sim_card_2.png"/>
+	<image description="通知类消息 上下箭头选择器" src="res/drawable-xxhdpi/dropdown_indicator_down.9.png"/>
+</ThemePage>

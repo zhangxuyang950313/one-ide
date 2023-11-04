@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ThemePage tag="电话" description="单卡拨号盘">
+	<image description="输入号码 顶栏背景" src="res/drawable-xxhdpi/dialer_title_bg.9.png"/>
+	<image description="拨号时电话号码背景" src="res/drawable-xxhdpi/dialerpad_background.9.png"/>
+	<image description="清空按钮 常态" src="res/drawable-xxhdpi/dialer_digits_clear_btn_normal.png"/>
+	<image description="清空按钮 二态" src="res/drawable-xxhdpi/dialer_digits_clear_btn_pressed.png"/>
+	<image description="拨号按钮背景" src="res/drawable-xxhdpi/dialer_btn_call_bg.png"/>
+	<image description="拨号按钮 常态" src="res/drawable-xxhdpi/dialer_btn_call_normal.png"/>
+	<image description="拨号按钮 二态" src="res/drawable-xxhdpi/dialer_btn_call_pressed.png"/>
+	<image description="菜单 常态" src="res/drawable-xxhdpi/dialer_btn_menu_dialpad_normal.9.png"/>
+	<image description="菜单 二态" src="res/drawable-xxhdpi/dialer_btn_menu_dialpad_pressed.9.png"/>
+	<image description="收起键盘 常态" src="res/drawable-xxhdpi/dialer_btn_close_dialpad_normal.9.png"/>
+	<image description="收起键盘 二态" src="res/drawable-xxhdpi/dialer_btn_close_dialpad_pressed.9.png"/>
+	<image description="拨号数字 0" src="res/drawable-xxhdpi/dial_num_0.png"/>
+	<image description="拨号数字 1" src="res/drawable-xxhdpi/dial_num_1.png"/>
+	<image description="拨号数字 2" src="res/drawable-xxhdpi/dial_num_2.png"/>
+	<image description="拨号数字 3" src="res/drawable-xxhdpi/dial_num_3.png"/>
+	<image description="拨号数字 4" src="res/drawable-xxhdpi/dial_num_4.png"/>
+	<image description="拨号数字 5" src="res/drawable-xxhdpi/dial_num_5.png"/>
+	<image description="拨号数字 6" src="res/drawable-xxhdpi/dial_num_6.png"/>
+	<image description="拨号数字 7" src="res/drawable-xxhdpi/dial_num_7.png"/>
+	<image description="拨号数字 8" src="res/drawable-xxhdpi/dial_num_8.png"/>
+	<image description="拨号数字 9" src="res/drawable-xxhdpi/dial_num_9.png"/>
+	<image description="拨号数字 *" src="res/drawable-xxhdpi/dial_num_star.png"/>
+	<image description="拨号数字 #" src="res/drawable-xxhdpi/dial_num_pound.png"/>
+	<image description="拨号数字 按下" src="res/drawable-xxhdpi/dialer_button_pressed.9.png"/>
+	<image description="加载icon" src="res/drawable-xxhdpi/miuix_appcompat_progressbar_indeterminate_circle_light.png"/>
+	<image description="VoLTE电话会议icon" src="res/drawable-xxhdpi/dialer_menu_volte_fixed.png"/>
+	<image description="骚扰拦截icon" src="res/drawable-xxhdpi/dialer_menu_blocklist_fixed.png"/>
+	<image description="AI通话icon" src="res/drawable-xxhdpi/dialer_menu_xiaoaiphone_fixed.png"/>
+	<image description="设置icon" src="res/drawable-xxhdpi/miuix_action_icon_settings_light.png"/>
+	<image description="号码识别图标icon" src="res/drawable-xxhdpi/dialer_menu_identify_numbers_fixed.png"/>
+	<image description="菜单" src="res/drawable-xxhdpi/dialer_menu_business_fixed.png"/>
+</ThemePage>

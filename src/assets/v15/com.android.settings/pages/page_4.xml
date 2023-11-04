@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ThemePage tag="设置" description="声音与触感">
+	<image description="卡片 通知提醒icon" src="res/drawable-xxhdpi/ic_ringtone_notification.png"/>
+	<image description="卡片 电话铃声icon" src="res/drawable-xxhdpi/ic_telephone_ring.png"/>
+	<image description="卡片 闹钟铃声icon" src="res/drawable-xxhdpi/ic_alarms_ring.png"/>
+	<image description="媒体 icon" src="res/drawable-xxhdpi/media_volume_icon.png"/>
+	<image description="铃声 icon" src="res/drawable-xxhdpi/ring_volume_icon.png"/>
+	<image description="闹钟 icon" src="res/drawable-xxhdpi/alarm_volume_icon.png"/>
+	<image description="小爱同学 icon" src="res/drawable-xxhdpi/xiaoai_volume_icon.png"/>
+</ThemePage>

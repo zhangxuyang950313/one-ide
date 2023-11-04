@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ThemePage tag="手机管家" description="桌面快捷方式" page="framework-res">
+	<image description="垃圾清理" src="res/drawable-xxhdpi/ic_launcher_rubbish_clean.png"/>
+	<image description="网络助手 " src="res/drawable-xxhdpi/ic_launcher_network_assistant.png"/>
+	<image description="骚扰拦截 " src="res/drawable-xxhdpi/ic_launcher_anti_spam.png"/>
+	<image description="省电优化 " src="res/drawable-xxhdpi/ic_launcher_power_optimize.png"/>
+	<image description="病毒扫描 " src="res/drawable-xxhdpi/ic_launcher_virus_scan.png"/>
+	<image description="网络诊断 " src="res/drawable-xxhdpi/ic_launcher_network_diagnostics.png"/>
+	<image description="红包助手 " src="res/drawable-xxhdpi/hongbao_launcher.png"/>
+	<image description="自动任务 " src="res/drawable-xxhdpi/auto_task_shortcut.png"/>
+</ThemePage>

@@ -1,0 +1,3 @@
+<Theme>
+    <dimen title="WLAN/蓝牙 卡片背景 圆角半径" name="miuix_preference_high_light_radius" value="18dp,18dp" description="" />
+</Theme>

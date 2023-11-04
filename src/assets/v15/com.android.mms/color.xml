@@ -1,0 +1,232 @@
+<Theme>
+    <colors title="主要颜色" value="#ff000000,#ffffffff">
+        <item name="miuix_appcompat_action_bar_title_text_color_light" description="标题文字" />
+        <item name="miuix_appcompat_list_text_color_normal_light" description="列表主要文字normal" />
+        <item name="miuix_appcompat_list_text_color_pressed_light" description="列表主要文字pressed" />
+        <item name="miuix_appcompat_immersion_text_color_normal_light" description="长按弹窗 列表文字normal" />
+        <item name="miuix_appcompat_immersion_text_color_pressed_light" description="长按弹窗 列表文字pressed" />
+        <item name="miuix_appcompat_edit_text_search_hint_color_light" description="搜索框提示文字" />
+        <item name="miuix_appcompat_dialog_default_title_text_color_light" description="弹窗标题文字" />
+        <item name="dialog_secondary_text_fixed" description="弹窗主要文字1" />
+        <item name="dialog_tertiary_text_fixed" description="弹窗主要文字2" />
+        <item name="miuix_appcompat_dialog_default_edit_text_dialog_color_normal_light" description="弹窗输入框 已输入文字" />
+        <item name="miuix_appcompat_dialog_default_message_text_color_light" description="弹窗提示文字" />
+        <item name="miuix_appcompat_dialog_default_button_text_color_light" description="普通按钮文字" />
+        <item name="miuix_appcompat_dialog_default_button_text_color_guide_normal_light" description="高亮按钮文字" />
+        <item name="miuix_preference_primary_text_color_light" description="设置页 列表文字 短信发送失败 重发/不发了文字颜色" />
+        <item name="miuix_appcompat_dropdown_popup_list_text_color_normal_light" description="弹窗列表文字 常态" />
+        <item name="miuix_appcompat_dropdown_popup_list_text_color_pressed_light" description="弹窗列表文字 按下" />
+        <!-- <item name="miuix_appcompat_edit_text_search_color_light" description="群发短信/搜索框输入文字" /> -->
+        <item name="miuix_appcompat_action_mode_title_text_color_light" description="多选上滑后标题文字" />
+        <item name="miuix_appcompat_action_button_text_color_normal_light" description="底部icon按钮下方文字normal" />
+        <item name="miuix_appcompat_action_button_text_color_pressed_light" description="底部icon按钮下方文字pressed" />
+        <item name="miuix_appcompat_action_button_text_color_selected_light" description="底部icon按钮下方文字selected" />
+        <item name="miuix_appcompat_dialog_default_list_text_color_normal_light" description="添加更多选项弹窗文字常态" />
+        <item name="miuix_appcompat_dialog_default_list_text_color_pressed_light" description="添加更多选项弹窗文字二态" />
+
+        <item name="new_message_label_color" description="新建短信 收信人文字颜色" />
+        <item name="recipient_text_color" description="新建短信 联系人颜色" />
+        <item name="text_color_recipient_item" description="新建短信 联系人颜色" />
+        <item name="miuix_appcompat_text_color_primary_light" description="新建短信 已输入文字颜色" />
+        <item name="flat_list_title_color" description="短信 常用语文字颜色" />
+        <item name="text_color_attachment_type" description="短信附件 表情 符号表情颜色 卡片文字颜色（表情 名片..." />
+        <item name="miuix_appcompat_filter_sort_tab_view2_text_activated_light" description="sim卡上的短信 选中按钮文字" />
+        <item name="miuix_appcompat_filter_sort_tab_view2_text_normal_light" description="sim卡上的短信 未选中按钮文字" />
+        <item name="tab_list_header_title" description="我的收藏 联系人名称" />
+        <item name="contact_card_title_text_color" description="联系人名片 联系人名称" />
+        <item name="contact_card_item_title_text_color" description="联系人名片 联系人号码" />
+        <item name="normal_card_text_secondary" description="我的收藏 短信文字" />
+        <item name="text_color_message_out" description="发送短信 主要文字" />
+        <item name="text_color_message_in" description="接收短信 主要文字" />
+        <item name="understand_button_text" description="短信对话框中 按钮文字" />
+
+        <item name="bottom_menu_text_color" description="短信对话 底部按钮文字" />
+
+        <item name="verfication_card_text_primary" description="其他短信卡片 主要文字" />
+        <item name="verficationl_card_text_secondary" description="其他短信卡片 验证码内容" />
+        <item name="miuix_appcompat_hint_edit_text_color_light" description="新建短信输入框 “主题”文字颜色" />
+        <item name="dialog_primary_text_fixed" description="时间设置弹窗 标题文字" />
+        <item name="sim_indicator_color_normal" description="短信输入框 双卡常态文字" />
+        <item name="sim_number_color_normal" description="短信输入框 双卡电话号码文字" />
+        <item name="text_color_black" description="编辑幻灯片弹窗 列表文字" />
+        <item name="flatshow_pageno_text_color" description="编辑幻灯片 图片数量文字" />
+        <item name="audio_item_in_text_color" description="对话气泡 语音分钟数字" />
+
+        <item name="miuix_appcompat_dialog_default_checkbox_text_color_light" description="底部弹窗 单选文字" />
+        <item name="recent_recipient_checked_text_color" description="新建短信 最近联系人名称" />
+        <item name="miuix_preference_primary_text_color_disable_light" description="智能短信更新中文字颜色" />
+        <item name="sim_card_number_color" description="发送信息 选择sim卡弹窗号码文字" />
+        <item name="new_message_popup_sender_color" description="弹窗回复 标题文字" />
+
+        <item name="normal_card_text_primary" description="富文本卡片 主要文字/按钮文字" />
+    </colors>
+
+    <colors title="次要颜色" value="#99000000,#99ffffff">
+        <item name="miuix_appcompat_list_secondary_text_color_normal_light" description="列表次要文字normal" />
+        <item name="miuix_appcompat_list_secondary_text_color_pressed_light" description="列表次要文字pressed" />
+        <item name="conversation_date_color" description="列表次要文字pressed" />
+        <item name="miuix_appcompat_arrow_right_normal_fill_color_light" description="列表右箭头/上下箭头normal颜色" />
+        <item name="miuix_appcompat_arrow_right_pressed_fill_color_light" description="列表右箭头/上下箭头pressed颜色" />
+        <item name="miuix_appcompat_arrow_right_disable_fill_color_light" description="列表右箭头/上下箭头disable颜色" />
+        <item name="ic_contact_card_arrow_right_color" description="联系人名片 右箭头" />
+        <item name="miuix_appcompat_dialog_default_button_text_color_guide_disabled_light" description="高亮按钮 不可点击状态文字" />
+        <item name="miuix_preference_secondary_text_color_light" description="设置页 列表次要文字" />
+        <item name="miuix_color_grey_light_primary_default" description="小标题default" />
+        <item name="miuix_color_grey_light_primary_disable" description="小标题disable" />
+        <item name="miuix_color_grey_light_primary_hover" description="小标题hover" />
+        <item name="miuix_color_grey_light_primary_pressed" description="小标题pressed" />
+        <item name="miuix_color_grey_light_secondary_default" description="小标题选择default" />
+        <item name="miuix_color_grey_light_secondary_disable" description="小标题选择disable" />
+        <item name="miuix_color_grey_light_secondary_hover" description="小标题选择hover" />
+        <item name="miuix_color_grey_light_secondary_pressed" description="小标题选择pressed" />
+        <item name="miuix_appcompat_action_button_text_color_disable_light" description="底部icon按钮下方文字disable" />
+        <item name="miuix_appcompat_action_bar_subtitle_text_light" description="群组标题上滑后下方次要文字" />
+        <item name="miuix_appcompat_default_number_picker_hint_color" description="调整时间弹窗 未选中文字" />
+        <item name="miuix_appcompat_blank_page_text_color_light" description="没有搜索到内容提示文字" />
+        <item name="miuix_appcompat_bright_foreground_light" description="短信 高级设置 列表文字" />
+        <item name="miuix_preference_category_text_color_light" description="设置页 小标题" />
+        <item name="miuix_preference_right_text_color_normal_light" description="列表右侧提示文字normal" />
+        <item name="miuix_appcompat_integrated_spinner_text_color_normal_light" description="列表右侧提示文字normal" />
+        <item name="miuix_appcompat_integrated_spinner_text_color_disable_light" description="列表右侧提示文字disable" />
+        <item name="miuix_preference_right_text_color_disable_light" description="列表右侧提示disable" />
+        <item name="hint_edit_text_color_light" description="输入框提示文字" />
+        <item name="list_secondary_text_color_normal_light" description="新建短信已输入字数颜色" />
+        <item name="contact_card_item_tag_text_color" description="联系人名片 联系人方式分类" />
+        <item name="text_color_message_alert_secondary" description="发送短信次要文字" />
+        <item name="miuix_appcompat_immersion_text_color_disable_light" description="长按弹窗 列表文字disable" />
+        <item name="bank_subtitle_color" description="其他短信卡片 次要文字" />
+        <item name="verification_card_text_content" description="其他短信卡片 验证码来源" />
+        <item name="verfication_card_action_text_primary" description="其他短信卡片 按钮文字" />
+        <item name="tab_list_header_date" description="收到验证码时间文字" />
+        <item name="list_secondary_text_color_normal_light_message" description="短信剩余可输入文字数量文字" />
+        <item name="search_result_number_text_color" description="搜索内容 次要文字" />
+        <item name="recent_label_text_color" description="新建联系人 最近联系人标题" />
+        <item name="screen_view_seek_point_normal" description="短信附件 小点点 常态" />
+        <item name="smiley_tab_icon_color" description="短信附件 表情下方icon" />
+        <item name="miuix_preference_secondary_text_color_disable_light" description="智能短信更新中次要文字颜色" />
+        <item name="text_color_message_alert_secondary_pressed" description="发送失败对话框中文字 按下" />
+        <item name="miuix_appcompat_list_view_item_group_header_text_light" description="可选小标题文字 “全部通知类消息”" />
+        <item name="rich_media_card_single_app_five_info_color" description="富文本卡片 提示文字" />
+    </colors>
+
+    <!-- 3482ff -->
+    <colors title="高亮色 蓝" value="#ffFF3B00,#ff277AF7">
+        <item name="miuix_color_blue_light_primary_default" description="高亮色default" />
+        <item name="miuix_color_blue_light_primary_hover" description="高亮色hover" />
+        <item name="miuix_color_blue_light_primary_pressed" description="高亮色pressed" />
+        <item name="miuix_color_blue_dark_secondary_default" description="高亮色选中default" />
+        <item name="miuix_color_blue_light_secondary_hover" description="高亮色选中hover" />
+        <item name="miuix_color_blue_light_secondary_pressed" description="高亮色选中pressed" />
+        <item name="screen_view_seek_point_highlight" description="短信附件 小点点 选中" />
+        <item name="text_color_attachment_edit_phrase" description="编辑常用语文字颜色" />
+        <item name="miuix_appcompat_filter_sort_tab_view2_bg_color_selected_light" description="sim卡上的短信 选中按钮" />
+        <item name="link_text_color_normal" description="短信中数字颜色" />
+        <item name="ic_insert_contact_color" description="联系人名片 导入联系人+号颜色" />
+        <item name="sim_indicator_color_selected" description="短信输入框 双卡选中文字" />
+        <item name="text_color_mi_recipient" description="新建短信 收件人 编辑态" />
+        <item name="miuix_appcompat_cloud_count_normal_text_color_light" description="云同步文字" />
+        <item name="miuix_appcompat_cloud_sync_color_light" description="云服务同步icon" />
+        <item name="miuix_appcompat_cloud_arrow_color_light" description="云同步右箭头" />
+        <item name="aim_show_card" description="富文本卡片 高亮色" />
+    </colors>
+
+    <colors title="高亮色 蓝 不可用" value="#4dFF3B00,#4d277AF7">
+        <item name="miuix_color_blue_light_primary_disable" description="高亮色disable" />
+        <item name="miuix_color_blue_light_secondary_disable" description="高亮色选中disable" />
+    </colors>
+
+    <colors title="高亮色 蓝 选中/背景" value="#1aFF3B00,#1a277AF7">
+        <item name="miuix_appcompat_list_item_bg_color_checked_light" description="列表选中背景" />
+        <item name="miuix_appcompat_cloud_state_message_bg_color_normal_light" description="云同步背景" />
+        <item name="miuix_color_blue_light_secondary_default" description="弹窗选中背景" />
+        <item name="miuix_appcompat_dropdown_popup_list_item_bg_checked_light" description="弹窗列表选中" />
+    </colors>
+
+    <!-- FFB21D -->
+    <colors title="高亮色 黄" value="#ffFFB21D,#ffECA200">
+        <item name="miuix_color_yellow_light_primary_default" description="新建短信背景 / 未读消息小圆点 / 新建短信返回过渡色" />
+    </colors>
+
+    <colors title="高亮色 红" value="#fff22424,#ffD70015">
+        <item name="miuix_color_deep_red_light_primary_default" description="删除按钮 文字" />
+    </colors>
+
+    <color title="底tab icon选中" name="miuix_navigator_bottom_tab_light" value="#ff000000,#ffffffff" description="" />
+    <color title="底tab icon未选中" name="miuix_appcompat_black" value="#ff000000,#ffffffff" description="" />
+
+    <colors title="底栏背景" value="#ffffffff,#ff121212">
+        <item name="miuix_appcompat_bottom_menu_bg_light" description="底部菜单背景" />
+        <item name="miuix_design_default_color_surface" description="底tab背景" />
+        <item name="miuix_design_default_color_surface_divider" description="底tab分隔线" />
+    </colors>
+
+    <colors title="弹窗背景" value="#ffffffff,#ff242424">
+        <item name="miuix_appcompat_dropdown_popup_backgroud_color_light" description="长按弹窗" />
+        <item name="miuix_appcompat_dialog_default_bg_color_light" description="底部弹窗背景" />
+        <item name="miuix_appcompat_spinner_item_normal_bg_color_light" description="可选弹窗常态背景" />
+        <item name="sim_button_container_color" description="短信输入框 双卡弹窗背景" />
+        <item name="bottom_sub_menu_bg_color" description="编辑幻灯片弹窗背景" />
+    </colors>
+
+    <colors title="底部弹窗 普通按钮" value="#0a000000,#14ffffff">
+        <item name="miuix_appcompat_button_bg_color_normal_light" description="底部弹窗普通按钮背景常态" />
+        <item name="miuix_appcompat_button_bg_color_pressed_light" description="底部弹窗普通按钮背景按下" />
+    </colors>
+
+    <colors title="输入框填充色" value="#fff0f0f0,#ff202020">
+        <item name="miuix_appcompat_edit_text_search_bg_color_light" description="搜索输入框颜色（素材优先生效" />
+        <item name="record_audio_btn_editor" description="新建短信输入框（素材优先生效" />
+        <item name="miuix_appcompat_edit_text_bg_color_light" description="底部弹窗输入框" />
+        <item name="miuix_appcompat_dialog_default_edit_text_bg_solid_light" description="底部弹窗输入框" />
+        <item name="button_send_slot_bg_n" description="弹窗回复 输入框" />
+    </colors>
+
+    <colors title="卡片/滑动条/分隔线" value="#0a000000,#14ffffff">
+        <item name="new_border_color" description="新建短信 收信人下方分隔线" />
+        <item name="border_color" description="短信发送失败 标题下方分隔线" />
+        <item name="card_bottom_menu_button_color" description="短信附件卡片（表情 名片..." />
+        <item name="miuix_preference_first_last_divider_line_light" description="设置页列表分隔线" />
+        <item name="miuix_appcompat_filter_sort_tab_view2_bg_color_normal_light" description="高级设置/管理sim卡/sim卡上的短信 未选中tab" />
+        <item name="new_card_body_bg" description="我的收藏 收藏短信背景" />
+        <item name="understand_button_color" description="短信对话框中 按钮背景" />
+        <item name="verfication_card_bottom_button_bg" description="其他短信对话框中 按钮背景" />
+        <item name="recent_recipient_text_bg_color" description="新建短信 最近联系人 背景" />
+        <item name="miuix_appcompat_scrollbar_thumb_vertical_bg_light" description="列表滚动条颜色" />
+    </colors>
+
+    <colors title="开关 关闭背景" value="#19000000,#19ffffff">
+        <item name="miuix_appcompat_checkbox_btn_disable_background_color_light" description="复选框 未选中背景色" />
+        <item name="miuix_appcompat_checkbox_btn_stroke_color_light" description="复选框 描边" />
+        <item name="miuix_appcompat_sliding_button_bar_off_disabled_color_light" description="开关不可用背景" />
+        <item name="miuix_appcompat_sliding_button_bar_off_normal_color_light" description="开关关闭背景" />
+    </colors>
+
+    <colors title="开关圆点" value="#ffffffff,#ffffffff">
+        <item name="miuix_appcompat_sliding_btn_slider_off_normal_color_light" description="开关圆点" />
+        <item name="miuix_appcompat_sliding_btn_slider_off_pressed_color_light" description="开关圆点" />
+        <item name="miuix_appcompat_sliding_btn_slider_on_normal_color_light" description="开关圆点" />
+        <item name="miuix_appcompat_sliding_btn_slider_on_pressed_color_light" description="开关圆点" />
+        <item name="miuix_appcompat_sliding_btn_slider_off_disable_color_light" description="开关圆点" />
+        <item name="miuix_appcompat_sliding_btn_slider_on_disable_color_light" description="开关圆点" />
+    </colors>
+
+    <colors title="MIUIX点按过渡动画颜色" value="#14000000,#14ffffff">
+        <item name="miuix_folme_color_touch_tint" description="点按过渡动画颜色" />
+        <item name="miuix_folme_color_touch_tint_light" description="点按过渡动画颜色" />
+        <item name="miuix_folme_color_touch_tint_light_p1" description="点按过渡动画颜色p1" />
+        <item name="miuix_folme_color_touch_tint_light_p2" description="点按过渡动画颜色p2" />
+        <item name="miuix_folme_color_touch_tint_light_p3" description="点按过渡动画颜色p3" />
+    </colors>
+
+    <colors title="透明色（默认就行不要改" value="#00000000,#00ffffff">
+        <item name="miuix_appcompat_transparent" description="弹窗前置背景" />
+        <item name="miuix_appcompat_white" description="弹窗前置背景/列表背景" />
+        <item name="smiley_tab_bg" description="短信附件 表情 底部菜单背景" />
+        <item name="miuix_appcompat_dialog_default_number_picker_highlight_region_bg_color_light" description="时间设置弹窗 数字背景" />
+        <item name="slide_controler_bg" description="幻灯片 编辑底栏背景" />
+        <item name="flatshow_pageno_text_shadow_color" description="编辑幻灯片 幻灯片图片数量文字投影" />
+        <!-- <item name="miuix_appcompat_filter_sort_tab_view2_bg_color_normal_light" description="联系人多选 tab背景常态" /> -->
+        <item name="miuix_appcompat_dropdown_popup_list_item_bg_normal_light" description="下拉弹窗上层背景" />
+    </colors>
+
+</Theme>

@@ -1,0 +1,82 @@
+<Theme>
+    <colors title="主要颜色" value="#ff000000,#ff000000">
+        <item name="system_neutral1_900" description="原生通知 主要文字" package="android"/>
+        <item name="notification_primary_text_color_light" description="第三方通知 标题文字" />
+        <item name="primary_text_default_material_light" description="不重要通知 文字颜色" package="android"/>
+        <item name="notification_time_color" description="通知时间颜色（安卓" package="android"/>
+        <item name="notification_time_color" description="通知时间颜色" />
+        <item name="notification_action_text_color" description="通知已读 按钮文字" />
+        <item name="optimized_game_heads_up_notification_text" description="标题文字" />
+        <item name="optimized_game_heads_up_notification_action_text" description="按钮文字" />
+        <item name="control_center_detail_empty_text_color" description="卡片开关状态提示文字" />
+        <item name="clickable_toast_text_color" description="历史通知右箭头颜色（自带透明度" />
+        <!-- <item name="system_neutral2_500" description="原生通知文字颜色《突然间的自我》、暂不生效" package="android" /> -->
+    </colors>
+
+    <colors title="次要颜色" value="#99000000,#99000000">
+        <item name="system_neutral2_700" description="第三方通知 次要文字" package="android"/>
+        <item name="notification_default_color_light" description="折叠列表 按钮数字" package="android"/>
+        <item name="notification_secondary_text_color_light" description="通知中心 次要字体颜色" />
+
+        <item name="mini_window_bar_color" description="竖屏 小横条" />
+        <item name="mini_window_bar_color_gamemode" description="横屏 小横条" />
+    </colors>
+
+    <colors title="主要颜色 白色" value="#ffffffff,#ffffffff">
+        <item name="miui_notification_modal_menu_text_color" description="长按通知展开后按钮文字颜色" />
+        <item name="control_center_detail_title_text_color" description="卡片展开标题" />
+        <item name="control_center_detail_item_title_text_color_s" description="wifi 已连接列表主要文字" />
+        <item name="control_center_detail_item_summary_text_color_s" description="wifi 已连接列表次要文字" />
+        <item name="control_center_detail_item_summary_text_color_n" description="wifi 已保持列表次要文字" />
+        <item name="control_center_detail_item_title_text_color_n" description="wifi 可连接ID" />
+        <item name="miuix_appcompat_scrollbar_thumb_vertical_bg_dark" description="wifi 滚动条" />
+        <item name="qs_control_header_clock_color" description="首页时间 颜色" />
+        <item name="qs_control_header_tiles_title_color" description="首页标题 颜色" />
+        <item name="qs_control_header_date_color" description="首页日期 颜色" />
+        <item name="notification_group_collapsed_header" description="消息展开 卡片外 标题颜色" />
+
+        <item name="control_center_detail_item_divider_text_color" description="列表设备文字" />
+        <item name="control_center_detail_item_icon1_tint_color_s" description="已连接icon 左" />
+        <item name="control_center_detail_item_icon2_tint_color_s" description="已连接icon 右" />
+
+        <item name="control_center_detail_item_icon1_tint_color_n" description="未连接icon 左" />
+        <item name="control_center_detail_item_icon2_tint_color_n" description="未连接icon 右" />
+        <item name="control_center_detail_button_text_color" description="次要提示文字" />
+    </colors>
+
+    <colors title="次要颜色 黑色" value="#66000000,#66000000">
+        <item name="control_center_detail_background_color" description="卡片展开-二级界面背景" />
+        <item name="control_center_detail_button_background_color_n" description="卡片展开-二级菜单底部按钮背景" />
+        <item name="control_center_detail_button_background_color_p" description="卡片展开-二级菜单底部按钮背景 按下" />
+    </colors>
+
+    <colors title="卡片 / 背景 / 进度条 / 按钮" value="#e5ffffff,#e5ffffff">
+        <item name="notification_bg_color" description="通知背景" />
+        <item name="notification_action_bg_color" description="悬浮通知 按钮背景" />
+        <item name="notification_progress_horizontal_bg_color" description="带进度条通知 进度背景 颜色" package="android"/>
+    </colors>
+
+    <colors title="折叠通知 数字背景" value="#1a000000,#1a000000">
+        <item name="hybrid_overflow_number_bg" description="折叠通知 数字背景" />
+    </colors>
+
+    <colors title="高亮色 蓝" value="#ff3482ff,#ff3482ff">
+        <item name="notification_progress_horizontal_progress_color" description="带进度条通知 进度条 颜色" package="android"/>
+        <item name="control_center_detail_item_selectable_background_color_s" description="卡片展开-二级界面选中背景" />
+    </colors>
+
+    <colors title="高亮色 绿" value="#ff43c773,#ff43c773">
+        <item name="recent_tick_anim_color" description="清除按钮动画" />
+    </colors>
+
+    <colors title="悬浮通知背景" value="#f5ffffff,#f5ffffff">
+        <item name="notification_heads_up_bg_color" description="竖屏" />
+        <item name="optimized_transparent_heads_up_notification_bg_color" description="横屏" />
+    </colors>
+
+    <colors title="透明色（不要改，默认就好" value="#00000000,#00000000">
+        <item name="default_theme_background_color" description="竖屏 大背景（无特别设计建议默认高斯模糊）" />
+        <item name="transparent" description="" />
+        <item name="notification_heads_up_bg_stroke_color" description="悬浮通知背景描边（横竖屏通用）" />
+    </colors>
+</Theme>

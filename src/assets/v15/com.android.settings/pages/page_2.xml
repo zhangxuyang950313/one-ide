@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ThemePage tag="设置" description="指纹、面部与密码">
+	<image description="密码不可见" src="res/drawable-xxhdpi/miuix_appcompat_default_ic_invisible_light.png"/>
+	<image description="密码可见" src="res/drawable-xxhdpi/miuix_appcompat_default_ic_visible_light.png"/>
+	<image description="密码类型icon 密码解锁 关" src="res/drawable-xxhdpi/ic_password_unlock.png"/>
+	<image description="密码类型icon 密码解锁 开" src="res/drawable-xxhdpi/ic_password_unlock_checked.png"/>
+	<image description="密码类型icon 指纹解锁 关" src="res/drawable-xxhdpi/ic_finger_unlock.png"/>
+	<image description="密码类型icon 指纹解锁 开" src="res/drawable-xxhdpi/ic_finger_unlock_checked.png"/>
+	<image description="密码类型icon 人脸解锁 关" src="res/drawable-xxhdpi/ic_face_unlock.png"/>
+	<image description="密码类型icon 人脸解锁 开" src="res/drawable-xxhdpi/ic_face_unlock_checked.png"/>
+	<image description="密码类型icon 蓝牙解锁 关" src="res/drawable-xxhdpi/ic_bluetooth_unlock.png"/>
+	<image description="密码类型icon 蓝牙解锁 开" src="res/drawable-xxhdpi/ic_bluetooth_unlock_checked.png"/>
+	<image description="密码解锁 图案密码icon 未选（更换锁屏密码页面卡片内icon）" src="res/drawable-xxhdpi/ic_unlock_pattern_icon.png"/>
+	<image description="密码解锁 图案密码icon 选中" src="res/drawable-xxhdpi/ic_unlock_pattern_icon_selected.png"/>
+	<image description="密码解锁 数字密码icon 未选" src="res/drawable-xxhdpi/ic_unlock_pin_icon.png"/>
+	<image description="密码解锁 数字密码icon 选中" src="res/drawable-xxhdpi/ic_unlock_pin_icon_selected.png"/>
+	<image description="密码解锁 混合密码icon 未选" src="res/drawable-xxhdpi/ic_unlock_password_icon.png"/>
+	<image description="密码解锁 混合密码icon 选中" src="res/drawable-xxhdpi/ic_unlock_password_icon_selected.png"/>
+	<image description="紧急求助 操作示意图" src="res/drawable-xxhdpi/sos_direction_back.png"/>
+	<image description="添加账号 +（账号与同步）" src="res/drawable-xxhdpi/ic_menu_add.png"/>
+	<image description="指纹录入成功 图标（后置指纹）" src="res/drawable-xxhdpi/new_fingerprint_finish.png"/>
+	<image description="设置icon（文字转语音（TTS）输出-首选引擎）" src="res/drawable-xxhdpi/ic_settings_accent.png"/>
+	<image description="多用户 弹窗 头像选择背景（开发者选项-关闭MIUI优化-设置首页-多用户-个人资料信息弹窗-点击头像弹出）" src="res/drawable-xxhdpi/popup_background.9.png"/>
+	<image description="图案密码 小圆点" src="res/drawable-xxhdpi/lock_pattern_code_lock_touched_holo.png"/>
+</ThemePage>

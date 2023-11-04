@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ThemePage tag="短信" description="全局">
+	<image description="大背景" src="res/drawable-xxhdpi/conversation_bg.9.png"/>
+	<image description="顶栏背景" src="res/drawable-xxhdpi/miuix_appcompat_action_bar_bg_light.9.png"/>
+	<image description="搜索条背景" src="res/drawable-xxhdpi/miuix_appcompat_search_mode_bg_light.9.png"/>
+	<image description="搜索条" src="res/drawable-xxhdpi/miuix_appcompat_search_mode_edit_text_bg_light.9.png"/>
+	<image description="搜索放大镜" src="res/drawable-xxhdpi/miuix_appcompat_ic_edit_text_search_light.png"/>
+	<image description="搜索清空icon" src="res/drawable-xxhdpi/miuix_appcompat_edit_text_clear_btn_on_light.png"/>
+	<image description="空页面 没有短信" src="res/drawable-xxhdpi/ic_conversation_empty.png"/>
+	<image description="加载圆圈" src="res/drawable-xxhdpi/miuix_appcompat_progressbar_indeterminate_circle_light.png"/>
+	<image description="设置icon" src="res/drawable-xxhdpi/action_bar_setting.png"/>
+	<image description="菜单icon" src="res/drawable-xxhdpi/miuix_action_icon_immersion_more_light.png"/>
+	<image description="返回icon" src="res/drawable-xxhdpi/miuix_action_icon_back_light.png"/>
+	<image description="标记已读icon" src="res/drawable-xxhdpi/action_button_all_read_light.png"/>
+	<image description="miuix删除icon" src="res/drawable-xxhdpi/miuix_action_icon_delete_light.png"/>
+	<image description="取消icon" src="res/drawable-xxhdpi/miuix_action_icon_cancel_light.png"/>
+	<image description="弹窗回复取消icon" src="res/drawable-xxhdpi/miuix_actionbar_dismiss_icon.png"/>
+	<image description="多选icon" src="res/drawable-xxhdpi/miuix_action_icon_select_all_light.png"/>
+	<image description="全选icon" src="res/drawable-xxhdpi/miuix_action_icon_deselect_all_light.png"/>
+	<image description="收藏icon" src="res/drawable-xxhdpi/miuix_action_icon_favorite_light.png"/>
+	<image description="复制icon" src="res/drawable-xxhdpi/miuix_actionbar_copy_icon.png"/>
+	<image description="移动icon" src="res/drawable-xxhdpi/miuix_actionbar_move_icon.png"/>
+	<image description="转发icon" src="res/drawable-xxhdpi/actionbar_forward_icon.png"/>
+	<image description="更多icon" src="res/drawable-xxhdpi/miuix_action_icon_more_light.png"/>
+	<image description="新建常用语icon" src="res/drawable-xxhdpi/miuix_actionbar_new_icon.png"/>
+	<image description="添加icon" src="res/drawable-xxhdpi/miuix_action_icon_new_light.png"/>
+	<image description="详情icon" src="res/drawable-xxhdpi/action_button_detail_light.png"/>
+	<image description="保存附件icon" src="res/drawable-xxhdpi/miuix_action_icon_save_light.png"/>
+	<image description="关闭icon" src="res/drawable-xxhdpi/hybrid_action_bar_close.png"/>
+	<image description="删除icon" src="res/drawable-xxhdpi/miuix_actionbar_delete_icon.png"/>
+	<image description="底tab背景" src="res/drawable-xxhdpi/bottom_navigation_background.9.png"/>
+	<image description="底tab 主要icon 形状" src="res/drawable-xxhdpi/tab_icon_sms.png"/>
+	<image description="底tab 推广icon 形状" src="res/drawable-xxhdpi/tab_icon_promo.png"/>
+</ThemePage>

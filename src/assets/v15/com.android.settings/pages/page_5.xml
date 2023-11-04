@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ThemePage tag="设置" description="通知栏与状态栏">
+	<image description="通知与控制中心-锁屏通知背景" src="res/drawable-xxhdpi/ic_lock_screen_notification.png"/>
+	<image description="通知与控制中心-悬浮通知背景" src="res/drawable-xxhdpi/ic_float_notification.png"/>
+	<image description="通知与控制中心-桌面角标背景" src="res/drawable-xxhdpi/ic_notification_badge.png"/>
+	<image description="不隐藏刘海（状态栏-隐藏屏幕刘海）" src="res/drawable-xxhdpi/notch_style_show.png"/>
+	<image description="隐藏后状态栏在刘海内（状态栏-隐藏屏幕刘海）" src="res/drawable-xxhdpi/notch_style_status_bar_inside.png"/>
+	<image description="隐藏后状态栏在刘海外（状态栏-隐藏屏幕刘海，最新版本系统已去掉该选项）" src="res/drawable-xxhdpi/notch_style_status_bar_outside.png"/>
+</ThemePage>

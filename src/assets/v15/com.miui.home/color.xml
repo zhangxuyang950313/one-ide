@@ -1,0 +1,39 @@
+<Theme>
+    <group title="桌面图标文字">
+        <item name="icon_title_text" description="深色壁纸" value="#e6ffffff,#e6ffffff" />
+        <item name="icon_title_text_dark" description="浅色壁纸" value="#80000000,#80000000" />
+    </group>
+
+    <group title="桌面图标 其他">
+        <item name="icon_message_text" description="角标 通知数字颜色" value="#ffffffff,#ffffffff" />
+        <item name="checkbox_btn_on_background_color_light" description="编辑模式 复选框 已选背景 颜色（不支持修改透明度）" value="#ff0d84ff,#ff0d84ff" />
+    </group>
+
+    <group title="搜索框背景">
+        <item name="search_bar_bg_color_dark" description="背景颜色（深色壁纸）" value="#16ffffff,#16ffffff" />
+        <item name="search_bar_stroke_color_dark" description="描边颜色（深色壁纸）" value="#00ffffff,#00ffffff" />
+        <item name="search_bar_bg_color_light" description="背景颜色（浅色壁纸）" value="#1a000000,#1a000000" />
+        <item name="search_bar_stroke_color_light" description="描边颜色（浅色壁纸）" value="#1c000000,#1c000000" />
+    </group>
+
+    <group title="任务管理 小窗应用">
+        <item name="recent_tv_small_window_background_color" description="按钮背景" value="#42ffffff,#42ffffff" />
+        <item name="recents_tv_small_window_text_color" description="按钮文字" value="#ffffffff,#ffffffff" />
+    </group>
+
+    <group title="任务管理">
+        <item name="task_manager_no_recents_text" description="“近期没有任何内容” 提示文字颜色" value="#66ffffff,#66ffffff" />
+        <item name="recent_menu_bg_color" description="应用菜单按钮背景颜色" value="#ffffffff,#33ffffff" />
+        <item name="recent_tick_anim_color" description="完成清理勾 √ 动画 颜色" value="#ff43c773,#ff43c773" />
+    </group>
+
+    <colors title="任务管理 app名称 颜色" value="#ffffffff,#ffffffff">
+        <item name="task_manager_text" description="" />
+        <item name="txt_memory_info_color" description="" />
+    </colors>
+
+    <group title="图标文字阴影颜色">
+        <item name="icon_title_text_shadow_light" description="浅色壁纸" value="#0d000000,#0d000000" />
+        <item name="icon_title_text_shadow" description="深色壁纸" value="#0d000000,#0d000000" />
+    </group>
+</Theme>

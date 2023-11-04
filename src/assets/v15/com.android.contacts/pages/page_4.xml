@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ThemePage tag="电话" description="联系人详情页">
+	<image description="详情页顶部大图(最大1080x918)" src="res/drawable-xxhdpi/contact_detail_default_photo.9.png"/>
+	<image description="上滑后顶栏背景" src="res/drawable-xxhdpi/contact_detail_titlebar_cover_bg.9.png"/>
+	<image description="详情页头像" src="res/drawable-xxhdpi/ic_contact_circle_photo.png"/>
+	<image description="电话" src="res/drawable-xxhdpi/send_call_ic.png"/>
+	<image description="短信" src="res/drawable-xxhdpi/send_sms_ic.png"/>
+	<image description="视频" src="res/drawable-xxhdpi/send_video_ic.png"/>
+</ThemePage>

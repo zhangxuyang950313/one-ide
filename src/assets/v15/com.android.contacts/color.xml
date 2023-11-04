@@ -1,0 +1,265 @@
+<Theme>
+    <colors title="主要颜色" value="#ff000000,#ffffffff">
+        <item name="miuix_appcompat_action_bar_title_text_color_light" description="标题文字" />
+        <item name="setting_action_bar_tab_text_color" description="联系人设置标题文字" />
+        <item name="dialer_title_text_color" description="标题文字（输入号码后通话" />
+        <item name="miuix_appcompat_list_text_color_normal_light" description="列表主要文字normal" />
+        <item name="miuix_appcompat_list_text_color_pressed_light" description="列表主要文字pressed" />
+        <item name="miuix_appcompat_immersion_text_color_normal_light" description="长按弹窗列表文字normal" />
+        <item name="miuix_appcompat_immersion_text_color_pressed_light" description="长按弹窗列表文字pressed" />
+        <item name="word_photo_color" description="头像文字颜色" />
+        <item name="miuix_appcompat_edit_text_search_hint_color_light" description="搜索框提示文字" />
+        <item name="miuix_appcompat_dialog_default_title_text_color_light" description="弹窗标题文字" />
+        <item name="miuix_appcompat_dialog_default_message_text_color_light" description="弹窗提示文字" />
+        <item name="dialog_message_text_color_light_fixed" description="弹窗图标文字（拨号功能选项" />
+        <item name="miuix_appcompat_dialog_default_button_text_color_light" description="普通按钮文字" />
+        <item name="miuix_appcompat_dialog_default_button_text_color_guide_normal_light" description="高亮按钮文字" />
+        <item name="bh_sim_text_unselect" description="营业厅号码颜色" />
+        <item name="bh_sim_text_select" description="营业厅选中号码颜色" />
+        <item name="bh_color_main_text_black_40" description="营业厅小标题文字" />
+        <item name="bh_color_main_text_white_90" description="营业厅卡片小标题文字" />
+        <item name="bh_color_main_text_white" description="营业厅流量数字文字" />
+        <item name="bh_color_main_text_white_80" description="营业厅流量数字单位文字" />
+        <item name="bh_color_main_text_black" description="营业厅语音数字文字" />
+        <item name="bh_black_90_daynight" description="营业厅话费数字文字" />
+        <item name="bh_color_main_text_black_50" description="营业厅语音/话费单位文字" />
+        <item name="miuix_preference_primary_text_color_light" description="营业厅标题文字/联系人设置列表文字" />
+        <item name="bh_color_main_text_des" description="营业厅售价颜色" />
+        <item name="bh_black_daynight" description="营业厅底部列表文字" />
+        <item name="bh_black_80_daynight_dialog_button_text_fixed" description="编辑sim卡号码按钮文字颜色" />
+        <item name="bh_black_daynight_dialog_content_fixed" description="编辑sim卡号码输入号码文字颜色/隐私撤回内容弹窗文字颜色" />
+        <item name="bh_black_daynight_dialog_content_hint_fixed" description="编辑sim卡号码输入号码文字颜色" />
+        <item name="bh_black_daynight_dialog_title_fixed" description="营业厅隐私撤回弹窗标题文字" />
+        <item name="miuix_appcompat_dropdown_popup_list_text_color_normal_light" description="弹窗列表文字 常态" />
+        <item name="miuix_appcompat_dropdown_popup_list_text_color_pressed_light" description="弹窗列表文字 按下" />
+        <item name="miuix_appcompat_text_color_primary_light" description="搜索记录文字颜色/搜索框输入文字/可合并联系人重复联系人名称" />
+        <item name="miuix_appcompat_edit_text_search_color_light" description="群发短信/搜索框输入文字" />
+        <item name="miuix_appcompat_action_mode_title_text_color_light" description="多选上滑后标题文字" />
+        <item name="miuix_appcompat_action_button_text_color_normal_light" description="底部icon按钮下方文字normal" />
+        <item name="miuix_appcompat_action_button_text_color_pressed_light" description="底部icon按钮下方文字pressed" />
+        <item name="miuix_appcompat_action_button_text_color_selected_light" description="底部icon按钮下方文字selected" />
+        <item name="dialer_item_number_color" description="拨号盘数字文字" />
+        <item name="dialer_digits_location_text_color" description="拨号盘归属地" />
+        <item name="bh_black_30_daynight" description="充话费未输入号码提示文字" />
+        <item name="bh_blue_ff" description="充话费输入号码后sim卡文字" />
+        <item name="visual_check_textview_unchecked_text_color" description="营业厅样式设置常态文字" />
+        <item name="action_bar_tab_text_color_normal_light" description="联系人多选tab文字" />
+        <item name="v5_list_text_color_light" description="联系人多选 群组名称" />
+        <item name="text_color_black" description="重命名群组输入框文字" />
+        <item name="contact_editor_group_name_color" description="新建联系人 列表文字" />
+        <item name="miuix_appcompat_dialog_default_list_text_color_normal_light" description="新建联系人 添加更多选项弹窗文字常态" />
+        <item name="miuix_appcompat_dialog_default_list_text_color_pressed_light" description="新建联系人 添加更多选项弹窗文字二态" />
+        <item name="dialog_title_text_color_fixed" description="新建联系人 时间弹窗主要文字" />
+        <item name="bh_black_80_daynight" description="新建联系人 添加群组-新建群组文字" />
+        <item name="qrcode_hint_text_primary_color" description="二维码分享联系人 标题文字" />
+        <item name="contact_title_color" description="联系人详情，联系人名称" />
+        <item name="contact_detail_list_item_firstly_text_color" description="联系人详情列表主要文字" />
+        <item name="color_log_item_title_tv" description="联系人详情 通话详情列表文字" />
+
+        <item name="color_filter_black" description="联系人详情 黑色头像 上滑后icon颜色" />
+        <item name="color_filter_white" description="联系人详情 白色头像 上滑后icon颜色" />
+
+        <!-- <item name="contact_detail_title_color_light" description="联系人详情 有头像 联系人名称文字" /> -->
+        <!-- <item name="contact_detail_subtitle_color_light" description="联系人详情 有头像 联系人名称下方文字" /> -->
+
+    </colors>
+
+    <colors title="次要颜色" value="#99000000,#99ffffff">
+        <item name="miuix_appcompat_list_secondary_text_color_normal_light" description="列表次要文字normal" />
+        <item name="miuix_appcompat_list_secondary_text_color_pressed_light" description="列表次要文字pressed" />
+        <item name="miuix_appcompat_arrow_right_normal_fill_color_light" description="列表右箭头normal颜色" />
+        <item name="miuix_appcompat_arrow_right_pressed_fill_color_light" description="列表右箭头pressed颜色" />
+        <item name="miuix_appcompat_arrow_right_disable_fill_color_light" description="列表右箭头disable颜色" />
+        <item name="miuix_appcompat_dialog_default_button_text_color_guide_disabled_light" description="高亮按钮 不可点击状态文字" />
+        <item name="miuix_preference_secondary_text_color_light" description="小标题提示文字（您好xxx用户" />
+        <item name="bh_color_main_text_black_60" description="营业厅更多服务卡片次要文字" />
+        <item name="bh_color_main_text_white_80_fixed" description="隐私撤回确定按钮不可用文字颜色" />
+        <item name="search_history_clear_all" description="清除搜索记录文字颜色" />
+        <item name="picker_recent_header_color" description="搜索小标题" />
+        <item name="contact_search_result_color_sub" description="搜索内容未匹配文字" />
+
+        <item name="miuix_color_grey_light_primary_default" description="小标题default" />
+        <item name="miuix_color_grey_light_primary_disable" description="小标题disable" />
+        <item name="miuix_color_grey_light_primary_hover" description="小标题hover" />
+        <item name="miuix_color_grey_light_primary_pressed" description="小标题pressed" />
+        <item name="miuix_color_grey_light_secondary_default" description="小标题选择default" />
+        <item name="miuix_color_grey_light_secondary_disable" description="小标题选择disable" />
+        <item name="miuix_color_grey_light_secondary_hover" description="小标题选择hover" />
+        <item name="miuix_color_grey_light_secondary_pressed" description="小标题选择pressed" />
+        <item name="miuix_appcompat_action_button_text_color_disable_light" description="底部icon按钮下方文字disable" />
+
+        <item name="dialer_item_letter_color" description="拨号盘数字下方英文（abc def..." />
+        <item name="bh_black_40_daynight" description="充话费 sim卡描边和文字" />
+        <item name="bh_black_10_daynight" description="充话费 分割线" />
+        <item name="bh_black_50_daynight" description="充话费 推荐卡片次要文字" />
+        <item name="bh_second_more_rec" description="充话费 小标题" />
+        <item name="bh_black_60_daynight" description="充话费 号码不在通讯录提示" />
+        <item name="miuix_appcompat_alphabet_indexer_text_color" description="a~z索引文字" />
+        <item name="middle_text" description="群组标题下方次要文字" />
+        <item name="miuix_appcompat_action_bar_subtitle_text_light" description="群组标题上滑后下方次要文字" />
+        <item name="group_list_secondary_text_color" description="群组没有联系人提示文字" />
+        <item name="editor_hint_text_color_n" description="新建联系人输入框提示文字" />
+        <item name="editor_label_text_color_n" description="新建联系人可选输入框提示文字常态" />
+        <item name="editor_label_text_color_p" description="新建联系人可选输入框提示文字二态" />
+        <item name="miuix_appcompat_default_number_picker_hint_color" description="调整时间弹窗 未选中文字" />
+        <item name="dropdown_popup_list_second_text_color_normal" description="新建联系人 下拉弹窗" />
+        <item name="miuix_appcompat_blank_page_text_color_light" description="搜索联系人 没有搜索到内容提示文字" />
+
+        <item name="qrcode_hint_secondly_text_color" description="二维码分享联系人 副标题文字" />
+        <item name="qrcode_hint_detail_text_color" description="二维码分享联系人 提示文字" />
+        <item name="miuix_appcompat_bright_foreground_light" description="合并重复联系人提示文字" />
+        <item name="contact_subtitle_color" description="联系人详情 公司名称" />
+        <item name="contact_detail_list_item_secondly_text_color" description="联系人详情 联系人归归属地" />
+        <item name="contact_detail_head_textcolor" description="联系人详情 小标题文字" />
+        <item name="contact_detail_list_item_secondly_text_color_night_40" description="联系人详情 通话状态（已接通，未接通" />
+        <item name="detail_call_log_dialer_number_color" description="联系人详情 通话记录号码" />
+        <item name="miuix_preference_category_text_color_light" description="联系人设置小标题" />
+        <item name="miuix_preference_right_text_color_normal_light" description="列表右侧提示normal" />
+        <item name="miuix_preference_right_text_color_disable_light" description="列表右侧提示disable" />
+
+        <item name="miuix_appcompat_immersion_text_color_disable_light" description="长按弹窗列表文字disable" />
+
+    </colors>
+
+    <!-- 3482ff -->
+    <colors title="高亮色 蓝" value="#ffFF3B00,#ff277AF7">
+        <item name="contacts_accent_color" description="拨号盘按钮背景" />
+        <item name="miuix_color_blue_light_primary_default" description="高亮色default" />
+        <item name="miuix_color_blue_light_primary_hover" description="高亮色hover" />
+        <item name="miuix_color_blue_light_primary_pressed" description="高亮色pressed" />
+        <item name="miuix_color_blue_dark_secondary_default" description="高亮色选中default" />
+        <item name="miuix_color_blue_light_secondary_hover" description="高亮色选中hover" />
+        <item name="miuix_color_blue_light_secondary_pressed" description="高亮色选中pressed" />
+        <item name="miuix_appcompat_cloud_count_normal_text_color_light" description="云同步文字" />
+        <item name="miuix_appcompat_cloud_arrow_color_light" description="云同步右箭头" />
+
+        <item name="bh_sim_indicator" description="营业厅选中sim卡背景" />
+        <item name="bh_color_main_text_blue" description="营业厅填写号码提示文字/查余额文字" />
+        <item name="bh_color_main_text_blue_disable" description="营业厅填写号码提示文字" />
+        <item name="bh_color_bg_waterbox" description="营业厅流量卡片常态背景" />
+        <item name="bh_orange" description="营业厅话费推荐卡片文字/充话费高亮文字" />
+        <item name="bh_red_5500" description="充话费高亮文字2" />
+        <item name="high_light_text" description="搜索内容匹配文字" />
+        <item name="miuix_color_green_light_primary_default" description="拨号盘已输入号码文字/呼出拨号盘，新建联系人+号背景" />
+        <item name="t9_guide_text_color" description="t9拨号提示文字" />
+        <item name="t9_list_item_text_highlight" description="输入号码已匹配文字" />
+        <item name="action_button_positive_color" description="输入未知号码时列表文字/新建联系人添加更多选项/联系人详情更多通话记录" />
+        <item name="bh_orange_start" description="营业厅卡片推荐角标" />
+        <item name="bh_tag_blue" description="充话费输入号码后sim卡文字背景" />
+        <item name="editor_scan_businesscard_btn_txt_color" description="新建联系人扫描名片文字" />
+
+    </colors>
+
+    <colors title="高亮色 蓝 不可用" value="#4dFF3B00,#4d277AF7">
+        <item name="miuix_color_blue_light_primary_disable" description="高亮色disable" />
+        <item name="miuix_color_blue_light_secondary_disable" description="高亮色选中disable" />
+
+    </colors>
+
+    <colors title="高亮色 蓝 选中/背景" value="#1aFF3B00,#1a277AF7">
+        <item name="bh_color_bg_block_orange_light" description="营业厅话费推荐卡片背景" />
+        <item name="bh_black_50_daynight_dialog_bg_fixed" description="隐私撤回确定按钮不可用背景颜色" />
+        <item name="miuix_appcompat_dropdown_popup_list_item_bg_checked_light" description="弹窗列表选中" />
+        <item name="dropdown_popup_list_item_bg_checked_v12" description="全部联系人弹窗选中" />
+        <item name="miuix_appcompat_list_item_bg_color_checked_light" description="列表选中背景" />
+        <item name="miuix_appcompat_cloud_state_message_bg_color_normal_light" description="云同步背景" />
+        <item name="contact_list_item_bg_p" description="联系人多选 选中背景" />
+        <item name="editor_scan_bussiness_card_bg_n" description="新建联系人扫描名片背景" />
+        <item name="miuix_color_blue_light_secondary_default" description="新建联系人可选输入框弹窗选中背景 开启号码识别提示背景" />
+    </colors>
+
+    <colors title="高亮色 红" value="#fff22424,#fff22424">
+        <item name="bh_color_bg_waterbox_over" description="营业厅流量卡片流量超出背景" />
+        <item name="bh_red_f2" description="编辑sim卡号码提示文字" />
+        <item name="bh_red_ff35" description="充话费 不支持该号码提示文字" />
+        <item name="color_filter_red" description="联系人详情 上滑后收藏红心" />
+    </colors>
+
+    <color title="底tab icon选中" name="miuix_navigator_bottom_tab_light" value="#ff000000,#ffffffff" description="" />
+    <color title="底tab icon未选中" name="miuix_appcompat_black" value="#ff000000,#ffffffff" description="" />
+
+    <colors title="底栏 + 标题背景" value="#ffffffff,#ff121212">
+        <item name="miuix_appcompat_bottom_menu_bg_light" description="联系人底部菜单背景" />
+        <item name="miuix_design_default_color_surface" description="拨号底部菜单背景" />
+        <item name="contact_detail_cover_bg_color" description="联系人详情上滑标题背景" />
+        <item name="contact_photoview_end_color" description="联系人详情上滑过渡颜色" />
+        <item name="contact_detail_content_bg_color" description="有头像的联系人 详情页列表背景" />
+        <item name="miuix_design_default_color_surface_divider" description="底tab分隔线" />
+    </colors>
+
+    <colors title="弹窗背景" value="#ffffffff,#ff242424">
+        <item name="dropdown_popup_list_item_bg_normal" description="全部联系人弹窗normal" />
+        <item name="dropdown_popup_list_item_bg_pressed" description="全部联系人弹窗pressed" />
+        <item name="miuix_appcompat_dropdown_popup_backgroud_color_light" description="长按弹窗" />
+        <item name="miuix_appcompat_dialog_default_bg_color_light" description="底部弹窗背景" />
+        <item name="miuix_appcompat_spinner_item_normal_bg_color_light" description="新建联系人可选输入框弹窗常态背景" />
+        <item name="aggregation_suggestions_item_n" description="新建联系人 可选弹窗列表背景常态" />
+        <item name="aggregation_suggestions_item_p" description="新建联系人 可选弹窗列表背景二态" />
+    </colors>
+
+    <colors title="底部弹窗 普通按钮" value="#0a000000,#14ffffff">
+        <item name="miuix_appcompat_button_bg_color_normal_light" description="底部弹窗普通按钮背景常态" />
+        <item name="miuix_appcompat_button_bg_color_pressed_light" description="底部弹窗普通按钮背景按下" />
+    </colors>
+
+    <colors title="输入框填充色" value="#fff0f0f0,#ff202020">
+        <item name="miuix_appcompat_edit_text_search_bg_color_light" description="搜索输入框颜色（素材优先生效" />
+        <item name="miuix_appcompat_edit_text_bg_color_light" description="底部弹窗输入框" />
+    </colors>
+
+    <colors title="卡片/滑动条/分隔线" value="#0a000000,#14ffffff">
+        <item name="bh_color_sim_tab" description="营业厅卡1、2号码背景" />
+        <item name="bh_color_input_number" description="营业厅填写号码提示背景" />
+        <item name="bh_color_bg_block_gray" description="营业厅话费语音卡片背景" />
+        <item name="bh_color_bg_block_blue_light" description="营业厅充话费卡片背景" />
+        <item name="bh_black_6_daynight_dialog_bg_fixed" description="编辑sim卡号码按钮背景" />
+        <item name="bh_black_10_daynight_dialog_bg_fixed" description="编辑sim卡号码按钮背景" />
+        <item name="dialer_menu_item_bg_color_fixed" description="拨号功能选项背景" />
+        <item name="t9_guide_text_fg_color" description="t9拨号提示前景" />
+        <item name="miuix_appcompat_alphabet_indexer_bg_color_light" description="a～z索引背景" />
+        <item name="miuix_appcompat_alphabet_indexer_overlay_bg_color_light" description="a～z索引选中背景" />
+        <item name="miuix_appcompat_filter_sort_tab_view2_bg_color_selected_light" description="联系人多选 tab背景选中" />
+        <item name="edit_text_divider_bg_color" description="新建联系人 公司和职位中间分隔线" />
+        <item name="miuix_preference_first_last_divider_line_light" description="联系人/设置/列表分隔线" />
+        <item name="list_divider_stroke" description="联系人列表分隔线" />
+        <item name="miuix_appcompat_scrollbar_thumb_vertical_bg_light" description="列表滚动条颜色" />
+    </colors>
+
+    <colors title="开关 关闭背景" value="#19000000,#19ffffff">
+        <item name="miuix_appcompat_checkbox_btn_disable_background_color_light" description="复选框 未选中背景色" />
+        <item name="miuix_appcompat_sliding_button_bar_off_disabled_color_light" description="开关不可用背景" />
+        <item name="miuix_appcompat_sliding_button_bar_off_normal_color_light" description="开关关闭背景" />
+    </colors>
+
+    <colors title="开关圆点" value="#ffffffff,#ffffffff">
+        <item name="miuix_appcompat_sliding_btn_slider_off_normal_color_light" description="开关圆点" />
+        <item name="miuix_appcompat_sliding_btn_slider_off_pressed_color_light" description="开关圆点" />
+        <item name="miuix_appcompat_sliding_btn_slider_on_normal_color_light" description="开关圆点" />
+        <item name="miuix_appcompat_sliding_btn_slider_on_pressed_color_light" description="开关圆点" />
+        <item name="miuix_appcompat_sliding_btn_slider_off_disable_color_light" description="开关圆点" />
+        <item name="miuix_appcompat_sliding_btn_slider_on_disable_color_light" description="开关圆点" />
+    </colors>
+
+    <colors title="MIUIX点按过渡动画颜色" value="#14000000,#14ffffff">
+        <item name="miuix_folme_color_touch_tint" description="点按过渡动画颜色" />
+        <item name="miuix_folme_color_touch_tint_light" description="点按过渡动画颜色" />
+        <item name="miuix_folme_color_touch_tint_light_p1" description="点按过渡动画颜色p1" />
+        <item name="miuix_folme_color_touch_tint_light_p2" description="点按过渡动画颜色p2" />
+        <item name="miuix_folme_color_touch_tint_light_p3" description="点按过渡动画颜色p3" />
+    </colors>
+
+    <colors title="透明色（默认就行不要改" value="#00000000,#00ffffff">
+        <item name="miuix_appcompat_transparent" description="弹窗前置背景" />
+        <item name="miuix_appcompat_white" description="弹窗前置背景/列表背景" />
+        <item name="list_item_bg_normal" description="小标题背景（全部通话" />
+        <item name="default_contact_list_item_bg" description="搜索记录列表/联系人列表/联系人详情页上层背景" />
+        <item name="contact_list_item_bg_top_n" description="有头像的联系人详情页底部列表第一条背景" />
+        <item name="divider_bg_color" description="列表分隔线背景" />
+        <item name="bh_white_daynight" description="充话费界面背景" />
+        <item name="miuix_appcompat_filter_sort_tab_view2_bg_color_normal_light" description="联系人多选 tab背景常态" />
+        <item name="miuix_appcompat_dropdown_popup_list_item_bg_normal_light" description="下拉弹窗上层背景" />
+        <item name="contact_edit_content_bg_color" description="联系人详情，联系人头像背景" />
+    </colors>
+
+
+</Theme>

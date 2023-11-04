@@ -1,13 +1,17 @@
-import { createApp } from 'vue'
-import './style.css'
-import App from './App.vue'
+import { createApp } from "vue";
+import "./style.css";
+import "@arco-design/web-vue/es/style/index.less";
+import App from "./App.vue";
+import router from "./router";
 
-createApp(App).mount('#app').$nextTick(() => {
+const app = createApp(App);
+app.use(router);
+app.mount("#app").$nextTick(() => {
   // Remove Preload scripts loading
-  postMessage({ payload: 'removeLoading' }, '*')
+  postMessage({ payload: "removeLoading" }, "*");
 
   // Use contextBridge
-  window.ipcRenderer.on('main-process-message', (_event, message) => {
-    console.log(message)
-  })
-})
+  window.ipcRenderer.on("main-process-message", (_event, message) => {
+    console.log(message);
+  });
+});

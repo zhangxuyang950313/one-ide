@@ -1,0 +1,5 @@
+<GeneralTemplate>
+    <ThemePage tag="安卓全局" description="原生通知" page="framework-res">
+
+    </ThemePage>
+</GeneralTemplate>

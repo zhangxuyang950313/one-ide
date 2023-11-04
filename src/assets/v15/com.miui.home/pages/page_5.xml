@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ThemePage tag="桌面" description="页面指示器">
+	<image description="负一屏指示点" src="res/drawable-xxhdpi/workspace_assistantpoint.png"/>
+	<image description="负一屏指示点 深色" src="res/drawable-xxhdpi/workspace_assistantpoint_dark.png"/>
+	<image description="页面指示点" src="res/drawable-xxhdpi/workspace_seekpoint_normal.png"/>
+	<image description="页面指示点 选中态" src="res/drawable-xxhdpi/workspace_seekpoint_highlight.png"/>
+	<image description="页面指示点（浅壁纸模式）" src="res/drawable-xxhdpi/workspace_seekpoint_normal_dark.png"/>
+	<image description="页面指示点 选中态（浅壁纸模式）" src="res/drawable-xxhdpi/workspace_seekpoint_highlight_dark.png"/>
+</ThemePage>

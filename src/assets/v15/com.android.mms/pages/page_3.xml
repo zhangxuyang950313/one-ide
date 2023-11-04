@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ThemePage tag="短信" description="新建短信">
+	<image description="添加联系人icon" src="res/drawable-xxhdpi/ic_add_contact.png"/>
+	<image description="输入号码后确定icon" src="res/drawable-xxhdpi/ic_confirm_recipient.png"/>
+	<image description="收信人 按钮背景" src="res/drawable-xxhdpi/recipient_view_bg.9.png"/>
+	<image description="气泡中语音icon 接收" src="res/drawable-xxhdpi/chat_icon_voice_in.png"/>
+	<image description="气泡中语音icon 接收" src="res/drawable-xxhdpi/chat_icon_voice_in0.png"/>
+	<image description="气泡中语音icon 接收" src="res/drawable-xxhdpi/chat_icon_voice_in1.png"/>
+	<image description="气泡中语音icon 接收" src="res/drawable-xxhdpi/chat_icon_voice_in2.png"/>
+	<image description="气泡中语音icon 发送" src="res/drawable-xxhdpi/chat_icon_voice_out.png"/>
+	<image description="气泡中语音icon 发送" src="res/drawable-xxhdpi/chat_icon_voice_out0.png"/>
+	<image description="气泡中语音icon 发送" src="res/drawable-xxhdpi/chat_icon_voice_out1.png"/>
+	<image description="气泡中语音icon 发送" src="res/drawable-xxhdpi/chat_icon_voice_out2.png"/>
+	<image description="输入框背景" src="res/drawable-xxhdpi/message_edit_bottom_panel.9.png"/>
+	<image description="输入框" src="res/drawable-xxhdpi/compose_message_editor_bg.9.png"/>
+	<image description="文字模式 icon" src="res/drawable-xxhdpi/message_edit_bottom_edit_mode.png"/>
+	<image description="菜单模式 icon" src="res/drawable-xxhdpi/message_bottom_edit_mode.png"/>
+	<image description="语音模式 icon" src="res/drawable-xxhdpi/ic_chat_icon_voice_n.png"/>
+	<image description="添加附件 icon" src="res/drawable-xxhdpi/insert_attachment_button_n.png"/>
+	<image description="输入框 幻灯片icon" src="res/drawable-xxhdpi/ic_attachment_slideshow.png"/>
+	<image description="输入框中sim卡？ icon" src="res/drawable-xxhdpi/msg_edit_default.png"/>
+	<image description="输入框中sim卡1 icon" src="res/drawable-xxhdpi/msg_edit_sim1.png"/>
+	<image description="输入框中sim卡2 icon" src="res/drawable-xxhdpi/msg_edit_sim2.png"/>
+	<image description="选择sim卡弹窗中sim卡1 icon" src="res/drawable-xxhdpi/sim1.png"/>
+	<image description="选择sim卡弹窗中sim卡2 icon" src="res/drawable-xxhdpi/sim2.png"/>
+	<image description="发送icon不可用" src="res/drawable-xxhdpi/ic_send_btn_disable.png"/>
+	<image description="发送icon可用" src="res/drawable-xxhdpi/ic_send_btn_n.png"/>
+	<image description="附件 表情" src="res/drawable-xxhdpi/ic_attach_smiley.png"/>
+	<image description="附件 名片" src="res/drawable-xxhdpi/ic_attach_contact.png"/>
+	<image description="附件 图片" src="res/drawable-xxhdpi/ic_attach_photo.png"/>
+	<image description="附件 拍照" src="res/drawable-xxhdpi/ic_attach_take_photo.png"/>
+	<image description="附件 我的收藏" src="res/drawable-xxhdpi/ic_attach_phrase.png"/>
+	<image description="附件 定时" src="res/drawable-xxhdpi/ic_attach_timing.png"/>
+	<image description="附件 主题" src="res/drawable-xxhdpi/ic_attach_subject.png"/>
+	<image description="附件 音频" src="res/drawable-xxhdpi/ic_attach_sound.png"/>
+	<image description="附件 视频" src="res/drawable-xxhdpi/ic_attach_video.png"/>
+	<image description="附件 幻灯片" src="res/drawable-xxhdpi/ic_attach_slide_show.png"/>
+	<image description="编辑幻灯片 列表幻灯片icon" src="res/drawable-xxhdpi/ic_attach_slide_show_new.png"/>
+	<image description="编辑幻灯片 添加图片icon" src="res/drawable-xxhdpi/slide_image_empty.png"/>
+</ThemePage>

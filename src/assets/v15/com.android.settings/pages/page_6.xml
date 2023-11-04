@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ThemePage tag="设置" description="护眼模式">
+	<image description="调节色温icon（护眼模式-经典护眼）" src="res/drawable-xxhdpi/temperature_icon.png"/>
+	<image description="纸质纹理icon（护眼模式-经典护眼）" src="res/drawable-xxhdpi/texture_icon.png"/>
+</ThemePage>

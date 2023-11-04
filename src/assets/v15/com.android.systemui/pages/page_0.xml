@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ThemePage tag="SYSTEMUI" description="通知中心" page="framework-res">
+	<image description="通知列表背景" src="res/drawable-xxhdpi/notification_heads_up_transparent_bg.9.png"/>
+	<image description="历史通知 右箭头" src="res/drawable-xxhdpi/unimportant_icon_more.png"/>
+	<image description="清除按钮背景" src="res/drawable-xxhdpi/btn_clear_all.png"/>
+	<image description="清除按钮" src="res/drawable-xxhdpi/notifications_clear_all.png"/>
+	<image description="通知设置" src="res/drawable-xxhdpi/notification_panel_manage_icon.png"/>
+	<image description="消息展开提示按钮" src="res/drawable-xxhdpi/notification_group_collapsed_arrow.png"/>
+	<image description="通知列表长按 按钮背景" src="res/drawable-xxhdpi/miui_notification_menu_ic_bg_inactive.png"/>
+	<image description="通知列表长按 按钮内关闭通知icon" src="res/drawable-xxhdpi/miui_notification_menu_ic_close.png"/>
+	<image description="通知列表长按 按钮内更多设置icon" src="res/drawable-xxhdpi/miui_notification_menu_ic_more_setting.png"/>
+</ThemePage>

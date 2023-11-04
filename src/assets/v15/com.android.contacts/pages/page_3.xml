@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ThemePage tag="电话" description="联系人列表">
+	<image description="无联系人时列表背景（无特殊设计不要修改）" src="res/drawable-xxhdpi/miuix_appcompat_window_bg_secondary_light.9.png"/>
+	<image description="列表小标题背景" src="res/drawable-xxhdpi/list_view_item_group_header_bg_light.9.png"/>
+	<image description="全部通话 展开提示icon" src="res/drawable-xxhdpi/miuix_appcompat_arrow_up_down.png"/>
+	<image description="列表 文字头像背景" src="res/drawable-xxhdpi/word_photo_bg_light.png"/>
+	<image description="列表头像 边框" src="res/drawable-xxhdpi/ic_contact_photo_fg.png"/>
+	<image description="我的群组 公司" src="res/drawable-xxhdpi/company_group.png"/>
+	<image description="我的群组 所在地" src="res/drawable-xxhdpi/location_group.png"/>
+	<image description="我的群组 最近联系时间" src="res/drawable-xxhdpi/frequency_group.png"/>
+	<image description="我的群组 头像背景" src="res/drawable-xxhdpi/group_photos_container_bg.png"/>
+	<image description="多选 群组展开" src="res/drawable-xxhdpi/expander_open.png"/>
+	<image description="多选 群组收起" src="res/drawable-xxhdpi/expander_close.png"/>
+</ThemePage>

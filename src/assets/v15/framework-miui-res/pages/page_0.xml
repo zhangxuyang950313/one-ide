@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ThemePage tag="MIUI全局" description="小图标双开" page="framework-res">
+	<image description="1x1图标应用双开icon" src="res/drawable-xxhdpi/ic_corp_icon_xspace.png"/>
+</ThemePage>
