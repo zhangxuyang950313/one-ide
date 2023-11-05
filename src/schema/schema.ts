@@ -20,7 +20,7 @@ export type TPage = {
   name: string;
   description: string;
   preview: string;
-  moduleKey: string | number; // 归属于模块
+  moduleKey: string | number | TModule; // 归属于模块
   resources: TResource[]; // 页面资源
 };
 
@@ -32,7 +32,7 @@ export type TResourceCategory = {
 
 // 资源
 export type TResource = {
-  categoryKey: string | number; // 归属于资源分类
+  categoryKey: string | number | TResourceCategory; // 归属于资源分类
   mimeType: MimeType; // 文件类型
   paths: string[];
   name: string;

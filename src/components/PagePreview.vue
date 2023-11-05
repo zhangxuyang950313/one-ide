@@ -13,7 +13,10 @@ defineProps<{
 <style lang="less" scoped>
 .preview {
   width: 100%;
-  height: 100%;
+  outline: 2px solid var(--color-border);
+  border-radius: 8px;
+  overflow: hidden;
+  font-size: 0;
   .static {
     width: 100%;
     object-fit: contain;

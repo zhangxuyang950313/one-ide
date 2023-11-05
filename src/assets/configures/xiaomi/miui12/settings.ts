@@ -1,4 +1,6 @@
-import { pages } from "./pages.ts";
+import { pagesDesktop } from "./pages-desktop.ts";
+import { pagesContacts } from "./pages-contacts.ts";
+import { pagesMms } from "./pages-mms.ts";
 import { ModuleKey, CategoryKey } from "./enums.ts";
 import { TIDESettings } from "../../../../schema/schema.ts";
 
@@ -29,7 +31,7 @@ const ideSettings: TIDESettings = {
       icon: mms,
     },
   ],
-  pages: pages,
+  pages: [...pagesDesktop, ...pagesContacts, ...pagesMms],
   resourceCategories: [
     {
       name: "图片",

@@ -2,26 +2,20 @@
 import { Empty, Tabs } from "@arco-design/web-vue";
 import ModuleSelector from "../components/ModuleSelector.vue";
 import ToolBar from "../components/ToolBar.vue";
-import PageSelector from "../components/PageSelector.vue";
+import PageSelector from "../components/PageSelector/Index.vue";
 import PagePreview from "../components/PagePreview.vue";
 import ResourceHandler from "../components/ResourceHandler.vue";
-import { useCurrentSelectStore } from "../store/useCurrentSelectStore.ts";
+import { useIdeStateStore } from "../store/useIdeStateStore.ts";
 import { storeToRefs } from "pinia";
-import { watchEffect } from "vue";
 
-const currentSelectStore = useCurrentSelectStore();
+const ideStateStore = useIdeStateStore();
 const {
-  settings,
+  settings, //
   modules,
   resourceCategories,
-  pagesFiltered,
   moduleSelected,
   pageSelected,
-} = storeToRefs(currentSelectStore);
-
-watchEffect(() => {
-  console.log(moduleSelected.value);
-});
+} = storeToRefs(ideStateStore);
 </script>
 
 <template>
@@ -41,7 +35,7 @@ watchEffect(() => {
         <template v-if="!!modules">
           <!-- 页面选择器 -->
           <section class="page-selector">
-            <PageSelector :pages="pagesFiltered" />
+            <PageSelector />
           </section>
           <!-- 页面预览 -->
           <section class="page-preview">
@@ -108,7 +102,7 @@ watchEffect(() => {
         transform: translate(-50%, -50%);
       }
       .page-selector {
-        width: 220px;
+        width: 160px;
         height: 100%;
         padding: 10px;
         flex-shrink: 0;

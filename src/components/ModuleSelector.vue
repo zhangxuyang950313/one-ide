@@ -1,12 +1,16 @@
 <script setup lang="ts">
-import { defineModel, watchEffect } from "vue";
+import { watchEffect } from "vue";
+import { useVModel } from "@vueuse/core";
 import { type TModule } from "../schema/schema.ts";
 
-defineProps<{
+const props = defineProps<{
   modules: TModule[];
+  select: TModule;
 }>();
 
-const select = defineModel("select");
+const emit = defineEmits(["update:select"]);
+
+const select = useVModel(props, "select", emit);
 
 watchEffect(() => {
   console.log(select);
@@ -22,6 +26,7 @@ watchEffect(() => {
         :key="`${m.icon}_${i}`"
         :src="m.icon"
         :alt="m.name"
+        :data-selected="select === m"
         @click="select = m"
       />
     </div>
@@ -38,11 +43,18 @@ watchEffect(() => {
   width: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  align-items: center;
   grid-gap: 10px;
   .icon {
     width: 100%;
     cursor: pointer;
+    transform: scale(0.9);
+    opacity: 0.5;
+    transition: 0.2s ease all;
+    &[data-selected="true"] {
+      transform: scale(1);
+      opacity: 1;
+    }
   }
 }
 </style>

@@ -17,7 +17,14 @@ module.exports = {
             }
         },
         {
-            files: ['*.js', '*.jsx', '*.mjs', '*.cjs', '*.vue', '*.ts', '*.tsx'],
+            files: [
+                '*.js',
+                '*.jsx',
+                '*.mjs',
+                '*.cjs',
+                '*.ts',
+                '*.tsx'
+            ],
             options: {
                 parser: 'babel'
             }
