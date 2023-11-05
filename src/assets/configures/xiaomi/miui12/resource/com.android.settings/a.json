@@ -1,0 +1,4291 @@
+{
+  "declaration": {
+    "attributes": {
+      "version": "1.0",
+      "encoding": "utf-8",
+      "standalone": "yes"
+    }
+  },
+  "elements": [
+    {
+      "type": "element",
+      "name": "MIUI_Theme_Values",
+      "elements": [
+        {
+          "type": "comment",
+          "comment": " 顶栏 "
+        },
+        {
+          "type": "comment",
+          "comment": " 一级标题大文字 "
+        },
+        {
+          "type": "element",
+          "name": "color",
+          "attributes": {
+            "name": "action_bar_title_text_color_light",
+            "package": "miui"
+          },
+          "elements": [
+            {
+              "type": "text",
+              "text": "class_color_top_title"
+            }
+          ]
+        },
+        {
+          "type": "comment",
+          "comment": " 顶栏编辑界面\t标题文字\t“MIOffice-5G 网络详情” "
+        },
+        {
+          "type": "element",
+          "name": "color",
+          "attributes": {
+            "name": "action_mode_title_text_color_light",
+            "package": "miui"
+          },
+          "elements": [
+            {
+              "type": "text",
+              "text": "class_color_top_title"
+            }
+          ]
+        },
+        {
+          "type": "comment",
+          "comment": " 顶栏标题次要文字颜色 "
+        },
+        {
+          "type": "element",
+          "name": "color",
+          "attributes": {
+            "name": "action_bar_subtitle_text_light",
+            "package": "miui"
+          },
+          "elements": [
+            {
+              "type": "text",
+              "text": "class_color_top_subtitle"
+            }
+          ]
+        },
+        {
+          "type": "comment",
+          "comment": " 左右小豆豆按钮\t常态（不可按、二态是与底部小豆豆用的一套颜色值） "
+        },
+        {
+          "type": "element",
+          "name": "color",
+          "attributes": {
+            "name": "action_title_color_light",
+            "package": "miui"
+          },
+          "elements": [
+            {
+              "type": "text",
+              "text": "class_color_top_title"
+            }
+          ]
+        },
+        {
+          "type": "comment",
+          "comment": " 顶部编辑按钮\t顶部右上角编辑按钮（声音与振动-静音/勿扰-定时开启） "
+        },
+        {
+          "type": "element",
+          "name": "color",
+          "attributes": {
+            "name": "action_button_edit_color"
+          },
+          "elements": [
+            {
+              "type": "text",
+              "text": "class_color_top_title"
+            }
+          ]
+        },
+        {
+          "type": "comment",
+          "comment": " 更多设置-无障碍\t顶部文字常态/选中 "
+        },
+        {
+          "type": "element",
+          "name": "color",
+          "attributes": {
+            "name": "accessibility_settings_action_bar_inactive_color"
+          },
+          "elements": [
+            {
+              "type": "text",
+              "text": "class_color_bar_normal"
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "name": "color",
+          "attributes": {
+            "name": "accessibility_settings_action_bar_active_color"
+          },
+          "elements": [
+            {
+              "type": "text",
+              "text": "class_color_bar_active"
+            }
+          ]
+        },
+        {
+          "type": "comment",
+          "comment": " 搜索条\t背景、提示文字 "
+        },
+        {
+          "type": "element",
+          "name": "color",
+          "attributes": {
+            "name": "edit_text_search_bg_color_light",
+            "package": "miui"
+          },
+          "elements": [
+            {
+              "type": "text",
+              "text": "class_color_search_bg"
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "name": "color",
+          "attributes": {
+            "name": "edit_text_search_hint_color_light",
+            "package": "miui"
+          },
+          "elements": [
+            {
+              "type": "text",
+              "text": "class_color_search_tips"
+            }
+          ]
+        },
+        {
+          "type": "comment",
+          "comment": " 搜索框展开后 "
+        },
+        {
+          "type": "comment",
+          "comment": " 搜索条\t输入的文字 "
+        },
+        {
+          "type": "element",
+          "name": "color",
+          "attributes": {
+            "name": "edit_text_search_color_light",
+            "package": "miui"
+          },
+          "elements": [
+            {
+              "type": "text",
+              "text": "class_color_search_normal"
+            }
+          ]
+        },
+        {
+          "type": "comment",
+          "comment": " 搜索条右侧\t\t“取消”\t文字按钮 "
+        },
+        {
+          "type": "element",
+          "name": "color",
+          "attributes": {
+            "name": "search_action_mode_cancel_text_color_normal",
+            "package": "miui"
+          },
+          "elements": [
+            {
+              "type": "text",
+              "text": "class_color_search_light"
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "name": "color",
+          "attributes": {
+            "name": "search_action_mode_cancel_text_color_pressed",
+            "package": "miui"
+          },
+          "elements": [
+            {
+              "type": "text",
+              "text": "class_color_search_normal"
+            }
+          ]
+        },
+        {
+          "type": "comment",
+          "comment": " 设置首页 "
+        },
+        {
+          "type": "comment",
+          "comment": " 设置首页-小米账号次要文字：“管理账号、云服务、支付信息等” "
+        },
+        {
+          "type": "element",
+          "name": "color",
+          "attributes": {
+            "name": "account_info_summary"
+          },
+          "elements": [
+            {
+              "type": "text",
+              "text": "class_color_second"
+            }
+          ]
+        },
+        {
+          "type": "comment",
+          "comment": "  我的设备：“新版本”按钮背景、文字“新版本” "
+        },
+        {
+          "type": "element",
+          "name": "color",
+          "attributes": {
+            "name": "new_version_button_color"
+          },
+          "elements": [
+            {
+              "type": "text",
+              "text": "class_color_new_version_bg"
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "name": "color",
+          "attributes": {
+            "name": "new_version_text_color"
+          },
+          "elements": [
+            {
+              "type": "text",
+              "text": "class_color_light_n"
+            }
+          ]
+        },
+        {
+          "type": "comment",
+          "comment": " 首页列表\t主要文字 "
+        },
+        {
+          "type": "element",
+          "name": "color",
+          "attributes": {
+            "name": "preference_primary_text_color_disable_light",
+            "package": "miui"
+          },
+          "elements": [
+            {
+              "type": "text",
+              "text": "class_color_disable"
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "name": "color",
+          "attributes": {
+            "name": "preference_primary_text_color_light",
+            "package": "miui"
+          },
+          "elements": [
+            {
+              "type": "text",
+              "text": "class_color_first"
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "name": "color",
+          "attributes": {
+            "name": "preference_primary_text_color_pressed_light",
+            "package": "miui"
+          },
+          "elements": [
+            {
+              "type": "text",
+              "text": "class_color_first"
+            }
+          ]
+        },
+        {
+          "type": "comment",
+          "comment": " 首页列表\t列表次要文字 "
+        },
+        {
+          "type": "element",
+          "name": "color",
+          "attributes": {
+            "name": "preference_secondary_text_color_disable_light",
+            "package": "miui"
+          },
+          "elements": [
+            {
+              "type": "text",
+              "text": "class_color_disable"
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "name": "color",
+          "attributes": {
+            "name": "preference_secondary_text_color_light",
+            "package": "miui"
+          },
+          "elements": [
+            {
+              "type": "text",
+              "text": "class_color_second"
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "name": "color",
+          "attributes": {
+            "name": "preference_secondary_text_color_pressed_light",
+            "package": "miui"
+          },
+          "elements": [
+            {
+              "type": "text",
+              "text": "class_color_second"
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "name": "color",
+          "attributes": {
+            "name": "preference_secondary_text_color_checked_light",
+            "package": "miui"
+          },
+          "elements": [
+            {
+              "type": "text",
+              "text": "class_color_light_n"
+            }
+          ]
+        },
+        {
+          "type": "comment",
+          "comment": " 系统默认是用的#99000000、次要文字；class_color_second "
+        },
+        {
+          "type": "comment",
+          "comment": " 首页列表\t次要提示文字\t设置列表右侧提示文字“已开启、已关闭” "
+        },
+        {
+          "type": "element",
+          "name": "color",
+          "attributes": {
+            "name": "list_secondary_text_color_disable_light",
+            "package": "miui"
+          },
+          "elements": [
+            {
+              "type": "text",
+              "text": "class_color_disable"
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "name": "color",
+          "attributes": {
+            "name": "list_secondary_text_color_normal_light",
+            "package": "miui"
+          },
+          "elements": [
+            {
+              "type": "text",
+              "text": "class_color_tips"
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "name": "color",
+          "attributes": {
+            "name": "list_secondary_text_color_pressed_light",
+            "package": "miui"
+          },
+          "elements": [
+            {
+              "type": "text",
+              "text": "class_color_tips"
+            }
+          ]
+        },
+        {
+          "type": "comment",
+          "comment": " 无标题 非第一条列表分隔线（首页、wifi网络详情页） "
+        },
+        {
+          "type": "element",
+          "name": "color",
+          "attributes": {
+            "name": "preference_first_last_divider_line_light"
+          },
+          "elements": [
+            {
+              "type": "text",
+              "text": "#0d000000"
+            }
+          ]
+        },
+        {
+          "type": "comment",
+          "comment": " 二级设置界面 "
+        },
+        {
+          "type": "comment",
+          "comment": " 无标题 非第一条分割线（二级设置界面） "
+        },
+        {
+          "type": "element",
+          "name": "color",
+          "attributes": {
+            "name": "miuix_preference_first_last_divider_line_light"
+          },
+          "elements": [
+            {
+              "type": "text",
+              "text": "#0d000000"
+            }
+          ]
+        },
+        {
+          "type": "comment",
+          "comment": " 主要文字 "
+        },
+        {
+          "type": "element",
+          "name": "color",
+          "attributes": {
+            "name": "miuix_preference_primary_text_color_disable_light"
+          },
+          "elements": [
+            {
+              "type": "text",
+              "text": "class_color_disable"
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "name": "color",
+          "attributes": {
+            "name": "miuix_preference_primary_text_color_light"
+          },
+          "elements": [
+            {
+              "type": "text",
+              "text": "class_color_first"
+            }
+          ]
+        },
+        {
+          "type": "comment",
+          "comment": " 次要文字 "
+        },
+        {
+          "type": "element",
+          "name": "color",
+          "attributes": {
+            "name": "miuix_preference_secondary_text_color_disable_light"
+          },
+          "elements": [
+            {
+              "type": "text",
+              "text": "class_color_disable"
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "name": "color",
+          "attributes": {
+            "name": "miuix_preference_secondary_text_color_light"
+          },
+          "elements": [
+            {
+              "type": "text",
+              "text": "class_color_second"
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "name": "color",
+          "attributes": {
+            "name": "miuix_preference_secondary_text_color_checked_light"
+          },
+          "elements": [
+            {
+              "type": "text",
+              "text": "class_color_light_n"
+            }
+          ]
+        },
+        {
+          "type": "comment",
+          "comment": " 次要提示文字\t“勿扰”（声音与振动-静音/勿扰＞） "
+        },
+        {
+          "type": "element",
+          "name": "color",
+          "attributes": {
+            "name": "miuix_preference_list_secondary_text_color_disable_light"
+          },
+          "elements": [
+            {
+              "type": "text",
+              "text": "class_color_disable"
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "name": "color",
+          "attributes": {
+            "name": "miuix_preference_list_secondary_text_color_normal_light"
+          },
+          "elements": [
+            {
+              "type": "text",
+              "text": "class_color_second"
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "name": "color",
+          "attributes": {
+            "name": "miuix_preference_list_secondary_text_color_pressed_light"
+          },
+          "elements": [
+            {
+              "type": "text",
+              "text": "class_color_second"
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "name": "color",
+          "attributes": {
+            "name": "miuix_preference_list_secondary_text_color_checked_light"
+          },
+          "elements": [
+            {
+              "type": "text",
+              "text": "class_color_light_n"
+            }
+          ]
+        },
+        {
+          "type": "comment",
+          "comment": " 次要文字\t右操作提示文字“适中”（声音与振动-点按时振动-） "
+        },
+        {
+          "type": "element",
+          "name": "color",
+          "attributes": {
+            "name": "miuix_compat_integrated_spinner_text_color_light"
+          },
+          "elements": [
+            {
+              "type": "text",
+              "text": "class_color_tips"
+            }
+          ]
+        },
+        {
+          "type": "comment",
+          "comment": " 卡片背景（常态、选中） "
+        },
+        {
+          "type": "element",
+          "name": "color",
+          "attributes": {
+            "name": "miuix_preference_checkable_item_fill_color_normal_light"
+          },
+          "elements": [
+            {
+              "type": "text",
+              "text": "class_color_checkable_item_fill_bg_normal"
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "name": "color",
+          "attributes": {
+            "name": "miuix_preference_checkable_item_fill_color_checked_light"
+          },
+          "elements": [
+            {
+              "type": "text",
+              "text": "class_color_checkable_item_fill_bg_checked"
+            }
+          ]
+        },
+        {
+          "type": "comment",
+          "comment": " 卡片 主要文字 选中高亮色 "
+        },
+        {
+          "type": "element",
+          "name": "color",
+          "attributes": {
+            "name": "miuix_preference_highlight_disabled_light"
+          },
+          "elements": [
+            {
+              "type": "text",
+              "text": "class_color_light_d"
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "name": "color",
+          "attributes": {
+            "name": "miuix_preference_highlight_normal_light"
+          },
+          "elements": [
+            {
+              "type": "text",
+              "text": "class_color_light_n"
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "name": "color",
+          "attributes": {
+            "name": "miuix_preference_highlight_pressed_light"
+          },
+          "elements": [
+            {
+              "type": "text",
+              "text": "class_color_light_n"
+            }
+          ]
+        },
+        {
+          "type": "comment",
+          "comment": " 卡片左侧 选中√勾 "
+        },
+        {
+          "type": "element",
+          "name": "color",
+          "attributes": {
+            "name": "miuix_preference_btn_radio_arrow_color"
+          },
+          "elements": [
+            {
+              "type": "text",
+              "text": "class_color_light_n"
+            }
+          ]
+        },
+        {
+          "type": "comment",
+          "comment": " 列表右箭头 "
+        },
+        {
+          "type": "element",
+          "name": "color",
+          "attributes": {
+            "name": "miuix_preference_arrow_right_normal_fill_color_light"
+          },
+          "elements": [
+            {
+              "type": "text",
+              "text": "class_color_tips"
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "name": "color",
+          "attributes": {
+            "name": "miuix_preference_arrow_right_pressed_fill_color_light"
+          },
+          "elements": [
+            {
+              "type": "text",
+              "text": "class_color_tips"
+            }
+          ]
+        },
+        {
+          "type": "comment",
+          "comment": " 内容标题文字\t“选取附近的WLAN” "
+        },
+        {
+          "type": "element",
+          "name": "color",
+          "attributes": {
+            "name": "bright_foreground_light"
+          },
+          "elements": [
+            {
+              "type": "text",
+              "text": "class_color_first"
+            }
+          ]
+        },
+        {
+          "type": "comment",
+          "comment": " 类别小标题文字\t“WLAN设置”\t#ff8c93b0 "
+        },
+        {
+          "type": "element",
+          "name": "color",
+          "attributes": {
+            "name": "miuix_preference_category_text_color_light"
+          },
+          "elements": [
+            {
+              "type": "text",
+              "text": "class_color_category_text_tips"
+            }
+          ]
+        },
+        {
+          "type": "comment",
+          "comment": " VPN-添加VPN-标题文字“类型” "
+        },
+        {
+          "type": "element",
+          "name": "color",
+          "attributes": {
+            "name": "preference_category_text_color_light",
+            "package": "miui"
+          },
+          "elements": [
+            {
+              "type": "text",
+              "text": "class_color_tips"
+            }
+          ]
+        },
+        {
+          "type": "comment",
+          "comment": " 右侧刷新按钮：圆圈背景 "
+        },
+        {
+          "type": "element",
+          "name": "color",
+          "attributes": {
+            "name": "bt_refresh_bg_color"
+          },
+          "elements": [
+            {
+              "type": "text",
+              "text": "class_color_wb_bt_refresh_bg"
+            }
+          ]
+        },
+        {
+          "type": "comment",
+          "comment": " 右侧刷新按钮：箭头 "
+        },
+        {
+          "type": "element",
+          "name": "color",
+          "attributes": {
+            "name": "bt_refresh_color"
+          },
+          "elements": [
+            {
+              "type": "text",
+              "text": "class_color_wb_bt_refresh_arrow"
+            }
+          ]
+        },
+        {
+          "type": "comment",
+          "comment": " WLAN卡片、蓝牙卡片 "
+        },
+        {
+          "type": "comment",
+          "comment": " 已连接 wifi信号图标染色颜色值 "
+        },
+        {
+          "type": "element",
+          "name": "color",
+          "attributes": {
+            "name": "miuix_preference_connect_icon_connected_color"
+          },
+          "elements": [
+            {
+              "type": "text",
+              "text": "class_color_wb_card_first_connected"
+            }
+          ]
+        },
+        {
+          "type": "comment",
+          "comment": " 已连接卡片内 主要文字 "
+        },
+        {
+          "type": "element",
+          "name": "color",
+          "attributes": {
+            "name": "miuix_preference_connect_title_connected_color"
+          },
+          "elements": [
+            {
+              "type": "text",
+              "text": "class_color_wb_card_first_connected"
+            }
+          ]
+        },
+        {
+          "type": "comment",
+          "comment": " 已连接卡片内 次要文字 "
+        },
+        {
+          "type": "element",
+          "name": "color",
+          "attributes": {
+            "name": "miuix_preference_connect_summary_connected_color"
+          },
+          "elements": [
+            {
+              "type": "text",
+              "text": "class_color_wb_card_secondary_connected"
+            }
+          ]
+        },
+        {
+          "type": "comment",
+          "comment": " 已连接卡片内 主要文字后面的小图标 "
+        },
+        {
+          "type": "element",
+          "name": "color",
+          "attributes": {
+            "name": "wifi_signal_icon_connected_color"
+          },
+          "elements": [
+            {
+              "type": "text",
+              "text": "class_color_wb_card_first_connected"
+            }
+          ]
+        },
+        {
+          "type": "comment",
+          "comment": " wifi/蓝牙 卡片背景 圆角 "
+        },
+        {
+          "type": "comment",
+          "comment": " <dimen name=\"miuix_preference_high_light_radius\">17.45dp</dimen> "
+        },
+        {
+          "type": "element",
+          "name": "dimen",
+          "attributes": {
+            "name": "miuix_preference_high_light_radius"
+          },
+          "elements": [
+            {
+              "type": "text",
+              "text": "class_dimen_miuix_preference_high_light_radius"
+            }
+          ]
+        },
+        {
+          "type": "comment",
+          "comment": " 未连接 wifi信号图标染色颜色值 "
+        },
+        {
+          "type": "element",
+          "name": "color",
+          "attributes": {
+            "name": "miuix_preference_connect_icon_disconnected_color_light"
+          },
+          "elements": [
+            {
+              "type": "text",
+              "text": "class_color_wb_card_first_disconnected"
+            }
+          ]
+        },
+        {
+          "type": "comment",
+          "comment": " 未连接\twifi列表 主要文字 "
+        },
+        {
+          "type": "element",
+          "name": "color",
+          "attributes": {
+            "name": "miuix_preference_connect_title_disconnected_color_light"
+          },
+          "elements": [
+            {
+              "type": "text",
+              "text": "class_color_wb_card_first_disconnected"
+            }
+          ]
+        },
+        {
+          "type": "comment",
+          "comment": " 未连接\twifi列表 次要文字（在上面已连接wifi刚开始连接时显示） "
+        },
+        {
+          "type": "element",
+          "name": "color",
+          "attributes": {
+            "name": "miuix_preference_connect_summary_disconnected_color_light"
+          },
+          "elements": [
+            {
+              "type": "text",
+              "text": "class_color_wb_card_secondary_disconnected"
+            }
+          ]
+        },
+        {
+          "type": "comment",
+          "comment": " 列表文字后面的小图标（2.4G/5G/6G/MI） "
+        },
+        {
+          "type": "element",
+          "name": "color",
+          "attributes": {
+            "name": "wifi_signal_icon_color"
+          },
+          "elements": [
+            {
+              "type": "text",
+              "text": "class_color_wb_card_first_disconnected"
+            }
+          ]
+        },
+        {
+          "type": "comment",
+          "comment": " 网络详情界面 详细图标icon染色 "
+        },
+        {
+          "type": "element",
+          "name": "color",
+          "attributes": {
+            "name": "wifi_detail_item_icon_color"
+          },
+          "elements": [
+            {
+              "type": "text",
+              "text": "class_color_second"
+            }
+          ]
+        },
+        {
+          "type": "comment",
+          "comment": " icon下方主要文字、次要文字 "
+        },
+        {
+          "type": "element",
+          "name": "color",
+          "attributes": {
+            "name": "basic_info_item_title_color"
+          },
+          "elements": [
+            {
+              "type": "text",
+              "text": "class_color_first"
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "name": "color",
+          "attributes": {
+            "name": "basic_info_item_summary_color"
+          },
+          "elements": [
+            {
+              "type": "text",
+              "text": "class_color_second"
+            }
+          ]
+        },
+        {
+          "type": "comment",
+          "comment": " wifi网络详情页面 高亮文字 "
+        },
+        {
+          "type": "comment",
+          "comment": " 修改密码 "
+        },
+        {
+          "type": "element",
+          "name": "color",
+          "attributes": {
+            "name": "wifi_detail_modify_color"
+          },
+          "elements": [
+            {
+              "type": "text",
+              "text": "class_color_light_n"
+            }
+          ]
+        },
+        {
+          "type": "comment",
+          "comment": " 删除网络 "
+        },
+        {
+          "type": "element",
+          "name": "color",
+          "attributes": {
+            "name": "wifi_detail_delete_color"
+          },
+          "elements": [
+            {
+              "type": "text",
+              "text": "class_color_wifi_detail_delete"
+            }
+          ]
+        },
+        {
+          "type": "comment",
+          "comment": " WLAN：添加网络按钮文字“添加网络” "
+        },
+        {
+          "type": "element",
+          "name": "color",
+          "attributes": {
+            "name": "wifi_add_network_title_color"
+          },
+          "elements": [
+            {
+              "type": "text",
+              "text": "class_color_light_n"
+            }
+          ]
+        },
+        {
+          "type": "comment",
+          "comment": " 列表 右操作 近手弹窗\t提示文字 "
+        },
+        {
+          "type": "element",
+          "name": "color",
+          "attributes": {
+            "name": "miuix_compat_spinner_text_color_light"
+          },
+          "elements": [
+            {
+              "type": "text",
+              "text": "class_color_tips"
+            }
+          ]
+        },
+        {
+          "type": "comment",
+          "comment": " 账号与同步\t "
+        },
+        {
+          "type": "comment",
+          "comment": " 小米账号下方提示文字：“小米云服务能同步你的联系人，照片，备份桌面应用，系统设置,还能开启查找手机防止手机丢失” "
+        },
+        {
+          "type": "element",
+          "name": "color",
+          "attributes": {
+            "name": "list_secondary_text_color_normal_light"
+          },
+          "elements": [
+            {
+              "type": "text",
+              "text": "class_color_tips"
+            }
+          ]
+        },
+        {
+          "type": "comment",
+          "comment": " 恢复出厂设置\t底部提示文字 "
+        },
+        {
+          "type": "element",
+          "name": "color",
+          "attributes": {
+            "name": "reset_hint_content"
+          },
+          "elements": [
+            {
+              "type": "text",
+              "text": "class_color_second"
+            }
+          ]
+        },
+        {
+          "type": "comment",
+          "comment": " USB弹窗 "
+        },
+        {
+          "type": "comment",
+          "comment": " 选中边框 "
+        },
+        {
+          "type": "element",
+          "name": "color",
+          "attributes": {
+            "name": "usb_dialog_selected_bg_color"
+          },
+          "elements": [
+            {
+              "type": "text",
+              "text": "class_color_light_n"
+            }
+          ]
+        },
+        {
+          "type": "comment",
+          "comment": " 卡片背景 "
+        },
+        {
+          "type": "element",
+          "name": "color",
+          "attributes": {
+            "name": "usb_dialog_bg_color"
+          },
+          "elements": [
+            {
+              "type": "text",
+              "text": "class_color_usb_dialog_bg"
+            }
+          ]
+        },
+        {
+          "type": "comment",
+          "comment": " 选项卡片中文字 "
+        },
+        {
+          "type": "element",
+          "name": "color",
+          "attributes": {
+            "name": "usb_dialog_text_color"
+          },
+          "elements": [
+            {
+              "type": "text",
+              "text": "class_color_usb_dialog_text"
+            }
+          ]
+        },
+        {
+          "type": "comment",
+          "comment": " 弹窗 "
+        },
+        {
+          "type": "comment",
+          "comment": " 按下、选中（与弹窗-列表按下背景共用） "
+        },
+        {
+          "type": "element",
+          "name": "color",
+          "attributes": {
+            "name": "list_item_bg_color_pressed_light",
+            "package": "miui"
+          },
+          "elements": [
+            {
+              "type": "text",
+              "text": "class_color_list_bg_pressed"
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "name": "color",
+          "attributes": {
+            "name": "list_item_bg_color_checked_light",
+            "package": "miui"
+          },
+          "elements": [
+            {
+              "type": "text",
+              "text": "class_color_list_bg_checked"
+            }
+          ]
+        },
+        {
+          "type": "comment",
+          "comment": " <color name=\"list_item_bg_color_light\" package=\"miui\">class_color_list_bg_pressed</color> "
+        },
+        {
+          "type": "element",
+          "name": "color",
+          "attributes": {
+            "name": "miuix_folme_color_touch_tint"
+          },
+          "elements": [
+            {
+              "type": "text",
+              "text": "class_color_list_bg_pressed"
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "name": "color",
+          "attributes": {
+            "name": "folme_color_touch_tint",
+            "package": "miui"
+          },
+          "elements": [
+            {
+              "type": "text",
+              "text": "class_color_list_bg_pressed"
+            }
+          ]
+        },
+        {
+          "type": "comment",
+          "comment": " 更多弹窗（连接有共享-触碰付款-更多-） "
+        },
+        {
+          "type": "comment",
+          "comment": " 弹窗列表文字\t不可按、常态、按下 "
+        },
+        {
+          "type": "element",
+          "name": "color",
+          "attributes": {
+            "name": "menu_list_text_color_disabled_light",
+            "package": "miui"
+          },
+          "elements": [
+            {
+              "type": "text",
+              "text": "class_color_disable"
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "name": "color",
+          "attributes": {
+            "name": "menu_list_text_color_normal_light",
+            "package": "miui"
+          },
+          "elements": [
+            {
+              "type": "text",
+              "text": "class_color_first"
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "name": "color",
+          "attributes": {
+            "name": "menu_list_text_color_pressed_light",
+            "package": "miui"
+          },
+          "elements": [
+            {
+              "type": "text",
+              "text": "class_color_first"
+            }
+          ]
+        },
+        {
+          "type": "comment",
+          "comment": " 弹窗列表 二态：list_item_bg_color_pressed_light（与弹窗-列表按下背景共用） "
+        },
+        {
+          "type": "comment",
+          "comment": " 弹窗列表文字\t未选中 "
+        },
+        {
+          "type": "element",
+          "name": "color",
+          "attributes": {
+            "name": "dialog_list_text_color_disabled_light",
+            "package": "miui"
+          },
+          "elements": [
+            {
+              "type": "text",
+              "text": "class_color_disable"
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "name": "color",
+          "attributes": {
+            "name": "dialog_list_text_color_normal_light",
+            "package": "miui"
+          },
+          "elements": [
+            {
+              "type": "text",
+              "text": "class_color_first"
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "name": "color",
+          "attributes": {
+            "name": "dialog_list_text_color_pressed_light",
+            "package": "miui"
+          },
+          "elements": [
+            {
+              "type": "text",
+              "text": "class_color_first"
+            }
+          ]
+        },
+        {
+          "type": "comment",
+          "comment": " <color name=\"list_item_bg_color_pressed_light\" package=\"miui\">#0c000000</color> "
+        },
+        {
+          "type": "comment",
+          "comment": " 弹窗列表文字\t已选中\t高亮色（系统高亮蓝：#ff0d84ff） "
+        },
+        {
+          "type": "element",
+          "name": "color",
+          "attributes": {
+            "name": "highlight_disabled_light",
+            "package": "miui"
+          },
+          "elements": [
+            {
+              "type": "text",
+              "text": "class_color_light_d"
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "name": "color",
+          "attributes": {
+            "name": "highlight_normal_light",
+            "package": "miui"
+          },
+          "elements": [
+            {
+              "type": "text",
+              "text": "class_color_light_n"
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "name": "color",
+          "attributes": {
+            "name": "highlight_pressed_light",
+            "package": "miui"
+          },
+          "elements": [
+            {
+              "type": "text",
+              "text": "class_color_light_n"
+            }
+          ]
+        },
+        {
+          "type": "comment",
+          "comment": " 近手弹窗\t主要文字（个人热点-已连接设备-最大设备连接数）\t不可按、常态、按下、选中 "
+        },
+        {
+          "type": "element",
+          "name": "color",
+          "attributes": {
+            "name": "miuix_compat_list_text_color_disable_light"
+          },
+          "elements": [
+            {
+              "type": "text",
+              "text": "class_color_disable"
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "name": "color",
+          "attributes": {
+            "name": "miuix_compat_list_text_color_normal_light"
+          },
+          "elements": [
+            {
+              "type": "text",
+              "text": "class_color_first"
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "name": "color",
+          "attributes": {
+            "name": "miuix_compat_list_text_color_pressed_light"
+          },
+          "elements": [
+            {
+              "type": "text",
+              "text": "class_color_first"
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "name": "color",
+          "attributes": {
+            "name": "miuix_compat_list_text_color_checked_light"
+          },
+          "elements": [
+            {
+              "type": "text",
+              "text": "class_color_light_n"
+            }
+          ]
+        },
+        {
+          "type": "comment",
+          "comment": " 近手弹窗\t次要文字（更多设置-语言与输入法-全面屏键盘优化-左右侧功能键-） "
+        },
+        {
+          "type": "element",
+          "name": "color",
+          "attributes": {
+            "name": "miuix_compat_list_secondary_text_color_disable_light"
+          },
+          "elements": [
+            {
+              "type": "text",
+              "text": "class_color_disable"
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "name": "color",
+          "attributes": {
+            "name": "miuix_compat_list_secondary_text_color_normal_light"
+          },
+          "elements": [
+            {
+              "type": "text",
+              "text": "class_color_second"
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "name": "color",
+          "attributes": {
+            "name": "miuix_compat_list_secondary_text_color_pressed_light"
+          },
+          "elements": [
+            {
+              "type": "text",
+              "text": "class_color_second"
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "name": "color",
+          "attributes": {
+            "name": "miuix_compat_list_secondary_text_color_checked_light"
+          },
+          "elements": [
+            {
+              "type": "text",
+              "text": "class_color_light_n"
+            }
+          ]
+        },
+        {
+          "type": "comment",
+          "comment": " 近手弹窗\t列表文字\t不可按/常态/二态 "
+        },
+        {
+          "type": "element",
+          "name": "color",
+          "attributes": {
+            "name": "list_text_color_disable_light",
+            "package": "miui"
+          },
+          "elements": [
+            {
+              "type": "text",
+              "text": "class_color_disable"
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "name": "color",
+          "attributes": {
+            "name": "list_text_color_normal_light",
+            "package": "miui"
+          },
+          "elements": [
+            {
+              "type": "text",
+              "text": "class_color_first"
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "name": "color",
+          "attributes": {
+            "name": "list_text_color_pressed_light",
+            "package": "miui"
+          },
+          "elements": [
+            {
+              "type": "text",
+              "text": "class_color_first"
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "name": "color",
+          "attributes": {
+            "name": "list_text_color_checked_light",
+            "package": "miui"
+          },
+          "elements": [
+            {
+              "type": "text",
+              "text": "class_color_light_n"
+            }
+          ]
+        },
+        {
+          "type": "comment",
+          "comment": " 弹窗列表背景（WLAN-网络详情-代理-）\t常态、按下、选中 "
+        },
+        {
+          "type": "element",
+          "name": "color",
+          "attributes": {
+            "name": "dropdown_popup_list_item_bg_normal_light",
+            "package": "miui"
+          },
+          "elements": [
+            {
+              "type": "text",
+              "text": "#00000000"
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "name": "color",
+          "attributes": {
+            "name": "dropdown_popup_list_item_bg_pressed_light",
+            "package": "miui"
+          },
+          "elements": [
+            {
+              "type": "text",
+              "text": "class_color_list_bg_pressed"
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "name": "color",
+          "attributes": {
+            "name": "dropdown_popup_list_item_bg_checked_light",
+            "package": "miui"
+          },
+          "elements": [
+            {
+              "type": "text",
+              "text": "class_color_list_bg_checked"
+            }
+          ]
+        },
+        {
+          "type": "comment",
+          "comment": " 弹窗列表文字\t不可按、常态、按下、选中 "
+        },
+        {
+          "type": "element",
+          "name": "color",
+          "attributes": {
+            "name": "dropdown_popup_list_text_color_disabled_light",
+            "package": "miui"
+          },
+          "elements": [
+            {
+              "type": "text",
+              "text": "class_color_disable"
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "name": "color",
+          "attributes": {
+            "name": "dropdown_popup_list_text_color_normal_light",
+            "package": "miui"
+          },
+          "elements": [
+            {
+              "type": "text",
+              "text": "class_color_first"
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "name": "color",
+          "attributes": {
+            "name": "dropdown_popup_list_text_color_pressed_light",
+            "package": "miui"
+          },
+          "elements": [
+            {
+              "type": "text",
+              "text": "class_color_first"
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "name": "color",
+          "attributes": {
+            "name": "dropdown_popup_list_text_color_checked_light",
+            "package": "miui"
+          },
+          "elements": [
+            {
+              "type": "text",
+              "text": "class_color_light_n"
+            }
+          ]
+        },
+        {
+          "type": "comment",
+          "comment": " 底部弹窗 "
+        },
+        {
+          "type": "comment",
+          "comment": " 弹窗背景 "
+        },
+        {
+          "type": "element",
+          "name": "color",
+          "attributes": {
+            "name": "dialog_bg_color_light",
+            "package": "miui"
+          },
+          "elements": [
+            {
+              "type": "text",
+              "text": "class_color_dialog_bg"
+            }
+          ]
+        },
+        {
+          "type": "comment",
+          "comment": " 标题文字\t设置时间、静音/勿扰-定时开启-添加-规则名称-定时规则：“规则名称” "
+        },
+        {
+          "type": "element",
+          "name": "color",
+          "attributes": {
+            "name": "dialog_title_text_color",
+            "package": "miui"
+          },
+          "elements": [
+            {
+              "type": "text",
+              "text": "class_color_first"
+            }
+          ]
+        },
+        {
+          "type": "comment",
+          "comment": " 提示文字\t“确定要删除所选的9个会话吗？”\t“用户名面不匹配” "
+        },
+        {
+          "type": "element",
+          "name": "color",
+          "attributes": {
+            "name": "dialog_message_text_color_light",
+            "package": "miui"
+          },
+          "elements": [
+            {
+              "type": "text",
+              "text": "class_color_first"
+            }
+          ]
+        },
+        {
+          "type": "comment",
+          "comment": " 二级提示文字\t“同时删除选中的收藏的信息” "
+        },
+        {
+          "type": "element",
+          "name": "color",
+          "attributes": {
+            "name": "dialog_checkbox_text_color_light",
+            "package": "miui"
+          },
+          "elements": [
+            {
+              "type": "text",
+              "text": "class_color_second"
+            }
+          ]
+        },
+        {
+          "type": "comment",
+          "comment": " 左按钮文字\t\t“取消”、添加VPN复选框标题文字“显示高级选项”、密码图案设置界面：“重绘” "
+        },
+        {
+          "type": "comment",
+          "comment": " 左按钮文字\t不可按、常态 "
+        },
+        {
+          "type": "element",
+          "name": "color",
+          "attributes": {
+            "name": "disabled_text_light",
+            "package": "miui"
+          },
+          "elements": [
+            {
+              "type": "text",
+              "text": "class_color_disable"
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "name": "color",
+          "attributes": {
+            "name": "button_text_color_light",
+            "package": "miui"
+          },
+          "elements": [
+            {
+              "type": "text",
+              "text": "class_color_second"
+            }
+          ]
+        },
+        {
+          "type": "comment",
+          "comment": " 右 高亮按钮背景 "
+        },
+        {
+          "type": "element",
+          "name": "color",
+          "attributes": {
+            "name": "button_bg_primary_color_disabled_light",
+            "package": "miui"
+          },
+          "elements": [
+            {
+              "type": "text",
+              "text": "class_color_dialog_button_bg_primary_d"
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "name": "color",
+          "attributes": {
+            "name": "button_bg_primary_color_normal_light",
+            "package": "miui"
+          },
+          "elements": [
+            {
+              "type": "text",
+              "text": "class_color_dialog_button_bg_primary_n"
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "name": "color",
+          "attributes": {
+            "name": "button_bg_primary_color_pressed_light",
+            "package": "miui"
+          },
+          "elements": [
+            {
+              "type": "text",
+              "text": "class_color_dialog_button_bg_primary_n"
+            }
+          ]
+        },
+        {
+          "type": "comment",
+          "comment": " 右 高亮按钮 文字\t“确定” "
+        },
+        {
+          "type": "element",
+          "name": "color",
+          "attributes": {
+            "name": "button_text_color_guide_disabled_light",
+            "package": "miui"
+          },
+          "elements": [
+            {
+              "type": "text",
+              "text": "class_color_dialog_button_text_guide_d"
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "name": "color",
+          "attributes": {
+            "name": "button_text_color_guide_normal_light",
+            "package": "miui"
+          },
+          "elements": [
+            {
+              "type": "text",
+              "text": "class_color_dialog_button_text_guide_n"
+            }
+          ]
+        },
+        {
+          "type": "comment",
+          "comment": " 输入框 "
+        },
+        {
+          "type": "comment",
+          "comment": " 输入常用语、添加私密联系人；身份、密码\t背景框 "
+        },
+        {
+          "type": "element",
+          "name": "color",
+          "attributes": {
+            "name": "edit_text_dialog_bg_solid_light",
+            "package": "miui"
+          },
+          "elements": [
+            {
+              "type": "text",
+              "text": "class_color_edit_text_dialog_bg"
+            }
+          ]
+        },
+        {
+          "type": "comment",
+          "comment": " 匿名身份？\t背景框"
+        },
+        {
+          "type": "element",
+          "name": "color",
+          "attributes": {
+            "name": "edit_text_bg_color_light",
+            "package": "miui"
+          },
+          "elements": [
+            {
+              "type": "text",
+              "text": "class_color_edit_text_dialog_bg"
+            }
+          ]
+        },
+        {
+          "type": "comment",
+          "comment": " 输入框 描边（实际是矩形背景） "
+        },
+        {
+          "type": "element",
+          "name": "color",
+          "attributes": {
+            "name": "edit_text_border_color",
+            "package": "miui"
+          },
+          "elements": [
+            {
+              "type": "text",
+              "text": "class_color_edit_text_dialog_border"
+            }
+          ]
+        },
+        {
+          "type": "comment",
+          "comment": " 页面输入框 "
+        },
+        {
+          "type": "comment",
+          "comment": " 提示文字 "
+        },
+        {
+          "type": "element",
+          "name": "color",
+          "attributes": {
+            "name": "hint_edit_text_dialog_color_light",
+            "package": "miui"
+          },
+          "elements": [
+            {
+              "type": "text",
+              "text": "class_color_tips"
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "name": "color",
+          "attributes": {
+            "name": "hint_foreground_light",
+            "package": "miui"
+          },
+          "elements": [
+            {
+              "type": "text",
+              "text": "class_color_tips"
+            }
+          ]
+        },
+        {
+          "type": "comment",
+          "comment": " 框下空白处提示文字：“在使用快传接收发送文件、蓝牙设备互联、首次建立共享热点等操作时，都会看到您的手机名称”（我的设备-修改手机名称-） "
+        },
+        {
+          "type": "element",
+          "name": "color",
+          "attributes": {
+            "name": "prompt_text_color"
+          },
+          "elements": [
+            {
+              "type": "text",
+              "text": "class_color_tips"
+            }
+          ]
+        },
+        {
+          "type": "comment",
+          "comment": " 备份与恢复-帮助与反馈-常见问题-问题详情页-提示文字“备份方式有2种，分别是......” "
+        },
+        {
+          "type": "element",
+          "name": "color",
+          "attributes": {
+            "name": "detal_description_color"
+          },
+          "elements": [
+            {
+              "type": "text",
+              "text": "class_color_second"
+            }
+          ]
+        },
+        {
+          "type": "comment",
+          "comment": " 已输入的文字 "
+        },
+        {
+          "type": "element",
+          "name": "color",
+          "attributes": {
+            "name": "edit_text_color_light_disabled",
+            "package": "miui"
+          },
+          "elements": [
+            {
+              "type": "text",
+              "text": "class_color_disable"
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "name": "color",
+          "attributes": {
+            "name": "edit_text_dialog_color_disabled_light",
+            "package": "miui"
+          },
+          "elements": [
+            {
+              "type": "text",
+              "text": "class_color_disable"
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "name": "color",
+          "attributes": {
+            "name": "edit_text_dialog_color_normal_light",
+            "package": "miui"
+          },
+          "elements": [
+            {
+              "type": "text",
+              "text": "class_color_first"
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "name": "color",
+          "attributes": {
+            "name": "edit_text_color_light",
+            "package": "miui"
+          },
+          "elements": [
+            {
+              "type": "text",
+              "text": "class_color_first"
+            }
+          ]
+        },
+        {
+          "type": "comment",
+          "comment": " 修复系统设置、我的设备-全部参数：SIM卡状态 弹窗 主要文字 "
+        },
+        {
+          "type": "element",
+          "name": "color",
+          "attributes": {
+            "name": "dim_foreground_light",
+            "package": "miui"
+          },
+          "elements": [
+            {
+              "type": "text",
+              "text": "class_color_second"
+            }
+          ]
+        },
+        {
+          "type": "comment",
+          "comment": " 时间弹窗 "
+        },
+        {
+          "type": "comment",
+          "comment": " 待选提示日期时间文字 "
+        },
+        {
+          "type": "element",
+          "name": "color",
+          "attributes": {
+            "name": "number_picker_hint_text_color",
+            "package": "miui"
+          },
+          "elements": [
+            {
+              "type": "text",
+              "text": "class_color_second"
+            }
+          ]
+        },
+        {
+          "type": "comment",
+          "comment": " 选中高亮色\t**时**分（时间*单位） "
+        },
+        {
+          "type": "element",
+          "name": "color",
+          "attributes": {
+            "name": "number_picker_highlight_text_color",
+            "package": "miui"
+          },
+          "elements": [
+            {
+              "type": "text",
+              "text": "class_color_light_n"
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "name": "color",
+          "attributes": {
+            "name": "number_picker_label_color",
+            "package": "miui"
+          },
+          "elements": [
+            {
+              "type": "text",
+              "text": "class_color_light_n"
+            }
+          ]
+        },
+        {
+          "type": "comment",
+          "comment": " 蓝牙配对弹窗 提示文字：“蓝牙配对码”\t“允许访问您的通讯录和通话记录” "
+        },
+        {
+          "type": "element",
+          "name": "color",
+          "attributes": {
+            "name": "bluetooth_dialog_text_color"
+          },
+          "elements": [
+            {
+              "type": "text",
+              "text": "class_color_second"
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "name": "color",
+          "attributes": {
+            "name": "bluetooth_dialog_text_color_2"
+          },
+          "elements": [
+            {
+              "type": "text",
+              "text": "class_color_second"
+            }
+          ]
+        },
+        {
+          "type": "comment",
+          "comment": " 连接wifi时CA证书域名提示文字：“必须指定域名。” "
+        },
+        {
+          "type": "element",
+          "name": "color",
+          "attributes": {
+            "name": "error_color_material_light"
+          },
+          "elements": [
+            {
+              "type": "text",
+              "text": "class_color_wifi_detail_delete"
+            }
+          ]
+        },
+        {
+          "type": "comment",
+          "comment": " 我的设备 "
+        },
+        {
+          "type": "comment",
+          "comment": " MIUI 版本 卡片背景\t#fff7f7f7 "
+        },
+        {
+          "type": "element",
+          "name": "color",
+          "attributes": {
+            "name": "card_view_background_color"
+          },
+          "elements": [
+            {
+              "type": "text",
+              "text": "class_color_card_view_background"
+            }
+          ]
+        },
+        {
+          "type": "comment",
+          "comment": " 次要文字：版本号/版本类（MIUI 12 20.5.25、开发板） "
+        },
+        {
+          "type": "element",
+          "name": "color",
+          "attributes": {
+            "name": "instructions_text_color"
+          },
+          "elements": [
+            {
+              "type": "text",
+              "text": "class_color_second"
+            }
+          ]
+        },
+        {
+          "type": "comment",
+          "comment": " 有新版本提示文字：“有新版本” "
+        },
+        {
+          "type": "element",
+          "name": "color",
+          "attributes": {
+            "name": "need_update_text_color"
+          },
+          "elements": [
+            {
+              "type": "text",
+              "text": "class_color_light_n"
+            }
+          ]
+        },
+        {
+          "type": "comment",
+          "comment": " 储存空间 卡片背景、进度背景 "
+        },
+        {
+          "type": "element",
+          "name": "color",
+          "attributes": {
+            "name": "progress_card_view_background_color"
+          },
+          "elements": [
+            {
+              "type": "text",
+              "text": "class_color_card_view_background"
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "name": "color",
+          "attributes": {
+            "name": "progress_paint_color"
+          },
+          "elements": [
+            {
+              "type": "text",
+              "text": "class_color_card_progress_paint"
+            }
+          ]
+        },
+        {
+          "type": "comment",
+          "comment": " 手机参数卡片背景、描边 "
+        },
+        {
+          "type": "element",
+          "name": "color",
+          "attributes": {
+            "name": "device_card_background"
+          },
+          "elements": [
+            {
+              "type": "text",
+              "text": "class_color_device_card_background"
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "name": "color",
+          "attributes": {
+            "name": "card_background_stroke_color"
+          },
+          "elements": [
+            {
+              "type": "text",
+              "text": "class_color_device_card_stroke"
+            }
+          ]
+        },
+        {
+          "type": "comment",
+          "comment": " 参数icon染色 "
+        },
+        {
+          "type": "element",
+          "name": "color",
+          "attributes": {
+            "name": "device_icon_fill_color"
+          },
+          "elements": [
+            {
+              "type": "text",
+              "text": "class_color_second"
+            }
+          ]
+        },
+        {
+          "type": "comment",
+          "comment": " 声音与振动 "
+        },
+        {
+          "type": "comment",
+          "comment": " 文字：电话铃声、小米清新版 "
+        },
+        {
+          "type": "element",
+          "name": "color",
+          "attributes": {
+            "name": "ringtone_item_title_color"
+          },
+          "elements": [
+            {
+              "type": "text",
+              "text": "class_color_first"
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "name": "color",
+          "attributes": {
+            "name": "ringtone_item_value_color"
+          },
+          "elements": [
+            {
+              "type": "text",
+              "text": "class_color_second"
+            }
+          ]
+        },
+        {
+          "type": "comment",
+          "comment": " 音量标识icon "
+        },
+        {
+          "type": "element",
+          "name": "color",
+          "attributes": {
+            "name": "volume_icon_color"
+          },
+          "elements": [
+            {
+              "type": "text",
+              "text": "class_color_tips"
+            }
+          ]
+        },
+        {
+          "type": "comment",
+          "comment": " 音量条背景 "
+        },
+        {
+          "type": "element",
+          "name": "color",
+          "attributes": {
+            "name": "progressBackground_light",
+            "package": "miui"
+          },
+          "elements": [
+            {
+              "type": "text",
+              "text": "class_color_progressBackground"
+            }
+          ]
+        },
+        {
+          "type": "comment",
+          "comment": " 音量条进度（目前只有亮度调节页面生效） "
+        },
+        {
+          "type": "element",
+          "name": "color",
+          "attributes": {
+            "name": "progressPrimaryColor",
+            "package": "miui"
+          },
+          "elements": [
+            {
+              "type": "text",
+              "text": "class_color_light_n"
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "name": "color",
+          "attributes": {
+            "name": "progressDisableColor",
+            "package": "miui"
+          },
+          "elements": [
+            {
+              "type": "text",
+              "text": "class_color_light_n"
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "name": "color",
+          "attributes": {
+            "name": "ringtone_item_region_color"
+          },
+          "elements": [
+            {
+              "type": "text",
+              "text": "class_color_progressBackground"
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "name": "color",
+          "attributes": {
+            "name": "seekbar_progress_color",
+            "package": "miui"
+          },
+          "elements": [
+            {
+              "type": "text",
+              "text": "class_color_first"
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "name": "color",
+          "attributes": {
+            "name": "volume_seekbar_title_color"
+          },
+          "elements": [
+            {
+              "type": "text",
+              "text": "class_color_first"
+            }
+          ]
+        },
+        {
+          "type": "comment",
+          "comment": " 全面屏键盘优化 "
+        },
+        {
+          "type": "comment",
+          "comment": " 旧：选中卡片 蓝色边框 "
+        },
+        {
+          "type": "element",
+          "name": "color",
+          "attributes": {
+            "name": "input_method_keyboard_bg_color"
+          },
+          "elements": [
+            {
+              "type": "text",
+              "text": "class_color_light_n"
+            }
+          ]
+        },
+        {
+          "type": "comment",
+          "comment": " 旧：选中卡片 下方文字 "
+        },
+        {
+          "type": "element",
+          "name": "color",
+          "attributes": {
+            "name": "input_method_keyboard_des_text_color_selected"
+          },
+          "elements": [
+            {
+              "type": "text",
+              "text": "class_color_light_n"
+            }
+          ]
+        },
+        {
+          "type": "comment",
+          "comment": " 旧：未选卡片 下方文字 "
+        },
+        {
+          "type": "element",
+          "name": "color",
+          "attributes": {
+            "name": "input_method_keyboard_des_text_color_unselected"
+          },
+          "elements": [
+            {
+              "type": "text",
+              "text": "class_color_first"
+            }
+          ]
+        },
+        {
+          "type": "comment",
+          "comment": " 选中卡片 蓝色边框 "
+        },
+        {
+          "type": "element",
+          "name": "color",
+          "attributes": {
+            "name": "visual_check_borderlayout_bg_stroke_color"
+          },
+          "elements": [
+            {
+              "type": "text",
+              "text": "class_color_light_n"
+            }
+          ]
+        },
+        {
+          "type": "comment",
+          "comment": " 选中卡片 下方文字 "
+        },
+        {
+          "type": "element",
+          "name": "color",
+          "attributes": {
+            "name": "visual_check_textview_checked_text_color"
+          },
+          "elements": [
+            {
+              "type": "text",
+              "text": "class_color_light_n"
+            }
+          ]
+        },
+        {
+          "type": "comment",
+          "comment": " 未选卡片 下方文字 "
+        },
+        {
+          "type": "element",
+          "name": "color",
+          "attributes": {
+            "name": "visual_check_textview_unchecked_text_color"
+          },
+          "elements": [
+            {
+              "type": "text",
+              "text": "class_color_first"
+            }
+          ]
+        },
+        {
+          "type": "comment",
+          "comment": " 密码与安全 "
+        },
+        {
+          "type": "comment",
+          "comment": " 未开启：卡片背景（与我的设备卡片颜色“card_view_background_color”共用）、素材：card_shape_corner.png "
+        },
+        {
+          "type": "comment",
+          "comment": " 未开启：主要文字、次要文字"
+        },
+        {
+          "type": "element",
+          "name": "color",
+          "attributes": {
+            "name": "card_view_title_color"
+          },
+          "elements": [
+            {
+              "type": "text",
+              "text": "class_color_first"
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "name": "color",
+          "attributes": {
+            "name": "card_view_value_color"
+          },
+          "elements": [
+            {
+              "type": "text",
+              "text": "class_color_second"
+            }
+          ]
+        },
+        {
+          "type": "comment",
+          "comment": " 密码 icon：ic_password_unlock.png、指纹 icon：ic_finger_unlock.png、人脸 icon：ic_face_unlock.png、蓝牙 icon：ic_bluetooth_unlock.png "
+        },
+        {
+          "type": "comment",
+          "comment": " 已开启：卡片背景\t素材：card_checked_corner.png "
+        },
+        {
+          "type": "element",
+          "name": "color",
+          "attributes": {
+            "name": "card_view_checked_color"
+          },
+          "elements": [
+            {
+              "type": "text",
+              "text": "class_color_card_view_checked"
+            }
+          ]
+        },
+        {
+          "type": "comment",
+          "comment": " 已开启：主要文字、次要文字 "
+        },
+        {
+          "type": "element",
+          "name": "color",
+          "attributes": {
+            "name": "card_view_title_checked_color"
+          },
+          "elements": [
+            {
+              "type": "text",
+              "text": "class_color_password_card_checked_first"
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "name": "color",
+          "attributes": {
+            "name": "card_view_value_checked_color"
+          },
+          "elements": [
+            {
+              "type": "text",
+              "text": "class_color_password_card_checked_second"
+            }
+          ]
+        },
+        {
+          "type": "comment",
+          "comment": " 图案密码、数字密码、混合密码\t卡片背景\t常态、按下、选中、选中按下（设置锁屏密码-三级界面） "
+        },
+        {
+          "type": "element",
+          "name": "color",
+          "attributes": {
+            "name": "choose_unlock_item_bg_normal"
+          },
+          "elements": [
+            {
+              "type": "text",
+              "text": "class_color_choose_unlock_item_bg"
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "name": "color",
+          "attributes": {
+            "name": "choose_unlock_item_bg_pressed"
+          },
+          "elements": [
+            {
+              "type": "text",
+              "text": "class_color_choose_unlock_item_bg"
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "name": "color",
+          "attributes": {
+            "name": "choose_unlock_item_bg_selected"
+          },
+          "elements": [
+            {
+              "type": "text",
+              "text": "class_color_card_view_checked"
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "name": "color",
+          "attributes": {
+            "name": "choose_unlock_item_bg_selected_pressed"
+          },
+          "elements": [
+            {
+              "type": "text",
+              "text": "class_color_card_view_checked"
+            }
+          ]
+        },
+        {
+          "type": "comment",
+          "comment": " 密码设置进行中界面 标题提示文字：“请设置图案”\t“请重试” "
+        },
+        {
+          "type": "element",
+          "name": "color",
+          "attributes": {
+            "name": "default_text_color"
+          },
+          "elements": [
+            {
+              "type": "text",
+              "text": "class_color_first"
+            }
+          ]
+        },
+        {
+          "type": "comment",
+          "comment": " 更换锁屏密码 按钮文字：“关闭密码” "
+        },
+        {
+          "type": "element",
+          "name": "color",
+          "attributes": {
+            "name": "turn_off_password_color"
+          },
+          "elements": [
+            {
+              "type": "text",
+              "text": "class_color_wifi_detail_delete"
+            }
+          ]
+        },
+        {
+          "type": "comment",
+          "comment": " 更换锁屏密码 卡片文字 "
+        },
+        {
+          "type": "comment",
+          "comment": " 未选卡片：主要文字、次要文字 "
+        },
+        {
+          "type": "element",
+          "name": "color",
+          "attributes": {
+            "name": "card_style_title_normal_color"
+          },
+          "elements": [
+            {
+              "type": "text",
+              "text": "class_color_first"
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "name": "color",
+          "attributes": {
+            "name": "card_style_summary_normal_color"
+          },
+          "elements": [
+            {
+              "type": "text",
+              "text": "class_color_second"
+            }
+          ]
+        },
+        {
+          "type": "comment",
+          "comment": " 选中卡片：主要文字、次要文字 "
+        },
+        {
+          "type": "element",
+          "name": "color",
+          "attributes": {
+            "name": "card_style_title_selected_color"
+          },
+          "elements": [
+            {
+              "type": "text",
+              "text": "class_color_password_card_checked_first"
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "name": "color",
+          "attributes": {
+            "name": "card_style_summary_selected_color"
+          },
+          "elements": [
+            {
+              "type": "text",
+              "text": "class_color_password_card_checked_second"
+            }
+          ]
+        },
+        {
+          "type": "comment",
+          "comment": " 忘记密码\t弹窗文字 "
+        },
+        {
+          "type": "comment",
+          "comment": " <color name=\"forget_password_dialog_background\">#b3000000</color> "
+        },
+        {
+          "type": "comment",
+          "comment": " 标题文字、主要文字：“请重置数据”、忘记密码无法找回、您只能通过 清除全部数据 ...... "
+        },
+        {
+          "type": "element",
+          "name": "color",
+          "attributes": {
+            "name": "forget_password_dialog_title_text_color"
+          },
+          "elements": [
+            {
+              "type": "text",
+              "text": "class_color_first"
+            }
+          ]
+        },
+        {
+          "type": "comment",
+          "comment": " 次要文字：“如需清除数据，请按以下操作：......” "
+        },
+        {
+          "type": "element",
+          "name": "color",
+          "attributes": {
+            "name": "forget_password_dialog_content_text_color"
+          },
+          "elements": [
+            {
+              "type": "text",
+              "text": "class_color_tips"
+            }
+          ]
+        },
+        {
+          "type": "comment",
+          "comment": " SOS紧急求助 "
+        },
+        {
+          "type": "comment",
+          "comment": " 播放求助录音：卡片背景、文字、播放按钮、按钮按下 "
+        },
+        {
+          "type": "element",
+          "name": "color",
+          "attributes": {
+            "name": "sos_player_linear_bg"
+          },
+          "elements": [
+            {
+              "type": "text",
+              "text": "class_color_card_view_background"
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "name": "color",
+          "attributes": {
+            "name": "sos_text_color"
+          },
+          "elements": [
+            {
+              "type": "text",
+              "text": "class_color_second"
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "name": "color",
+          "attributes": {
+            "name": "sos_player_bg"
+          },
+          "elements": [
+            {
+              "type": "text",
+              "text": "class_color_second"
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "name": "color",
+          "attributes": {
+            "name": "sos_player_linear_pressed_bg"
+          },
+          "elements": [
+            {
+              "type": "text",
+              "text": "class_color_card_view_background"
+            }
+          ]
+        },
+        {
+          "type": "comment",
+          "comment": " SOS紧急求助（紧急联系人） "
+        },
+        {
+          "type": "comment",
+          "comment": " 已添加紧急联系人 列表背景 "
+        },
+        {
+          "type": "element",
+          "name": "color",
+          "attributes": {
+            "name": "emergency_contact_item_bg"
+          },
+          "elements": [
+            {
+              "type": "text",
+              "text": "#00000000"
+            }
+          ]
+        },
+        {
+          "type": "comment",
+          "comment": " 已添加联系人名字 "
+        },
+        {
+          "type": "element",
+          "name": "color",
+          "attributes": {
+            "name": "emergency_contact_name_color"
+          },
+          "elements": [
+            {
+              "type": "text",
+              "text": "class_color_first"
+            }
+          ]
+        },
+        {
+          "type": "comment",
+          "comment": " 电话号码 "
+        },
+        {
+          "type": "element",
+          "name": "color",
+          "attributes": {
+            "name": "emergency_contact_number_color"
+          },
+          "elements": [
+            {
+              "type": "text",
+              "text": "class_color_second"
+            }
+          ]
+        },
+        {
+          "type": "comment",
+          "comment": " 设置锁屏密码、页面按钮 "
+        },
+        {
+          "type": "element",
+          "name": "color",
+          "attributes": {
+            "name": "settings_default_bg_color"
+          },
+          "elements": [
+            {
+              "type": "text",
+              "text": "#00000000"
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "name": "color",
+          "attributes": {
+            "name": "add_fingerprint_title_text_color"
+          },
+          "elements": [
+            {
+              "type": "text",
+              "text": "class_color_first"
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "name": "color",
+          "attributes": {
+            "name": "add_fingerprint_msg_text_color"
+          },
+          "elements": [
+            {
+              "type": "text",
+              "text": "class_color_second"
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "name": "color",
+          "attributes": {
+            "name": "add_fingerprint_finish_title_text_color"
+          },
+          "elements": [
+            {
+              "type": "text",
+              "text": "class_color_first"
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "name": "color",
+          "attributes": {
+            "name": "choose_password_forget_text_color_light"
+          },
+          "elements": [
+            {
+              "type": "text",
+              "text": "class_color_tips"
+            }
+          ]
+        },
+        {
+          "type": "comment",
+          "comment": " 隐私密码 背景、主要文字、次要文字 "
+        },
+        {
+          "type": "element",
+          "name": "color",
+          "attributes": {
+            "name": "main_page_background"
+          },
+          "elements": [
+            {
+              "type": "text",
+              "text": "class_color_main_page_background"
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "name": "color",
+          "attributes": {
+            "name": "unlock_text_title"
+          },
+          "elements": [
+            {
+              "type": "text",
+              "text": "class_color_unlock_text_title"
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "name": "color",
+          "attributes": {
+            "name": "unlock_text_summary"
+          },
+          "elements": [
+            {
+              "type": "text",
+              "text": "class_color_unlock_text_summary"
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "name": "color",
+          "attributes": {
+            "name": "account_info_text_color"
+          },
+          "elements": [
+            {
+              "type": "text",
+              "text": "class_color_first"
+            }
+          ]
+        },
+        {
+          "type": "comment",
+          "comment": " 密码上方提示：请输入隐私密码 "
+        },
+        {
+          "type": "element",
+          "name": "color",
+          "attributes": {
+            "name": "unlock_text_tips"
+          },
+          "elements": [
+            {
+              "type": "text",
+              "text": "class_color_tips"
+            }
+          ]
+        },
+        {
+          "type": "comment",
+          "comment": " 底部提示：忘记了密码？ "
+        },
+        {
+          "type": "element",
+          "name": "color",
+          "attributes": {
+            "name": "unlock_text_light"
+          },
+          "elements": [
+            {
+              "type": "text",
+              "text": "class_color_first"
+            }
+          ]
+        },
+        {
+          "type": "comment",
+          "comment": " 设置页引导卡片：在查找其他设置吗？ "
+        },
+        {
+          "type": "comment",
+          "comment": " 卡片背景 "
+        },
+        {
+          "type": "element",
+          "name": "color",
+          "attributes": {
+            "name": "recommend_region_color"
+          },
+          "elements": [
+            {
+              "type": "text",
+              "text": "class_color_recommend_bg"
+            }
+          ]
+        },
+        {
+          "type": "comment",
+          "comment": " 主要文字、次要文字 "
+        },
+        {
+          "type": "element",
+          "name": "color",
+          "attributes": {
+            "name": "recommend_title_color"
+          },
+          "elements": [
+            {
+              "type": "text",
+              "text": "class_color_second"
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "name": "color",
+          "attributes": {
+            "name": "recommend_item_link"
+          },
+          "elements": [
+            {
+              "type": "text",
+              "text": "class_color_light_n"
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "name": "color",
+          "attributes": {
+            "name": "recommend_item_link_pressed"
+          },
+          "elements": [
+            {
+              "type": "text",
+              "text": "class_color_light_d"
+            }
+          ]
+        },
+        {
+          "type": "comment",
+          "comment": " 隐藏屏幕刘海 "
+        },
+        {
+          "type": "element",
+          "name": "color",
+          "attributes": {
+            "name": "notch_radio_button_text"
+          },
+          "elements": [
+            {
+              "type": "text",
+              "text": "class_color_first"
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "name": "color",
+          "attributes": {
+            "name": "notch_radio_button_text_checked"
+          },
+          "elements": [
+            {
+              "type": "text",
+              "text": "class_color_light_n"
+            }
+          ]
+        },
+        {
+          "type": "comment",
+          "comment": " 通知过滤 "
+        },
+        {
+          "type": "element",
+          "name": "color",
+          "attributes": {
+            "name": "fold_description_text_color"
+          },
+          "elements": [
+            {
+              "type": "text",
+              "text": "class_color_tips"
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "name": "color",
+          "attributes": {
+            "name": "fold_feedback_link_color"
+          },
+          "elements": [
+            {
+              "type": "text",
+              "text": "class_color_light_n"
+            }
+          ]
+        },
+        {
+          "type": "comment",
+          "comment": " 滑盖设置 "
+        },
+        {
+          "type": "element",
+          "name": "color",
+          "attributes": {
+            "name": "slider_color_header"
+          },
+          "elements": [
+            {
+              "type": "text",
+              "text": "class_color_second"
+            }
+          ]
+        },
+        {
+          "type": "comment",
+          "comment": " 设备解锁状态 "
+        },
+        {
+          "type": "element",
+          "name": "color",
+          "attributes": {
+            "name": "bootloader_status_default_color"
+          },
+          "elements": [
+            {
+              "type": "text",
+              "text": "class_color_first"
+            }
+          ]
+        },
+        {
+          "type": "comment",
+          "comment": " 字体大小与粗细 "
+        },
+        {
+          "type": "comment",
+          "comment": " 无障碍-视觉-显示大小\t小标题提示文字 "
+        },
+        {
+          "type": "element",
+          "name": "color",
+          "attributes": {
+            "name": "transparent_40_balck"
+          },
+          "elements": [
+            {
+              "type": "text",
+              "text": "class_color_tips"
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "name": "color",
+          "attributes": {
+            "name": "transparent_60_balck"
+          },
+          "elements": [
+            {
+              "type": "text",
+              "text": "class_color_second"
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "name": "color",
+          "attributes": {
+            "name": "transparent_80_balck"
+          },
+          "elements": [
+            {
+              "type": "text",
+              "text": "class_color_first"
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "name": "color",
+          "attributes": {
+            "name": "font_size_view_background"
+          },
+          "elements": [
+            {
+              "type": "text",
+              "text": "class_color_recommend_bg"
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "name": "color",
+          "attributes": {
+            "name": "font_size_view_small_color"
+          },
+          "elements": [
+            {
+              "type": "text",
+              "text": "class_color_font_size_view_small"
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "name": "color",
+          "attributes": {
+            "name": "font_weight_view_small_color"
+          },
+          "elements": [
+            {
+              "type": "text",
+              "text": "class_color_font_weight_view_small"
+            }
+          ]
+        },
+        {
+          "type": "comment",
+          "comment": " 圆点滑块 "
+        },
+        {
+          "type": "element",
+          "name": "color",
+          "attributes": {
+            "name": "font_size_view_big_color"
+          },
+          "elements": [
+            {
+              "type": "text",
+              "text": "class_color_light_n"
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "name": "color",
+          "attributes": {
+            "name": "font_size_view_big_center_color"
+          },
+          "elements": [
+            {
+              "type": "text",
+              "text": "#ffffffff"
+            }
+          ]
+        },
+        {
+          "type": "comment",
+          "comment": " 设置-显示-色彩风格 "
+        },
+        {
+          "type": "comment",
+          "comment": " 色温圆盘下方的 横向多选条背景\tclass_color_second "
+        },
+        {
+          "type": "element",
+          "name": "color",
+          "attributes": {
+            "name": "filter_sort_view_bg_color_light",
+            "package": "miui"
+          },
+          "elements": [
+            {
+              "type": "text",
+              "text": "#ffe5e5e5"
+            }
+          ]
+        },
+        {
+          "type": "comment",
+          "comment": " 文字：“默认、暖色、冷色、自定义” "
+        },
+        {
+          "type": "element",
+          "name": "color",
+          "attributes": {
+            "name": "filter_sort_tab_view_text_normal_light"
+          },
+          "elements": [
+            {
+              "type": "text",
+              "text": "#cc000000"
+            }
+          ]
+        },
+        {
+          "type": "comment",
+          "comment": " 全面屏 复选框按钮 文字 "
+        },
+        {
+          "type": "element",
+          "name": "color",
+          "attributes": {
+            "name": "color_radio_button_text"
+          },
+          "elements": [
+            {
+              "type": "text",
+              "text": "class_color_first"
+            }
+          ]
+        },
+        {
+          "type": "comment",
+          "comment": " MIUI实验室、蓝牙配对码数字“62821”、我的设备：卡片主要文字 "
+        },
+        {
+          "type": "element",
+          "name": "color",
+          "attributes": {
+            "name": "bright_foreground_light_disabled",
+            "package": "miui"
+          },
+          "elements": [
+            {
+              "type": "text",
+              "text": "class_color_disable"
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "name": "color",
+          "attributes": {
+            "name": "bright_foreground_light",
+            "package": "miui"
+          },
+          "elements": [
+            {
+              "type": "text",
+              "text": "class_color_first"
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "name": "color",
+          "attributes": {
+            "name": "miuix_preference_bright_foreground_light_disabled"
+          },
+          "elements": [
+            {
+              "type": "text",
+              "text": "class_color_disable"
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "name": "color",
+          "attributes": {
+            "name": "miuix_preference_bright_foreground_light"
+          },
+          "elements": [
+            {
+              "type": "text",
+              "text": "class_color_first"
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "name": "color",
+          "attributes": {
+            "name": "usage_stats_black60"
+          },
+          "elements": [
+            {
+              "type": "text",
+              "text": "class_color_second"
+            }
+          ]
+        },
+        {
+          "type": "comment",
+          "comment": " 空页面提示文字 "
+        },
+        {
+          "type": "element",
+          "name": "color",
+          "attributes": {
+            "name": "blank_page_text_color_light",
+            "package": "miui"
+          },
+          "elements": [
+            {
+              "type": "text",
+              "text": "class_color_tips"
+            }
+          ]
+        },
+        {
+          "type": "comment",
+          "comment": " 输入框长按内容后-文本功能弹窗 "
+        },
+        {
+          "type": "comment",
+          "comment": " <color name=\"text_select_bg_color_light\" package=\"miui\">class_color_dialog</color> "
+        },
+        {
+          "type": "comment",
+          "comment": " <color name=\"text_select_border_color_light\" package=\"miui\">class_color_dialog</color> "
+        },
+        {
+          "type": "comment",
+          "comment": " 按钮背景、分割线、文字、加载中的圆圈 "
+        },
+        {
+          "type": "element",
+          "name": "color",
+          "attributes": {
+            "name": "text_select_item_bg_color_normal_light",
+            "package": "miui"
+          },
+          "elements": [
+            {
+              "type": "text",
+              "text": "#00000000"
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "name": "color",
+          "attributes": {
+            "name": "text_select_item_bg_color_pressed_light",
+            "package": "miui"
+          },
+          "elements": [
+            {
+              "type": "text",
+              "text": "class_color_list_bg_pressed"
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "name": "color",
+          "attributes": {
+            "name": "divider_color_light",
+            "package": "miui"
+          },
+          "elements": [
+            {
+              "type": "text",
+              "text": "#0d000000"
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "name": "color",
+          "attributes": {
+            "name": "text_edit_action_popup_text_normal",
+            "package": "miui"
+          },
+          "elements": [
+            {
+              "type": "text",
+              "text": "class_color_first"
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "name": "color",
+          "attributes": {
+            "name": "text_edit_action_popup_text_pressed",
+            "package": "miui"
+          },
+          "elements": [
+            {
+              "type": "text",
+              "text": "class_color_light_n"
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "name": "color",
+          "attributes": {
+            "name": "progressbar_indeterminate_circle_color_light",
+            "package": "miui"
+          },
+          "elements": [
+            {
+              "type": "text",
+              "text": "class_color_first"
+            }
+          ]
+        },
+        {
+          "type": "comment",
+          "comment": " 释义后展开面板文字颜色\t释义的文字、文字释义、金山词霸提供技术支持、更多详情 "
+        },
+        {
+          "type": "element",
+          "name": "color",
+          "attributes": {
+            "name": "text_edit_action_popup_title_normal_light",
+            "package": "miui"
+          },
+          "elements": [
+            {
+              "type": "text",
+              "text": "class_color_first"
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "name": "color",
+          "attributes": {
+            "name": "text_edit_action_popup_summary_normal_light",
+            "package": "miui"
+          },
+          "elements": [
+            {
+              "type": "text",
+              "text": "class_color_second"
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "name": "color",
+          "attributes": {
+            "name": "text_edit_action_popup_info_normal_light",
+            "package": "miui"
+          },
+          "elements": [
+            {
+              "type": "text",
+              "text": "class_color_tips"
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "name": "color",
+          "attributes": {
+            "name": "text_edit_action_popup_more_normal_light",
+            "package": "miui"
+          },
+          "elements": [
+            {
+              "type": "text",
+              "text": "class_color_light_n"
+            }
+          ]
+        },
+        {
+          "type": "comment",
+          "comment": " 我的设备-全部参数：底部卡片内白色块 "
+        },
+        {
+          "type": "element",
+          "name": "color",
+          "attributes": {
+            "name": "list_card_background"
+          },
+          "elements": [
+            {
+              "type": "text",
+              "text": "#00000000"
+            }
+          ]
+        },
+        {
+          "type": "comment",
+          "comment": " 列表底层的白色背景\t网速模式、护眼模式、色彩风格 "
+        },
+        {
+          "type": "element",
+          "name": "color",
+          "attributes": {
+            "name": "miuix_preference_white"
+          },
+          "elements": [
+            {
+              "type": "text",
+              "text": "#00000000"
+            }
+          ]
+        },
+        {
+          "type": "comment",
+          "comment": " WLAN网络详情九宫格白色块背景 最新版本已去掉 "
+        },
+        {
+          "type": "element",
+          "name": "color",
+          "attributes": {
+            "name": "white"
+          },
+          "elements": [
+            {
+              "type": "text",
+              "text": "#00000000"
+            }
+          ]
+        },
+        {
+          "type": "comment",
+          "comment": " 更多设置-日期和时间-选择时区-时区：“中国”（属于安卓原生模块） "
+        },
+        {
+          "type": "element",
+          "name": "color",
+          "attributes": {
+            "name": "holo_blue_light",
+            "package": "android"
+          },
+          "elements": [
+            {
+              "type": "text",
+              "text": "class_color_light_n"
+            }
+          ]
+        },
+        {
+          "type": "comment",
+          "comment": " 开关背景、滑块 "
+        },
+        {
+          "type": "comment",
+          "comment": " 开关按钮\t关闭背景、开启背景 "
+        },
+        {
+          "type": "element",
+          "name": "color",
+          "attributes": {
+            "name": "sliding_button_bar_off_light",
+            "package": "miui"
+          },
+          "elements": [
+            {
+              "type": "text",
+              "text": "class_color_sliding_btn_off"
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "name": "color",
+          "attributes": {
+            "name": "sliding_button_bar_on_light",
+            "package": "miui"
+          },
+          "elements": [
+            {
+              "type": "text",
+              "text": "class_color_sliding_btn_on"
+            }
+          ]
+        },
+        {
+          "type": "comment",
+          "comment": " <color name=\"sliding_button_bg_border_color\">#19000000</color> "
+        },
+        {
+          "type": "comment",
+          "comment": " 开关按钮\t滑块\t关闭按钮、开启按钮 "
+        },
+        {
+          "type": "element",
+          "name": "color",
+          "attributes": {
+            "name": "sliding_btn_slider_off_normal_color_light",
+            "package": "miui"
+          },
+          "elements": [
+            {
+              "type": "text",
+              "text": "class_color_sliding_btn_slider"
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "name": "color",
+          "attributes": {
+            "name": "sliding_btn_slider_off_pressed_color_light",
+            "package": "miui"
+          },
+          "elements": [
+            {
+              "type": "text",
+              "text": "class_color_sliding_btn_slider"
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "name": "color",
+          "attributes": {
+            "name": "sliding_btn_slider_on_normal_color_light",
+            "package": "miui"
+          },
+          "elements": [
+            {
+              "type": "text",
+              "text": "class_color_sliding_btn_slider"
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "name": "color",
+          "attributes": {
+            "name": "sliding_btn_slider_on_pressed_color_light",
+            "package": "miui"
+          },
+          "elements": [
+            {
+              "type": "text",
+              "text": "class_color_sliding_btn_slider"
+            }
+          ]
+        },
+        {
+          "type": "comment",
+          "comment": " 底部小豆豆icon "
+        },
+        {
+          "type": "element",
+          "name": "color",
+          "attributes": {
+            "name": "svg_icon_color_normal_light"
+          },
+          "elements": [
+            {
+              "type": "text",
+              "text": "class_color_svg_icon_n"
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "name": "color",
+          "attributes": {
+            "name": "svg_icon_color_pressed_light"
+          },
+          "elements": [
+            {
+              "type": "text",
+              "text": "class_color_svg_icon_p"
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "name": "color",
+          "attributes": {
+            "name": "svg_icon_color_disable_light"
+          },
+          "elements": [
+            {
+              "type": "text",
+              "text": "class_color_svg_icon_d"
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "name": "color",
+          "attributes": {
+            "name": "svg_icon_color_normal_light",
+            "package": "miui"
+          },
+          "elements": [
+            {
+              "type": "text",
+              "text": "class_color_svg_icon_n"
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "name": "color",
+          "attributes": {
+            "name": "svg_icon_color_pressed_light",
+            "package": "miui"
+          },
+          "elements": [
+            {
+              "type": "text",
+              "text": "class_color_svg_icon_p"
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "name": "color",
+          "attributes": {
+            "name": "svg_icon_color_disable_light",
+            "package": "miui"
+          },
+          "elements": [
+            {
+              "type": "text",
+              "text": "class_color_svg_icon_d"
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "name": "color",
+          "attributes": {
+            "name": "svg_icon_color_blue_selected_light",
+            "package": "miui"
+          },
+          "elements": [
+            {
+              "type": "text",
+              "text": "class_color_svg_icon_light"
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "name": "color",
+          "attributes": {
+            "name": "svg_icon_color_blue_disable_light",
+            "package": "miui"
+          },
+          "elements": [
+            {
+              "type": "text",
+              "text": "class_color_svg_icon_d"
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "name": "color",
+          "attributes": {
+            "name": "svg_icon_color_red_pressed_light",
+            "package": "miui"
+          },
+          "elements": [
+            {
+              "type": "text",
+              "text": "class_color_svg_icon_p"
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "name": "color",
+          "attributes": {
+            "name": "svg_icon_color_red_disable_light",
+            "package": "miui"
+          },
+          "elements": [
+            {
+              "type": "text",
+              "text": "class_color_svg_icon_d"
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "name": "color",
+          "attributes": {
+            "name": "svg_icon_color_red_normal_light",
+            "package": "miui"
+          },
+          "elements": [
+            {
+              "type": "text",
+              "text": "class_color_svg_icon_red"
+            }
+          ]
+        },
+        {
+          "type": "comment",
+          "comment": " 底部小豆豆文字 "
+        },
+        {
+          "type": "element",
+          "name": "color",
+          "attributes": {
+            "name": "action_mode_button_text_color_normal_light",
+            "package": "miui"
+          },
+          "elements": [
+            {
+              "type": "text",
+              "text": "class_color_svg_icon_n"
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "name": "color",
+          "attributes": {
+            "name": "action_mode_button_text_color_pressed_light",
+            "package": "miui"
+          },
+          "elements": [
+            {
+              "type": "text",
+              "text": "class_color_svg_icon_p"
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "name": "color",
+          "attributes": {
+            "name": "action_mode_button_text_color_disable_light",
+            "package": "miui"
+          },
+          "elements": [
+            {
+              "type": "text",
+              "text": "class_color_svg_icon_d"
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "name": "color",
+          "attributes": {
+            "name": "action_mode_button_text_color_selected_light",
+            "package": "miui"
+          },
+          "elements": [
+            {
+              "type": "text",
+              "text": "class_color_svg_icon_light"
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "name": "color",
+          "attributes": {
+            "name": "action_button_text_color_normal_light",
+            "package": "miui"
+          },
+          "elements": [
+            {
+              "type": "text",
+              "text": "class_color_svg_icon_n"
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "name": "color",
+          "attributes": {
+            "name": "action_button_text_color_pressed_light",
+            "package": "miui"
+          },
+          "elements": [
+            {
+              "type": "text",
+              "text": "class_color_svg_icon_p"
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "name": "color",
+          "attributes": {
+            "name": "action_button_text_color_disable_light",
+            "package": "miui"
+          },
+          "elements": [
+            {
+              "type": "text",
+              "text": "class_color_svg_icon_d"
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "name": "color",
+          "attributes": {
+            "name": "action_button_text_color_selected_light",
+            "package": "miui"
+          },
+          "elements": [
+            {
+              "type": "text",
+              "text": "class_color_svg_icon_light"
+            }
+          ]
+        },
+        {
+          "type": "comment",
+          "comment": " 复选框 未选 描边的颜色 "
+        },
+        {
+          "type": "element",
+          "name": "color",
+          "attributes": {
+            "name": "checkbox_btn_stroke_color_light",
+            "package": "miui"
+          },
+          "elements": [
+            {
+              "type": "text",
+              "text": "class_color_checkbox_btn_stroke"
+            }
+          ]
+        },
+        {
+          "type": "comment",
+          "comment": " 复选框 未选、已选、对勾 颜色 "
+        },
+        {
+          "type": "element",
+          "name": "color",
+          "attributes": {
+            "name": "checkbox_btn_disable_background_color_light",
+            "package": "miui"
+          },
+          "elements": [
+            {
+              "type": "text",
+              "text": "class_color_checkbox_btn_off"
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "name": "color",
+          "attributes": {
+            "name": "checkbox_btn_on_background_color_light",
+            "package": "miui"
+          },
+          "elements": [
+            {
+              "type": "text",
+              "text": "class_color_checkbox_btn_on"
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "name": "color",
+          "attributes": {
+            "name": "checkbox_btn_on_foreground_color_light",
+            "package": "miui"
+          },
+          "elements": [
+            {
+              "type": "text",
+              "text": "class_color_checkbox_btn_hook"
+            }
+          ]
+        },
+        {
+          "type": "comment",
+          "comment": " 背景透明度 "
+        },
+        {
+          "type": "element",
+          "name": "integer",
+          "attributes": {
+            "name": "checkwidget_background_normal_alpha_light",
+            "package": "miui"
+          },
+          "elements": [
+            {
+              "type": "text",
+              "text": "class_integer_checkbox_bg_n"
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "name": "integer",
+          "attributes": {
+            "name": "checkwidget_background_disable_alpha_light",
+            "package": "miui"
+          },
+          "elements": [
+            {
+              "type": "text",
+              "text": "class_integer_checkbox_bg_d"
+            }
+          ]
+        },
+        {
+          "type": "comment",
+          "comment": " 描边透明度 "
+        },
+        {
+          "type": "element",
+          "name": "integer",
+          "attributes": {
+            "name": "checkwidget_stroke_normal_alpha_light",
+            "package": "miui"
+          },
+          "elements": [
+            {
+              "type": "text",
+              "text": "class_integer_checkbox_stroke_n"
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "name": "integer",
+          "attributes": {
+            "name": "checkwidget_stroke_disable_alpha_light",
+            "package": "miui"
+          },
+          "elements": [
+            {
+              "type": "text",
+              "text": "class_integer_checkbox_stroke_d"
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "name": "integer",
+          "attributes": {
+            "name": "window_translucent_status",
+            "package": "miui"
+          },
+          "elements": [
+            {
+              "type": "text",
+              "text": "class_integer_window_status"
+            }
+          ]
+        },
+        {
+          "type": "comment",
+          "comment": " <bool name=\"check_widget_anim_enable\" package=\"miui\">class_bool_checkbox_btn</bool> "
+        }
+      ]
+    }
+  ]
+}

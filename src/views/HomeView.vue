@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { Empty } from "@arco-design/web-vue";
+
 import ToolBar from "../components/ToolBar.vue";
 import ModuleSelector from "../components/ModuleSelector/Index.vue";
 import ViewSelector from "../components/ViewSelector/Index.vue";
@@ -72,6 +73,7 @@ const ideStateStore = useIdeStateStore();
       flex-grow: 1;
       position: relative;
       display: flex;
+      width: 100%;
 
       .empty {
         position: absolute;

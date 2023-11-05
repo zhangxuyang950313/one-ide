@@ -1,39 +1,44 @@
 <script setup lang="ts">
-import { watch, watchEffect, nextTick } from "vue";
+// import { watch, watchEffect, nextTick } from "vue";
 import { storeToRefs } from "pinia";
+
 import Selector from "./Selector.vue";
-import { TModule, TView } from "../../schema/schema.ts";
-import { useIdeStateStore } from "../../store/useIdeStateStore.ts";
+
+// import { Module, View } from "@/schema/schema";
+import { useIdeStateStore } from "@/store/useIdeStateStore.ts";
 
 defineOptions({ name: "ViewSelector" });
 
-const memoryMap = new Map<TModule, TView>();
+// const memoryMap = new Map<Module, View>();
 
 const ideState = useIdeStateStore();
 const {
-  moduleSelected, //
-  pageSelected,
-  pagesBySelectedModule,
+  views,
+  // selectModule, //
+  selectView,
 } = storeToRefs(ideState);
 
-watchEffect(() => {
-  if (!pageSelected.value) return;
-  nextTick(() => {
-    memoryMap.set(moduleSelected.value, pageSelected.value);
-  });
-});
-
-watch(
-  moduleSelected,
-  (v) => {
-    const p = memoryMap.get(v);
-    if (p) pageSelected.value = p;
-    else pageSelected.value = pagesBySelectedModule.value[0];
-  },
-  { immediate: true },
-);
+// watchEffect(() => {
+//   if (!selectView.value) return;
+//   nextTick(() => {
+//     if (selectModule.value && selectView.value) {
+//       memoryMap.set(selectModule.value, selectView.value);
+//     }
+//   });
+// });
+//
+// watch(
+//   selectModule,
+//   (v) => {
+//     if (!v) return;
+//     const p = memoryMap.get(v);
+//     if (p) selectView.value = p;
+//     else selectView.value = views.value[0];
+//   },
+//   { immediate: true },
+// );
 </script>
 
 <template>
-  <Selector :pages="pagesBySelectedModule" v-model:select="pageSelected" />
+  <Selector :pages="views" v-model:select="selectView" />
 </template>

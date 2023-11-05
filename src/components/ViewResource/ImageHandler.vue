@@ -1,8 +1,8 @@
 <script lang="ts" setup>
-import { TResource } from "../../schema/schema.ts";
+import { Resource } from "@/schema/schema.ts";
 
 defineProps<{
-  resource: TResource;
+  resource: Resource;
 }>();
 </script>
 
@@ -19,7 +19,7 @@ defineProps<{
   justify-content: center;
   width: 100px;
   height: 100px;
-  background: url("../../assets/image-handler-bg.svg") no-repeat center/100%;
+  background: url("../../assets/image-bg.svg") no-repeat center/100%;
   border-radius: 6px;
   .origin {
     width: 80%;

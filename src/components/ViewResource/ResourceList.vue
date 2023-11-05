@@ -1,43 +1,33 @@
 <script lang="tsx">
-import { computed, defineComponent, PropType } from "vue";
-import ImageA from "./Image.vue";
-import { TDivide, TElement, TResource } from "../../schema/schema.ts";
+import { defineComponent, PropType } from "vue";
+
+import ImageHandler from "./ImageHandler.vue";
+import XmlHandler from "./XmlHandler.vue";
+
+import { ResourceGroup } from "@/schema/schema.ts";
 
 export default defineComponent({
   props: {
-    elements: {
-      type: Array as PropType<TElement[]>,
+    resourceGroups: {
+      type: Array as PropType<ResourceGroup[]>,
       required: true,
     },
   },
   setup(props) {
-    const elements = computed(() => {
-      const list: Array<TDivide | TResource[]> = [];
-      for (const item of props.elements) {
-        if (item.type === "divide") {
-          list.push(item);
-        } else if (item.type === "resource") {
-          const last = list[list.length - 1];
-          if (!Array.isArray(last)) {
-            list.push([item]);
-            continue;
-          }
-          last.push(item);
-        }
-      }
-      return list;
-    });
-
     return () => (
       <div class="c-resource-list">
-        {elements.value.map((element) => {
-          if (Array.isArray(element)) {
-            return (
+        {props.resourceGroups.map((group) => {
+          return (
+            <>
+              <h3 class="group-title">{group.title}</h3>
               <div class="resources">
-                {element.map((resource) => {
+                {group.resources.map((resource) => {
                   switch (true) {
                     case resource.mimeType.startsWith("image/"): {
-                      return <ImageA resource={resource} />;
+                      return <ImageHandler resource={resource} />;
+                    }
+                    case resource.mimeType === "application/xml": {
+                      return <XmlHandler resource={resource} />;
                     }
                     default: {
                       return null;
@@ -45,11 +35,8 @@ export default defineComponent({
                   }
                 })}
               </div>
-            );
-          }
-          if (element.type === "divide") {
-            return <h2>{element.title}</h2>;
-          }
+            </>
+          );
         })}
       </div>
     );
@@ -61,13 +48,20 @@ export default defineComponent({
 .c-resource-list {
   display: flex;
   flex-direction: column;
-  padding: 0 30px;
+  padding: 20px;
+  width: 100%;
+  //height: 100%;
   .divide {
     color: var(--color-text-1);
   }
   .resources {
     display: flex;
     grid-gap: 20px;
+    margin-bottom: 50px;
+  }
+  .group-title {
+    margin: 0 0 20px;
+    color: var(--color-text-2);
   }
 }
 </style>

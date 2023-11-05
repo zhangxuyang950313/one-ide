@@ -1,10 +1,11 @@
 <script setup lang="ts">
-import { TView } from "../../schema/schema.ts";
 import { useVModel } from "@vueuse/core";
 
+import { View } from "@/schema/schema.ts";
+
 const props = defineProps<{
-  pages: TView[];
-  select?: TView;
+  pages: View[];
+  select: View | null;
 }>();
 
 const emit = defineEmits(["update:select"]);

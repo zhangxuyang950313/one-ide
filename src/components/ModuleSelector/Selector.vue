@@ -1,11 +1,11 @@
 <script setup lang="ts">
-import { watchEffect } from "vue";
 import { useVModel } from "@vueuse/core";
-import { type TModule } from "../../schema/schema.ts";
+
+import { type Module } from "@/schema/schema.ts";
 
 const props = defineProps<{
-  modules: TModule[];
-  select: TModule;
+  modules: Module[];
+  select: Module | null;
 }>();
 
 const emit = defineEmits(["update:select"]);

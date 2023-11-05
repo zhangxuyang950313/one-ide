@@ -1,64 +1,77 @@
 import { MimeType } from "file-type";
 
 // 配置元信息
-export type TMetaInfo = {
+export type MetaInfo = {
   name: string;
   description: string;
-  uiVersion: string;
-  [k: string]: string;
 };
 
 // 模块配置
-export type TModule = {
-  key: string | number; // 模块标识
+export type Module<
+  MK extends PropertyKey = PropertyKey,
+  RK extends PropertyKey = PropertyKey,
+> = {
+  key: MK;
   name: string;
   icon: string;
+  views: View<RK>[];
 };
 
 // 页面配置
-export type TView = {
+export type View<T extends PropertyKey = PropertyKey> = {
   name: string;
   description: string;
   preview: string;
-  moduleKey: string | number | TModule; // 归属于模块
-  resources: TElement[]; // 页面资源
+  resources: Partial<Record<T, ResourceGroup[]>>;
 };
 
 // 资源分类配置
-export type TResourceCategory = {
-  key: string | number; // 资源分类标识
+export type ResourceCategory<T extends PropertyKey = PropertyKey> = {
+  key: T;
   name: string;
 };
 
 // 资源
-export type TDivide = {
-  type: "divide";
-  categoryKey: string | number | TResourceCategory; // 归属于资源分类
-  title: string;
-  description: string;
-};
-export type TResource = {
-  type: "resource";
-  categoryKey: string | number | TResourceCategory; // 归属于资源分类
+export type Resource = {
   mimeType: MimeType; // 文件类型
   origin: string; // 资源位置
   targets: string[]; // 目标位置
   name: string;
   description: string;
 };
-export type TElement = TDivide | TResource;
+
+export type ResourceGroup = {
+  title: string;
+  resources: Resource[];
+};
 
 // 打包步骤
-export type TPackStep = {
+export type PackStep = {
   name: string;
   script: string;
 };
 
-// IDE 配置汇总
-export type TIDESettings = {
-  meta: TMetaInfo;
-  modules: TModule[];
-  views: TView[];
-  resourceCategories: TResourceCategory[];
-  packSteps: TPackStep[];
+export type IdeSettings<
+  MK extends PropertyKey = PropertyKey,
+  RK extends PropertyKey = PropertyKey,
+> = {
+  meta: MetaInfo;
+  modules: Module<MK, RK>[];
+  resourceCategories: ResourceCategory<RK>[];
 };
+
+type MaybePromise<T> = T | Promise<T>;
+
+export interface IdePluginImpl<
+  M extends Module = Module,
+  V extends View = View,
+  R extends ResourceGroup = ResourceGroup,
+  C extends ResourceCategory = ResourceCategory,
+  I extends MetaInfo = MetaInfo,
+> {
+  getMetaInfo(): MaybePromise<I>;
+  getModules(): MaybePromise<M[]>;
+  getViews(m: M): MaybePromise<V[]>;
+  getResourceGroups(v: V, c: C): MaybePromise<R[]>;
+  getResourceCategories(): MaybePromise<C[]>;
+}

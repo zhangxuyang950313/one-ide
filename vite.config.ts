@@ -1,5 +1,7 @@
-import { defineConfig } from "vite";
 import path from "path";
+
+import { defineConfig } from "vite";
+
 import electron from "vite-plugin-electron/simple";
 import vue from "@vitejs/plugin-vue";
 import vueJsxPlugin from "@vitejs/plugin-vue-jsx";
@@ -26,4 +28,9 @@ export default defineConfig({
       renderer: {},
     }),
   ],
+  resolve: {
+    alias: {
+      "@": path.resolve(__dirname, "src"),
+    },
+  },
 });

@@ -1,15 +1,18 @@
 <script setup lang="ts">
-import Preview from "./Preview.vue";
-import { useIdeStateStore } from "../../store/useIdeStateStore.ts";
 import { storeToRefs } from "pinia";
+
+import Preview from "./Preview.vue";
+
+import { useIdeStateStore } from "@/store/useIdeStateStore.ts";
+
 defineOptions({ name: "ViewPreview" });
 
 const ideStateStore = useIdeStateStore();
-const { pageSelected } = storeToRefs(ideStateStore);
+const { selectView } = storeToRefs(ideStateStore);
 </script>
 
 <template>
   <div>
-    <Preview :preview="pageSelected.preview" />
+    <Preview v-if="selectView" :preview="selectView.preview" />
   </div>
 </template>
