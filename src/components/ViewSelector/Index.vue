@@ -1,13 +1,13 @@
 <script setup lang="ts">
 import { watch, watchEffect, nextTick } from "vue";
 import { storeToRefs } from "pinia";
-import PageSelector from "./Selector.vue";
-import { TModule, TPage } from "../../schema/schema.ts";
+import Selector from "./Selector.vue";
+import { TModule, TView } from "../../schema/schema.ts";
 import { useIdeStateStore } from "../../store/useIdeStateStore.ts";
 
-defineOptions({ name: "PageSelector" });
+defineOptions({ name: "ViewSelector" });
 
-const memoryMap = new Map<TModule, TPage>();
+const memoryMap = new Map<TModule, TView>();
 
 const ideState = useIdeStateStore();
 const {
@@ -35,5 +35,5 @@ watch(
 </script>
 
 <template>
-  <PageSelector :pages="pagesBySelectedModule" v-model:select="pageSelected" />
+  <Selector :pages="pagesBySelectedModule" v-model:select="pageSelected" />
 </template>

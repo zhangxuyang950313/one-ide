@@ -1,10 +1,10 @@
 <script setup lang="ts">
-import { TPage } from "../../schema/schema.ts";
+import { TView } from "../../schema/schema.ts";
 import { useVModel } from "@vueuse/core";
 
 const props = defineProps<{
-  pages: TPage[];
-  select?: TPage;
+  pages: TView[];
+  select?: TView;
 }>();
 
 const emit = defineEmits(["update:select"]);
@@ -13,10 +13,10 @@ const select = useVModel(props, "select", emit);
 </script>
 
 <template>
-  <div class="page-selector-container">
-    <div class="page-list">
+  <div class="c-view-selector">
+    <div class="view-list">
       <div
-        class="page-wrapper"
+        class="view-wrapper"
         v-for="(p, i) in pages"
         :key="`${p.preview}_${i}`"
         :data-selected="select === p"
@@ -28,18 +28,18 @@ const select = useVModel(props, "select", emit);
           :alt="p.name"
           :data-selected="select === p"
         />
-        <span class="title">{{ p.name }}</span>
+        <span class="title" :data-selected="select === p">{{ p.name }}</span>
       </div>
     </div>
   </div>
 </template>
 
 <style lang="less" scoped>
-.page-selector-container {
+.c-view-selector {
   width: 100%;
-  .page-list {
+  .view-list {
     width: 100%;
-    .page-wrapper {
+    .view-wrapper {
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -55,6 +55,11 @@ const select = useVModel(props, "select", emit);
         margin: 6px 0;
         font-size: 12px;
         color: var(--color-text-2);
+
+        &[data-selected="true"] {
+          color: var(--color-primary-light-4);
+          font-weight: bold;
+        }
       }
       .preview {
         width: 100%;

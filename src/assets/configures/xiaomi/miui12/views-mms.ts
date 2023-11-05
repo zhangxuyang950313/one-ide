@@ -1,21 +1,23 @@
-import { TPage } from "../../../../schema/schema.ts";
+import { TView } from "../../../../schema/schema.ts";
 import { ModuleKey, CategoryKey } from "./enums.ts";
 import page_miui_0 from "./pages-preview/mms/page_miui_0.jpg";
 import page_miui_1 from "./pages-preview/mms/page_miui_1.jpg";
 
-export const pagesMms: TPage[] = [
+export const viewsMms: TView[] = [
   {
     name: "短信列表",
     description: "",
     preview: page_miui_0,
     moduleKey: ModuleKey.mms,
-    resources: [
+    elements: [
       {
+        type: "resource",
         name: "短信列表",
         description: "",
         categoryKey: CategoryKey.image,
         mimeType: "image/jpeg",
-        paths: ["wallpaper/default_wallpaper.jpg"],
+        origin: "",
+        targets: ["wallpaper/default_wallpaper.jpg"],
       },
     ],
   },
@@ -24,13 +26,15 @@ export const pagesMms: TPage[] = [
     description: "",
     preview: page_miui_1,
     moduleKey: ModuleKey.mms,
-    resources: [
+    elements: [
       {
+        type: "resource",
         name: "短信列表",
         description: "",
         categoryKey: CategoryKey.image,
         mimeType: "image/jpeg",
-        paths: ["wallpaper/default_wallpaper.jpg"],
+        origin: "",
+        targets: ["wallpaper/default_wallpaper.jpg"],
       },
     ],
   },

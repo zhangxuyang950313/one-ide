@@ -1,21 +1,13 @@
 <script setup lang="ts">
-import { Empty, Tabs } from "@arco-design/web-vue";
-import ModuleSelector from "../components/ModuleSelector.vue";
+import { Empty } from "@arco-design/web-vue";
 import ToolBar from "../components/ToolBar.vue";
-import PageSelector from "../components/PageSelector/Index.vue";
-import PagePreview from "../components/PagePreview.vue";
-import ResourceHandler from "../components/ResourceHandler.vue";
+import ModuleSelector from "../components/ModuleSelector/Index.vue";
+import ViewSelector from "../components/ViewSelector/Index.vue";
+import ViewPreview from "../components/ViewPreview/Index.vue";
+import ViewResource from "../components/ViewResource/Index.vue";
 import { useIdeStateStore } from "../store/useIdeStateStore.ts";
-import { storeToRefs } from "pinia";
 
 const ideStateStore = useIdeStateStore();
-const {
-  settings, //
-  modules,
-  resourceCategories,
-  moduleSelected,
-  pageSelected,
-} = storeToRefs(ideStateStore);
 </script>
 
 <template>
@@ -28,34 +20,17 @@ const {
     <section class="under">
       <!-- 模块选择器 -->
       <section class="module-selector">
-        <ModuleSelector :modules="modules" v-model:select="moduleSelected" />
+        <ModuleSelector />
       </section>
       <!-- 模块内容编辑 -->
       <section class="module-content">
-        <template v-if="!!modules">
+        <template v-if="!!ideStateStore.modules">
           <!-- 页面选择器 -->
-          <section class="page-selector">
-            <PageSelector />
-          </section>
+          <ViewSelector class="view-selector" />
           <!-- 页面预览 -->
-          <section class="page-preview">
-            <PagePreview :preview="pageSelected.preview" />
-          </section>
+          <ViewPreview class="view-preview" />
           <!-- 页面内容编辑 -->
-          <section class="page-resource">
-            <Tabs class="tabs">
-              <Tabs.TabPane
-                v-for="category in resourceCategories"
-                :key="category.key"
-                :title="category.name"
-              >
-                <ResourceHandler
-                  :category="category"
-                  :resources="pageSelected?.resources || []"
-                />
-              </Tabs.TabPane>
-            </Tabs>
-          </section>
+          <ViewResource class="view-resource" />
         </template>
         <template v-else>
           <Empty class="empty" description="未选择模块" />
@@ -73,26 +48,31 @@ const {
   overflow: hidden;
   display: flex;
   flex-direction: column;
+
   .upper {
     width: 100vw;
     height: 60px;
     flex-shrink: 0;
     border-bottom: 1px solid var(--color-border-2);
   }
+
   .under {
     display: flex;
     flex-grow: 1;
     overflow: hidden;
+
     .module-selector {
       width: 60px;
       height: 100%;
       flex-shrink: 0;
       border-right: 1px solid var(--color-border-2);
     }
+
     .module-content {
       flex-grow: 1;
       position: relative;
       display: flex;
+
       .empty {
         position: absolute;
         width: auto;
@@ -101,7 +81,8 @@ const {
         left: 50%;
         transform: translate(-50%, -50%);
       }
-      .page-selector {
+
+      .view-selector {
         width: 160px;
         height: 100%;
         padding: 10px;
@@ -109,15 +90,18 @@ const {
         border-right: 1px solid var(--color-border-2);
         overflow: auto;
       }
-      .page-preview {
+
+      .view-preview {
         width: 300px;
         height: 100%;
         padding: 15px;
         flex-shrink: 0;
         border-right: 1px solid var(--color-border-2);
       }
-      .page-resource {
+
+      .view-resource {
         width: 100%;
+
         .tabs {
         }
       }

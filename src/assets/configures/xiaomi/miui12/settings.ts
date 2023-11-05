@@ -1,6 +1,6 @@
-import { pagesDesktop } from "./pages-desktop.ts";
-import { pagesContacts } from "./pages-contacts.ts";
-import { pagesMms } from "./pages-mms.ts";
+import { viewsDesktop } from "./views-desktop.ts";
+import { viewsContacts } from "./views-contacts.ts";
+import { viewsMms } from "./views-mms.ts";
 import { ModuleKey, CategoryKey } from "./enums.ts";
 import { TIDESettings } from "../../../../schema/schema.ts";
 
@@ -31,7 +31,7 @@ const ideSettings: TIDESettings = {
       icon: mms,
     },
   ],
-  pages: [...pagesDesktop, ...pagesContacts, ...pagesMms],
+  views: [...viewsDesktop, ...viewsContacts, ...viewsMms],
   resourceCategories: [
     {
       name: "图片",

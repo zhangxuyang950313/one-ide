@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { watchEffect } from "vue";
 import { useVModel } from "@vueuse/core";
-import { type TModule } from "../schema/schema.ts";
+import { type TModule } from "../../schema/schema.ts";
 
 const props = defineProps<{
   modules: TModule[];
@@ -11,14 +11,10 @@ const props = defineProps<{
 const emit = defineEmits(["update:select"]);
 
 const select = useVModel(props, "select", emit);
-
-watchEffect(() => {
-  console.log(select);
-});
 </script>
 
 <template>
-  <div class="module-selector">
+  <div class="c-module-selector">
     <div class="icon-list">
       <img
         class="icon"
@@ -34,7 +30,7 @@ watchEffect(() => {
 </template>
 
 <style scoped lang="less">
-.module-selector {
+.c-module-selector {
   width: 100%;
   height: 100%;
   padding: 10px;

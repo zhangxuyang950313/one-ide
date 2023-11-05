@@ -20,7 +20,7 @@ export const useIdeState = () => {
   const moduleSelected = shallowRef<TModule>(settings.value.modules[0]);
   // 当前选中模块下页面
   const pagesBySelectedModule = computed(() =>
-    settings.value.pages.filter(
+    settings.value.views.filter(
       (page) => moduleSelected.value.key === page.moduleKey,
     ),
   );
