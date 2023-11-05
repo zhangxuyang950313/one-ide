@@ -24,7 +24,6 @@
    "content_security_policy": "script-src 'self'; object-src 'self'",
    "description": "Browser DevTools extension for debugging Vue.js applications.",
    "devtools_page": "devtools-background.html",
-   "differential_fingerprint": "1.ae69ebb7a546c360f81fecb4b75a420df107d609ea746a70864f4c2e585c1de2",
    "icons": {
       "128": "icons/128.png",
       "16": "icons/16.png",
