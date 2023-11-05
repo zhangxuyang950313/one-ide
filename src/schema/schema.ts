@@ -4,6 +4,8 @@ import { MimeType } from "file-type";
 export type TMetaInfo = {
   name: string;
   description: string;
+  uiVersion: string;
+  [k: string]: string;
 };
 
 // 模块配置
@@ -30,9 +32,10 @@ export type TResourceCategory = {
 
 // 资源
 export type TResource = {
-  resourceCategoryKey: string | number; // 归属于资源分类
+  categoryKey: string | number; // 归属于资源分类
   mimeType: MimeType; // 文件类型
-  file: string;
+  paths: string[];
+  name: string;
   description: string;
 };
 

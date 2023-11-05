@@ -1,9 +1,16 @@
 <script setup lang="ts">
+import { defineModel, watchEffect } from "vue";
 import { type TModule } from "../schema/schema.ts";
 
 defineProps<{
   modules: TModule[];
 }>();
+
+const select = defineModel("select");
+
+watchEffect(() => {
+  console.log(select);
+});
 </script>
 
 <template>
@@ -15,6 +22,7 @@ defineProps<{
         :key="`${m.icon}_${i}`"
         :src="m.icon"
         :alt="m.name"
+        @click="select = m"
       />
     </div>
   </div>

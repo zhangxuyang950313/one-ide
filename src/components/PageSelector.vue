@@ -24,7 +24,6 @@ defineProps<{
 <style lang="less" scoped>
 .page-selector-container {
   width: 100%;
-  height: 100%;
   .page-list {
     width: 100%;
     .page-wrapper {
@@ -35,6 +34,7 @@ defineProps<{
       .title {
         margin-top: 4px;
         font-size: 12px;
+        color: var(--color-text-2);
       }
       .preview {
         width: 100%;

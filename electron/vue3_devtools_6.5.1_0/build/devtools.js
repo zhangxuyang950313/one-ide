@@ -6242,9 +6242,9 @@
                   ? ((e = g(t.r, t.g, t.b)),
                     (a = !0),
                     (s = "%" === String(t.r).substr(-1) ? "prgb" : "rgb"))
-                  : W(t.h) && W(t.s) && W(t.v)
+                  : W(t.h) && W(t.s) && W(t.moduleSelected)
                   ? ((i = G(t.s)),
-                    (o = G(t.v)),
+                    (o = G(t.moduleSelected)),
                     (e = w(t.h, i, o)),
                     (a = !0),
                     (s = "hsv"))
@@ -6349,7 +6349,7 @@
               }
               i /= 6;
             }
-            return { h: i, s: o, v: s };
+            return { h: i, s: o, moduleSelected: s };
           }
           function w(t, e, n) {
             (t = 6 * Q(t, 360)), (e = Q(e, 100)), (n = Q(n, 100));
@@ -6488,10 +6488,11 @@
             var n = A(t).toHsv(),
               i = n.h,
               o = n.s,
-              r = n.v,
+              r = n.moduleSelected,
               a = [],
               s = 1 / e;
-            while (e--) a.push(A({ h: i, s: o, v: r })), (r = (r + s) % 1);
+            while (e--)
+              a.push(A({ h: i, s: o, moduleSelected: r })), (r = (r + s) % 1);
             return a;
           }
           (A.prototype = {
@@ -6545,13 +6546,18 @@
             },
             toHsv: function () {
               var t = f(this._r, this._g, this._b);
-              return { h: 360 * t.h, s: t.s, v: t.v, a: this._a };
+              return {
+                h: 360 * t.h,
+                s: t.s,
+                moduleSelected: t.moduleSelected,
+                a: this._a,
+              };
             },
             toHsvString: function () {
               var t = f(this._r, this._g, this._b),
                 e = h(360 * t.h),
                 n = h(100 * t.s),
-                i = h(100 * t.v);
+                i = h(100 * t.moduleSelected);
               return 1 == this._a
                 ? "hsv(" + e + ", " + n + "%, " + i + "%)"
                 : "hsva(" +
@@ -7085,9 +7091,9 @@
               : (e = X.hsla.exec(t))
               ? { h: e[1], s: e[2], l: e[3], a: e[4] }
               : (e = X.hsv.exec(t))
-              ? { h: e[1], s: e[2], v: e[3] }
+              ? { h: e[1], s: e[2], moduleSelected: e[3] }
               : (e = X.hsva.exec(t))
-              ? { h: e[1], s: e[2], v: e[3], a: e[4] }
+              ? { h: e[1], s: e[2], moduleSelected: e[3], a: e[4] }
               : (e = X.hex8.exec(t))
               ? {
                   r: F(e[1]),
@@ -15974,7 +15980,7 @@
                 (t) =>
                   !f(this, t) && {
                     k: t.key,
-                    v: t.value,
+                    moduleSelected: t.value,
                     e: t.now + (t.maxAge || 0),
                   },
               )
@@ -16038,10 +16044,10 @@
             for (let n = t.length - 1; n >= 0; n--) {
               const i = t[n],
                 o = i.e || 0;
-              if (0 === o) this.set(i.k, i.v);
+              if (0 === o) this.set(i.k, i.moduleSelected);
               else {
                 const t = o - e;
-                t > 0 && this.set(i.k, i.v, t);
+                t > 0 && this.set(i.k, i.moduleSelected, t);
               }
             }
           }

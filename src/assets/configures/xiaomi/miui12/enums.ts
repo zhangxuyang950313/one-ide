@@ -1,10 +1,10 @@
-export const enum ModuleEnum {
+export const enum ModuleKey {
   desktop_wallpaper,
   contacts,
   mms,
 }
 
-export const enum ResourceCateGoryKey {
+export const enum CategoryKey {
   image,
   color,
   bool,
