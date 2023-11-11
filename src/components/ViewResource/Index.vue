@@ -1,32 +1,31 @@
 <script setup lang="ts">
 import { storeToRefs } from "pinia";
 import { Tabs } from "@arco-design/web-vue";
-
-import ResourceList from "./ResourceList.vue";
-
 import { useIdeStateStore } from "@/store/useIdeStateStore.ts";
+import FileList from "./FileList.vue";
 
 defineOptions({ name: "ViewResource" });
 
 const ideStateStore = useIdeStateStore();
-const {
-  // resourceGroups, //
-  resourceCategories,
-  selectView,
-} = storeToRefs(ideStateStore);
+const { selectView } = storeToRefs(ideStateStore);
 </script>
 
 <template>
-  <Tabs class="tabs" animation lazy-load justify>
+  <Tabs v-if="selectView" class="tabs" justify>
     <Tabs.TabPane
-      v-for="(category, key) in resourceCategories"
+      v-for="(item, key) in selectView.resources"
       :key="key"
-      :title="category.name"
+      :title="item.name"
     >
-      <ResourceList
+      <FileList
+        v-if="item.use === 'file-list'"
         class="list"
-        v-if="selectView"
-        :resourceGroups="selectView.resources[category.key] || []"
+        :list="item.resources"
+      />
+      <FileList
+        v-else-if="item.use === 'file'"
+        class="list"
+        :list="[{ title: '', resources: [item.resource] }]"
       />
     </Tabs.TabPane>
   </Tabs>
@@ -34,14 +33,16 @@ const {
 
 <style lang="less" scoped>
 .tabs {
-  //width: 100%;
-  //height: 100%;
-  //overflow: auto;
+  width: 100%;
+  overflow: hidden;
+
+  :deep(.arco-tabs-pane) {
+    width: 90%;
+    overflow: hidden;
+  }
 }
 :deep(.arco-tabs-content) {
   padding: 0;
-  //height: 100%;
-  overflow: auto;
 }
 .list {
   display: inline-flex;

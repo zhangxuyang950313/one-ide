@@ -19,7 +19,6 @@ export default defineComponent({
       default: () => {
         return {
           language: "json",
-          // theme: "vs-light",
         } as editor.IStandaloneEditorConstructionOptions;
       },
     },
@@ -30,7 +29,7 @@ export default defineComponent({
   setup(props) {
     let editorIns: editor.IStandaloneCodeEditor;
     const modelValue = ref(props.value);
-    const onVNodeMounted: VNodeRef = (ref) => {
+    const onVNodeMounted: VNodeRef = async (ref) => {
       if (!(ref instanceof HTMLDivElement)) return;
       editorIns = editor.create(ref, {
         ...props.options,

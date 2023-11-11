@@ -26,6 +26,9 @@ dependencies:
   monaco-editor:
     specifier: ^0.44.0
     version: 0.44.0
+  monaco-editor-nls:
+    specifier: ^3.1.0
+    version: 3.1.0
   pinia:
     specifier: ^2.1.7
     version: 2.1.7(typescript@5.2.2)(vue@3.3.7)
@@ -103,6 +106,12 @@ devDependencies:
   vite-plugin-electron-renderer:
     specifier: ^0.14.5
     version: 0.14.5
+  vite-plugin-monaco-editor:
+    specifier: ^1.1.0
+    version: 1.1.0(monaco-editor@0.44.0)
+  vite-plugin-monaco-editor-nls:
+    specifier: ^2.0.2
+    version: 2.0.2(vite@4.5.0)
   vue-tsc:
     specifier: ^1.8.8
     version: 1.8.22(typescript@5.2.2)
@@ -3585,9 +3594,12 @@ packages:
     hasBin: true
     dev: true
 
+  /monaco-editor-nls@3.1.0:
+    resolution: {integrity: sha512-GdzgKRAiwXlGI/ude/HbzP8ukml28yUoZ7rx/xsSsmYf9W13jTyWjXjoMK/+pjL6JorAThH2WkCYaDoCnIX7Jg==}
+    dev: false
+
   /monaco-editor@0.44.0:
     resolution: {integrity: sha512-5SmjNStN6bSuSE5WPT2ZV+iYn1/yI9sd4Igtk23ChvqB7kDk9lZbB9F5frsuvpB+2njdIeGGFf2G4gbE6rCC9Q==}
-    dev: false
 
   /ms@2.1.2:
     resolution: {integrity: sha512-sGkPx+VjMtmA6MX27oA4FBFELFCZZ4S4XqeGOXCv68tT+jb3vk/RyaKWP0PTKyWtmLSM0b+adUTEvbs1PEaH2w==}
@@ -4592,6 +4604,22 @@ packages:
         optional: true
     dependencies:
       vite-plugin-electron-renderer: 0.14.5
+    dev: true
+
+  /vite-plugin-monaco-editor-nls@2.0.2(vite@4.5.0):
+    resolution: {integrity: sha512-g7/17LktYHev/UDaafnqbTiDg6Q526jR50+71Kx9Zxuvhji8VF1H4xM/eEgY3+9POZAcbXCmn3GmRCqmzNyxww==}
+    peerDependencies:
+      vite: '>=2.3.0'
+    dependencies:
+      vite: 4.5.0(@types/node@20.8.10)(less@4.2.0)
+    dev: true
+
+  /vite-plugin-monaco-editor@1.1.0(monaco-editor@0.44.0):
+    resolution: {integrity: sha512-IvtUqZotrRoVqwT0PBBDIZPNraya3BxN/bfcNfnxZ5rkJiGcNtO5eAOWWSgT7zullIAEqQwxMU83yL9J5k7gww==}
+    peerDependencies:
+      monaco-editor: '>=0.33.0'
+    dependencies:
+      monaco-editor: 0.44.0
     dev: true
 
   /vite@4.5.0(@types/node@20.8.10)(less@4.2.0):

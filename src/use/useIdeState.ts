@@ -1,14 +1,10 @@
 import { shallowRef, watchEffect, watch } from "vue";
-
 import type {
   Module,
   View,
-  ResourceCategory,
   MetaInfo,
-  ResourceGroup,
   IdePluginImpl,
 } from "../schema/schema.ts";
-
 // // TODO 设置编辑器配置
 // const allSettings = Object.values<TIDESettings>(
 //   import.meta.glob("@/assets/configures/**/*/settings.ts", {
@@ -67,32 +63,31 @@ export const useIdeState = (idePlugin: IdePluginImpl) => {
     }
   });
 
-  // 资源分类
-  const resourceCategories = shallowRef<ResourceCategory[]>([]);
-  // 获取资源分类配置
-  (async function () {
-    resourceCategories.value = await idePlugin.getResourceCategories();
-  })();
-  // 当前选中的资源分类
-  const selectCategory = shallowRef<ResourceCategory | null>(null);
-  watchEffect(() => {
-    if (!selectCategory.value && resourceCategories.value.length > 0) {
-      selectCategory.value = resourceCategories.value[0];
-    }
-  });
-
-  // 资源列表
-  const resourceGroups = shallowRef<ResourceGroup[]>([]);
-  watchEffect(async () => {
-    if (!selectView.value || !selectCategory.value) {
-      resourceGroups.value = [];
-    } else {
-      resourceGroups.value = await idePlugin.getResourceGroups(
-        selectView.value,
-        selectCategory.value,
-      );
-    }
-  });
+  // // 资源分类
+  // const resourceCategories = shallowRef<ResourceCategory[]>([]);
+  // // 获取资源分类配置
+  // (async function () {
+  //   resourceCategories.value = await idePlugin.getResourceCategories();
+  // })();
+  // // 当前选中的资源分类
+  // const selectCategory = shallowRef<ResourceCategory | null>(null);
+  // watchEffect(() => {
+  //   if (!selectCategory.value && resourceCategories.value.length > 0) {
+  //     selectCategory.value = resourceCategories.value[0];
+  //   }
+  // });
+  //
+  // // 资源列表
+  // const resourceGroups = shallowRef<ResourceGroup[]>([]);
+  // watchEffect(async () => {
+  //   if (!selectView.value || !selectCategory.value) {
+  //     resourceGroups.value = [];
+  //   } else {
+  //     resourceGroups.value = await idePlugin.getResourceGroups(
+  //       selectView.value,
+  //     );
+  //   }
+  // });
 
   return {
     metaInfo,
@@ -100,8 +95,5 @@ export const useIdeState = (idePlugin: IdePluginImpl) => {
     selectModule,
     views,
     selectView,
-    resourceCategories,
-    selectCategory,
-    resourceGroups,
   };
 };

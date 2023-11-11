@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import { Empty } from "@arco-design/web-vue";
-
 import ToolBar from "../components/ToolBar.vue";
 import ModuleSelector from "../components/ModuleSelector/Index.vue";
 import ViewSelector from "../components/ViewSelector/Index.vue";
@@ -103,9 +102,8 @@ const ideStateStore = useIdeStateStore();
 
       .view-resource {
         width: 100%;
-
-        .tabs {
-        }
+        height: 100%;
+        overflow: hidden;
       }
     }
   }

@@ -1,9 +1,7 @@
 <script setup lang="ts">
 import { storeToRefs } from "pinia";
-
-import Preview from "./Preview.vue";
-
 import { useIdeStateStore } from "@/store/useIdeStateStore.ts";
+import Preview from "./Preview.vue";
 
 defineOptions({ name: "ViewPreview" });
 

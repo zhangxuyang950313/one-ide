@@ -1,11 +1,10 @@
 <script setup lang="ts">
 // import { watch, watchEffect, nextTick } from "vue";
 import { storeToRefs } from "pinia";
-
+import { useIdeStateStore } from "@/store/useIdeStateStore.ts";
 import Selector from "./Selector.vue";
 
 // import { Module, View } from "@/schema/schema";
-import { useIdeStateStore } from "@/store/useIdeStateStore.ts";
 
 defineOptions({ name: "ViewSelector" });
 

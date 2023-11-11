@@ -23,7 +23,8 @@ module.exports = {
                 '*.mjs',
                 '*.cjs',
                 '*.ts',
-                '*.tsx'
+                '*.tsx',
+                '*.vue'
             ],
             options: {
                 parser: 'babel'

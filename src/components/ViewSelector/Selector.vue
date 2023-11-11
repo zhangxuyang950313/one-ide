@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import { useVModel } from "@vueuse/core";
-
 import { View } from "@/schema/schema.ts";
 
 const props = defineProps<{

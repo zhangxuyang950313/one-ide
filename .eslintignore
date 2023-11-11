@@ -1,1 +1,3 @@
 electron/extensions/*
+dist-electron
+node_modules

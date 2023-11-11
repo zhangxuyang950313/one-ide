@@ -1,8 +1,6 @@
 import { defineStore } from "pinia";
-
-import { useIdeState } from "../use/useIdeState.ts";
-
 import XiaomiMiui12 from "@/assets/configures/xiaomi/miui12";
+import { useIdeState } from "../use/useIdeState.ts";
 
 export const useIdeStateStore = defineStore(
   "__ide_state__", //

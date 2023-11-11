@@ -1,5 +1,3 @@
-import { settings } from "./settings.ts";
-
 import {
   View,
   MetaInfo,
@@ -8,6 +6,7 @@ import {
   ResourceCategory,
   Module,
 } from "@/schema/schema.ts";
+import { settings } from "./settings.ts";
 
 export default class XiaomiMiui12 implements IdePluginImpl {
   getMetaInfo(): MetaInfo {

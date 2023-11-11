@@ -1,9 +1,7 @@
 <script setup lang="ts">
 import { storeToRefs } from "pinia";
-
-import Selector from "./Selector.vue";
-
 import { useIdeStateStore } from "@/store/useIdeStateStore.ts";
+import Selector from "./Selector.vue";
 
 defineOptions({ name: "ModuleSelector" });
 

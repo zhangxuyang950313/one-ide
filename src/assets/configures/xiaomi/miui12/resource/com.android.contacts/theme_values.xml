@@ -1,18 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ThemeConfig>
-	
-	<integer name="window_translucent_status" package="miui">class_integer_window_status</integer>
-	
+
+	<!-- 顶栏、搜索条 -->
+	<color name="action_bar_title_text_color_light" package="miui">#ffffffff</color>
+	<color name="action_mode_title_text_color_light" package="miui">#ffffffff</color>
+	<color name="dialer_title_text_color">#ffffffff</color>
+	<color name="action_bar_subtitle_text_light" package="miui">#ffffffff</color>
+	<!-- 搜索条	背景、提示文字 -->
+	<color name="edit_text_search_bg_color_light">#ffffffff</color>
+	<color name="edit_text_search_bg_color_light" package="miui">#ffffffff</color>
+	<color name="edit_text_search_hint_color_light" package="miui">#ffffffff</color>
+
+	<integer name="window_translucent_status" package="miui">1</integer>
+	<integer name="window_translucent_status" package="miui">
+		<!-- test	-->
+		<test test="1">test</test>
+	</integer>
+
 	<!-- <bool name="check_widget_anim_enable" package="miui">class_bool_checkbox_btn</bool> -->
-	
 	<!-- 默认是true，拨号盘的数字是字体。改为false后拨号盘数字是图片 -->
-	<bool name="default_theme">class_bool_default_theme</bool>
+	<bool name="default_theme">true</bool>
 	<!-- 拨号盘展开动画 -->
-	<bool name="dialerinput_with_animation">class_bool_dialerinput_ani</bool>
+	<bool name="dialerinput_with_animation">true</bool>
 	<bool name="status_bar_color_enable">false</bool>
-	<bool name="status_bar_color_white">class_bool_status_bar</bool>
+	<bool name="status_bar_color_white">true</bool>
 	<!-- 输入号码 背景的阴影高度	（默认：14.099976dp） -->
-	<dimen name="shadow_height">class_dimen_digits_input_shadow_height</dimen>
+	<dimen name="shadow_height">14.099976dp</dimen>
 	<!-- 输入号码 背景偏移高度	（默认：15.0dp） -->
 	<dimen name="twelve_key_digits_input_margin_top">class_dimen_digits_input_bg_height</dimen>
 	<!-- 输入号码 文字偏移高度	（默认：0.0dp） -->
@@ -29,16 +42,7 @@
 	<dimen name="dialer_menu_padding_btm">class_dimen_dialer_menu_padding_btm</dimen>
 	<!-- 双卡按钮中间的间距（默认：0.5dp） -->
 	<dimen name="double_call_btn_divider">class_dimen_double_call_btn_divider</dimen>
-	
-	<!-- 顶栏、搜索条 -->
-	<color name="action_bar_title_text_color_light" package="miui">class_color_top_title</color>
-	<color name="action_mode_title_text_color_light" package="miui">class_color_top_title</color>
-	<color name="dialer_title_text_color">class_color_top_title</color>
-	<color name="action_bar_subtitle_text_light" package="miui">class_color_top_subtitle</color>
-	<!-- 搜索条	背景、提示文字 -->
-	<color name="edit_text_search_bg_color_light">class_color_search_bg</color>
-	<color name="edit_text_search_bg_color_light" package="miui">class_color_search_bg</color>
-	<color name="edit_text_search_hint_color_light" package="miui">class_color_search_tips</color>
+
 	<!-- 编辑模式下 搜索条 放大镜的颜色；icon有透明通道，此处使用class_color_search_normal颜色 -->
 	<color name="edit_text_search_color">class_color_search_normal</color>
 	<!-- 搜索条	输入的文字 -->

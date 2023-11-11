@@ -1,11 +1,10 @@
-import path from "path";
-
 import { defineConfig } from "vite";
-
 import electron from "vite-plugin-electron/simple";
 import vue from "@vitejs/plugin-vue";
 import vueJsxPlugin from "@vitejs/plugin-vue-jsx";
 import { vitePluginForArco } from "@arco-plugins/vite-vue";
+import vitePluginMonacoEditor from "vite-plugin-monaco-editor";
+import path from "path";
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -13,6 +12,7 @@ export default defineConfig({
     vue(),
     vueJsxPlugin(),
     vitePluginForArco(),
+    vitePluginMonacoEditor({}),
     electron({
       main: {
         // Shortcut of `build.lib.entry`.
