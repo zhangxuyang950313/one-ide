@@ -1,5 +1,7 @@
 <script setup lang="ts">
 import { Empty } from "@arco-design/web-vue";
+import { storeToRefs } from "pinia";
+import { useToolbarStore } from "@/store/useToolbar";
 import ToolBar from "../components/ToolBar.vue";
 import ModuleSelector from "../components/ModuleSelector/Index.vue";
 import ViewSelector from "../components/ViewSelector/Index.vue";
@@ -8,6 +10,8 @@ import ViewResource from "../components/ViewResource/Index.vue";
 import { useIdeStateStore } from "../store/useIdeStateStore.ts";
 
 const ideStateStore = useIdeStateStore();
+const toolbarStore = useToolbarStore();
+const { panelVisible } = storeToRefs(toolbarStore);
 </script>
 
 <template>
@@ -19,16 +23,16 @@ const ideStateStore = useIdeStateStore();
     <!-- 下方 -->
     <section class="under">
       <!-- 模块选择器 -->
-      <section class="module-selector">
+      <section v-show="panelVisible.module" class="module-selector">
         <ModuleSelector />
       </section>
       <!-- 模块内容编辑 -->
       <section class="module-content">
         <template v-if="!!ideStateStore.modules">
           <!-- 页面选择器 -->
-          <ViewSelector class="view-selector" />
+          <ViewSelector v-show="panelVisible.view" class="view-selector" />
           <!-- 页面预览 -->
-          <ViewPreview class="view-preview" />
+          <ViewPreview v-show="panelVisible.preview" class="view-preview" />
           <!-- 页面内容编辑 -->
           <ViewResource class="view-resource" />
         </template>
@@ -51,7 +55,7 @@ const ideStateStore = useIdeStateStore();
 
   .upper {
     width: 100vw;
-    height: 60px;
+    min-height: 60px;
     flex-shrink: 0;
     border-bottom: 1px solid var(--color-border-2);
   }

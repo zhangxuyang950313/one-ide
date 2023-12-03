@@ -37,7 +37,7 @@ const { selectView } = storeToRefs(ideStateStore);
   overflow: hidden;
 
   :deep(.arco-tabs-pane) {
-    width: 90%;
+    width: 100%;
     overflow: hidden;
   }
 }
