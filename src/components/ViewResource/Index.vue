@@ -34,14 +34,17 @@ const {
 
 <style lang="less" scoped>
 .tabs {
-  //width: 100%;
-  //height: 100%;
-  //overflow: auto;
-}
-:deep(.arco-tabs-content) {
-  padding: 0;
-  //height: 100%;
-  overflow: auto;
+  width: 100%;
+  overflow: hidden;
+
+  :deep(.arco-tabs-pane) {
+    width: 100%;
+    overflow: hidden;
+  }
+  :deep(.arco-tabs-content-item) {
+    padding: 0;
+    overflow: auto;
+  }
 }
 .list {
   display: inline-flex;
