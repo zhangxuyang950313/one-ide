@@ -1,0 +1,2873 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Lockscreen version="1" frameRate="60" screenWidth="1080" displayDesktop="false" showSysWallpaper="true">
+<!--Sunny制作，可供参考，抄袭必究-->
+<VariableBinders>
+	<ContentProviderBinder name="weather_provider" uri="content://weather/weather" columns="city_id,city_name,weather_type,temperature,tmphighs,tmplows,description,temperature_range,wind,humidity" countName="hasweather" denpendency="selected_city">
+		<Variable name="city_id" type="string" column="city_id"/>
+		<Variable name="weather_location" type="string" column="city_name"/>
+		<Variable name="weather_humidity" type="string" column="humidity"/>
+		<Variable name="weather_id" type="int" column="weather_type" row="0"/>
+		<Variable name="weather_description" type="string" column="description" row="0"/>
+		<Variable name="weather_temperature" type="int" column="temperature" row="0"/>
+		<Variable name="weather_temperature_range" type="string" column="temperature_range" row="0"/>
+		<Variable name="weather_temphigh" type="int" column="tmphighs"/>
+		<Variable name="weather_templow" type="int" column="tmplows"/>
+		<Variable name="weather_publish_time" type="long" column="publish_time"/>
+		<Variable name="weather_id1" type="int" column="weather_type" row="1"/>
+		<Variable name="weather_description1" type="string" column="description" row="1"/>
+		<Variable name="weather_temperature1" type="int" column="temperature" row="1"/>
+		<Variable name="weather_temperature_range1" type="string" column="temperature_range" row="1"/>
+		<Variable name="weather_temphigh1" type="int" column="tmphighs" row="1"/>
+		<Variable name="weather_templow1" type="int" column="tmplows" row="1"/>
+		<Variable name="weather_id2" type="int" column="weather_type" row="2"/>
+		<Variable name="weather_description2" type="string" column="description" row="2"/>
+		<Variable name="weather_temperature2" type="int" column="temperature" row="2"/>
+		<Variable name="weather_temperature_range2" type="string" column="temperature_range" row="2"/>
+		<Variable name="weather_temphigh2" type="int" column="tmphighs" row="2"/>
+		<Variable name="weather_templow2" type="int" column="tmplows" row="2"/>
+		<Variable name="weather_id3" type="int" column="weather_type" row="3"/>
+		<Variable name="weather_description3" type="string" column="description" row="3"/>
+		<Variable name="weather_temperature3" type="int" column="temperature" row="3"/>
+		<Variable name="weather_temperature_range3" type="string" column="temperature_range" row="3"/>
+		<Variable name="weather_temphigh3" type="int" column="tmphighs" row="3"/>
+		<Variable name="weather_templow3" type="int" column="tmplows" row="3"/>
+		<Variable name="weather_id4" type="int" column="weather_type" row="4"/>
+		<Variable name="weather_description4" type="string" column="description" row="4"/>
+		<Variable name="weather_temperature4" type="int" column="temperature" row="4"/>
+		<Variable name="weather_temperature_range4" type="string" column="temperature_range" row="4"/>
+		<Variable name="weather_temphigh4" type="int" column="tmphighs" row="4"/>
+		<Variable name="weather_templow4" type="int" column="tmplows" row="4"/>
+		<Variable name="weather_wind" type="string" column="wind" />
+		<Variable name="weather_humidity" type="string" column="humidity" />
+	</ContentProviderBinder>
+	<ContentProviderBinder uri="content://weather/selected_city" columns="flag" whereFormat="posID='%s'" whereParas="@weather_location_id" dependency="weather_provider">
+		<Variable name="is_location_city" type="int" column="flag"/>
+	</ContentProviderBinder>
+	<ContentProviderBinder dependency="weather_provider" uriFormat="content://weather/daily_weather/%s" uriParas="@city_id" columns="pressure,water">
+		<Variable name="weather_pressure" type="string" column="pressure" />
+		<Variable name="weather_water" type="int" column="water" />
+	</ContentProviderBinder>
+	<ContentProviderBinder name="weather_aqi" dependency="weather_provider" uriFormat="content://weatherinfo/aqi/%s" uriParas="@city_id" columns="aqi,pm25,pm10,so2,no2,pub_time,src,spot" countName="hasweatherinfo">
+         <Variable name="aqi" type="int" column="aqi"/>
+         <Variable name="pm25" type="int" column="pm25"/>
+         <Variable name="pm10" type="int" column="pm10"/>
+         <Variable name="so2" type="int" column="so2"/>
+         <Variable name="no2" type="int" column="no2"/>
+        </ContentProviderBinder>
+	<ContentProviderBinder name="data" uri="content://keyguard.notification/notifications" columns="icon,title,content,time,info,subtext,key" countName="hasnotifications">
+		<Variable name="notification_icon" type="blob.bitmap" column="icon" row="0"/>
+		<Variable name="notification_title" type="string" column="title" row="0"/>
+		<Variable name="notification_content" type="string" column="content" row="0"/>
+		<Variable name="notification_time" type="string" column="time" row="0"/>
+		<Variable name="notification_info" type="string" column="info" row="0"/>
+		<Variable name="notification_subtext" type="string" column="subtext" row="0"/>
+		<Variable name="notification_key" type="int" column="key" row="0"/>
+		<List name="notification_list"/>
+	</ContentProviderBinder>
+	<ContentProviderBinder uri="content://notes/note" columns="modified_date,snippet,_id" order="modified_date DESC" where="type=0 and (parent_id >= 0 or parent_id=-2) and  snippet IS not NULL and snippet!='' " countName="note_count">
+		<Variable name="note_date_1" type="long" column="modified_date" row="0"/>
+		<Variable name="note_date_2" type="long" column="modified_date" row="1"/>
+		<Variable name="note_date_3" type="long" column="modified_date" row="2"/>
+		<Variable name="note_date_4" type="long" column="modified_date" row="3"/>
+		<Variable name="note_date_5" type="long" column="modified_date" row="4"/>
+		<Variable name="note_date_6" type="long" column="modified_date" row="5"/>
+		<Variable name="note_date_7" type="long" column="modified_date" row="6"/>
+		<Variable name="note_date_8" type="long" column="modified_date" row="7"/>
+		<Variable name="note_date_9" type="long" column="modified_date" row="8"/>
+		<Variable name="note_date_10" type="long" column="modified_date" row="9"/>
+		<Variable name="note_snippet_1" type="string" column="snippet" row="0"/>
+		<Variable name="note_snippet_2" type="string" column="snippet" row="1"/>
+		<Variable name="note_snippet_3" type="string" column="snippet" row="2"/>
+		<Variable name="note_snippet_4" type="string" column="snippet" row="3"/>
+		<Variable name="note_snippet_5" type="string" column="snippet" row="4"/>
+		<Variable name="note_snippet_6" type="string" column="snippet" row="5"/>
+		<Variable name="note_snippet_7" type="string" column="snippet" row="6"/>
+		<Variable name="note_snippet_8" type="string" column="snippet" row="7"/>
+		<Variable name="note_snippet_9" type="string" column="snippet" row="8"/>
+		<Variable name="note_snippet_10" type="string" column="snippet" row="9"/>
+		<Variable name="id_1" type="long" column="_id" row="0"/>
+		<Variable name="id_2" type="long" column="_id" row="1"/>
+		<Variable name="id_3" type="long" column="_id" row="2"/>
+		<Variable name="id_4" type="long" column="_id" row="3"/>
+		<Variable name="id_5" type="long" column="_id" row="4"/>
+		<Variable name="id_6" type="long" column="_id" row="5"/>
+		<Variable name="id_7" type="long" column="_id" row="6"/>
+		<Variable name="id_8" type="long" column="_id" row="7"/>
+		<Variable name="id_9" type="long" column="_id" row="8"/>
+		<Variable name="id_10" type="long" column="_id" row="9"/>
+	</ContentProviderBinder>
+	<ContentProviderBinder name="missed_calls" uri="content://call_log/calls" columns="date,number,name,type,duration" order="date DESC" countName="call_count">
+		<Variable name="call_type1" type="integer" column="type" row="0"/>
+		<Variable name="call_date1" type="long" column="date" row="0"/>
+		<Variable name="call_name1" type="string" column="name" row="0"/>
+		<Variable name="call_number1" type="string" column="number" row="0"/>
+		<Variable name="duration_time1" type="long" column="duration" row="0"/>
+		<Variable name="call_location1" type="string" column="location" row="0"/>
+		<Variable name="call_type2" type="integer" column="type" row="1"/>
+		<Variable name="call_date2" type="long" column="date" row="1"/>
+		<Variable name="call_name2" type="string" column="name" row="1"/>
+		<Variable name="call_number2" type="string" column="number" row="1"/>
+		<Variable name="duration_time2" type="long" column="duration" row="1"/>
+		<Variable name="call_location2" type="string" column="location" row="1"/>
+		<Variable name="call_type3" type="integer" column="type" row="2"/>
+		<Variable name="call_date3" type="long" column="date" row="2"/>
+		<Variable name="call_name3" type="string" column="name" row="2"/>
+		<Variable name="call_number3" type="string" column="number" row="2"/>
+		<Variable name="duration_time3" type="long" column="duration" row="2"/>
+		<Variable name="call_location3" type="string" column="location" row="2"/>
+		<Variable name="call_type4" type="integer" column="type" row="3"/>
+		<Variable name="call_date4" type="long" column="date" row="3"/>
+		<Variable name="call_name4" type="string" column="name" row="3"/>
+		<Variable name="call_number4" type="string" column="number" row="3"/>
+		<Variable name="duration_time4" type="long" column="duration" row="3"/>
+		<Variable name="call_location4" type="string" column="location" row="3"/>
+		<Variable name="call_type5" type="integer" column="type" row="4"/>
+		<Variable name="call_date5" type="long" column="date" row="4"/>
+		<Variable name="call_name5" type="string" column="name" row="4"/>
+		<Variable name="call_number5" type="string" column="number" row="4"/>
+		<Variable name="duration_time5" type="long" column="duration" row="4"/>
+		<Variable name="call_location5" type="string" column="location" row="4"/>
+		<Variable name="call_type6" type="integer" column="type" row="5"/>
+		<Variable name="call_date6" type="long" column="date" row="5"/>
+		<Variable name="call_name6" type="string" column="name" row="5"/>
+		<Variable name="call_number6" type="string" column="number" row="5"/>
+		<Variable name="duration_time6" type="long" column="duration" row="5"/>
+		<Variable name="call_location6" type="string" column="location" row="5"/>
+		<Variable name="call_type7" type="integer" column="type" row="6"/>
+		<Variable name="call_date7" type="long" column="date" row="6"/>
+		<Variable name="call_name7" type="string" column="name" row="6"/>
+		<Variable name="call_number7" type="string" column="number" row="6"/>
+		<Variable name="duration_time7" type="long" column="duration" row="6"/>
+		<Variable name="call_location1" type="string" column="location" row="6"/>
+		<Variable name="call_type8" type="integer" column="type" row="7"/>
+		<Variable name="call_date8" type="long" column="date" row="7"/>
+		<Variable name="call_name8" type="string" column="name" row="7"/>
+		<Variable name="call_number8" type="string" column="number" row="7"/>
+		<Variable name="duration_time8" type="long" column="duration" row="7"/>
+		<Variable name="call_location8" type="string" column="location" row="7"/>
+		<Variable name="call_type9" type="integer" column="type" row="8"/>
+		<Variable name="call_date9" type="long" column="date" row="8"/>
+		<Variable name="call_name9" type="string" column="name" row="8"/>
+		<Variable name="call_number9" type="string" column="number" row="8"/>
+		<Variable name="duration_time9" type="long" column="duration" row="8"/>
+		<Variable name="call_location9" type="string" column="location" row="8"/>
+		<Variable name="call_type10" type="integer" column="type" row="9"/>
+		<Variable name="call_date10" type="long" column="date" row="9"/>
+		<Variable name="call_name10" type="string" column="name" row="9"/>
+		<Variable name="call_number10" type="string" column="number" row="9"/>
+		<Variable name="duration_time10" type="long" column="duration" row="9"/>
+		<Variable name="call_location10" type="string" column="location" row="9"/>
+	</ContentProviderBinder>
+	<ContentProviderBinder dependency="missed_calls" uriFormat="content://datahub/call_log/location/%s" uriParas="@call_number1" columns="location">
+		<Variable name="call_location1" type="string" column="location" row="0"/>
+	</ContentProviderBinder>
+	<ContentProviderBinder dependency="missed_calls" uriFormat="content://datahub/call_log/location/%s" uriParas="@call_number2" columns="location">
+		<Variable name="call_location2" type="string" column="location" row="1"/>
+	</ContentProviderBinder>
+	<ContentProviderBinder dependency="missed_calls" uriFormat="content://datahub/call_log/location/%s" uriParas="@call_number3" columns="location">
+		<Variable name="call_location3" type="string" column="location" row="2"/>
+	</ContentProviderBinder>
+	<ContentProviderBinder dependency="missed_calls" uriFormat="content://datahub/call_log/location/%s" uriParas="@call_number4" columns="location">
+		<Variable name="call_location4" type="string" column="location" row="3"/>
+	</ContentProviderBinder>
+	<ContentProviderBinder dependency="missed_calls" uriFormat="content://datahub/call_log/location/%s" uriParas="@call_number5" columns="location">
+		<Variable name="call_location5" type="string" column="location" row="4"/>
+	</ContentProviderBinder>
+	<ContentProviderBinder dependency="call_raw_id1" uriExp="ifelse(isnull(@call_id1),'','content://com.android.contacts/contacts/'+@call_id1+'/photo')" columns="data15">
+		<Variable name="call_image1" type="blob.bitmap" column="data15" row="0"/>
+	</ContentProviderBinder>
+	<ContentProviderBinder name="sms_table1" uri="content://sms/inbox" columns="_id,address,date,body,person" order="date DESC" countName="sms_count">
+		<Variable name="sms_date1" type="long" column="date" row="0"/>
+		<Variable name="sms_detail1" type="string" column="body" row="0"/>
+		<Variable name="sms_num1" type="string" column="address" row="0"/>
+	</ContentProviderBinder>
+	<ContentProviderBinder name="sms_table2" uri="content://sms/inbox" columns="_id,address,date,body,person" order="date DESC" countName="sms_count">
+		<Variable name="sms_date2" type="long" column="date" row="1"/>
+		<Variable name="sms_detail2" type="string" column="body" row="1"/>
+		<Variable name="sms_num2" type="string" column="address" row="1"/>
+	</ContentProviderBinder>
+	<ContentProviderBinder name="sms_table3" uri="content://sms/inbox" columns="_id,address,date,body,person" order="date DESC" countName="sms_count">
+		<Variable name="sms_date3" type="long" column="date" row="2"/>
+		<Variable name="sms_detail3" type="string" column="body" row="2"/>
+		<Variable name="sms_num3" type="string" column="address" row="2"/>
+	</ContentProviderBinder>
+	<ContentProviderBinder name="sms_table4" uri="content://sms/inbox" columns="_id,address,date,body,person" order="date DESC" countName="sms_count">
+		<Variable name="sms_date4" type="long" column="date" row="3"/>
+		<Variable name="sms_detail4" type="string" column="body" row="3"/>
+		<Variable name="sms_num4" type="string" column="address" row="3"/>
+	</ContentProviderBinder>
+	<ContentProviderBinder name="sms_table5" uri="content://sms/inbox" columns="_id,address,date,body,person" order="date DESC" countName="sms_count">
+		<Variable name="sms_date5" type="long" column="date" row="4"/>
+		<Variable name="sms_detail5" type="string" column="body" row="4"/>
+		<Variable name="sms_num5" type="string" column="address" row="4"/>
+	</ContentProviderBinder>
+	<ContentProviderBinder name="sms_table6" uri="content://sms/inbox" columns="_id,address,date,body,person" order="date DESC" countName="sms_count">
+		<Variable name="sms_date6" type="long" column="date" row="5"/>
+		<Variable name="sms_detail6" type="string" column="body" row="5"/>
+		<Variable name="sms_num6" type="string" column="address" row="5"/>
+	</ContentProviderBinder>
+	<ContentProviderBinder name="sms_table7" uri="content://sms/inbox" columns="_id,address,date,body,person" order="date DESC" countName="sms_count">
+		<Variable name="sms_date7" type="long" column="date" row="6"/>
+		<Variable name="sms_detail7" type="string" column="body" row="6"/>
+		<Variable name="sms_num7" type="string" column="address" row="6"/>
+	</ContentProviderBinder>
+	<ContentProviderBinder name="sms_table8" uri="content://sms/inbox" columns="_id,address,date,body,person" order="date DESC" countName="sms_count">
+		<Variable name="sms_date8" type="long" column="date" row="7"/>
+		<Variable name="sms_detail8" type="string" column="body" row="7"/>
+		<Variable name="sms_num8" type="string" column="address" row="7"/>
+	</ContentProviderBinder>
+	<ContentProviderBinder name="sms_table9" uri="content://sms/inbox" columns="_id,address,date,body,person" order="date DESC" countName="sms_count">
+		<Variable name="sms_date9" type="long" column="date" row="8"/>
+		<Variable name="sms_detail9" type="string" column="body" row="8"/>
+		<Variable name="sms_num9" type="string" column="address" row="8"/>
+	</ContentProviderBinder>
+	<ContentProviderBinder name="sms_table10" uri="content://sms/inbox" columns="_id,address,date,body,person" order="date DESC" countName="sms_count">
+		<Variable name="sms_date10" type="long" column="date" row="9"/>
+		<Variable name="sms_detail10" type="string" column="body" row="9"/>
+		<Variable name="sms_num10" type="string" column="address" row="9"/>
+	</ContentProviderBinder>
+	<ContentProviderBinder name="raw_id1" dependency="sms_table1" uri="content://com.android.contacts/data" columns="display_name,raw_contact_id" whereFormat="PHONE_NUMBERS_EQUAL(data1,'%s')" whereParas="@sms_num1" countName="hasName">
+		<Variable name="sms_name1" type="string" column="display_name" row="0"/>
+		<Variable name="sms_id1" type="string" column="raw_contact_id" row="0"/>
+	</ContentProviderBinder>
+	<ContentProviderBinder name="raw_id2" dependency="sms_table2" uri="content://com.android.contacts/data" columns="display_name,raw_contact_id" whereFormat="PHONE_NUMBERS_EQUAL(data1,'%s')" whereParas="@sms_num2" countName="hasName">
+		<Variable name="sms_name2" type="string" column="display_name" row="1"/>
+		<Variable name="sms_id2" type="string" column="raw_contact_id" row="1"/>
+	</ContentProviderBinder>
+	<ContentProviderBinder name="raw_id3" dependency="sms_table3" uri="content://com.android.contacts/data" columns="display_name,raw_contact_id" whereFormat="PHONE_NUMBERS_EQUAL(data1,'%s')" whereParas="@sms_num3" countName="hasName">
+		<Variable name="sms_name3" type="string" column="display_name" row="2"/>
+		<Variable name="sms_id3" type="string" column="raw_contact_id" row="2"/>
+	</ContentProviderBinder>
+	<ContentProviderBinder name="raw_id4" dependency="sms_table4" uri="content://com.android.contacts/data" columns="display_name,raw_contact_id" whereFormat="PHONE_NUMBERS_EQUAL(data1,'%s')" whereParas="@sms_num4" countName="hasName">
+		<Variable name="sms_name4" type="string" column="display_name" row="3"/>
+		<Variable name="sms_id4" type="string" column="raw_contact_id" row="3"/>
+	</ContentProviderBinder>
+	<ContentProviderBinder name="raw_id5" dependency="sms_table5" uri="content://com.android.contacts/data" columns="display_name,raw_contact_id" whereFormat="PHONE_NUMBERS_EQUAL(data1,'%s')" whereParas="@sms_num5" countName="hasName">
+		<Variable name="sms_name5" type="string" column="display_name" row="4"/>
+		<Variable name="sms_id5" type="string" column="raw_contact_id" row="4"/>
+	</ContentProviderBinder>
+	<ContentProviderBinder name="raw_id6" dependency="sms_table6" uri="content://com.android.contacts/data" columns="display_name,raw_contact_id" whereFormat="PHONE_NUMBERS_EQUAL(data1,'%s')" whereParas="@sms_num6" countName="hasName">
+		<Variable name="sms_name6" type="string" column="display_name" row="5"/>
+		<Variable name="sms_id6" type="string" column="raw_contact_id" row="5"/>
+	</ContentProviderBinder>
+	<ContentProviderBinder name="raw_id7" dependency="sms_table7" uri="content://com.android.contacts/data" columns="display_name,raw_contact_id" whereFormat="PHONE_NUMBERS_EQUAL(data1,'%s')" whereParas="@sms_num7" countName="hasName">
+		<Variable name="sms_name7" type="string" column="display_name" row="6"/>
+		<Variable name="sms_id7" type="string" column="raw_contact_id" row="6"/>
+	</ContentProviderBinder>
+	<ContentProviderBinder name="raw_id8" dependency="sms_table8" uri="content://com.android.contacts/data" columns="display_name,raw_contact_id" whereFormat="PHONE_NUMBERS_EQUAL(data1,'%s')" whereParas="@sms_num8" countName="hasName">
+		<Variable name="sms_name8" type="string" column="display_name" row="7"/>
+		<Variable name="sms_id8" type="string" column="raw_contact_id" row="7"/>
+	</ContentProviderBinder>
+	<ContentProviderBinder name="raw_id9" dependency="sms_table9" uri="content://com.android.contacts/data" columns="display_name,raw_contact_id" whereFormat="PHONE_NUMBERS_EQUAL(data1,'%s')" whereParas="@sms_num9" countName="hasName">
+		<Variable name="sms_name9" type="string" column="display_name" row="8"/>
+		<Variable name="sms_id9" type="string" column="raw_contact_id" row="8"/>
+	</ContentProviderBinder>
+	<ContentProviderBinder name="raw_id10" dependency="sms_table10" uri="content://com.android.contacts/data" columns="display_name,raw_contact_id" whereFormat="PHONE_NUMBERS_EQUAL(data1,'%s')" whereParas="@sms_num10" countName="hasName">
+		<Variable name="sms_name10" type="string" column="display_name" row="9"/>
+		<Variable name="sms_id10" type="string" column="raw_contact_id" row="9"/>
+	</ContentProviderBinder>
+	<ContentProviderBinder dependency="raw_id1" uriExp="ifelse(isnull(@sms_id1),'','content://com.android.contacts/contacts/'+@sms_id1+'/photo')" columns="data15">
+		<Variable name="sms_image1" type="blob.bitmap" column="data15" row="0"/>
+	</ContentProviderBinder>
+	<ContentProviderBinder dependency="raw_id2" uriExp="ifelse(isnull(@sms_id2),'','content://com.android.contacts/contacts/'+@sms_id2+'/photo')" columns="data15">
+		<Variable name="sms_image2" type="blob.bitmap" column="data15" row="1"/>
+	</ContentProviderBinder>
+	<ContentProviderBinder dependency="raw_id3" uriExp="ifelse(isnull(@sms_id3),'','content://com.android.contacts/contacts/'+@sms_id3+'/photo')" columns="data15">
+		<Variable name="sms_image3" type="blob.bitmap" column="data15" row="2"/>
+	</ContentProviderBinder>
+	<ContentProviderBinder dependency="sms_table1" uriFormat="content://datahub/call_log/location/%s" uriParas="@sms_num1" columns="location">
+		<Variable name="sms_location1" type="string" column="location" row="0"/>
+	</ContentProviderBinder>
+	<ContentProviderBinder dependency="sms_table2" uriFormat="content://datahub/call_log/location/%s" uriParas="@sms_num2" columns="location">
+		<Variable name="sms_location2" type="string" column="location" row="1"/>
+	</ContentProviderBinder>
+	<ContentProviderBinder dependency="sms_table3" uriFormat="content://datahub/call_log/location/%s" uriParas="@sms_num3" columns="location">
+		<Variable name="sms_location3" type="string" column="location" row="2"/>
+	</ContentProviderBinder>
+	<ContentProviderBinder uri="content://com.android.calendar/events" columns="title,eventLocation,dtstart,allDay" order="dtstart ASC" whereFormat="allDay=1 AND dtstart&gt;%d" whereParas="#time_sys-864000000" countName="hasEvents">
+		<Variable name="event_title1_allday" type="string" column="title" row="0"/>
+		<Variable name="event_title2_allday" type="string" column="title" row="1"/>
+		<Variable name="event_title3_allday" type="string" column="title" row="2"/>
+		<Variable name="event_title4_allday" type="string" column="title" row="3"/>
+		<Variable name="event_title5_allday" type="string" column="title" row="4"/>
+		<Variable name="event_time1_allday" type="long" column="dtstart" row="0"/>
+		<Variable name="event_time2_allday" type="long" column="dtstart" row="1"/>
+		<Variable name="event_time2_allday" type="long" column="dtstart" row="1"/>
+		<Variable name="event_time4_allday" type="long" column="dtstart" row="3"/>
+		<Variable name="event_time5_allday" type="long" column="dtstart" row="4"/>
+		<Variable name="event_location1_allday" type="string" column="eventLocation" row="0"/>
+		<Variable name="event_location2_allday" type="string" column="eventLocation" row="1"/>
+		<Variable name="event_location3_allday" type="string" column="eventLocation" row="2"/>
+		<Variable name="event_location4_allday" type="string" column="eventLocation" row="3"/>
+		<Variable name="event_location5_allday" type="string" column="eventLocation" row="4"/>
+	</ContentProviderBinder>
+	<ContentProviderBinder uri="content://com.android.calendar/events" columns="title,eventLocation,dtstart,allDay" order="dtstart ASC" whereFormat="allDay=0 AND dtstart&gt;%d" whereParas="#time_sys-864000000" countName="hasEvents">
+		<Variable name="event_title1" type="string" column="title" row="0" />
+		<Variable name="event_title2" type="string" column="title" row="1" />
+		<Variable name="event_title3" type="string" column="title" row="2" />
+		<Variable name="event_time1" type="long" column="dtstart" row="0" />
+		<Variable name="event_time2" type="long" column="dtstart" row="1" />
+		<Variable name="event_time3" type="long" column="dtstart" row="2" />
+		<Variable name="event_location1" type="string" column="eventLocation" row="0" />
+		<Variable name="event_location2" type="string" column="eventLocation" row="1" />
+		<Variable name="event_location3" type="string" column="eventLocation" row="2" />
+	</ContentProviderBinder>
+	<SensorBinder type="linear_acceleration" rate="500"> 
+          <Variable name="sunny_black" index="0"/>  
+    </SensorBinder> 
+	<BroadcastBinder action="level_miwallpaper">
+		<Variable name="level_desktop_extra" type="number" extra="level_desktop_extra" />
+	</BroadcastBinder>
+</VariableBinders>
+	<Var name="air_quality" expression="ifelse(ge(#aqi,0)*lt(#aqi,50),'空气优良',ge(#aqi,50)*lt(#aqi,100),'空气良好',ge(#aqi,100)*lt(#aqi,150),'轻度污染',ge(#aqi,150)*lt(#aqi,200),'中度污染',ge(#aqi,200)*lt(#aqi,300),'重度污染',ge(#aqi,300)*le(#aqi,500),'污染爆表','信息异常')" type="string"/>
+	<Var name="has_night_icon" expression="eq(#weather_id,0)+eq(#weather_id,1)"/>
+	<Var name="has_night_icon1" expression="eq(#weather_id1,0)+eq(#weather_id1,1)"/>
+	<Var name="has_night_icon2" expression="eq(#weather_id2,0)+eq(#weather_id2,1)"/>
+	<Var name="has_night_icon3" expression="eq(#weather_id3,0)+eq(#weather_id3,1)"/>
+	<Var name="has_night_icon4" expression="eq(#weather_id4,0)+eq(#weather_id4,1)"/>
+	<Var name="icon_suffix" expression="ifelse(#has_night_icon,'_'+not(ge(#hour24,6)*le(#hour24,17)),'')" type="string"/>
+	<Var name="icon_suffix1" expression="ifelse(#has_night_icon1,'_'+not(ge(#hour24,6)*le(#hour24,17)),'')" type="string"/>
+	<Var name="icon_suffix2" expression="ifelse(#has_night_icon2,'_'+not(ge(#hour24,6)*le(#hour24,17)),'')" type="string"/>
+	<Var name="icon_suffix3" expression="ifelse(#has_night_icon3,'_'+not(ge(#hour24,6)*le(#hour24,17)),'')" type="string"/>
+	<Var name="icon_suffix4" expression="ifelse(#has_night_icon4,'_'+not(ge(#hour24,6)*le(#hour24,17)),'')" type="string"/>
+	<Var name="t_color" expression="'#002051'" type="string"/>
+	<Button w="1080" h="1920"/>
+		<Group visibility="ifelse(eq(#tm_mode,0),eq(#change_list,0),1)*not(#hasnotifications)">
+			<Image x="1080" y="0" w="1080" h="1920" align="right" src="bg/default_w.jpg" srcid="#wallpaper_id" visibility="not(#btn_diy)"/>
+				<Array count="5" indexName="__lxy">
+					<Var name="lxy_v1" index="#__lxy" size="5" expression="rand()*1080-600" type="number[]" const="true"/>
+					<Image x="#time/(#lxy_v1+4)%1300*(#__lxy+1)+#lxy_v1[#__lxy]+#gx*5" y="#time*(#__lxy+1)/(#lxy_v1+4)%1300" align="right" alignV="bottom" src="lxy/meteor.png" alpha="220"/>
+				</Array>
+			<Wallpaper visibility="#btn_diy"/>
+		</Group>
+		<Group visibility="ne(#change_list,0)*eq(#tm_mode,0)+#hasnotifications*eq(#change_list,0)">
+			<Image x="1080" y="0" w="1080" h="1920" align="right" src="bgblur/default_w.jpg" srcid="#wallpaper_id" visibility="not(#btn_diy)"/>
+			<Wallpaper blur="30" visibility="#btn_diy"/>
+		</Group>
+			<Var name="nlevel_v" expression="int(#nlevel_init/150)"/>
+			<Var name="vlevel_v" expression="int(#vlevel_init/150)"/>
+			<Var name="slevel_v" expression="int(#slevel_init/150)"/>
+			<Var name="level_v" expression="ifelse(eq(#vip_mode,0),#nlevel_v,eq(#vip_mode,1),#nlevel_v+#vlevel_v,#nlevel_v+#vlevel_v+#slevel_v)+#level_desktop_extra"/>
+			<Var name="vip_level" expression="min(#level_v,256)"/>
+	<Group visibility="eq(#change_list,0)">
+		<Group w="#screen_width" h="#screen_height" layered="true" visibility="not(#tm_mode)" alpha="255+#unlocker_sunny.move_y">
+			<Image x="0" y="0" w="1080" h="1920" src="bgblur/default_w.jpg" srcid="#wallpaper_id" visibility="not(#btn_diy)"/>
+			<Wallpaper blur="30" y="0" visibility="#btn_diy"/>
+			<Image x="0" y="#unlocker_sunny.move_y" src="bg_mask.png" xfermode="dst_in"/>
+		</Group>
+		<Group y="#unlocker_sunny.move_y" alpha="255+#unlocker_sunny.move_y/2">
+			<Image x="0" y="1920" alignV="bottom" src="bg.png"/>
+			<Group alpha="#music_ani" visibility="ne(#music_ani,0)">
+				<Time x="60" y="1830" alignV="center" src="item/t/s.png"/>
+				<DateTime x="370" y="1825" size="35" color="@t_color" alignV="bottom" format="M月dd日 EEEE"/>
+				<Image x="730" y="1805" align="center" alignV="center" src="item/music.png"/>
+				<Text x="370" y="1835" size="35" color="@t_color" alignV="top" format="%s %d° %s" paras="@weather_description,#weather_temperature,@air_quality"/>
+				<Image name="vip_n" x="10" y="1715" alignV="center" src="item/left/vip.png" srcid="#vip_mode"/>
+				<Image name="hg" x="20+#vip_n.bmp_width" y="1715" alignV="center" src="item/left/level/hg.png" srcid="ifelse(ge(#vip_level,256),4,int(#vip_level%256/64))"/>
+				<Image name="ty" x="20+#hg.bmp_width+#vip_n.bmp_width" y="1715" alignV="center" src="item/left/level/ty.png" srcid="int(#vip_level%64/16)"/>
+				<Image name="yl" x="20+#hg.bmp_width+#ty.bmp_width+#vip_n.bmp_width" y="1715" alignV="center" src="item/left/level/yl.png" srcid="int(#vip_level%16/4)"/>
+				<Image name="xx" x="20+#hg.bmp_width+#ty.bmp_width+#yl.bmp_width+#vip_n.bmp_width" y="1715" alignV="center" src="item/left/level/xx.png" srcid="#vip_level%4"/>
+				<Image x="20+#vip_n.bmp_width" y="1715" alignV="center" src="item/left/level/level_0.png" visibility="le(#vip_level,0)"/>
+				<Group w="#screen_width" h="#screen_height" layered="true">
+					<Image x="905" y="1748" w="252" h="252"  align="center" alignV="center" src="item/left/default.png" visibility="isnull(@set_tx)"/>
+					<Image x="905" y="1748" w="255" h="255" align="center" alignV="center" src="@set_tx" srcType="Uri" visibility="len(@set_tx)"/>
+					<Image x="905" y="1748" align="center" alignV="center" src="mask.png" xfermode="dst_in"/>
+				</Group>
+				<Arc x="905" y="1748" w="261" h="261" startAngle="-90" sweep="#battery_level*3.6" close="false" strokeColor="#46d0dd"  fillColor="#001b6fff" weight="9" cap="round" visibility="eq(#battery_state,1)"/>
+			</Group>
+			<!--音乐-->
+			<Var name="music_ani">
+				<VariableAnimation initPause="true" loop="false">
+					<AniFrame value="255" time="0" easeType="QuartEaseOut"/>
+					<AniFrame value="0" time="500"/>
+					<AniFrame value="#music_ani" time="600"/>
+					<AniFrame value="255" time="1100"/>
+				</VariableAnimation>
+			</Var>
+					<Button	x="730" y="1805" w="60" h="60" align="center" alignV="center">
+						<Triggers>
+							<Trigger action="up">
+								<Command target="music_ani.animation" value="play(0,500)" condition="ne(#music_ani,0)"/>
+								<Command target="music_ani.animation" value="play(600,1100)" condition="ne(#music_ani,255)"/>
+								<Command target="music_r.animation" value="play"/>
+							</Trigger>
+						</Triggers>
+					</Button>
+			<MusicControl name="music_control_small" autoShow="false" enableLyric="true" updateLyricInterval="200" alpha="255-#music_ani" visibility="ne(#music_ani,255)">
+				<Group visibility="eq(#music_control_small.music_state,1)">
+					<Var name="power_h1">
+						<VariableAnimation>
+							<AniFrame value="5" time="0"/>
+							<AniFrame value="rand()*30+5" time="200"/>
+							<AniFrame value="rand()*30+5" time="400"/>
+							<AniFrame value="5" time="600"/>
+						</VariableAnimation>
+					</Var>
+					<Var name="power_h2">
+						<VariableAnimation>
+							<AniFrame value="5" time="0"/>
+							<AniFrame value="rand()*55+5" time="200"/>
+							<AniFrame value="rand()*55+5" time="400"/>
+							<AniFrame value="5" time="600"/>
+						</VariableAnimation>
+					</Var>
+					<Var name="power_h3">
+						<VariableAnimation>
+							<AniFrame value="5" time="0"/>
+							<AniFrame value="rand()*65+5" time="200"/>
+							<AniFrame value="rand()*65+5" time="400"/>
+							<AniFrame value="5" time="600"/>
+						</VariableAnimation>
+					</Var>
+					<Var name="power_h4">
+						<VariableAnimation>
+							<AniFrame value="5" time="0"/>
+							<AniFrame value="rand()*75+5" time="200"/>
+							<AniFrame value="rand()*75+5" time="400"/>
+							<AniFrame value="5" time="600"/>
+						</VariableAnimation>
+					</Var>
+					<Var name="power_h5">
+						<VariableAnimation>
+							<AniFrame value="5" time="0"/>
+							<AniFrame value="rand()*55+5" time="200"/>
+							<AniFrame value="rand()*55+5" time="400"/>
+							<AniFrame value="5" time="600"/>
+						</VariableAnimation>
+					</Var>
+					<Var name="power_h6">
+						<VariableAnimation>
+							<AniFrame value="5" time="0"/>
+							<AniFrame value="rand()*30+5" time="200"/>
+							<AniFrame value="rand()*30+5" time="400"/>
+							<AniFrame value="5" time="600"/>
+						</VariableAnimation>
+					</Var>
+				</Group>
+				<Image x="730" y="1805" align="center" alignV="center" src="item/mc.png"/>
+				<Text x="40" y="1715" w="680" marqueeSpeed="30" alignV="center" size="35" color="@t_color" textExp="ifelse(isnull(@music_control_small.title)*isnull(@music_control_small.artist)*eq(#music_control_small.music_state,0),'未播放歌曲',isnull(@music_control_small.title)*isnull(@music_control_small.artist)*eq(#music_control_small.music_state,1),'暂无歌曲',@music_control_small.title+'丨'+@music_control_small.artist)"/>
+				<!--专辑-->
+				<Image x="905" y="1748" w="310" h="310" align="center" alignV="center" src="item/music/zj_bg.png"/>
+				<Group w="#screen_width" h="#screen_height" layered="true">
+					<Image name="music_album_cover" x="905" y="1748" w="252" h="252" align="center" alignV="center" antiAlias="true" />
+					<Image x="905" y="1748" w="252" h="252" align="center" alignV="center" src="item/music/mask.png" xfermode="dst_in"/>
+				</Group>
+				<!--进度-->
+				<Var name="art_c" expression="#music_control_small.music_position/#music_control_small.music_duration"/>
+				<Arc x="905" y="1748" w="261" h="261" startAngle="-90" sweep="#art_c*360" close="false" strokeColor="#46d0dd"  fillColor="#001b6fff" weight="9" cap="round"/>
+				<!--power-->
+				<Image x="550" y="1860" align="center" alignV="bottom" w="10" h="#power_h1" src="item/white.9.png"/>
+				<Image x="550+20" y="1860" align="center" alignV="bottom" w="10" h="#power_h2" src="item/white.9.png"/>
+				<Image x="550+40" y="1860" align="center" alignV="bottom" w="10" h="#power_h3" src="item/white.9.png"/>
+				<Image x="550+60" y="1860" align="center" alignV="bottom" w="10" h="#power_h4" src="item/white.9.png"/>
+				<Image x="550+80" y="1860" align="center" alignV="bottom" w="10" h="#power_h5" src="item/white.9.png"/>
+				<Image x="550+100" y="1860" align="center" alignV="bottom" w="10" h="#power_h6" src="item/white.9.png"/>
+				<Var name="judge_music_btn" expression="eq(#left_ani,0)"/>
+				<Button name="music_prev1" x="270-160" y="1834" w="80" h="80" align="center" alignV="center">
+					<Triggers>
+						<Trigger action="down" condition="#judge_music_btn">
+							<MethodCommand target="music_control_small" method="onButtonDown" params="'music_prev'" paramTypes="String" />
+						</Trigger>
+						<Trigger action="up" condition="#judge_music_btn">
+							<MethodCommand target="music_control_small" method="onButtonUp" params="'music_prev'" paramTypes="String" />
+							<ExternCommand command="statusbar_music_clicked" strPara="'prev_music'"/>
+						</Trigger>
+					</Triggers>
+					<Normal>
+						<Image x="270-160" y="1834" w="80" h="80" align="center" alignV="center" src="item/music1/prev.png"/>
+					</Normal>
+					<Pressed>
+						<Image x="270-160" y="1834" w="80" h="80" align="center" alignV="center" src="item/music1/prev.png" alpha="100"/>
+					</Pressed>
+				</Button>
+				<Button name="music_play1" x="270" y="1834"  w="80" h="80" align="center" alignV="center" visibility="eq(#music_control_small.music_state,0)">
+					<Triggers>
+						<Trigger action="down" condition="#judge_music_btn">
+							<MethodCommand target="music_control_small" method="onButtonDown" params="'music_play'" paramTypes="String" />
+						</Trigger>
+						<Trigger action="up" condition="#judge_music_btn">
+							<MethodCommand target="music_control_small" method="onButtonUp" params="'music_play'" paramTypes="String" />
+							<ExternCommand command="statusbar_music_clicked" strPara="'play_music'"/>
+						</Trigger>
+					</Triggers>
+					<Normal>
+						<Image x="270" y="1834" align="center" alignV="center" src="item/music1/play.png"/>
+					</Normal>
+					<Pressed>
+						<Image x="270" y="1834" align="center" alignV="center" src="item/music1/play.png" alpha="100"/>
+					</Pressed>
+				</Button>
+				<Button name="music_pause1" x="270" y="1834" w="110" h="110" align="center" alignV="center" visibility="eq(#music_control_small.music_state,1)">
+					<Triggers>
+						<Trigger action="down" condition="#judge_music_btn">
+							<MethodCommand target="music_control_small" method="onButtonDown" params="'music_pause'" paramTypes="String" />
+						</Trigger>
+						<Trigger action="up" condition="#judge_music_btn">
+							<MethodCommand target="music_control_small" method="onButtonUp" params="'music_pause'" paramTypes="String" />
+							<ExternCommand command="statusbar_music_clicked" strPara="'pause_music'"/>
+						</Trigger>
+					</Triggers>
+					<Normal>
+						<Image x="270" y="1834" align="center" alignV="center" src="item/music1/pause.png"/>
+					</Normal>
+					<Pressed>
+						<Image x="270" y="1834" align="center" alignV="center" src="item/music1/pause.png" alpha="100"/>
+					</Pressed>
+				</Button>
+				<Button name="music_next1" x="270+160" y="1834" w="80" h="80" align="center" alignV="center">
+					<Triggers>
+						<Trigger action="down" condition="#judge_music_btn">
+							<MethodCommand target="music_control_small" method="onButtonDown" params="'music_next'" paramTypes="String" />
+						</Trigger>
+						<Trigger action="up" condition="#judge_music_btn">
+							<MethodCommand target="music_control_small" method="onButtonUp" params="'music_next'" paramTypes="String" />
+							<ExternCommand command="statusbar_music_clicked" strPara="'next_music'"/>
+						</Trigger>
+					</Triggers>
+					<Normal>
+						<Image x="270+160" y="1834" w="80" h="80" align="center" alignV="center" src="item/music1/next.png"/>
+					</Normal>
+					<Pressed>
+						<Image x="270+160" y="1834" w="80" h="80" align="center" alignV="center" src="item/music1/next.png" alpha="100"/>
+					</Pressed>
+				</Button>
+			</MusicControl>
+			<Image x="905" y="1748" align="center" alignV="center" src="item/tx/tx.png" srcid="#txgj"/> 
+			<Image x="905" y="1748" align="center" alignV="center" src="@set_dzgj" srcType="Uri" visibility="len(@set_dzgj)*eq(#txgj,0)"/> 
+			<Var name="left_r">
+				<VariableAnimation initPause="true" loop="false">
+					<AniFrame value="0" time="0" easeType="QuartEaseOut"/>
+					<AniFrame value="100" time="700"/>
+				</VariableAnimation>
+			</Var>
+			<Var name="right_r">
+				<VariableAnimation initPause="true" loop="false">
+					<AniFrame value="0" time="0" easeType="QuartEaseOut"/>
+					<AniFrame value="100" time="700"/>
+				</VariableAnimation>
+			</Var>
+			<Var name="music_r">
+				<VariableAnimation initPause="true" loop="false">
+					<AniFrame value="0" time="0" easeType="QuartEaseOut"/>
+					<AniFrame value="70" time="700"/>
+				</VariableAnimation>
+			</Var>
+			<Image x="30" y="1890" align="center" alignV="center" src="left.png" alpha="#music_ani"/> 
+			<Image x="1050" y="1890" align="center" alignV="center" src="right.png" alpha="#music_ani"/> 
+			<Circle x="30" y="1890" r="#left_r" fillColor="@t_color" alpha="200-#left_r*2"/>
+			<Circle x="1050" y="1890" r="#right_r" fillColor="@t_color" alpha="200-#right_r*2"/>
+			<Circle x="730" y="1805" r="#music_r" fillColor="@t_color" alpha="200-#music_r*3"/>
+		</Group>
+		<Var name="emoji_ani">
+			<VariableAnimation initPause="true" loop="false">
+				<AniFrame value="0" time="0" easeType="BackEaseOut"/>
+				<AniFrame value="1" time="200"/>
+				<AniFrame value="#emoji_ani" time="300"/>
+				<AniFrame value="0" time="500"/>
+			</VariableAnimation>
+		</Var>
+		<Group name="emoji_page" y="ifelse(eq(#emoji_ani,1),0,#point_ani_screen)" alpha="255+#unlocker_sunny.move_y" visibility="not(#emoji_page_vis)">
+			<Group pivotX="540" pivotY="960" scale="#emoji_ani" visibility="#emoji_ani">
+				<Image x="540" y="960" align="center" alignV="center" src="item/emo.png"/>
+				<Array count="48" indexName="__emoji">
+					<Button x="191+100*int(#__emoji%8)" y="711+100*int(#__emoji/8)" w="98" h="98" align="center" alignV="center">
+						<Triggers>
+							<Trigger action="up">
+								<VariableCommand name="emoji_mode" expression="#__emoji" persist="true"/>
+							</Trigger>
+						</Triggers>
+					</Button>
+					<Image x="191+100*int(#__emoji%8)" y="711+100*int(#__emoji/8)" align="center" alignV="center" src="item/xz.png" visibility="eq(#emoji_mode,#__emoji)"/>
+				</Array>
+			</Group>
+			<Button x="694" y="1560" w="120" h="120"  align="center" alignV="center" visibility="eq(#left_ani,0)">
+				<Triggers>
+					<Trigger action="up">
+						<Command target="emoji_ani.animation" value="play(0,200)" condition="ne(#emoji_ani,1)"/>
+						<Command target="emoji_ani.animation" value="play(300,500)" condition="ne(#emoji_ani,0)"/>
+					</Trigger>
+				</Triggers>
+			</Button>
+			<Button x="981" y="624" w="120" h="120"  align="center" alignV="center" visibility="eq(#emoji_ani,1)">
+				<Triggers>
+					<Trigger action="up">
+						<Command target="emoji_ani.animation" value="play(300,500)"/>
+					</Trigger>
+				</Triggers>
+			</Button>
+			<Image x="694" y="1560" align="center" alignV="center" src="item/hk.png"/>
+			<Image x="694" y="1560" align="center" alignV="center" src="item/emg/em.png" srcid="#emoji_mode"/>
+		</Group>
+		<Button x="905" y="1748" w="260" h="260" align="center" alignV="center" visibility="eq(#right_ani,500)*eq(#left_ani,0)">
+			<Triggers>
+				<Trigger action="up">
+					<VariableCommand name="emoji_page_vis" expression="ifelse(#emoji_page_vis,0,1)" persist="true"/>
+				</Trigger>
+			</Triggers>
+		</Button>
+		
+	<Group name="notifications" y="500" visibility="#hasnotifications*eq(#emoji_ani,0)">
+		<Var name="item_height" expression="200" const="true" />
+		<Var name="item_width" expression="1080" const="true" />
+		<Var name="mess_c">
+			<VariableAnimation initPause="true" loop="true">
+				<AniFrame value="0" time="0"/>
+				<AniFrame value="255" time="200"/>
+			</VariableAnimation>
+		</Var>
+		<List name="notification_list" x="0" y="0" w="#item_width" maxHeight="5*#item_height" data="icon:bitmap,title:string,content:string,time:string,info:string,subtext:string,key:int">
+			<Item x="0" y="0" w="#item_width" h="#item_height">
+				<Button x="0" y="0" w="#item_width-#mess_c*1.56" h="#item_height" alignChildren="true" visibility="#notifications.visibility">
+					<Normal>
+						<Rectangle x="#item_width/2" y="#item_height/2" w="#item_width+2" h="#item_height" align="center" alignV="center" fillColor="#00000000" strokeColor="@t_color" weight="1" strokeAlign="inner" alpha="50"/>
+					</Normal>
+					<Pressed>
+						<Rectangle x="#item_width/2" y="#item_height/2" w="#item_width" h="#item_height" align="center" alignV="center" fillColor="@t_color" alpha="50"/>
+					</Pressed>
+					<Triggers>
+						<Trigger action="up">
+							<Command target="mess_c.animation" value="play(0,200)" condition="ne(#mess_c,255)"/>
+							<Command target="mess_c.animation" value="play(200,0)" condition="ne(#mess_c,0)"/>
+						</Trigger>
+					</Triggers>
+				</Button>
+				<Group alpha="300-#mess_c">
+					<Image x="180" y="#item_height/2" align="center" alignV="center" w="150" h="150" name="notification_icon" />
+					<Text name="notification_title" x="290" y="36" alignV="top" size="43" color="@t_color" w="460-#mess_c/6" marqueeSpeed="30" alpha="220"/>
+					<Text name="notification_content" x="290" y="#item_height-36" alignV="bottom" size="38" color="@t_color" w="635-#mess_c*0.85" h="40" marqueeSpeed="30" alpha="150"/>
+					<Text name="notification_time" x="925" y="79" align="right" alignV="bottom" size="35" color="@t_color" alpha="220-#mess_c" />
+				</Group>
+				<Group alpha="#mess_c" visibility="#mess_c">
+					<Button x="790" y="#item_height/2" w="150" h="100" align="center" alignV="center">
+						<Triggers>
+							<Trigger action="up">
+								<VariableCommand name="notification_key" expression="#notification_list.key" />
+								<IntentCommand action="com.miui.app.ExtraStatusBarManager.action_remove_keyguard_notification" broadcast="true">
+									<Extra name="com.miui.app.ExtraStatusBarManager.extra_notification_key" type="int" expression="#notification_list.key" />
+									<Extra name="com.miui.app.ExtraStatusBarManager.extra_notification_click" type="int" expression="1" />
+								</IntentCommand>
+								<MethodCommand target="triggersContainer" method="performAction" paramTypes="String" params="'change_passwords'"/>
+							</Trigger>
+						</Triggers>
+						<Normal>
+							<Rectangle x="790" y="#item_height/2" w="135" h="85" align="center" alignV="center" fillColor="#20002051" strokeColor="#70002051" cornerRadius="5,5"/>
+							<Text x="790" y="#item_height/2" align="center" alignV="center" size="43" color="#90002051" text="查看"/>
+						</Normal>
+						<Pressed>
+							<Rectangle x="790" y="#item_height/2" w="135" h="85" align="center" alignV="center" fillColor="#20002051" strokeColor="#70002051" cornerRadius="5,5"/>
+							<Text x="790" y="#item_height/2" align="center" alignV="center" size="43" color="#90002051" text="查看"/>
+						</Pressed>
+					</Button>
+					<Button x="790+170" y="#item_height/2" w="150" h="100" align="center" alignV="center">
+						<Triggers>
+							<Trigger action="up">
+								<VariableCommand name="hasnotifications" expression="0"/>
+							</Trigger>
+						</Triggers>
+						<Normal>
+							<Rectangle x="790+170" y="#item_height/2" w="135" h="85" align="center" alignV="center" fillColor="#20002051" strokeColor="#70002051" cornerRadius="5,5"/>
+							<Text x="790+170" y="#item_height/2" align="center" alignV="center" size="43" color="#90002051" text="忽略"/>
+						</Normal>
+						<Pressed>
+							<Rectangle x="790+170" y="#item_height/2" w="135" h="85" align="center" alignV="center" fillColor="#20002051" strokeColor="#70002051" cornerRadius="5,5"/>
+							<Text x="790+170" y="#item_height/2" align="center" alignV="center" size="43" color="#90002051" text="忽略"/>
+						</Pressed>
+					</Button>
+				</Group>
+			</Item>
+			<Rectangle x="#item_width" w="6" align="right" cornerRadius="3,6" strokeColor="#cccccccc" fillColor="#cccccccc" weight="1" name="scrollbar" />
+			<AttrDataBinders>
+				<AttrDataBinder target="notification_icon" attr="bitmap" data="icon" />
+				<AttrDataBinder target="notification_title" attr="text" data="title" />
+				<AttrDataBinder target="notification_content" attr="text" data="content" />
+				<AttrDataBinder target="notification_time" attr="text" data="time" />
+			</AttrDataBinders>
+		</List>
+	</Group>
+		
+		<Var name="xl_ani">
+			<VariableAnimation initPause="true" loop="false">
+				<AniFrame value="700" time="0" easeType="QuartEaseOut"/>
+				<AniFrame value="0" time="700"/>
+				<AniFrame value="#xl_ani" time="900" easeType="CubicEaseOut"/>
+				<AniFrame value="700" time="1300"/>
+			</VariableAnimation>
+		</Var>
+		<Group visibility="eq(#left_ani,0)*eq(#right_ani,500)">
+			<Button x="540" y="75" w="1080" h="100" align="center" visibility="ne(#xl_ani,0)">
+				<Triggers>
+					<Trigger action="up">
+						<Command target="xl_ani.animation" value="play(0,700)"/>
+						<VariableCommand name="judge_back_app" expression="0"/>
+					</Trigger>
+				</Triggers>
+			</Button>
+			<Slider  visibility="eq(#xl_ani,700)">
+				<StartPoint x="0" y="0" w="1080" h="250">
+					<ReachedState>
+						<Trigger>
+							<Command target="xl_ani.animation" value="play(0,700)"/>
+							<VariableCommand name="judge_back_app" expression="0"/>
+						</Trigger>
+					</ReachedState>
+				</StartPoint>
+				<EndPoint x="0" y="300" w="1080" h="500">
+					<Path x="0" y="0" tolerance="1000"> 
+						<Position x="0" y="0" /> 
+						<Position x="0" y="500"/>
+					</Path>
+				</EndPoint>
+			</Slider>
+		</Group>
+		<Group alpha="700/2-#xl_ani/2" visibility="700-#xl_ani">
+			<Button x="0" y="400" w="1080" h="1600">
+				<Triggers>
+					<Trigger action="up" visibility="ne(#xl_ani,700)">
+						<Command target="xl_ani.animation" value="play(900,1300)"/>
+						<VariableCommand name="judge_back_app" expression="1"/>
+					</Trigger>
+				</Triggers>
+			</Button>
+			<Var name="btn_diy" expression="1"/>
+			<Group x="0" y="-#xl_ani" w="1080" h="630-300" clip="true" visibility="eq(#tm_mode,0)">
+				<Image y="#xl_ani" w="1080" h="1920" src="bgblur/default_w.jpg" srcid="#wallpaper_id" visibility="not(#btn_diy)"/>
+				<Wallpaper y="#xl_ani" blur="40" visibility="#btn_diy"/>
+			</Group>
+			<Group x="0" y="-#xl_ani" w="1080" h="630-300" clip="true" visibility="eq(#tm_mode,1)">
+				<Image y="#xl_ani" w="1080" h="1920" src="bg/default_w.jpg" srcid="#wallpaper_id" visibility="not(#btn_diy)"/>
+				<Wallpaper y="#xl_ani" visibility="#btn_diy"/>
+			</Group>
+			<Image x="0" y="630-#xl_ani-300" src="item/xl/yy.png"/>
+			<Array count="5" indexName="__i">
+				<Button x="150+195*#__i" y="180" w="100" h="100" align="center" alignV="center" visibility="eq(#xl_ani,0)">
+					<Triggers>
+						<Trigger action="up" condition="eq(#__i,0)">
+							<Command target="Wifi" value="toggle"/>
+						</Trigger>
+						<Trigger action="up" condition="eq(#__i,1)">
+							<Command target="Data" value="toggle"/>
+						</Trigger>
+						<Trigger action="up" condition="eq(#__i,2)">
+							<Command target="Bluetooth" value="toggle"/>
+						</Trigger>
+						<Trigger action="up" condition="eq(#__i,3)">
+							<Command target="RingMode" value="normal,silent,vibrate"/>
+						</Trigger>
+						<Trigger action="up" condition="eq(#__i,4)">
+							<IntentCommand action="android.intent.action.MAIN" package="com.android.systemui" class="com.android.systemui.TorchActivity"/>
+						</Trigger>
+					</Triggers>
+				</Button>
+			</Array>
+			<Group y="-#xl_ani*2" alpha="700-#xl_ani">
+				<Image x="150" y="180" align="center" alignV="center" src="item/toggle/wifi.png" srcid="#wifi_state"/>
+				<Image x="150+195" y="180" align="center" alignV="center" src="item/toggle/data.png" srcid="#data_state"/>
+				<Image x="150+195*2" y="180" align="center" alignV="center" src="item/toggle/bluetooth.png" srcid="#bluetooth_state"/>
+				<Image x="150+195*3" y="180" align="center" alignV="center" src="item/toggle/ring.png" srcid="#ring_mode"/>
+				<Image x="150+195*4" y="180" align="center" alignV="center" src="item/toggle/sdt.png"/>
+			</Group>
+		</Group>
+			<Image x="540" y="max(600-300-#xl_ani,75)" align="center" alignV="center" src="item/xl/n.png" srcid="ifelse(eq(#xl_ani,700),0,ne(#xl_ani,700)*ne(#xl_ani,0),1,2)"/>
+	</Group>
+		<Var name="right_ani">
+			<VariableAnimation initPause="true" loop="false">
+				<AniFrame value="500" time="0" easeType="QuartEaseOut"/>
+				<AniFrame value="0" time="700"/>
+				<AniFrame value="#right_ani" time="900"/>
+				<AniFrame value="500" time="1300"/>
+			</VariableAnimation>
+		</Var>
+	<Button x="1050" y="1890" w="150" h="150" align="center" alignV="center">
+		<Triggers>
+			<Trigger action="up" condition="eq(#left_ani,0)*eq(#right_ani,500)*eq(#emoji_ani,0)*#music_ani">
+				<Command target="right_ani.animation" value="play(0,700)" delay="20"/>
+				<Command target="right_r.animation" value="play"/>
+				<VariableCommand name="judge_back" expression="1"/>
+			</Trigger>
+		</Triggers>
+	</Button>
+	<Var expression="eq(#right_ani,500)*eq(#left_ani,0)*eq(#emoji_ani,0)*lt(#touch_x-#touch_begin_x,-100)*lt(#touch_begin_x,1080)*gt(#touch_begin_x,880)" threshold="1">
+		<Trigger>
+			<Command target="right_ani.animation" value="play(0,700)"/>
+			<VariableCommand name="judge_back" expression="1"/>
+		</Trigger>
+	</Var>
+	<Button x="880" y="0" w="200" h="1920" visibility="eq(#right_ani,500)">
+		<Triggers>
+			<Trigger action="down">
+				<VariableCommand name="ready_right_visibility" expression="1"/>
+			</Trigger>
+			<Trigger action="up,cancel">
+				<VariableCommand name="ready_right_visibility" expression="0" delay="100"/>
+			</Trigger>
+		</Triggers>
+	</Button>
+	<Var expression="ge(#sunny_black*100,#set_lm)" threshold="1">
+		<Trigger condition="eq(#right_ani,500)*#set_auto*eq(#left_ani,0)*eq(#emoji_ani,0)">
+			<Command target="right_ani.animation" value="play(0,700)"/>
+			<VariableCommand name="judge_back" expression="1"/>
+		</Trigger>
+	</Var>
+	<Var expression="le(#sunny_black*100,-#set_lm)" threshold="1">
+		<Trigger condition="eq(#right_ani,0)*#set_auto*eq(#emoji_ani,0)">
+			<Command target="right_ani.animation" value="play(900,1300)"/>
+			<VariableCommand name="judge_back" expression="2"/>
+		</Trigger>
+	</Var>
+	<Button x="0" y="0" w="780" h="1920" visibility="ne(#right_ani,500)">
+		<Triggers>
+			<Trigger action="up">
+				<Command target="right_ani.animation" value="play(900,1300)"/>
+				<VariableCommand name="judge_back" expression="2"/>
+			</Trigger>
+		</Triggers>
+	</Button>
+	<Group alpha="500-#right_ani" visibility="ne(#right_ani,500)+#ready_right_visibility">
+		<Group x="819+#right_ani" y="0" w="261" h="1920" clip="true" visibility="eq(#tm_mode,0)">
+			<Image x="261-#right_ani" y="0" w="1080" h="1920" align="right" src="bgblur/default_w.jpg" srcid="#wallpaper_id" visibility="not(#btn_diy)"/>
+			<Wallpaper x="261-#right_ani"  align="right" blur="30" visibility="#btn_diy"/>
+		</Group>
+		<Group x="819+#right_ani" y="0" w="261" h="1920" clip="true" visibility="eq(#tm_mode,1)">
+			<Image x="261-#right_ani" y="0" w="1080" h="1920" align="right" src="bg/default_w.jpg" srcid="#wallpaper_id" visibility="not(#btn_diy)"/>
+			<Wallpaper x="261-#right_ani"  align="right" visibility="#btn_diy"/>
+		</Group>
+		<Image x="1080+#right_ani" y="0" align="right" src="item/right/bg.png"/>
+		<!--
+		<Image x="830+ifelse(eq(#judge_back,1),#right_ani*1.8,#right_ani)" y="130" alignV="bottom" src="item/right/zd.png" srcid="#btn_diy"/>
+		<Image x="830+ifelse(eq(#judge_back,1),#right_ani*2,#right_ani)" y="190" alignV="bottom" src="item/right/auto.png" srcid="#btn_change"/>
+		-->
+		<Var name="uri_exp_vs" index="0" size="7" expression="ifelse(isnull(@app_1.package)+eqs(@app_1.package,''),'com.android.contacts,com.android.contacts.activities.TwelveKeyDialer',@app_1.package + ',' + @app_1.class)" type="string[]"/>
+		<Var name="uri_exp_vs" index="1" expression="ifelse(isnull(@app_2.package)+eqs(@app_2.package,''),'com.android.mms,com.android.mms.ui.MmsTabActivity',@app_2.package + ',' + @app_2.class)" type="string[]"/>
+		<Var name="uri_exp_vs" index="2" expression="ifelse(isnull(@app_3.package)+eqs(@app_3.package,''),'com.tencent.mobileqq,com.tencent.mobileqq.activity.SplashActivity',@app_3.package + ',' + @app_3.class)" type="string[]"/>
+		<Var name="uri_exp_vs" index="3" expression="ifelse(isnull(@app_4.package)+eqs(@app_4.package,''),'com.android.camera,com.android.camera.Camera',@app_4.package + ',' + @app_4.class)" type="string[]"/>
+		<Var name="uri_exp_vs" index="4" expression="ifelse(isnull(@app_5.package)+eqs(@app_5.package,''),'com.miui.player,com.miui.player.ui.MusicBrowserActivity',@app_5.package + ',' + @app_5.class)" type="string[]"/>
+		<Var name="uri_exp_vs" index="5" expression="ifelse(isnull(@app_6.package)+eqs(@app_6.package,''),'com.miui.calculator,com.miui.calculator.cal.CalculatorActivity',@app_6.package + ',' + @app_6.class)" type="string[]"/>
+		<Var name="uri_exp_vs" index="6" expression="ifelse(isnull(@app_7.package)+eqs(@app_7.package,''),'com.tencent.mm,com.tencent.mm.ui.LauncherUI',@app_7.package + ',' + @app_7.class)" type="string[]"/>
+		<Array count="7" indexName="__w">
+			<Group x="949+ifelse(eq(#judge_back,1),#right_ani*(#__w/2+1.5),#right_ani)" y="200+260*#__w" alpha="255-#btn_diy*80" >
+			<!--
+				<Image align="center" alignV="center" src="item/right/xz.png" visibility="eq(#wallpaper_id,#__w)"/>
+				<Image align="center" alignV="center" src="item/right/w.png" srcid="#__w+1"/>
+			-->
+				
+				<Button w="200" h="200" align="center" alignV="center">
+					<Triggers>
+						<Trigger action="up" condition="eq(#__w,0)">
+							<IntentCommand id="app_1" action="android.intent.action.MAIN" package="com.android.contacts" class="com.android.contacts.activities.TwelveKeyDialer"/>
+							<ExternCommand command="unlock"/>
+						</Trigger>
+						<Trigger action="up" condition="eq(#__w,1)">
+							<IntentCommand id="app_2" action="android.intent.action.MAIN" package="com.android.mms" class="com.android.mms.ui.MmsTabActivity"/>
+							<ExternCommand command="unlock"/>
+						</Trigger>
+						<Trigger action="up" condition="eq(#__w,2)">
+							<IntentCommand id="app_3" action="android.intent.action.MAIN" package="com.tencent.mobileqq" class="com.tencent.mobileqq.activity.SplashActivity"/>
+							<ExternCommand command="unlock"/>
+						</Trigger>
+						<Trigger action="up" condition="eq(#__w,3)">
+							<IntentCommand id="app_4" action="android.intent.action.MAIN" package="com.android.camera" class="com.android.camera.Camera"/>
+							<ExternCommand command="unlock"/>
+						</Trigger>
+						<Trigger action="up" condition="eq(#__w,4)">
+							<IntentCommand id="app_5" action="android.intent.action.MAIN" package="com.miui.player" class="com.miui.player.ui.MusicBrowserActivity"/>
+							<ExternCommand command="unlock"/>
+						</Trigger>
+						<Trigger action="up" condition="eq(#__w,5)">
+							<IntentCommand id="app_6" action="android.intent.action.MAIN" package="com.miui.player" class="com.miui.calculator.cal.CalculatorActivity"/>
+							<ExternCommand command="unlock"/>
+						</Trigger>
+						<Trigger action="up" condition="eq(#__w,6)">
+							<IntentCommand id="app_7" action="android.intent.action.MAIN" package="com.tencent.mm" class="com.tencent.mm.ui.LauncherUI"/>
+							<ExternCommand command="unlock"/>
+						</Trigger>
+					</Triggers>
+					<Normal>
+						<Image w="200" h="200" align="center" alignV="center" srcType="ApplicationIcon" srcExp="@uri_exp_vs[#__w]"/>
+					</Normal>
+					<Pressed>
+						<Image w="200" h="200" align="center" alignV="center" srcType="ApplicationIcon" srcExp="@uri_exp_vs[#__w]" alpha="150"/>
+					</Pressed>
+				</Button>
+			</Group>
+		</Array>
+	</Group>
+	<!--
+	<Var name="judge_time_wallpaper" expression="ifelse(ge(#hour24,7)*le(#hour24,10),0,gt(#hour24,10)*le(#hour24,12),1,gt(#hour24,12)*le(#hour24,15),2,gt(#hour24,15)*le(#hour24,18),3,gt(#hour24,18)*le(#hour24,21),4,gt(#hour24,21)*le(#hour24,0),5,gt(#hour24,0)*lt(#hour24,7),6,0)"/>
+	<Var name="wallpaper_id" expression="ifelse(#btn_change,#judge_time_wallpaper,#wallpaper_idv)"/>
+	<Group visibility="le(#right_ani,10)">
+		<Array name="wallpaper_button" count="7" indexName="__i">
+			<Button x="949" y="342.5+237*#__i" w="190" h="190" align="center" alignV="center">
+				<Triggers>
+					<Trigger action="up">
+						<VariableCommand name="wallpaper_idv" expression="#__i" persist="true"/>
+						<VariableCommand name="btn_change" expression="0" condition="eq(#btn_change,1)" persist="true"/>
+						<VariableCommand name="btn_diy" expression="0" condition="eq(#btn_diy,1)" persist="true"/>
+						<IntentCommand action="wallpaper_set" broadcast="true">
+							<Extra name="wallpaper_idv" type="number" expression="#wallpaper_idv"/>
+							<Extra name="btn_change" type="number" expression="#btn_change"/>
+						</IntentCommand>
+					</Trigger>
+				</Triggers>
+			</Button>
+		</Array>
+		<Button x="830" y="130" w="230" h="45" alignV="bottom">
+			<Triggers>
+				<Trigger action="up">
+					<VariableCommand name="btn_diy" expression="ifelse(eq(#btn_diy,0),1,0)" persist="true"/>
+					<VariableCommand name="btn_change" expression="0" persist="true"/>
+				</Trigger>
+			</Triggers>
+		</Button>
+		<Button x="830" y="190" w="230" h="45" alignV="bottom">
+			<Triggers>
+				<Trigger action="up">
+					<VariableCommand name="btn_change" expression="ifelse(eq(#btn_change,0),1,0)" persist="true"/>
+					<VariableCommand name="btn_diy" expression="0" persist="true"/>
+					<IntentCommand action="wallpaper_set" broadcast="true">
+						<Extra name="wallpaper_idv" type="number" expression="#wallpaper_idv"/>
+						<Extra name="btn_change" type="number" expression="#btn_change"/>
+					</IntentCommand>
+				</Trigger>
+			</Triggers>
+		</Button>
+	</Group>
+	-->
+		<Var name="left_ani">
+			<VariableAnimation initPause="true" loop="false">
+				<AniFrame value="0" time="0" easeType="QuartEaseOut"/>
+				<AniFrame value="800" time="800"/>
+				<AniFrame value="390" time="1200" easeType="QuartEaseOut"/>
+				<AniFrame value="800" time="1600"/>
+				<AniFrame value="#left_ani" time="1700"/>
+				<AniFrame value="0" time="2100"/>
+			</VariableAnimation>
+		</Var>
+	<Button x="30" y="1890" w="200" h="150" align="center" alignV="center">
+		<Triggers>
+			<Trigger action="up" condition="eq(#right_ani,500)*eq(#left_ani,0)*eq(#emoji_ani,0)*#music_ani">
+				<Command target="left_ani.animation" value="play(0,800)" delay="100"/>
+				<Command target="left_r.animation" value="play"/>
+				<VariableCommand name="judge_back_left" expression="1"/>
+				<VariableCommand name="ready_left_visibility" expression="0" delay="500"/>
+			</Trigger>
+			<Trigger action="down" condition="eq(#right_ani,500)*eq(#left_ani,0)*eq(#emoji_ani,0)">
+				<VariableCommand name="ready_left_visibility" expression="1"/>
+			</Trigger>
+		</Triggers>
+	</Button>
+	<Var expression="eq(#right_ani,500)*eq(#left_ani,0)*eq(#emoji_ani,0)*gt(#touch_x-#touch_begin_x,100)*lt(#touch_begin_x,200)*gt(#touch_begin_x,0)" threshold="1">
+		<Trigger>
+			<Command target="left_ani.animation" value="play(0,800)"/>
+			<VariableCommand name="judge_back_left" expression="1"/>
+		</Trigger>
+	</Var>
+	<Button x="0" y="0" w="200" h="1920" visibility="eq(#left_ani,0)">
+		<Triggers>
+			<Trigger action="down">
+				<VariableCommand name="ready_left_visibility" expression="1"/>
+			</Trigger>
+			<Trigger action="up,cancel">
+				<VariableCommand name="ready_left_visibility" expression="0" delay="100"/>
+			</Trigger>
+		</Triggers>
+	</Button>
+	<Button x="610" y="0" w="470" h="1920" visibility="eq(#change_list,0)*ne(#left_ani,0)">
+		<Triggers>
+			<Trigger action="up">
+				<Command target="left_ani.animation" value="play(1700,2100)"/>
+				<VariableCommand name="judge_back_left" expression="0"/>
+				<VariableCommand name="change_list" expression="0"/>
+			</Trigger>
+		</Triggers>
+	</Button>
+	<Button x="84" y="280" w="150" h="150" align="center" alignV="center" visibility="eq(#left_ani,390)*eq(#ewm_ani,0)">
+		<Triggers>
+			<Trigger action="up">
+				<Command target="left_ani.animation" value="play(1700,2100)"/>
+				<VariableCommand name="judge_back_left" expression="0"/>
+				<VariableCommand name="change_list" expression="0"/>
+			</Trigger>
+			<Trigger action="down">
+				<VariableCommand name="p1" expression="1"/>
+			</Trigger>
+			<Trigger action="up,cancel">
+				<VariableCommand name="p1" expression="0"/>
+			</Trigger>
+		</Triggers>
+	</Button>
+	<Var name="judge_the_second_point" expression="1" const="true"/>
+	<Button x="84" y="430" w="150" h="150" align="center" alignV="center" visibility="eq(#left_ani,390)*eq(#ewm_ani,0)">
+		<Triggers>
+			<Trigger action="up">
+				<Command target="left_ani.animation" value="play(1200,1600)"/>
+				<VariableCommand name="judge_the_second_point" expression="0"/>
+			</Trigger>
+			<Trigger action="down">
+				<VariableCommand name="p2" expression="1"/>
+			</Trigger>
+			<Trigger action="up,cancel">
+				<VariableCommand name="p2" expression="0"/>
+			</Trigger>
+		</Triggers>
+	</Button>
+	<Button x="84" y="580" w="150" h="150" align="center" alignV="center" visibility="eq(#left_ani,390)*eq(#ewm_ani,0)*ne(#change_list,7)">
+		<Triggers>
+			<Trigger action="down">
+				<VariableCommand name="p3" expression="1"/>
+			</Trigger>
+			<Trigger action="up,cancel">
+				<VariableCommand name="p3" expression="0"/>
+			</Trigger>
+			<Trigger action="up" condition="eq(#change_list,1)">
+				<IntentCommand action="android.intent.action.MAIN" package="com.miui.player" class="com.miui.player.ui.MusicBrowserActivity"/>
+				<ExternCommand command="unlock"/>
+			</Trigger>
+			<Trigger action="up" condition="eq(#change_list,2)">
+				<IntentCommand package="com.miui.weather2" class="com.miui.weather2.ActivityWeatherMain"/>
+				<IntentCommand package="com.miui.weather2" class="com.miui.weather2.ActivityWeatherCycle"/>
+				<ExternCommand command="unlock"/>
+			</Trigger>
+			<Trigger action="up" condition="eq(#change_list,3)">
+				<IntentCommand action="android.intent.action.MAIN" package="com.android.calendar" class="com.android.calendar.AllInOneActivity"/>
+				<ExternCommand command="unlock"/>
+			</Trigger>
+			<Trigger action="up" condition="eq(#change_list,4)">
+				<IntentCommand action="android.intent.action.MAIN" package="com.miui.notes" class="com.miui.notes.ui.NotesListActivity"/>
+				<ExternCommand command="unlock"/>
+			</Trigger>
+			<Trigger action="up" condition="eq(#change_list,5)">
+				<IntentCommand action="android.intent.action.MAIN" package="com.android.deskclock" class="com.android.deskclock.DeskClockTabActivity"/>
+				<ExternCommand command="unlock"/>
+			</Trigger>
+			<Trigger action="up" condition="eq(#change_list,6)*not(#mess_mode)">
+				<IntentCommand action="android.intent.action.MAIN" package="com.android.contacts" class="com.android.contacts.activities.TwelveKeyDialer"/>
+				<ExternCommand command="unlock"/>
+			</Trigger>
+			<Trigger action="up" condition="eq(#change_list,6)*#mess_mode">
+				<IntentCommand action="android.intent.action.MAIN" package="com.android.mms" class="com.android.mms.ui.MmsTabActivity"/>
+				<ExternCommand command="unlock"/>
+			</Trigger>
+		</Triggers>
+	</Button>
+	<Button x="610" y="0" w="400" h="1920" visibility="eq(#left_ani,800)*eq(#judge_the_second_point,0)">
+		<Triggers>
+			<Trigger action="up">
+				<Command target="left_ani.animation" value="play(800,1200)"/>
+				<VariableCommand name="judge_the_second_point" expression="1"/>
+			</Trigger>
+		</Triggers>
+	</Button>
+	<Group visibility="eq(#change_list,1)">
+		<MusicControl name="music_control" autoShow="false" enableLyric="true" updateLyricInterval="200">
+				<Image x="626" y="510" align="center" alignV="center" src="item/music/zj_bg.png"/>
+			<Group w="#screen_width" h="#screen_height" layered="true">
+				<Image name="music_album_cover" x="626" y="510" w="512" h="512" align="center" alignV="center" antiAlias="true" />
+				<Image x="626" y="510" align="center" alignV="center" src="item/music/mask.png" xfermode="dst_in"/>
+			</Group>
+			<Text name="music_title" x="ifelse(ge(#music_title.text_width,800),226,626-#music_title.text_width/2)" y="915" w="800" marqueeSpeed="30" size="50" color="#cc002051" alignV="center" text="@music_control.title"/>
+			<Text name="music_artist" x="ifelse(ge(#music_artist.text_width,600),326,626-#music_artist.text_width/2)" y="1000" w="600" marqueeSpeed="30" size="40" color="#b2002051" alignV="center" text="@music_control.artist"/>
+			<Text x="626" y="915" size="50" color="#b2002051" align="center" alignV="center" text="未播放歌曲" visibility="isnull(@music_control.title)*isnull(@music_control.artist)*eq(#music_control.music_state,0)"/>
+			<Text x="626" y="915" size="50" color="#b2002051" align="center" alignV="center" text="暂无歌曲" visibility="isnull(@music_control.title)*isnull(@music_control.artist)*eq(#music_control.music_state,1)"/>
+			<Var name="lyric_width" expression="900" const="true"/>
+			<Group y="1200" w="#lyric_width" clip="true">
+				<Text x="626" y="-60" w="#lyric_width" marqueeSpeed="30" spacingMult="1" align="center" alignV="bottom" multiLine="true" color="@t_color" size="40" alpha="150" textExp="strTrim(@music_control.lyric_last)" />
+				<Text name="cur_lyric" x="ifelse(ge(#cur_lyric.text_width,900),176,626-#cur_lyric.text_width/2)" y="0" w="#lyric_width" alignV="center" multiLine="false" color="@color_lyc" size="50" textExp="strTrim(@music_control.lyric_current)" spacingMult="1" marqueeSpeed="30"/>
+				<Text x="626" y="100" align="center" alignV="center" color="@t_color" size="45" text="暂无歌词" visibility="isnull(@music_control.lyric_last)*isnull(@music_control.lyric_current)*isnull(@music_control.lyric_after)"/>
+				<Text x="626" y="75" w="#lyric_width" marqueeSpeed="30" spacingMult="1" h="230" align="center" multiLine="true" color="@t_color" size="40" textExp="strTrim(@music_control.lyric_after)"/>
+			</Group>
+			<Var name="position_mic" expression="#music_control.music_position/600000%10"/>
+			<Var name="position_min" expression="#music_control.music_position/60000%10"/>
+			<Var name="position_ser" expression="#music_control.music_position/10000%6"/>
+			<Var name="position_sec" expression="#music_control.music_position/1000%10"/>
+			<Var name="duration_mic" expression="#music_control.music_duration/600000%10"/>
+			<Var name="duration_min" expression="#music_control.music_duration/60000%10"/>
+			<Var name="duration_ser" expression="#music_control.music_duration/10000%6"/>
+			<Var name="duration_sec" expression="#music_control.music_duration/1000%10"/>
+			<Group  name="music_time" alpha="255-#volume_alpha">
+				<Text x="202" y="1600" color="@t_color" align="left" alignV="center" size="30" format="%d%d:%d%d" paras="#position_mic,#position_min,#position_ser,#position_sec"/>
+				<Text x="1050" y="1600" color="@t_color" align="right" alignV="center" size="30" format="%d%d:%d%d" paras="#duration_mic,#duration_min,#duration_ser,#duration_sec" />
+				<Rectangle x="305" y="1600" align="left" alignV="center" w="650" h="5" cornerRadius="5,5" fillColor="#50002051"  cap="round"/>
+				<Rectangle x="305" y="1600" align="left" alignV="center" w="#music_control.music_position/#music_control.music_duration*650" h="5" cornerRadius="5,5" fillColor="@t_color"  cap="round"/>
+			</Group>
+			<Image x="626-160*2" y="1745" align="center" alignV="center" src="item/music/love.png" srcid="#music_control.user_rating_value" />
+			<Button x="626-160*2" y="1745" w="100" h="100" align="center" alignV="center">
+				<Triggers>
+					<Trigger action="up">
+						<MethodCommand target="music_control" method="ratingHeart" />
+					</Trigger>
+				</Triggers>
+			</Button>
+			<Button name="music_prev" x="626-160" y="1745" w="120" h="120" align="center" alignV="center">
+				<Normal>
+					<Image x="626-160" y="1745" align="center" alignV="center" src="item/music/prev.png"/>
+				</Normal>
+				<Pressed>
+					<Image x="626-160" y="1745" align="center" alignV="center" src="item/music/prev.png" alpha="200"/>
+				</Pressed>
+			</Button>
+			<Button name="music_play" x="626" y="1745" w="140" h="140" align="center" alignV="center">
+				<Normal>
+					<Image x="626" y="1745" align="center" alignV="center" src="item/music/play.png"/>
+				</Normal>
+				<Pressed>
+					<Image x="626" y="1745" align="center" alignV="center" src="item/music/play.png" alpha="200"/>
+				</Pressed>
+			</Button>
+			<Button name="music_pause" x="626" y="1745" w="140" h="140" align="center" alignV="center">
+				<Normal>
+					<Image x="626" y="1745" align="center" alignV="center" src="item/music/pause.png"/>
+				</Normal>
+				<Pressed>
+					<Image x="626" y="1745" align="center" alignV="center" src="item/music/pause.png" alpha="200"/>
+				</Pressed>
+			</Button>
+			<Button name="music_next" x="626+160" y="1745" w="120" h="120" align="center" alignV="center">
+				<Normal>
+					<Image x="626+160" y="1745" align="center" alignV="center" src="item/music/next.png"/>
+				</Normal>
+				<Pressed>
+					<Image x="626+160" y="1745" align="center" alignV="center" src="item/music/next.png" alpha="200"/>
+				</Pressed>
+			</Button>
+			<Button x="626+160*2" y="1745" w="100" h="100" align="center" alignV="center">
+				<Triggers>
+					<Trigger action="up">
+						<Command target="lyc_color_bg.animation" value="play(0,400)" condition="ne(#lyc_color_bg,0)"/>
+						<Command target="lyc_color_bg.animation" value="play(500,1300)" condition="ne(#lyc_color_bg,500)"/>
+					</Trigger>
+				</Triggers>
+				<Normal>
+					<Image x="626+160*2" y="1745" align="center" alignV="center" src="item/music/lyc.png"/>
+				</Normal>
+				<Pressed>
+					<Image x="626+160*2" y="1745" align="center" alignV="center" src="item/music/lyc.png" alpha="100"/>
+				</Pressed>
+			</Button>
+			<!--LYC color -->
+			<Var name="lyc_color_bg">
+				<VariableAnimation initPause="true" loop="false">
+					<AniFrame value="500" time="0" easeType="QuartEaseOut"/>
+					<AniFrame value="0" time="400"/>
+					<AniFrame value="#lyc_color_bg" time="500" easeType="QuadEaseIn"/>
+					<AniFrame value="500" time="1300"/>
+				</VariableAnimation>
+			</Var>
+			<Var name="color_lyc" expression="ifelse(eq(#color_lyc_id,0),'#ff5f3d',eq(#color_lyc_id,1),'#002051',eq(#color_lyc_id,2),'#00c598',eq(#color_lyc_id,3),'#00b2db',eq(#color_lyc_id,4),'#ff8d50',eq(#color_lyc_id,5),'#76e3ff',eq(#color_lyc_id,6),'#ffbdb4',eq(#color_lyc_id,7),'#8f96ea','#8f96ea')" type="string"/>
+			<Array count="8" indexName="__lycc">
+				<Button x="255.5+107*#__lycc" y="1862" w="50" h="50" align="center" alignV="center" visibility="eq(#lyc_color_bg,0)">
+					<Triggers>
+						<Trigger action="up">
+							<VariableCommand name="color_lyc_id" expression="#__lycc" persist="true"/>
+						</Trigger>
+					</Triggers>
+				</Button>
+				<Circle x="250.5+107*#__lycc" y="1862+#lyc_color_bg*5" r="27" fillColor="@t_color" alpha="60" visibility="eq(#__lycc,#color_lyc_id)"/>	
+			</Array>
+				<Image x="626" y="1793+#lyc_color_bg" h="112+#lyc_color_bg*2" align="center" src="item/music/lyccolorbg.9.png"/>
+			<Group y="#lyc_color_bg*5" alpha="500-#lyc_color_bg">
+				<Circle x="250.5" y="1862" r="18" fillColor="#ff5f3d"/>
+				<Circle x="250.5+107" y="1862" r="18" fillColor="#002051"/>
+				<Circle x="250.5+107*2" y="1862" r="18" fillColor="#00c598"/>
+				<Circle x="250.5+107*3" y="1862" r="18" fillColor="#00b2db"/>
+				<Circle x="250.5+107*4" y="1862" r="18" fillColor="#ff8d50"/>
+				<Circle x="250.5+107*5" y="1862" r="18" fillColor="#76e3ff"/>
+				<Circle x="250.5+107*6" y="1862" r="18" fillColor="#ffbdb4"/>
+				<Circle x="250.5+107*7" y="1862" r="18" fillColor="#8f96ea"/>
+			</Group>
+			<SpectrumVisualizer x="626" y="1900" w="908" h="300" align="center" alignV="center" dotbarSrc="item/music/ss_2.png" shadowSrc="item/music/ss_2.png" alpha="#lyc_color_bg"/>
+
+		</MusicControl>
+	</Group>
+	<Group visibility="eq(#change_list,2)">
+		<Image x="220" y="150" alignV="center" src="item/weather/location.png"/>
+		<Text name="text1" x="290" y="160" size="35" color="@t_color" alignV="center" format="%s丨%s  %s" paras="@weather_location,@weather_description,@air_quality"/>
+		<DateTime x="1040" y="160" size="35" color="@t_color" align="right" alignV="center" format="MM/dd EEEE" value="#weather_publish_time"/>
+		<Image x="870" y="400" w="300" h="300" align="center" alignV="center" srcExp="'item/weather/w/weather_' + #weather_id + @icon_suffix + '.png'"/>
+		<Image x="626" y="200" align="center" alignV="center" src="item/clock/line.png" alpha="180"/>
+		<Image x="550-#temp_src.bmp_width" y="400+20" align="right" alignV="center" src="item/weather/temp/negative.png" visibility="lt(#weather_temperature,0)"/>
+		<ImageNumber name="temp_src" x="571" y="400+20" align="right" alignV="center" src="item/weather/temp/l.png" number="abs(#weather_temperature)"/>
+		<Image x="642" y="323+20" align="right" alignV="center" src="item/weather/temp/du.png"/>
+		<Image x="172" y="643" w="35+#s_ani" alignV="center" src="item/weather/ss.9.png"/>
+		<Image x="205-400+#s_ani" y="643" alignV="center" src="item/weather/s.png" visibility="ne(#s_ani,0)"/>
+		<Text x="253-400+#s_ani" y="643" size="30" color="@t_color" alignV="center" format="%s%%" paras="@weather_humidity" visibility="ne(#s_ani,0)"/>
+		<Text x="380-400+#s_ani" y="643" size="30" color="@t_color" alignV="center" format="%s" paras="@weather_wind" visibility="ne(#s_ani,0)"/>
+		<Var name="s_ani">
+			<VariableAnimation initPause="true" loop="false">
+				<AniFrame value="0" time="0"/>
+				<AniFrame value="400" time="200"/>
+			</VariableAnimation>
+		</Var>
+		<Button x="172+#s_ani" y="643" w="70" h="90" alignV="center">
+			<Triggers>
+				<Trigger action="up">
+					<Command target="s_ani.animation" value="play" condition="eq(#s_ani,0)"/>
+					<Command target="s_ani.animation" value="play(200,0)" condition="eq(#s_ani,400)"/>
+				</Trigger>
+			</Triggers>
+		</Button>
+		<Var name="mac_air" expression="max(max(max(max(#aqi,#pm25),#pm10),#so2),#no2)"/>
+		<Var name="judge_ge300" expression="ifelse(le(#mac_air,300),1,gt(#mac_air,300)*le(#mac_air,600),0.5,gt(#mac_air,600)*le(#mac_air,900),0.33,gt(#mac_air,900)*le(#mac_air,1200),0.25,gt(#mac_air,1200)*le(#mac_air,1500),0.2,gt(#mac_air,1500)*le(#mac_air,1800),0.167,0.12)"/>
+		<Var name="judge_high_and_low_differ" expression="ifelse(le(max(max(max(abs(#weather_temphigh1-#weather_temphigh),abs(#weather_temphigh2-#weather_temphigh1)),abs(#weather_temphigh3-#weather_temphigh2)),abs(#weather_temphigh4-#weather_temphigh3)),20),15,7)"/>
+		<Var name="temph_v" index="0" size="5" expression="800" type="number[]"/>
+		<Var name="temph_v" index="1" expression="ifelse(len(@weather_description1),800-(#weather_temphigh1-#weather_temphigh)*#judge_high_and_low_differ,800)" type="number[]"/>
+		<Var name="temph_v" index="2" expression="ifelse(len(@weather_description2),800-(#weather_temphigh2-#weather_temphigh)*#judge_high_and_low_differ,800)" type="number[]"/>
+		<Var name="temph_v" index="3" expression="ifelse(len(@weather_description3),800-(#weather_temphigh3-#weather_temphigh)*#judge_high_and_low_differ,800)" type="number[]"/>
+		<Var name="temph_v" index="4" expression="ifelse(len(@weather_description4),800-(#weather_temphigh4-#weather_temphigh)*#judge_high_and_low_differ,800)" type="number[]"/>
+		<Var name="temph_text_v" index="0" size="5" expression="ifelse(len(@weather_description),#weather_temphigh + '°','N/A')" type="string[]"/>
+		<Var name="temph_text_v" index="1" expression="ifelse(len(@weather_description1),#weather_temphigh1 + '°','N/A')" type="string[]"/>
+		<Var name="temph_text_v" index="2" expression="ifelse(len(@weather_description2),#weather_temphigh2 + '°','N/A')" type="string[]"/>
+		<Var name="temph_text_v" index="3" expression="ifelse(len(@weather_description3),#weather_temphigh3 + '°','N/A')" type="string[]"/>
+		<Var name="temph_text_v" index="4" expression="ifelse(len(@weather_description4),#weather_temphigh4 + '°','N/A')" type="string[]"/>
+		<Var name="templ_v" index="0" size="5" expression="1050" type="number[]"/>
+		<Var name="templ_v" index="1" expression="ifelse(len(@weather_description1),1050-(#weather_templow1-#weather_templow)*#judge_high_and_low_differ,1050)" type="number[]"/>
+		<Var name="templ_v" index="2" expression="ifelse(len(@weather_description2),1050-(#weather_templow2-#weather_templow)*#judge_high_and_low_differ,1050)" type="number[]"/>
+		<Var name="templ_v" index="3" expression="ifelse(len(@weather_description3),1050-(#weather_templow3-#weather_templow)*#judge_high_and_low_differ,1050)" type="number[]"/>
+		<Var name="templ_v" index="4" expression="ifelse(len(@weather_description4),1050-(#weather_templow4-#weather_templow)*#judge_high_and_low_differ,1050)" type="number[]"/>
+		<Var name="templ_text_v" index="0" size="5" expression="ifelse(len(@weather_description),#weather_templow + '°','N/A')" type="string[]"/>
+		<Var name="templ_text_v" index="1" expression="ifelse(len(@weather_description1),#weather_templow1 + '°','N/A')" type="string[]"/>
+		<Var name="templ_text_v" index="2" expression="ifelse(len(@weather_description2),#weather_templow2 + '°','N/A')" type="string[]"/>
+		<Var name="templ_text_v" index="3" expression="ifelse(len(@weather_description3),#weather_templow3 + '°','N/A')" type="string[]"/>
+		<Var name="templ_text_v" index="4" expression="ifelse(len(@weather_description4),#weather_templow4 + '°','N/A')" type="string[]"/>
+		<Var name="temp_future_text_v" index="0" size="5" expression="ifelse(len(@weather_description),#weather_temphigh + '°/' + #weather_templow + '°','无数据')" type="string[]"/>
+		<Var name="temp_future_text_v" index="1" expression="ifelse(len(@weather_description1),#weather_temphigh1 + '°/' + #weather_templow1 + '°','无数据')" type="string[]"/>
+		<Var name="temp_future_text_v" index="2" expression="ifelse(len(@weather_description2),#weather_temphigh2 + '°/' + #weather_templow2 + '°','无数据')" type="string[]"/>
+		<Var name="temp_future_text_v" index="3" expression="ifelse(len(@weather_description3),#weather_temphigh3 + '°/' + #weather_templow3 + '°','无数据')" type="string[]"/>
+		<Var name="temp_future_text_v" index="4" expression="ifelse(len(@weather_description4),#weather_temphigh4 + '°/' + #weather_templow4 + '°','无数据')" type="string[]"/>
+		<Var name="temp_future_image_v" index="0" size="5" expression="'item/weather/w/weather_' + #weather_id + @icon_suffix + '.png'" type="string[]"/>
+		<Var name="temp_future_image_v" index="1" expression="'item/weather/w/weather_' + #weather_id1 + @icon_suffix1 + '.png'" type="string[]"/>
+		<Var name="temp_future_image_v" index="2" expression="'item/weather/w/weather_' + #weather_id2 + @icon_suffix2 + '.png'" type="string[]"/>
+		<Var name="temp_future_image_v" index="3" expression="'item/weather/w/weather_' + #weather_id3 + @icon_suffix3 + '.png'" type="string[]"/>
+		<Var name="temp_future_image_v" index="4" expression="'item/weather/w/weather_' + #weather_id4 + @icon_suffix4 + '.png'" type="string[]"/>
+		<Text x="272" y="1550" align="center" alignV="center" size="38" color="@t_color" text="今天"/>
+		<Text x="272+177" y="1550" align="center" alignV="center" size="38" color="@t_color" text="明天"/>
+		<DateTime x="272+177*2" y="1550" align="center" alignV="center" size="38" color="@t_color" format="EEE" value="#time_sys+86400000*2"/>
+		<DateTime x="272+177*3" y="1550" align="center" alignV="center" size="38" color="@t_color" format="EEE" value="#time_sys+86400000*3"/>
+		<DateTime x="272+177*4" y="1550" align="center" alignV="center" size="38" color="@t_color" format="EEE" value="#time_sys+86400000*4"/>
+		<Var name="kq_v" index="0" size="5" expression="#aqi" type="number[]"/>
+		<Var name="kq_v" index="1" expression="#pm25" type="number[]"/>
+		<Var name="kq_v" index="2" expression="#pm10" type="number[]"/>
+		<Var name="kq_v" index="3" expression="#so2" type="number[]"/>
+		<Var name="kq_v" index="4" expression="#no2" type="number[]"/>
+		<Var name="kq_t_v" index="0" size="5" expression="'AQI'" type="string[]"/>
+		<Var name="kq_t_v" index="1" expression="'PM2.5'" type="string[]"/>
+		<Var name="kq_t_v" index="2" expression="'PM10'" type="string[]"/>
+		<Var name="kq_t_v" index="3" expression="'SO2'" type="string[]"/>
+		<Var name="kq_t_v" index="4" expression="'NO2'" type="string[]"/>
+		<Array count="5" indexName="__temp">
+			<Line x="202" y="1410" x1="1030" y1="1410" weight="2" strokeColor="@t_color" alpha="100"/>
+			<Group x="270+177*#__temp">
+				<Text y="1410-#kq_v[#__temp]*#judge_ge300-10" size="30" color="@t_color" align="center" alignV="bottom" format="%d" paras="#kq_v[#__temp]"/>
+				<Image y="1410" align="center" alignV="bottom" h="#kq_v[#__temp]*#judge_ge300" src="item/weather/air.png" alpha="210"/>
+				<Text y="1410+20" size="30" color="@t_color" align="center" alignV="top" textExp="@kq_t_v[#__temp]"/>
+				<Circle y="#temph_v[#__temp]" r="10" fillColor="@t_color"/>
+				<Line x="0" y="#temph_v[#__temp]" x1="177*(min((#__temp+1),4)-#__temp)" y1="#temph_v[min(#__temp+1,4)]" weight="15" fillColor="@t_color"/>
+				<Text y="#temph_v[#__temp]-55" size="35" color="@t_color" align="center" textExp="@temph_text_v[#__temp]"/>
+				<Circle y="#templ_v[#__temp]" r="10" fillColor="@t_color"/>
+				<Line x="0" y="#templ_v[#__temp]" x1="177*(min((#__temp+1),4)-#__temp)" y1="#templ_v[min(#__temp+1,4)]" weight="15" fillColor="@t_color"/>
+				<Text y="#templ_v[#__temp]-55" size="35" color="@t_color" align="center" textExp="@templ_text_v[#__temp]"/>
+				<Text y="1840" align="center" alignV="center" size="32" color="@t_color" textExp="@temp_future_text_v[#__temp]"/>
+				<Image y="1695" w="100" h="100" align="center" alignV="center" srcExp="@temp_future_image_v[#__temp]"/>
+			</Group>
+		</Array>
+	</Group>
+	<Group visibility="eq(#change_list,3)">
+		<Group y="-100">
+				<Text x="100+130" y="1310" alignV="center" size="35" color="@t_color" text="日程安排"/>
+				<Image x="626" y="1250" w="908" align="center" alignV="bottom" src="item/white.9.png"/>
+				<Image x="0" y="2020" w="1080" h="2" alignV="bottom" src="item/black.9.png" alpha="255"/>
+				<Var name="event_title_v" index="0" size="5" expression="@event_title1" type="string[]"/>
+				<Var name="event_title_v" index="1" expression="@event_title2" type="string[]"/>
+				<Var name="event_title_v" index="2" expression="@event_title3" type="string[]"/>
+				<Var name="event_title_v" index="3" expression="@event_title4" type="string[]"/>
+				<Var name="event_title_v" index="4" expression="@event_title5" type="string[]"/>
+				<Var name="event_title_allday_v" index="0" size="5" expression="@event_title1_allday" type="string[]"/>
+				<Var name="event_title_allday_v" index="1" expression="@event_title2_allday" type="string[]"/>
+				<Var name="event_title_allday_v" index="2" expression="@event_title3_allday" type="string[]"/>
+				<Var name="event_title_allday_v" index="3" expression="@event_title4_allday" type="string[]"/>
+				<Var name="event_title_allday_v" index="4" expression="@event_title5_allday" type="string[]"/>
+				<Var name="event_time_allday_v" index="0" size="5" expression="#event_time1_allday" type="number[]"/>
+				<Var name="event_time_allday_v" index="1" expression="#event_time2_allday" type="number[]"/>
+				<Var name="event_time_allday_v" index="2" expression="#event_time3_allday" type="number[]"/>
+				<Var name="event_time_allday_v" index="3" expression="#event_time4_allday" type="number[]"/>
+				<Var name="event_time_allday_v" index="4" expression="#event_time5_allday" type="number[]"/>
+				<Array count="5" indexName="__db">
+					<Group x="130" y="120*#__db" visibility="len(@event_title_v[#__db])+len(@event_title_allday_v[#__db])">
+						<Circle x="100" y="1440" r="12" fillColor="#002051" alpha="240"/>
+						<Text x="140" y="1440" w="570" marqueeSpeed="30" alignV="center" color="@t_color" size="45" textExp="ifelse(len(@event_title_v[#__db]),@event_title_v[#__db],len(@event_title_allday_v[#__db]),@event_title_allday_v[#__db]+'(全天)',' ')"/>
+						<!--
+						<DateTime x="980-80" y="1450" size="35" color="@t_color" align="right" alignV="center" format="MM-dd" value="#event_time_v[#__db]" visibility="len(@event_title_v[#__db])"/>
+						<DateTime x="980-80" y="1450" size="35" color="@t_color" align="right" alignV="center" format="MM-dd" value="#event_time_allday_v[#__db]" visibility="len(@event_title_allday_v[#__db])"/>
+						-->
+						<Image x="70" y="1490" w="850" src="item/white.9.png" alpha="200"/>
+					</Group>
+				</Array>
+				<Text x="626" y="1440" align="center" alignV="center" color="@t_color" size="50" text="无日程安排" visibility="isnull(@event_title1)*isnull(@event_title1_allday)"/>
+					<Button x="286" y="330" w="100" h="100" align="center" alignV="center">
+						<Triggers>
+							<Trigger action="up" condition="eq(#left_ani,390)">
+								<VariableCommand name="g3y1" expression="ifelse(eq(#g3m1,0),#g3y1-1,#g3y1)"/>
+								<VariableCommand name="g3m1" expression="ifelse(eq(#g3m1,0),11,#g3m1-1)"/>
+								<VariableCommand name="month_max_day" expression="ifelse((eq((#g3m1+1),1)+eq((#g3m1+1),3)+eq((#g3m1+1),5)+eq((#g3m1+1),7)+eq((#g3m1+1),8)+eq((#g3m1+1),10)+eq((#g3m1+1),12)),31,(eq((#g3m1+1),4)+eq((#g3m1+1),6)+eq((#g3m1+1),9)+eq((#g3m1+1),11)),30,eq((#g3m1+1),2)*#leap_year,29,28)"/>
+								<VariableCommand name="g3dow1" expression="ifelse(lt(#g3dow1-#month_max_day%7,0),7+(#g3dow1-#month_max_day%7),#g3dow1-#month_max_day%7)"/>
+							</Trigger>
+						</Triggers>
+						<Normal>
+							<Image x="286" y="330" align="center" alignV="center" src="rl/pre.png"/>
+						</Normal>
+						<Pressed>
+							<Image x="286" y="330" align="center" alignV="center" src="item/p.png" visibility="eq(#left_ani,390)"/>
+						</Pressed>
+					</Button>
+					
+					<Button x="626" y="330" w="280" h="100" align="center" alignV="center">
+						<Triggers>
+							<Trigger action="up" condition="eq(#left_ani,390)">
+								<VariableCommand name="g3dow1" expression="#day_of_week-1"/>
+								<VariableCommand name="g3y1" expression="#year"/>
+								<VariableCommand name="g3m1" expression="#month"/>
+							</Trigger>
+						</Triggers>
+						<Normal>
+							<Text x="626" y="330" align="center" alignV="center" textExp="#g3y1+'年'+@g3m1" color="@t_color" size="60"/>
+						</Normal>
+						<Pressed>
+							<Text x="626" y="330" align="center" alignV="center" textExp="#g3y1+'年'+@g3m1" color="@t_color" size="60" alpha="150" visibility="eq(#left_ani,390)"/>
+						</Pressed>
+					</Button>
+					<Button x="966" y="330" w="100" h="100" align="center" alignV="center">
+						<Triggers>
+							<Trigger action="up" condition="eq(#left_ani,390)">
+								<VariableCommand name="g3dow1" expression="ifelse(gt(#g3dow1+#month_max_day%7,7),-7+(#g3dow1+#month_max_day%7),#g3dow1+#month_max_day%7)"/>
+								<VariableCommand name="g3y1" expression="ifelse(eq(#g3m1,11),#g3y1+1,#g3y1)"/>
+								<VariableCommand name="g3m1" expression="ifelse(eq(#g3m1,11),0,#g3m1+1)"/>
+							</Trigger>
+						</Triggers>
+						<Normal>
+							<Image x="966" y="330" align="center" alignV="center" src="rl/next.png"/>
+						</Normal>
+						<Pressed>
+							<Image x="966" y="330" align="center" alignV="center" src="item/p.png" visibility="eq(#left_ani,390)"/>
+						</Pressed>
+					</Button>
+				<Group x="130">
+					<Image x="880" y="1088" src="rl/s.png"/>
+					<Image x="980" y="1088" src="rl/x.png"/>
+					<Var name="g3y1" expression="#year" const="true"/>
+					<Var name="g3m1" expression="#month" const="true"/>
+					<Var name="g3d1" expression="#date" const="true"/>
+					<Var name="g3dow1" expression="#day_of_week-1" const="true"/>
+					<VarArray type="string">
+						<Vars>
+							<Var name="g3m1" index="#g3m1"/>
+						</Vars>
+						<Items>
+							<Item value="1月"/>
+							<Item value="2月"/>
+							<Item value="3月"/>
+							<Item value="4月"/>
+							<Item value="5月"/>
+							<Item value="6月"/>
+							<Item value="7月"/>
+							<Item value="8月"/>
+							<Item value="9月"/>
+							<Item value="10月"/>
+							<Item value="11月"/>
+							<Item value="12月"/>
+						</Items>
+					</VarArray>
+					<VarArray type="string">
+						<Vars>
+							<Var name="g3d1" index="#g3d1-1"/>
+						</Vars>
+						<Items>
+							<Item value="1"/>
+							<Item value="2"/>
+							<Item value="3"/>
+							<Item value="4"/>
+							<Item value="5"/>
+							<Item value="6"/>
+							<Item value="7"/>
+							<Item value="8"/>
+							<Item value="9"/>
+							<Item value="10"/>
+							<Item value="11"/>
+							<Item value="12"/>
+							<Item value="13"/>
+							<Item value="14"/>
+							<Item value="15"/>
+							<Item value="16"/>
+							<Item value="17"/>
+							<Item value="18"/>
+							<Item value="19"/>
+							<Item value="20"/>
+							<Item value="21"/>
+							<Item value="22"/>
+							<Item value="23"/>
+							<Item value="24"/>
+							<Item value="25"/>
+							<Item value="26"/>
+							<Item value="27"/>
+							<Item value="28"/>
+							<Item value="29"/>
+							<Item value="30"/>
+							<Item value="31"/>
+						</Items>
+					</VarArray>
+					<Var name="day_of_week1" expression="ifelse(le(#g3dow1-1,0),7,#g3dow1-1))"/>
+					<Var name="day1_week" expression="#g3dow1+(1-#g3d1)%7"/>
+					<Var name="day1_week" expression="ifelse(le(#day1_week,0),7+#day1_week,#day1_week)"/>
+					<Var name="month_max_day" expression="ifelse((eq((#g3m1+1),1)+eq((#g3m1+1),3)+eq((#g3m1+1),5)+eq((#g3m1+1),7)+eq((#g3m1+1),8)+eq((#g3m1+1),10)+eq((#g3m1+1),12)),31,(eq((#g3m1+1),4)+eq((#g3m1+1),6)+eq((#g3m1+1),9)+eq((#g3m1+1),11)),30,eq((#g3m1+1),2)*#leap_year,29,28)"/>
+					<Var name="leap_year" expression="eq((#g3y1%4),0)*ne((#g3y1%100),0)+eq((#g3y1%400),0)"/>
+					<Var name="display29" expression="#leap_year+ne((#g3m1+1),2)"/>
+					<Var name="display30" expression="ne((#g3m1+1),2)"/>
+					<Var name="display31" expression="eq((#g3m1+1),1)+eq((#g3m1+1),3)+eq((#g3m1+1),5)+eq((#g3m1+1),7)+eq((#g3m1+1),8)+eq((#g3m1+1),10)+eq((#g3m1+1),12)"/>
+					<Var name="grid_x" expression="150"/>
+					<Var name="grid_y" expression="600"/>
+					<Var name="grid_w" expression="115" const="true"/>
+					<Var name="grid_h" expression="105" const="true"/>
+					<Var name="x1" expression="#grid_x+(#day1_week+1+5)%7*#grid_w"/>
+					<Var name="y1" expression="#grid_y+int((1+#day1_week-1.1)/7)*#grid_h"/>
+					<Var name="x2" expression="#grid_x+(#day1_week+2+5)%7*#grid_w"/>
+					<Var name="y2" expression="#grid_y+int((2+#day1_week-1.1)/7)*#grid_h"/>
+					<Var name="x3" expression="#grid_x+(#day1_week+3+5)%7*#grid_w"/>
+					<Var name="y3" expression="#grid_y+int((3+#day1_week-1.1)/7)*#grid_h"/>
+					<Var name="x4" expression="#grid_x+(#day1_week+4+5)%7*#grid_w"/>
+					<Var name="y4" expression="#grid_y+int((4+#day1_week-1.1)/7)*#grid_h"/>
+					<Var name="x5" expression="#grid_x+(#day1_week+5+5)%7*#grid_w"/>
+					<Var name="y5" expression="#grid_y+int((5+#day1_week-1.1)/7)*#grid_h"/>
+					<Var name="x6" expression="#grid_x+(#day1_week+6+5)%7*#grid_w"/>
+					<Var name="y6" expression="#grid_y+int((6+#day1_week-1.1)/7)*#grid_h"/>
+					<Var name="x7" expression="#grid_x+(#day1_week+7+5)%7*#grid_w"/>
+					<Var name="y7" expression="#grid_y+int((7+#day1_week-1.1)/7)*#grid_h"/>
+					<Var name="x8" expression="#grid_x+(#day1_week+8+5)%7*#grid_w"/>
+					<Var name="y8" expression="#grid_y+int((8+#day1_week-1.1)/7)*#grid_h"/>
+					<Var name="x9" expression="#grid_x+(#day1_week+9+5)%7*#grid_w"/>
+					<Var name="y9" expression="#grid_y+int((9+#day1_week-1.1)/7)*#grid_h"/>
+					<Var name="x10" expression="#grid_x+(#day1_week+10+5)%7*#grid_w"/>
+					<Var name="y10" expression="#grid_y+int((10+#day1_week-1.1)/7)*#grid_h"/>
+					<Var name="x11" expression="#grid_x+(#day1_week+11+5)%7*#grid_w"/>
+					<Var name="y11" expression="#grid_y+int((11+#day1_week-1.1)/7)*#grid_h"/>
+					<Var name="x12" expression="#grid_x+(#day1_week+12+5)%7*#grid_w"/>
+					<Var name="y12" expression="#grid_y+int((12+#day1_week-1.1)/7)*#grid_h"/>
+					<Var name="x13" expression="#grid_x+(#day1_week+13+5)%7*#grid_w"/>
+					<Var name="y13" expression="#grid_y+int((13+#day1_week-1.1)/7)*#grid_h"/>
+					<Var name="x14" expression="#grid_x+(#day1_week+14+5)%7*#grid_w"/>
+					<Var name="y14" expression="#grid_y+int((14+#day1_week-1.1)/7)*#grid_h"/>
+					<Var name="x15" expression="#grid_x+(#day1_week+15+5)%7*#grid_w"/>
+					<Var name="y15" expression="#grid_y+int((15+#day1_week-1.1)/7)*#grid_h"/>
+					<Var name="x16" expression="#grid_x+(#day1_week+16+5)%7*#grid_w"/>
+					<Var name="y16" expression="#grid_y+int((16+#day1_week-1.1)/7)*#grid_h"/>
+					<Var name="x17" expression="#grid_x+(#day1_week+17+5)%7*#grid_w"/>
+					<Var name="y17" expression="#grid_y+int((17+#day1_week-1.1)/7)*#grid_h"/>
+					<Var name="x18" expression="#grid_x+(#day1_week+18+5)%7*#grid_w"/>
+					<Var name="y18" expression="#grid_y+int((18+#day1_week-1.1)/7)*#grid_h"/>
+					<Var name="x19" expression="#grid_x+(#day1_week+19+5)%7*#grid_w"/>
+					<Var name="y19" expression="#grid_y+int((19+#day1_week-1.1)/7)*#grid_h"/>
+					<Var name="x20" expression="#grid_x+(#day1_week+20+5)%7*#grid_w"/>
+					<Var name="y20" expression="#grid_y+int((20+#day1_week-1.1)/7)*#grid_h"/>
+					<Var name="x21" expression="#grid_x+(#day1_week+21+5)%7*#grid_w"/>
+					<Var name="y21" expression="#grid_y+int((21+#day1_week-1.1)/7)*#grid_h"/>
+					<Var name="x22" expression="#grid_x+(#day1_week+22+5)%7*#grid_w"/>
+					<Var name="y22" expression="#grid_y+int((22+#day1_week-1.1)/7)*#grid_h"/>
+					<Var name="x23" expression="#grid_x+(#day1_week+23+5)%7*#grid_w"/>
+					<Var name="y23" expression="#grid_y+int((23+#day1_week-1.1)/7)*#grid_h"/>
+					<Var name="x24" expression="#grid_x+(#day1_week+24+5)%7*#grid_w"/>
+					<Var name="y24" expression="#grid_y+int((24+#day1_week-1.1)/7)*#grid_h"/>
+					<Var name="x25" expression="#grid_x+(#day1_week+25+5)%7*#grid_w"/>
+					<Var name="y25" expression="#grid_y+int((25+#day1_week-1.1)/7)*#grid_h"/>
+					<Var name="x26" expression="#grid_x+(#day1_week+26+5)%7*#grid_w"/>
+					<Var name="y26" expression="#grid_y+int((26+#day1_week-1.1)/7)*#grid_h"/>
+					<Var name="x27" expression="#grid_x+(#day1_week+27+5)%7*#grid_w"/>
+					<Var name="y27" expression="#grid_y+int((27+#day1_week-1.1)/7)*#grid_h"/>
+					<Var name="x28" expression="#grid_x+(#day1_week+28+5)%7*#grid_w"/>
+					<Var name="y28" expression="#grid_y+int((28+#day1_week-1.1)/7)*#grid_h"/>
+					<Var name="x29" expression="#grid_x+(#day1_week+29+5)%7*#grid_w"/>
+					<Var name="y29" expression="#grid_y+int((29+#day1_week-1.1)/7)*#grid_h"/>
+					<Var name="x30" expression="#grid_x+(#day1_week+30+5)%7*#grid_w"/>
+					<Var name="y30" expression="#grid_y+int((30+#day1_week-1.1)/7)*#grid_h"/>
+					<Var name="x31" expression="#grid_x+(#day1_week+31+5)%7*#grid_w"/>
+					<Var name="y31" expression="#grid_y+int((31+#day1_week-1.1)/7)*#grid_h"/>
+					<Var name="last_month" expression="ifelse(#month,#month,12)"/>
+					<Var name="last_month_max_day" expression="ifelse((eq(#last_month,1)+eq(#last_month,3)+eq(#last_month,5)+eq(#last_month,7)+eq(#last_month,8)+eq(#last_month,10)+eq(#last_month,12)),31,(eq(#last_month,4)+eq(#last_month,6)+eq(#last_month,9)+eq(#last_month,11)),30,eq(#last_month,2)*#leap_year,29,28)"/>
+					<Var name="last_date1_x" expression="#x1-#grid_w"/>
+					<Var name="last_date2_x" expression="#x1-2*#grid_w"/>
+					<Var name="last_date3_x" expression="#x1-3*#grid_w"/>
+					<Var name="last_date4_x" expression="#x1-4*#grid_w"/>
+					<Var name="last_date5_x" expression="#x1-5*#grid_w"/>
+					<Var name="last_date6_x" expression="#x1-6*#grid_w"/>
+					<Var name="next_x1" expression="#grid_x+(#day1_week+#month_max_day+1+5)%7*#grid_w"/>
+					<Var name="next_y1" expression="#grid_y+int((#month_max_day+1+#day1_week-1.1)/7)*#grid_h"/>
+					<Var name="next_x2" expression="#grid_x+(#day1_week+#month_max_day+2+5)%7*#grid_w"/>
+					<Var name="next_y2" expression="#grid_y+int((#month_max_day+2+#day1_week-1.1)/7)*#grid_h"/>
+					<Var name="next_x3" expression="#grid_x+(#day1_week+#month_max_day+3+5)%7*#grid_w"/>
+					<Var name="next_y3" expression="#grid_y+int((#month_max_day+3+#day1_week-1.1)/7)*#grid_h"/>
+					<Var name="next_x4" expression="#grid_x+(#day1_week+#month_max_day+4+5)%7*#grid_w"/>
+					<Var name="next_y4" expression="#grid_y+int((#month_max_day+4+#day1_week-1.1)/7)*#grid_h"/>
+					<Var name="next_x5" expression="#grid_x+(#day1_week+#month_max_day+5+5)%7*#grid_w"/>
+					<Var name="next_y5" expression="#grid_y+int((#month_max_day+5+#day1_week-1.1)/7)*#grid_h"/>
+					<Var name="next_x6" expression="#grid_x+(#day1_week+#month_max_day+6+5)%7*#grid_w"/>
+					<Var name="next_y6" expression="#grid_y+int((#month_max_day+6+#day1_week-1.1)/7)*#grid_h"/>
+					<Var name="next_x7" expression="#grid_x+(#day1_week+#month_max_day+7+5)%7*#grid_w"/>
+					<Var name="next_y7" expression="#grid_y+int((#month_max_day+7+#day1_week-1.1)/7)*#grid_h"/>
+					<Var name="next_x8" expression="#grid_x+(#day1_week+#month_max_day+8+5)%7*#grid_w"/>
+					<Var name="next_y8" expression="#grid_y+int((#month_max_day+8+#day1_week-1.1)/7)*#grid_h"/>
+					<Var name="next_x9" expression="#grid_x+(#day1_week+#month_max_day+9+5)%7*#grid_w"/>
+					<Var name="next_y9" expression="#grid_y+int((#month_max_day+9+#day1_week-1.1)/7)*#grid_h"/>
+					<Var name="next_x10" expression="#grid_x+(#day1_week+#month_max_day+10+5)%7*#grid_w"/>
+					<Var name="next_y10" expression="#grid_y+int((#month_max_day+10+#day1_week-1.1)/7)*#grid_h"/>
+					<Var name="next_x11" expression="#grid_x+(#day1_week+#month_max_day+11+5)%7*#grid_w"/>
+					<Var name="next_y11" expression="#grid_y+int((#month_max_day+11+#day1_week-1.1)/7)*#grid_h"/>
+					<Var name="next_x12" expression="#grid_x+(#day1_week+#month_max_day+12+5)%7*#grid_w"/>
+					<Var name="next_y12" expression="#grid_y+int((#month_max_day+12+#day1_week-1.1)/7)*#grid_h"/>
+					<Var name="next_x13" expression="#grid_x+(#day1_week+#month_max_day+13+5)%7*#grid_w"/>
+					<Var name="next_y13" expression="#grid_y+int((#month_max_day+13+#day1_week-1.1)/7)*#grid_h"/>
+					<Var name="next_x14" expression="#grid_x+(#day1_week+#month_max_day+14+5)%7*#grid_w"/>
+					<Var name="next_y14" expression="#grid_y+int((#month_max_day+14+#day1_week-1.1)/7)*#grid_h"/>
+					<Var name="date_current_x" expression="#grid_x+(#day1_week+#date+5)%7*#grid_w"/>
+					<Var name="date_current_y" expression="#grid_y+int((#date+#day1_week-1.1)/7)*#grid_h"/>
+					<Var name="transboundary_y" expression="#grid_y+5*#grid_h+10"/>
+					<Group x="0" y="0">
+						<Text x="#grid_x" y="#grid_y-#grid_h" align="center" alignV="center" text="一" size="45" color="@t_color"/>
+						<Text x="#grid_x+#grid_w" y="#grid_y-#grid_h" align="center" alignV="center" text="二" size="50" color="@t_color"/>
+						<Text x="#grid_x+#grid_w*2" y="#grid_y-#grid_h" align="center" alignV="center" text="三" size="50" color="@t_color"/>
+						<Text x="#grid_x+#grid_w*3" y="#grid_y-#grid_h" align="center" alignV="center" text="四" size="50" color="@t_color"/>
+						<Text x="#grid_x+#grid_w*4" y="#grid_y-#grid_h" align="center" alignV="center" text="五" size="50" color="@t_color"/>
+						<Text x="#grid_x+#grid_w*5" y="#grid_y-#grid_h" align="center" alignV="center" text="六" size="50" color="@t_color"/>
+						<Text x="#grid_x+#grid_w*6" y="#grid_y-#grid_h" align="center" alignV="center" text="日" size="50" color="@t_color"/>
+						<Line x="90" y="#grid_y-#grid_h/2" x1="890" y1="#grid_y-#grid_h/2" strokeColor="@t_color" cap="round" weight="2" alpha="100"/>
+						<Group x="0" y="0">
+							<Image x="#last_date1_x" y="#y1" align="center" alignV="center" srcid="#last_month_max_day" alpha="125" src="rl/miui_ic_menu_today_p.png" visibility="#day1_week-1"/>
+							<Image x="#last_date2_x" y="#y1" align="center" alignV="center" srcid="#last_month_max_day-1" alpha="125" src="rl/miui_ic_menu_today_p.png" visibility="#day1_week-2"/>
+							<Image x="#last_date3_x" y="#y1" align="center" alignV="center" srcid="#last_month_max_day-2" alpha="125" src="rl/miui_ic_menu_today_p.png" visibility="#day1_week-3"/>
+							<Image x="#last_date4_x" y="#y1" align="center" alignV="center" srcid="#last_month_max_day-3" alpha="125" src="rl/miui_ic_menu_today_p.png" visibility="#day1_week-4"/>
+							<Image x="#last_date5_x" y="#y1" align="center" alignV="center" srcid="#last_month_max_day-4" alpha="125" src="rl/miui_ic_menu_today_p.png" visibility="#day1_week-5"/>
+							<Image x="#last_date6_x" y="#y1" align="center" alignV="center" srcid="#last_month_max_day-5" alpha="125" src="rl/miui_ic_menu_today_p.png" visibility="#day1_week-6"/>
+							<Image x="#next_x1" y="#next_y1" align="center" alignV="center" srcid="1" src="rl/miui_ic_menu_today_p.png" alpha="88" visibility="le(#next_y1,#transboundary_y)"/>
+							<Image x="#next_x2" y="#next_y2" align="center" alignV="center" srcid="2" src="rl/miui_ic_menu_today_p.png" alpha="88" visibility="le(#next_y2,#transboundary_y)"/>
+							<Image x="#next_x3" y="#next_y3" align="center" alignV="center" srcid="3" src="rl/miui_ic_menu_today_p.png" alpha="88" visibility="le(#next_y3,#transboundary_y)"/>
+							<Image x="#next_x4" y="#next_y4" align="center" alignV="center" srcid="4" src="rl/miui_ic_menu_today_p.png" alpha="88" visibility="le(#next_y4,#transboundary_y)"/>
+							<Image x="#next_x5" y="#next_y5" align="center" alignV="center" srcid="5" src="rl/miui_ic_menu_today_p.png" alpha="88" visibility="le(#next_y5,#transboundary_y)"/>
+							<Image x="#next_x6" y="#next_y6" align="center" alignV="center" srcid="6" src="rl/miui_ic_menu_today_p.png" alpha="88" visibility="le(#next_y6,#transboundary_y)"/>
+							<Image x="#next_x7" y="#next_y7" align="center" alignV="center" srcid="7" src="rl/miui_ic_menu_today_p.png" alpha="88" visibility="le(#next_y7,#transboundary_y)"/>
+							<Image x="#next_x8" y="#next_y8" align="center" alignV="center" srcid="8" src="rl/miui_ic_menu_today_p.png" alpha="88" visibility="le(#next_y8,#transboundary_y)"/>
+							<Image x="#next_x9" y="#next_y9" align="center" alignV="center" srcid="9" src="rl/miui_ic_menu_today_p.png" alpha="88" visibility="le(#next_y9,#transboundary_y)"/>
+							<Image x="#next_x10" y="#next_y10" align="center" alignV="center" srcid="10" src="rl/miui_ic_menu_today_p.png" alpha="88" visibility="le(#next_y10,#transboundary_y)"/>
+							<Image x="#next_x11" y="#next_y11" align="center" alignV="center" srcid="11" src="rl/miui_ic_menu_today_p.png" alpha="88" visibility="le(#next_y11,#transboundary_y)"/>
+							<Image x="#next_x12" y="#next_y12" align="center" alignV="center" srcid="12" src="rl/miui_ic_menu_today_p.png" alpha="88" visibility="le(#next_y12,#transboundary_y)"/>
+							<Image x="#next_x13" y="#next_y13" align="center" alignV="center" srcid="13" src="rl/miui_ic_menu_today_p.png" alpha="88" visibility="le(#next_y13,#transboundary_y)"/>
+							<Image x="#next_x14" y="#next_y14" align="center" alignV="center" srcid="14" src="rl/miui_ic_menu_today_p.png" alpha="88" visibility="le(#next_y14,#transboundary_y)"/>
+							<Image x="#x1" y="#y1" align="center" alignV="center" srcid="1" src="rl/miui_ic_menu_today_p.png" visibility="not(eq(#date,1))"/>
+							<Image x="#x2" y="#y2" align="center" alignV="center" srcid="2" src="rl/miui_ic_menu_today_p.png" visibility="not(eq(#date,2))"/>
+							<Image x="#x3" y="#y3" align="center" alignV="center" srcid="3" src="rl/miui_ic_menu_today_p.png" visibility="not(eq(#date,3))"/>
+							<Image x="#x4" y="#y4" align="center" alignV="center" srcid="4" src="rl/miui_ic_menu_today_p.png" visibility="not(eq(#date,4))"/>
+							<Image x="#x5" y="#y5" align="center" alignV="center" srcid="5" src="rl/miui_ic_menu_today_p.png" visibility="not(eq(#date,5))"/>
+							<Image x="#x6" y="#y6" align="center" alignV="center" srcid="6" src="rl/miui_ic_menu_today_p.png" visibility="not(eq(#date,6))"/>
+							<Image x="#x7" y="#y7" align="center" alignV="center" srcid="7" src="rl/miui_ic_menu_today_p.png" visibility="not(eq(#date,7))"/>
+							<Image x="#x8" y="#y8" align="center" alignV="center" srcid="8" src="rl/miui_ic_menu_today_p.png" visibility="not(eq(#date,8))"/>
+							<Image x="#x9" y="#y9" align="center" alignV="center" srcid="9" src="rl/miui_ic_menu_today_p.png" visibility="not(eq(#date,9))"/>
+							<Image x="#x10" y="#y10" align="center" alignV="center" srcid="10" src="rl/miui_ic_menu_today_p.png" visibility="not(eq(#date,10))"/>
+							<Image x="#x11" y="#y11" align="center" alignV="center" srcid="11" src="rl/miui_ic_menu_today_p.png" visibility="not(eq(#date,11))"/>
+							<Image x="#x12" y="#y12" align="center" alignV="center" srcid="12" src="rl/miui_ic_menu_today_p.png" visibility="not(eq(#date,12))"/>
+							<Image x="#x13" y="#y13" align="center" alignV="center" srcid="13" src="rl/miui_ic_menu_today_p.png" visibility="not(eq(#date,13))"/>
+							<Image x="#x14" y="#y14" align="center" alignV="center" srcid="14" src="rl/miui_ic_menu_today_p.png" visibility="not(eq(#date,14))"/>
+							<Image x="#x15" y="#y15" align="center" alignV="center" srcid="15" src="rl/miui_ic_menu_today_p.png" visibility="not(eq(#date,15))"/>
+							<Image x="#x16" y="#y16" align="center" alignV="center" srcid="16" src="rl/miui_ic_menu_today_p.png" visibility="not(eq(#date,16))"/>
+							<Image x="#x17" y="#y17" align="center" alignV="center" srcid="17" src="rl/miui_ic_menu_today_p.png" visibility="not(eq(#date,17))"/>
+							<Image x="#x18" y="#y18" align="center" alignV="center" srcid="18" src="rl/miui_ic_menu_today_p.png" visibility="not(eq(#date,18))"/>
+							<Image x="#x19" y="#y19" align="center" alignV="center" srcid="19" src="rl/miui_ic_menu_today_p.png" visibility="not(eq(#date,19))"/>
+							<Image x="#x20" y="#y20" align="center" alignV="center" srcid="20" src="rl/miui_ic_menu_today_p.png" visibility="not(eq(#date,20))"/>
+							<Image x="#x21" y="#y21" align="center" alignV="center" srcid="21" src="rl/miui_ic_menu_today_p.png" visibility="not(eq(#date,21))"/>
+							<Image x="#x22" y="#y22" align="center" alignV="center" srcid="22" src="rl/miui_ic_menu_today_p.png" visibility="not(eq(#date,22))"/>
+							<Image x="#x23" y="#y23" align="center" alignV="center" srcid="23" src="rl/miui_ic_menu_today_p.png" visibility="not(eq(#date,23))"/>
+							<Image x="#x24" y="#y24" align="center" alignV="center" srcid="24" src="rl/miui_ic_menu_today_p.png" visibility="not(eq(#date,24))"/>
+							<Image x="#x25" y="#y25" align="center" alignV="center" srcid="25" src="rl/miui_ic_menu_today_p.png" visibility="not(eq(#date,25))"/>
+							<Image x="#x26" y="#y26" align="center" alignV="center" srcid="26" src="rl/miui_ic_menu_today_p.png" visibility="not(eq(#date,26))"/>
+							<Image x="#x27" y="#y27" align="center" alignV="center" srcid="27" src="rl/miui_ic_menu_today_p.png" visibility="not(eq(#date,27))"/>
+							<Image x="#x28" y="#y28" align="center" alignV="center" srcid="28" src="rl/miui_ic_menu_today_p.png" visibility="not(eq(#date,28))"/>
+							<Image x="#x29" y="#y29" align="center" alignV="center" srcid="29" src="rl/miui_ic_menu_today_p.png" visibility="not(eq(#date,29))*#display29"/>
+							<Image x="#x30" y="#y30" align="center" alignV="center" srcid="30" src="rl/miui_ic_menu_today_p.png" visibility="not(eq(#date,30))*#display30"/>
+							<Image x="#x31" y="#y31" align="center" alignV="center" srcid="31" src="rl/miui_ic_menu_today_p.png" visibility="not(eq(#date,31))*#display31"/>
+								<Circle x="#date_current_x" y="#date_current_y" r="40" align="center" alignV="center" weight="2" fillColor="#00000000" strokeColor="@t_color" alpha="220"/>
+								<Image x="#date_current_x" y="#date_current_y" align="center" alignV="center" src="rl/miui_ic_menu_today_p.png" srcid="#date"/>
+						</Group>
+					</Group>
+				</Group>
+			</Group>
+	</Group>
+	<Group visibility="eq(#change_list,4)">	
+		<Var name="note_ani">
+			<VariableAnimation initPause="true" loop="false">
+				<AniFrame value="0" time="0"/>
+				<AniFrame value="-908" time="300"/>
+				<AniFrame value="0" time="600"/>
+			</VariableAnimation>
+		</Var>
+		<Image x="170" y="0" w="910" h="200-#note_ani/11" src="item/white.9.png" alpha="100"/>
+		<Image x="170" y="1920" alignV="bottom" w="910" h="200+#note_ani" src="item/white.9.png" alpha="100"/>
+		<Group visibility="ne(#note_ani,-908)">
+			<Text x="626+#note_ani" y="130" align="center" alignV="center" color="@t_color" size="40" text="便签" alpha="300+#note_ani/3"/>
+			<Var name="note_snippet_v" index="0" size="10" expression="@note_snippet_1" type="string[]"/>
+			<Var name="note_snippet_v" index="1" expression="@note_snippet_2" type="string[]"/>
+			<Var name="note_snippet_v" index="2" expression="@note_snippet_3" type="string[]"/>
+			<Var name="note_snippet_v" index="3" expression="@note_snippet_4" type="string[]"/>
+			<Var name="note_snippet_v" index="4" expression="@note_snippet_5" type="string[]"/>	
+			<Var name="note_snippet_v" index="5" expression="@note_snippet_6" type="string[]"/>	
+			<Var name="note_snippet_v" index="6" expression="@note_snippet_7" type="string[]"/>	
+			<Var name="note_snippet_v" index="7" expression="@note_snippet_8" type="string[]"/>	
+			<Var name="note_snippet_v" index="8" expression="@note_snippet_9" type="string[]"/>	
+			<Var name="note_snippet_v" index="9" expression="@note_snippet_10" type="string[]"/>
+			<Var name="note_date_v" index="0" size="10" expression="#note_date_1" type="number[]"/>
+			<Var name="note_date_v" index="1" expression="#note_date_2" type="number[]"/>
+			<Var name="note_date_v" index="2" expression="#note_date_3" type="number[]"/>
+			<Var name="note_date_v" index="3" expression="#note_date_4" type="number[]"/>
+			<Var name="note_date_v" index="4" expression="#note_date_5" type="number[]"/>	
+			<Var name="note_date_v" index="5" expression="#note_date_6" type="number[]"/>	
+			<Var name="note_date_v" index="6" expression="#note_date_7" type="number[]"/>	
+			<Var name="note_date_v" index="7" expression="#note_date_8" type="number[]"/>	
+			<Var name="note_date_v" index="8" expression="#note_date_9" type="number[]"/>	
+			<Var name="note_date_v" index="9" expression="#note_date_10" type="number[]"/>
+			<Array count="10" indexName="__notelist">
+				<Group x="300+#note_ani*(1+#__notelist*0.2)" y="370+140*#__notelist" visibility="ge(#note_count,#__notelist+1)">
+					<Text w="600" alignV="center" color="@t_color" size="45" textExp="strTrim(@note_snippet_v[#__notelist])" multiLine="false" marqueeSpeed="20"/>
+					<DateTime x="#screen_width-330" align="right" alignV="center" color="@t_color" size="35" value="#note_date_v[#__notelist]" format="MM/dd"/>
+				</Group>
+			</Array>
+			<Circle x="300+#note_ani-55" y="370" r="15" fillColor="@color_vv1" visibility="len(@note_snippet_1)"/>
+			<Circle x="300+#note_ani*1.2-55" y="370+140" r="15" fillColor="@color_vv2" visibility="len(@note_snippet_2)"/>
+			<Circle x="300+#note_ani*1.4-55" y="370+140*2" r="15" fillColor="@color_vv3" visibility="len(@note_snippet_3)"/>
+			<Circle x="300+#note_ani*1.6-55" y="370+140*3" r="15" fillColor="@color_vv4" visibility="len(@note_snippet_4)"/>
+			<Circle x="300+#note_ani*1.8-55" y="370+140*4" r="15" fillColor="@color_vv5" visibility="len(@note_snippet_5)"/>
+			<Circle x="300+#note_ani*2-55" y="370+140*5" r="15" fillColor="@color_vv6" visibility="len(@note_snippet_6)"/>
+			<Circle x="300+#note_ani*2.2-55" y="370+140*6" r="15" fillColor="@color_vv7" visibility="len(@note_snippet_7)"/>
+			<Circle x="300+#note_ani*2.4-55" y="370+140*7" r="15" fillColor="@color_vv8" visibility="len(@note_snippet_8)"/>
+			<Circle x="300+#note_ani*2.6-55" y="370+140*8" r="15" fillColor="@color_vv9" visibility="len(@note_snippet_9)"/>
+			<Circle x="300+#note_ani*2.8-55" y="370+140*9" r="15" fillColor="@color_vv10" visibility="len(@note_snippet_10)"/>
+			<Array name="note_list_button" count="10" indexName="__i" >
+				<Image x="185+#note_ani" y="299+140*#__i" w="882" h="2" alignV="center" src="item/white.9.png" alpha="100" visibility="ge(#note_count,#__i)"/>
+				<Button x="172" y="370+140*#__i" w="918" h="130" alignV="center" visibility="eq(#left_ani,390)*eq(#note_ani,0)*gt(#note_count,#__i)">
+					<Triggers>
+						<Trigger action="down">
+							<VariableCommand name="point_note" expression="#__i+1"/>
+						</Trigger>
+						<Trigger action="up">
+							<Command target="note_ani.animation" value="play(0,300)"/>
+						</Trigger>
+					</Triggers>
+					<Pressed>
+						<Image x="172" y="370+140*#__i" w="918" h="140" alignV="center" src="item/white.9.png" alpha="100"/>
+					</Pressed>
+				</Button>
+			</Array>
+			<Button x="626" y="1805" w="100" h="100" align="center" alignV="center" visibility="eq(#left_ani,390)">
+				<Triggers>
+					<Trigger action="up">
+						<IntentCommand action="android.intent.action.INSERT_OR_EDIT" type="vnd.android.cursor.item/text_note"/>
+						<ExternCommand command="unlock"/>
+					</Trigger>
+				</Triggers>
+				<Pressed>
+					<Image x="626" y="1795" align="center" alignV="center" src="item/p.png"/>
+				</Pressed>
+			</Button>
+			<Image x="626" y="1820" align="center" alignV="center" src="item/note/new.png" alpha="300+#note_ani/3"/>
+		</Group>
+		<Group visibility="ne(#note_ani,0)">
+			<Group x="1080+#note_ani">
+				<VarArray type="string">
+					<Vars>
+						<Var name="point_notev" index="#point_note-1" />
+					</Vars>
+					<Items>
+						<Item expression="@note_snippet_1" />
+						<Item expression="@note_snippet_2" />
+						<Item expression="@note_snippet_3" />
+						<Item expression="@note_snippet_4" />
+						<Item expression="@note_snippet_5" />
+						<Item expression="@note_snippet_6" />
+						<Item expression="@note_snippet_7" />
+						<Item expression="@note_snippet_8" />
+						<Item expression="@note_snippet_9" />
+						<Item expression="@note_snippet_10" />
+					</Items>
+				</VarArray>
+				<Text name="note_name" x="70" y="350" w="772" h="1370" color="@t_color" size="45" textExp="@point_notev" multiLine="true" spacingMult="1.3"/>
+			<VarArray>
+					<Vars>
+						<Var name="id" index="#point_note-1" />
+					</Vars>
+				<Items>
+					<Item expression="#id_1"/>
+					<Item expression="#id_2"/>
+					<Item expression="#id_3"/>
+					<Item expression="#id_4"/>
+					<Item expression="#id_5"/>
+					<Item expression="#id_6"/>
+					<Item expression="#id_7"/>
+					<Item expression="#id_8"/>
+					<Item expression="#id_9"/>
+					<Item expression="#id_10"/>
+				</Items>
+			</VarArray>
+			<Button x="454" y="1805" w="100" h="100" align="center" alignV="center">
+				<Triggers>
+					<Trigger action="up">
+						<IntentCommand action="android.intent.action.VIEW" type="vnd.android.cursor.item/text_note">
+							<Extra name="android.intent.extra.UID" type="long" expression="#id" />
+						</IntentCommand>
+						<ExternCommand command="unlock"/>
+					</Trigger>
+				</Triggers>
+				<Pressed>
+					<Image x="454" y="1795" align="center" alignV="center" src="item/p.png"/>
+				</Pressed>
+			</Button>
+			</Group>
+			<Button x="240" y="175" w="100" h="100" align="center" alignV="center" visibility="eq(#note_ani,-908)*eq(#menu_ani,0)">
+				<Triggers>
+					<Trigger action="up">
+						<Command target="note_ani.animation" value="play(300,600)"/>
+					</Trigger>
+				</Triggers>
+				<Pressed>
+					<Image x="240" y="175" align="center" alignV="center" src="item/p.png"/>
+				</Pressed>
+			</Button>
+			<Group x="200" alpha="-#note_ani/3.56-#menu_ani">
+				<DateTime x="108" y="120" color="@t_color" size="45" value="#note_date_v[#point_note-1]" format="yyyy年M月dd日"/>
+				<DateTime x="108" y="185" color="@t_color" size="35" value="#note_date_v[#point_note-1]" format="EEEE H:mm" visibility="#time_format" alpha="150"/>
+				<DateTime x="108" y="185" color="@t_color" size="35" value="#note_date_v[#point_note-1]" format="EEEE aa h:mm" visibility="not(#time_format)" alpha="150"/>
+				<Image x="40" y="175" align="center" alignV="center" src="item/note_back.png"/>
+			</Group>
+			<Image x="626" y="1820" align="center" alignV="center" src="item/note/bj.png" visibility="lt(#note_name.text_height,1370)" alpha="-#note_ani/3"/>
+			<Image x="626" y="1820" align="center" alignV="center" src="item/note/more.png" visibility="ge(#note_name.text_height,1370)" alpha="-#note_ani/3"/>
+			<Var name="color_y_v_bg" expression="ifelse(eq(#color_y,1),'#ffd867',eq(#color_y,2),'#ff5f3d',eq(#color_y,3),'#00c598',eq(#color_y,4),'#ffbdb4',eq(#color_y,5),'#00b2db',eq(#color_y,6),'#76e3ff',eq(#color_y,7),'@t_color','@t_color')" type="string"/>
+			<Var name="menu_ani">
+				<VariableAnimation initPause="true" loop="false">
+					<AniFrame value="0" time="0" easeType="BackEaseOut"/>
+					<AniFrame value="300" time="500"/>
+					<AniFrame value="0" time="900"/>
+				</VariableAnimation>
+			</Var>
+			<Button x="975" y="175" w="100" h="100" align="center" alignV="center" visibility="eq(#menu_ani,0)">
+				<Triggers>
+					<Trigger action="up">
+						<Command target="menu_ani.animation" value="play(0,500)"/>
+					</Trigger>
+				</Triggers>
+				<Pressed>
+					<Image x="975" y="175" align="center" alignV="center" src="item/p.png"/>
+				</Pressed>
+			</Button>
+			<Button x="172" y="300" w="908" h="1920">
+				<Triggers>
+					<Trigger action="up">
+						<Command target="menu_ani.animation" value="play(500,900)" condition="eq(#menu_ani,300)"/>
+					</Trigger>
+				</Triggers>
+			</Button>300- 840  540
+			<Image x="975" y="175" align="center" alignV="center" src="item/note/flag.png" alpha="-#note_ani/3.56-#menu_ani"/>
+			<Line x="0" y="285" x1="1080" y1="285" strokeColor="@color_y_v_bg" weight="5" cap="round" alpha="-#note_ani/3.56"/>
+			<Var name="color_y" expression="ifelse(eq(#point_note,1),#color_note1,eq(#point_note,2),#color_note2,eq(#point_note,3),#color_note3,eq(#point_note,4),#color_note4,eq(#point_note,5),#color_note5,eq(#point_note,6),#color_note6,eq(#point_note,7),#color_note7,eq(#point_note,8),#color_note8,eq(#point_note,9),#color_note9,eq(#point_note,10),#color_note10,0)"/>
+			<Var name="color_y_v" expression="ifelse(eq(#color_y,1),0.9,eq(#color_y,2),1.29,eq(#color_y,3),1.69,eq(#color_y,4),2.08,eq(#color_y,5),2.48,eq(#color_y,6),2.87,eq(#color_y,7),3.27,3.27)"/>
+			<Var name="color_vv1" expression="ifelse(eq(#color_note1,1),'#ffd867',eq(#color_note1,2),'#ff5f3d',eq(#color_note1,3),'#00c598',eq(#color_note1,4),'#ffbdb4',eq(#color_note1,5),'#00b2db',eq(#color_note1,6),'#76e3ff',eq(#color_note1,7),'@t_color','#002051')" type="string"/>
+			<Var name="color_vv2" expression="ifelse(eq(#color_note2,1),'#ffd867',eq(#color_note2,2),'#ff5f3d',eq(#color_note2,3),'#00c598',eq(#color_note2,4),'#ffbdb4',eq(#color_note2,5),'#00b2db',eq(#color_note2,6),'#76e3ff',eq(#color_note2,7),'#002051','#002051')" type="string"/>
+			<Var name="color_vv3" expression="ifelse(eq(#color_note3,1),'#ffd867',eq(#color_note3,2),'#ff5f3d',eq(#color_note3,3),'#00c598',eq(#color_note3,4),'#ffbdb4',eq(#color_note3,5),'#00b2db',eq(#color_note3,6),'#76e3ff',eq(#color_note3,7),'#002051','#002051')" type="string"/>
+			<Var name="color_vv4" expression="ifelse(eq(#color_note4,1),'#ffd867',eq(#color_note4,2),'#ff5f3d',eq(#color_note4,3),'#00c598',eq(#color_note4,4),'#ffbdb4',eq(#color_note4,5),'#00b2db',eq(#color_note4,6),'#76e3ff',eq(#color_note4,7),'#002051','#002051')" type="string"/>
+			<Var name="color_vv5" expression="ifelse(eq(#color_note5,1),'#ffd867',eq(#color_note5,2),'#ff5f3d',eq(#color_note5,3),'#00c598',eq(#color_note5,4),'#ffbdb4',eq(#color_note5,5),'#00b2db',eq(#color_note5,6),'#76e3ff',eq(#color_note5,7),'#002051','#002051')" type="string"/>
+			<Var name="color_vv6" expression="ifelse(eq(#color_note6,1),'#ffd867',eq(#color_note6,2),'#ff5f3d',eq(#color_note6,3),'#00c598',eq(#color_note6,4),'#ffbdb4',eq(#color_note6,5),'#00b2db',eq(#color_note6,6),'#76e3ff',eq(#color_note6,7),'#002051','#002051')" type="string"/>
+			<Var name="color_vv7" expression="ifelse(eq(#color_note7,1),'#ffd867',eq(#color_note7,2),'#ff5f3d',eq(#color_note7,3),'#00c598',eq(#color_note7,4),'#ffbdb4',eq(#color_note7,5),'#00b2db',eq(#color_note7,6),'#76e3ff',eq(#color_note7,7),'#002051','#002051')" type="string"/>
+			<Var name="color_vv8" expression="ifelse(eq(#color_note8,1),'#ffd867',eq(#color_note8,2),'#ff5f3d',eq(#color_note8,3),'#00c598',eq(#color_note8,4),'#ffbdb4',eq(#color_note8,5),'#00b2db',eq(#color_note8,6),'#76e3ff',eq(#color_note8,7),'#002051','#002051')" type="string"/>
+			<Var name="color_vv9" expression="ifelse(eq(#color_note9,1),'#ffd867',eq(#color_note9,2),'#ff5f3d',eq(#color_note9,3),'#00c598',eq(#color_note9,4),'#ffbdb4',eq(#color_note9,5),'#00b2db',eq(#color_note9,6),'#76e3ff',eq(#color_note9,7),'#002051','#002051')" type="string"/>
+			<Var name="color_vv10" expression="ifelse(eq(#color_note10,1),'#ffd867',eq(#color_note10,2),'#ff5f3d',eq(#color_note10,3),'#00c598',eq(#color_note10,4),'#ffbdb4',eq(#color_note10,5),'#00b2db',eq(#color_note10,6),'#76e3ff',eq(#color_note10,7),'#002051','#002051')" type="string"/>
+			<Circle x="#menu_ani*#color_y_v" y="175" r="35" fillColor="#30002051"/>
+			<Circle x="#menu_ani*0.9" y="175" r="20" fillColor="#ffd867"/>
+			<Circle x="#menu_ani*1.29" y="175" r="20" fillColor="#ff5f3d"/>
+			<Circle x="#menu_ani*1.69" y="175" r="20" fillColor="#00c598"/>
+			<Circle x="#menu_ani*2.08" y="175" r="20" fillColor="#ffbdb4"/>
+			<Circle x="#menu_ani*2.48" y="175" r="20" fillColor="#00b2db"/>
+			<Circle x="#menu_ani*2.87" y="175" r="20" fillColor="#76e3ff"/>
+			<Circle x="#menu_ani*3.27" y="175" r="20" fillColor="#002051"/>
+			<Array name="color_button" count="10" indexName="__i" >
+				<Button x="270+118.6*min(#__i,7)" y="175" w="60" h="60" align="center" alignV="center" visibility="eq(#menu_ani,300)">
+					<Triggers>
+						<Trigger action="up">
+							<VariableCommand name="color_note1" expression="#__i+1" persist="true" condition="eq(#point_note,1)"/>
+							<VariableCommand name="color_note2" expression="#__i+1" persist="true" condition="eq(#point_note,2)"/>
+							<VariableCommand name="color_note3" expression="#__i+1" persist="true" condition="eq(#point_note,3)"/>
+							<VariableCommand name="color_note4" expression="#__i+1" persist="true" condition="eq(#point_note,4)"/>
+							<VariableCommand name="color_note5" expression="#__i+1" persist="true" condition="eq(#point_note,5)"/>
+							<VariableCommand name="color_note6" expression="#__i+1" persist="true" condition="eq(#point_note,6)"/>
+							<VariableCommand name="color_note7" expression="#__i+1" persist="true" condition="eq(#point_note,7)"/>
+							<VariableCommand name="color_note8" expression="#__i+1" persist="true" condition="eq(#point_note,8)"/>
+							<VariableCommand name="color_note9" expression="#__i+1" persist="true" condition="eq(#point_note,9)"/>
+							<VariableCommand name="color_note10" expression="#__i+1" persist="true" condition="eq(#point_note,10)"/>
+						</Trigger>
+					</Triggers>
+				</Button>
+			</Array>
+		</Group>
+	</Group>
+	<Group visibility="eq(#change_list,5)">	
+			<Button x="626" y="935" w="390" h="130" align="right" alignV="center">
+				<Triggers>
+					<Trigger action="up" condition="eq(#clock_alpha,555)*eq(#left_ani,390)">
+						<Command target="clock_ani.animation" value="play(1500,2000)"/>
+						<VariableCommand name="mb_mode" expression="0"/>
+					</Trigger>
+				</Triggers>
+				<Normal>
+					<Image x="626" y="935" align="center" alignV="center" src="item/clock/mode.png" srcid="#mb_mode+1"/>
+				</Normal>
+				<Pressed>
+					<Image x="626" y="935" align="center" alignV="center" src="item/clock/mode_1_p.png" visibility="eq(#clock_alpha,555)*eq(#left_ani,390)"/>
+				</Pressed>
+			</Button>
+			<Button x="626" y="935" w="390" h="130" align="left" alignV="center">
+				<Triggers>
+					<Trigger action="up" condition="eq(#clock_alpha,255)*eq(#left_ani,390)">
+						<Command target="clock_ani.animation" value="play(1100,1500)"/>
+						<VariableCommand name="mb_mode" expression="1"/>
+					</Trigger>
+				</Triggers>
+				<Normal>
+					<Image x="626" y="935" align="center" alignV="center" src="item/clock/mode.png" srcid="#mb_mode+1"/>
+				</Normal>
+				<Pressed>
+					<Image x="626" y="935" align="center" alignV="center" src="item/clock/mode_2_p.png" visibility="eq(#clock_alpha,255)*eq(#left_ani,390)"/>
+				</Pressed>
+			</Button>
+		<Var name="hour_angle_raw" expression="#hour12*30+#minute/2"/>
+		<Var name="minute_angle_raw" expression="#time_sys%3600000*0.0001"/>
+		<Var name="second_angle_raw" expression="#time_sys%60000*0.006"/>
+		<Group name="clock_ani">
+			<Var name="hour_dh">
+				<VariableAnimation loop="false" initPause="true">
+					<AniFrame value="-#hour_angle_raw" time="0" easeType="QuadEaseOut"/>
+					<AniFrame value="0" time="800"/>
+					<AniFrame value="0" time="1100" easeType="QuadEaseOut"/>
+					<AniFrame value="-#hour_angle_raw" time="1500" easeType="QuadEaseOut"/>
+					<AniFrame value="0" time="2000"/>
+				</VariableAnimation>
+			</Var>
+			<Var name="minute_dh">
+				<VariableAnimation loop="false" initPause="true">
+					<AniFrame value="-#minute_angle_raw" time="0" easeType="QuadEaseOut"/>
+					<AniFrame value="0" time="900"/>
+					<AniFrame value="0" time="1100" easeType="QuadEaseOut"/>
+					<AniFrame value="-#minute_angle_raw" time="1500" easeType="QuadEaseOut"/>
+					<AniFrame value="0" time="2000"/>
+				</VariableAnimation>
+			</Var>
+			<Var name="second_dh">
+				<VariableAnimation loop="false" initPause="true">
+					<AniFrame value="-#second_angle_raw" time="0" easeType="QuadEaseOut"/>
+					<AniFrame value="0" time="1000"/>
+					<AniFrame value="0" time="1100" easeType="QuadEaseOut"/>
+					<AniFrame value="-#second_angle_raw+#mb_zz" time="1500" easeType="QuadEaseOut"/>
+					<AniFrame value="0" time="2000"/>
+				</VariableAnimation>
+			</Var>
+			<Var name="clock_alpha">
+				<VariableAnimation loop="false" initPause="true">
+					<AniFrame value="0" time="0"/>
+					<AniFrame value="255" time="1000"/>
+					<AniFrame value="300" time="1100"/>
+					<AniFrame value="555" time="1500"/>
+					<AniFrame value="255" time="2000"/>
+				</VariableAnimation>
+			</Var>
+		</Group>
+		<Image x="626" y="450" align="center" alignV="center" src="item/clock/bg.png"/>
+		<Group alpha="555-#clock_alpha" visibility="555-#clock_alpha">
+			<Time x="626" y="550" align="center" alignV="center" src="item/t1/time.png" alpha="230"/>
+			<Image x="626" y="450" pivotX="50" pivotY="330" rotation="#hour_dh+#hour_angle_raw" align="center" alignV="center" src="item/clock/hour.png" alpha="220"/>
+			<Image x="626" y="450" pivotX="50" pivotY="330" rotation="#minute_dh+#minute_angle_raw" align="center" alignV="center" src="item/clock/minutes.png" alpha="230"/>
+			<DateTime x="626" y="835" size="30" color="@t_color" align="center" alignV="center" format="zzzz(ZZZZ)" alpha="180"/>
+			<DateTime x="626" y="1130" size="50" color="@t_color" align="center" alignV="center" format="yyyy年MM月dd日 EEEE" alpha="230"/>
+			<DateTime x="626" y="1230" size="50" color="@t_color" align="center" alignV="center" format="农历  NNNN" alpha="230"/>
+			<Text x="626" y="1330" size="50" color="@t_color" align="center" alignV="center" textExp="ifelse(len(@next_alarm_time),'闹钟：' + @next_alarm_time,'请设置闹钟')"/>
+			<Button x="626" y="1330" w="300" h="60" align="center" alignV="center" visibility="isnull(@next_alarm_time)">
+				<Triggers>
+					<Trigger action="up">
+						<IntentCommand action="android.intent.action.MAIN" package="com.android.deskclock" class="com.android.deskclock.DeskClockTabActivity"/>
+						<ExternCommand command="unlock"/>	
+					</Trigger>
+				</Triggers>
+			</Button>
+			<!--本倒计时代码由YAY（177132101）提供，Sunny个人修改 ＱＱ群：271909985 （MIUI中国－小米主题进阶）-->
+			<Var name="to" expression="1" />
+			<Var name="lya" expression="eq((#year%4),0)*ne((#year%100),0)+eq((#year%400),0)" />
+			<Var name="da" expression="(ge(#month,1)*31+(28+#lya)*ge(#month,2)+ge(#month,3)*31+ge(#month,4)*30+ge(#month,5)*31+ge(#month,6)*30+ge(#month,7)*31+ge(#month,8)*31+ge(#month,9)*30+ge(#month,10)*31+ge(#month,11)*30+ge(#month,12)*31)+(365*#year+int(#year/4)+int(#year/400)-int(#year/100))+#date-1" />
+			<Var name="fa" expression="#hour24*60+#minute" />
+			<Var name="lyz1" expression="eq((#y1111111%4),0)*ne((#y1111111%100),0)+eq((#y1111111%400),0)"  />
+			<Var name="dz1" expression="(gt(#m1,1)*31+(28+#lyz1)*gt(#m1,2)+gt(#m1,3)*31+gt(#m1,4)*30+gt(#m1,5)*31+gt(#m1,6)*30+gt(#m1,7)*31+gt(#m1,8)*31+gt(#m1,9)*30+gt(#m1,10)*31+gt(#m1,11)*30+gt(#m1,12)*31)+(365*#y1111111+int(#y1111111/4)+int(#y1111111/400)-int(#y1111111/100))+#d1-1" />
+			<Var name="vvv1" expression="ge(#dz1*1440+#fz1,#da*1440+#fa)" />
+			<Var name="date1" expression="ifelse(#vvv1,int(abs(#dz1-#da)-gt(#fa,#fz1)),int(abs(#dz1-#da)-gt(#fz1,#fa)))" />
+			<Text name="jl_text" x="626" y="1500" size="60" color="@t_color" align="center" alignV="center" textExp="ifelse(len(@djr1),'距离'+'  '+@djr1+'  '+ifelse(#vvv1,'还有','已经'),'---')" alpha="230"/>
+			<ImageNumber x="626" y="1650" align="center" alignV="center" src="item/clock/djs/clock.png" number="#date1"/>
+			<Text x="626" y="1800" align="center" alignV="center" size="60" color="@t_color" text="天"/>
+			<Image x="626" y="1412" align="center" alignV="center" src="item/clock/line.png" alpha="180"/>
+		</Group>
+			<Var name="mb_zz" expression="#mb_ani%60000*0.006"/>
+			<Var name="jsq_zz_ani">
+				<VariableAnimation initPause="true">
+					<AniFrame value="#set_time/1000*6" time="0"/>
+					<AniFrame value="-#set_time/1000*6" time="60000"/>
+				</VariableAnimation>
+			</Var>
+			<Var name="jsq_rotation" expression="#set_time/1000*6"/>
+			<Image x="626" y="450" pivotX="50" pivotY="330" rotation="ifelse(eq(#clock_alpha,555),#mb_zz,#second_dh+#second_angle_raw)" align="center" alignV="center" src="item/clock/second.png" alpha="240"/>
+			<Var name="mb_ani">
+				<VariableAnimation initPause="true">
+					<AniFrame value="0" time="0"/>
+					<AniFrame value="10000000000" time="10000000000"/>
+				</VariableAnimation>
+			</Var>
+		<Group alpha="#clock_alpha-300-#jsq_alpha" visibility="#clock_alpha-300">300-555  0-1
+			<Image x="0" y="1920" w="1080" h="2" alignV="bottom" src="item/black.9.png"/>
+			<DateTime x="626" y="350" align="center" alignV="center" color="@t_color" size="60" format="kk:mm:ss" value="#mb_ani" visibility="ge(#mb_ani,3600000)" />
+			<Text x="626" y="350" color="@t_color" size="60" align="center" alignV="center" textExp="int(#mb_ani/1000%3600/60/10)+int(#mb_ani/1000%3600/60%10)+':'+int(#mb_ani/1000%60/10)+int(#mb_ani/1000%60%10)+'.'+int(#mb_ani/100%10)+int(#mb_ani/10%10)" visibility="lt(#mb_ani,3600000)"/>
+			<Image x="532" y="565" pivotX="51" pivotY="51" scale="#clock_alpha/555" align="center" alignV="center" src="item/clock/mb/bg.png"/>
+			<Image x="720" y="565" pivotX="51" pivotY="51" scale="#clock_alpha/555" align="center" alignV="center" src="item/clock/mb/bg.png"/>
+			<Image x="532" y="565" pivotX="51" pivotY="51" rotation="#mb_zz/60" align="center" alignV="center" src="item/clock/mb/zz.png"/>
+			<Image x="720" y="565" pivotX="51" pivotY="51" rotation="#mb_zz*60" align="center" alignV="center" src="item/clock/mb/zz.png"/>
+			<Button x="626" y="1785" align="center" alignV="center" w="200" h="200" visibility="eq(#mode_v,0)">
+				<Triggers>
+					<Trigger action="up">
+						<Command target="mb_ani.animation" value="play"/>
+						<VariableCommand name="begin_time" expression="#touch_begin_time"/>
+						<VariableCommand name="mode_v" expression="1"/>
+					</Trigger>
+				</Triggers>
+				<Normal>
+					<Image x="626" y="1785" align="center" alignV="center" src="item/clock/mb/begin_n.png"/>
+				</Normal>
+				<Pressed>
+					<Image x="626" y="1785" align="center" alignV="center" src="item/clock/mb/begin_p.png"/>
+				</Pressed>
+			</Button>
+			<Button x="626-70" y="1785" align="right" alignV="center" w="300" h="130" visibility="eq(#mode_v,1)">
+				<Triggers>
+					<Trigger action="up">
+						<Command target="mb_ani.animation" value="pause"/>
+						<VariableCommand name="mode_v" expression="2"/>
+					</Trigger>
+				</Triggers>
+				<Normal>
+					<Image x="626-70" y="1785" align="right" alignV="center" src="item/clock/mb/pause_n.png"/>
+				</Normal>
+				<Pressed>
+					<Image x="626-70" y="1785" align="right" alignV="center" src="item/clock/mb/pause_p.png"/>
+				</Pressed>
+			</Button>
+			<Button x="626+70" y="1785" align="left" alignV="center" w="300" h="130" visibility="eq(#mode_v,1)">
+				<Triggers>
+					<Trigger action="up" condition="lt(#aaa,5)">
+						<VariableCommand name="aaa" expression="min(#aaa+1,5)" />
+						<VariableCommand name="jc" type="number[]" index="#aaa-1" expression="#mb_ani" />
+					</Trigger>
+				</Triggers>
+				<Normal>
+					<Image x="626+70" y="1785" align="left" alignV="center" src="item/clock/mb/jc_n.png"/>
+				</Normal>
+				<Pressed>
+					<Image x="626+70" y="1785" align="left" alignV="center" src="item/clock/mb/jc_p.png"/>
+				</Pressed>
+			</Button>
+			<Button x="626-70" y="1785" align="right" alignV="center" w="300" h="130" visibility="eq(#mode_v,2)">
+				<Triggers>
+					<Trigger action="up">
+						<Command target="mb_ani.animation" value="resume"/>
+						<VariableCommand name="mode_v" expression="1"/>
+					</Trigger>
+				</Triggers>
+				<Normal>
+					<Image x="626-70" y="1785" align="right" alignV="center" src="item/clock/mb/resume_n.png"/>
+				</Normal>
+				<Pressed>
+					<Image x="626-70" y="1785" align="right" alignV="center" src="item/clock/mb/resume_p.png"/>
+				</Pressed>
+			</Button>
+			<Button x="626+70" y="1785" align="left" alignV="center" w="300" h="130" visibility="eq(#mode_v,2)">
+				<Triggers>
+					<Trigger action="up" delay="50">
+						<Command target="mb_ani.animation" value="play(0,0)"/>
+						<VariableCommand name="mode_v" expression="0"/>
+						<VariableCommand name="aaa" expression="0"/>
+						<VariableCommand name="jc" expression="0"/>
+						<VariableCommand name="jc" type="number[]" index="0" expression="0" />
+					</Trigger>
+				</Triggers>
+				<Normal>
+					<Image x="626+70" y="1785" align="left" alignV="center" src="item/clock/mb/cz_n.png"/>
+				</Normal>
+				<Pressed>
+					<Image x="626+70" y="1785" align="left" alignV="center" src="item/clock/mb/cz_p.png"/>
+				</Pressed>
+			</Button>
+			<Text x="626" y="835" size="35" color="@t_color" align="center" alignV="center" text="最多记录5次" alpha="200" visibility="eq(#aaa,5)"/>
+			<Var name="jc" type="number[]" size="5" const="true"/>
+			<Array count="5" indexName="__i" >
+				<!--running-->
+				<Group visibility="le(#aaa,#__i)">
+					<Image x="270" y="1130+116*#__i" alignV="center" pivotX="35" pivotY="35" rotation="#mb_zz*120" src="item/clock/mb/running.png"/>
+					<DateTime x="626" y="350" align="center" alignV="center" color="@t_color" size="60" format="kk:mm:ss" value="#mb_ani" visibility="ge(#mb_ani,3600000)" />
+					<Text x="626" y="1130+116*#__i" color="@t_color" size="60" align="center" alignV="center" textExp="int(#mb_ani/1000%3600/60/10)+int(#mb_ani/1000%3600/60%10)+':'+int(#mb_ani/1000%60/10)+int(#mb_ani/1000%60%10)+'.'+int(#mb_ani/100%10)+int(#mb_ani/10%10)" visibility="lt(#mb_ani,3600000)"/>
+					<!--add-->
+					<Text x="1000" y="1130+116*#__i" color="@t_color" alpha="120" size="40" align="right" alignV="center" text="+00:00.00" visibility="lt(#jc[#__i],3600000)"/>
+					<Text x="1000" y="1130+116*#__i" color="@t_color" alpha="120" size="40" align="right" alignV="center" text="+00:00:00" visibility="ge(#jc[#__i],3600000)"/>
+				</Group>
+				<DateTime x="626" y="1130+116*#__i" color="@t_color" size="60" align="center" alignV="center" format="kk:mm:ss" value="#jc[#__i]" visibility="ge(#jc[#__i],3600000)*#jc[#__i]*gt(#aaa,#__i)" />
+				<Text x="626" y="1130+116*#__i" color="@t_color" size="60" align="center" alignV="center" textExp="int(#jc[#__i]/1000%3600/60/10)+int(#jc[#__i]/1000%3600/60%10)+':'+int(#jc[#__i]/1000%60/10)+int(#jc[#__i]/1000%60%10)+'.'+int(#jc[#__i]/100%10)+int(#jc[#__i]/10%10)" visibility="lt(#jc[#__i],3600000)*gt(#aaa,#__i)"/>
+				<DateTime x="1000" y="1130+116*#__i" color="@t_color" alpha="120" size="40" align="right" alignV="center" format="+kk:mm:ss" value="(#jc[#__i]-#jc[#__i-1])" visibility="ge((#jc[#__i]-#jc[#__i-1]),3600000)*(#jc[#__i]-#jc[#__i-1])*gt(#aaa,#__i)" />
+				<Text x="1000" y="1130+116*#__i" color="@t_color" alpha="120" size="40" align="right" alignV="center" textExp="'+'+int((#jc[#__i]-#jc[#__i-1])/1000%3600/60/10)+int((#jc[#__i]-#jc[#__i-1])/1000%3600/60%10)+':'+int((#jc[#__i]-#jc[#__i-1])/1000%60/10)+int((#jc[#__i]-#jc[#__i-1])/1000%60%10)+'.'+int((#jc[#__i]-#jc[#__i-1])/100%10)+int((#jc[#__i]-#jc[#__i-1])/10%10)" visibility="lt((#jc[#__i]-#jc[#__i-1]),3600000)*gt(#aaa,#__i)"/>
+				<Image x="270" y="1130+116*#__i" alignV="center" src="item/clock/mb/jc.png" srcid="#__i+1" visibility="gt(#aaa,#__i)"/>
+			</Array>
+		</Group>
+	</Group>
+	<Group visibility="eq(#change_list,6)">
+		<Var name="mess_ani">
+			<VariableAnimation initPause="true" loop="false">
+				<AniFrame value="#mess_ani" time="0" easeType="QuartEaseOut"/>
+				<AniFrame value="-908" time="600"/>
+				<AniFrame value="#mess_ani" time="700" easeType="QuartEaseOut"/>
+				<AniFrame value="0" time="1300"/>
+				<AniFrame value="#mess_ani" time="1400" easeType="QuartEaseOut"/>
+				<AniFrame value="-1816" time="2000"/>
+			</VariableAnimation>
+		</Var>
+		<Group alpha="1816+#mess_ani">
+			<Image x="626" y="120" align="center" alignV="center" src="item/mess/mode.png" srcid="#mess_mode" alpha="255-#set_text_tx_ani"/>
+		</Group>
+			<Image x="0" y="0" w="1080" h="min(max(200,-#mess_ani/6.05),270)" src="item/white.9.png" alpha="100"/>
+		<!--change-->
+			<Button x="469.5+313*not(#mess_mode)" y="120" w="330" h="100" align="center" alignV="center" visibility="eq(#set_text_tx_ani,0)*eq(#left_ani,390)*ne(#mess_ani,-1816)">
+				<Triggers>
+					<Trigger action="up" condition="ne(#mess_ani,-908)">
+						<Command target="mess_ani.animation" value="play(0,600)"/>
+						<VariableCommand name="mess_mode" expression="1"/>
+					</Trigger>
+					<Trigger action="up" condition="ne(#mess_ani,0)">
+						<Command target="mess_ani.animation" value="play(700,1300)"/>
+						<VariableCommand name="mess_mode" expression="0"/>
+					</Trigger>
+				</Triggers>
+				<Pressed>
+					<Image x="626" y="120" align="center" alignV="center" src="item/mess/modep.png" srcid="ge(#touch_x,626)"/>
+				</Pressed>
+			</Button>
+			<Var name="call_name_v" index="0" size="9" expression="ifelse(len(@call_name1),@call_name1,@call_number1)" type="string[]"/>
+			<Var name="call_name_v" index="1" expression="ifelse(len(@call_name2),@call_name2,@call_number2)" type="string[]"/>
+			<Var name="call_name_v" index="2" expression="ifelse(len(@call_name3),@call_name3,@call_number3)" type="string[]"/>
+			<Var name="call_name_v" index="3" expression="ifelse(len(@call_name4),@call_name4,@call_number4)" type="string[]"/>
+			<Var name="call_name_v" index="4" expression="ifelse(len(@call_name5),@call_name5,@call_number5)" type="string[]"/>
+			<Var name="call_name_v" index="5" expression="ifelse(len(@call_name6),@call_name6,@call_number6)" type="string[]"/>
+			<Var name="call_name_v" index="6" expression="ifelse(len(@call_name7),@call_name7,@call_number7)" type="string[]"/>
+			<Var name="call_name_v" index="7" expression="ifelse(len(@call_name8),@call_name8,@call_number8)" type="string[]"/>
+			<Var name="call_name_v" index="8" expression="ifelse(len(@call_name9),@call_name9,@call_number9)" type="string[]"/>
+			<Var name="call_name_vn" index="0" size="9" expression="@call_name1" type="string[]"/>
+			<Var name="call_name_vn" index="1" expression="@call_name2" type="string[]"/>
+			<Var name="call_name_vn" index="2" expression="@call_name3" type="string[]"/>
+			<Var name="call_name_vn" index="3" expression="@call_name4" type="string[]"/>
+			<Var name="call_name_vn" index="4" expression="@call_name5" type="string[]"/>
+			<Var name="call_name_vn" index="5" expression="@call_name6" type="string[]"/>
+			<Var name="call_name_vn" index="6" expression="@call_name7" type="string[]"/>
+			<Var name="call_name_vn" index="7" expression="@call_name8" type="string[]"/>
+			<Var name="call_name_vn" index="8" expression="@call_name9" type="string[]"/>
+			<Var name="call_number_v" index="0" size="9" expression="@call_number1" type="string[]"/>
+			<Var name="call_number_v" index="1" expression="@call_number2" type="string[]"/>
+			<Var name="call_number_v" index="2" expression="@call_number3" type="string[]"/>
+			<Var name="call_number_v" index="3" expression="@call_number4" type="string[]"/>
+			<Var name="call_number_v" index="4" expression="@call_number5" type="string[]"/>
+			<Var name="call_number_v" index="5" expression="@call_number6" type="string[]"/>
+			<Var name="call_number_v" index="6" expression="@call_number7" type="string[]"/>
+			<Var name="call_number_v" index="7" expression="@call_number8" type="string[]"/>
+			<Var name="call_number_v" index="8" expression="@call_number9" type="string[]"/>
+			<Var name="call_date_v" index="0" size="9" expression="#call_date1" type="number[]"/>
+			<Var name="call_date_v" index="1" expression="#call_date2" type="number[]"/>
+			<Var name="call_date_v" index="2" expression="#call_date3" type="number[]"/>
+			<Var name="call_date_v" index="3" expression="#call_date4" type="number[]"/>
+			<Var name="call_date_v" index="4" expression="#call_date5" type="number[]"/>	
+			<Var name="call_date_v" index="5" expression="#call_date6" type="number[]"/>	
+			<Var name="call_date_v" index="6" expression="#call_date7" type="number[]"/>	
+			<Var name="call_date_v" index="7" expression="#call_date8" type="number[]"/>	
+			<Var name="call_date_v" index="8" expression="#call_date9" type="number[]"/>	
+			<Var name="call_type_v" index="0" size="9" expression="#call_type1" type="number[]"/>
+			<Var name="call_type_v" index="1" expression="#call_type2" type="number[]"/>
+			<Var name="call_type_v" index="2" expression="#call_type3" type="number[]"/>
+			<Var name="call_type_v" index="3" expression="#call_type4" type="number[]"/>
+			<Var name="call_type_v" index="4" expression="#call_type5" type="number[]"/>
+			<Var name="call_type_v" index="5" expression="#call_type6" type="number[]"/>
+			<Var name="call_type_v" index="6" expression="#call_type7" type="number[]"/>
+			<Var name="call_type_v" index="7" expression="#call_type8" type="number[]"/>
+			<Var name="call_type_v" index="8" expression="#call_type9" type="number[]"/>
+			<Var name="duration_time_vf" index="0" size="9" expression="#duration_time1%60" type="number[]"/>
+			<Var name="duration_time_vf" index="1" expression="#duration_time2%60" type="number[]"/>
+			<Var name="duration_time_vf" index="2" expression="#duration_time3%60" type="number[]"/>
+			<Var name="duration_time_vf" index="3" expression="#duration_time4%60" type="number[]"/>
+			<Var name="duration_time_vf" index="4" expression="#duration_time5%60" type="number[]"/>
+			<Var name="duration_time_vf" index="5" expression="#duration_time5%60" type="number[]"/>
+			<Var name="duration_time_vf" index="6" expression="#duration_time6%60" type="number[]"/>
+			<Var name="duration_time_vf" index="7" expression="#duration_time7%60" type="number[]"/>
+			<Var name="duration_time_vf" index="8" expression="#duration_time8%60" type="number[]"/>
+			<Var name="duration_time_vf" index="9" expression="#duration_time9%60" type="number[]"/>
+			<Var name="duration_time_vm" index="0" size="9" expression="#duration_time1%60%60" type="number[]"/>
+			<Var name="duration_time_vm" index="1" expression="#duration_time2%60%60" type="number[]"/>
+			<Var name="duration_time_vm" index="2" expression="#duration_time3%60%60" type="number[]"/>
+			<Var name="duration_time_vm" index="3" expression="#duration_time4%60%60" type="number[]"/>
+			<Var name="duration_time_vm" index="4" expression="#duration_time5%60%60" type="number[]"/>
+			<Var name="duration_time_vm" index="5" expression="#duration_time5%60%60" type="number[]"/>
+			<Var name="duration_time_vm" index="6" expression="#duration_time6%60%60" type="number[]"/>
+			<Var name="duration_time_vm" index="7" expression="#duration_time7%60%60" type="number[]"/>
+			<Var name="duration_time_vm" index="8" expression="#duration_time8%60%60" type="number[]"/>
+			<Var name="duration_time_vm" index="9" expression="#duration_time9%60%60" type="number[]"/>
+			<Var name="duration_time_v" index="0" size="9" expression="#duration_time1" type="number[]"/>
+			<Var name="duration_time_v" index="1" expression="#duration_time2" type="number[]"/>
+			<Var name="duration_time_v" index="2" expression="#duration_time3" type="number[]"/>
+			<Var name="duration_time_v" index="3" expression="#duration_time4" type="number[]"/>
+			<Var name="duration_time_v" index="4" expression="#duration_time5" type="number[]"/>
+			<Var name="duration_time_v" index="5" expression="#duration_time6" type="number[]"/>
+			<Var name="duration_time_v" index="6" expression="#duration_time7" type="number[]"/>
+			<Var name="duration_time_v" index="7" expression="#duration_time7" type="number[]"/>
+			<Var name="duration_time_v" index="8" expression="#duration_time9" type="number[]"/>
+			<Var name="call_sms_ani">
+				<VariableAnimation initPause="true" loop="false">
+					<AniFrame value="#call_sms_ani" time="0" easeType="BackEaseOut"/>
+					<AniFrame value="180" time="500"/>
+					<AniFrame value="#call_sms_ani" time="600"/>
+					<AniFrame value="0" time="1000"/>
+				</VariableAnimation>
+			</Var>
+			<Var name="judge_call_null" expression="ifelse(isnull(@call_number1),0,isnull(@call_number2),1,isnull(@call_number3),2,isnull(@call_number4),3,isnull(@call_number5),4,isnull(@call_number6),5,isnull(@call_number7),6,isnull(@call_number8),7,isnull(@call_number9),8,9)"/>
+			<Text x="626+#mess_ani" y="960" align="center" alignV="center" size="50" color="@t_color" alpha="150" text="暂无通话记录" visibility="eq(#judge_call_null,0)"/>
+		<Array count="9" indexName="__call">
+			<Group x="ifelse(not(#mess_mode),#mess_ani*(1+#__call*0.5),#mess_ani)" alpha="(908+#mess_ani)/3" visibility="ne(#mess_ani,-908)*lt(#__call,#judge_call_null)">1+ 1.8-0.2*#__call
+				<Image x="270" y="300+180*#__call" align="center" alignV="center" src="item/mess/lxr.png" visibility="isnull(@call_name_vn[#__call])+#set_text_tx_mode"/>
+				<Group visibility="len(@call_name_vn[#__call])*not(#set_text_tx_mode)">
+					<Image x="270" y="300+180*#__call" align="center" alignV="center" src="item/mess/text_bg.png"/>
+					<Text x="270" y="300+180*#__call" align="center" alignV="center" color="@t_color" size="60" textExp="substr(@call_name_vn[#__call],0,1)"/>
+				</Group>
+				<Text x="380" y="230+180*#__call" w="612" color="@t_color" size="45" marqueeSpeed="30" bold="true" textExp="@call_name_v[#__call]"/>
+				<Text name="sz" x="380" y="290+180*#__call" w="612" marqueeSpeed="30" color="@t_color" size="40" textExp="@call_number_v[#__call]"/>
+				<DateTime name="dt1" x="380" y="345+180*#__call" color="@t_color" size="32" format="H:mm" value="#call_date_v[#__call]" visibility="#time_format*lt(#time_sys-#call_date_v[#__call],86400000)"/>
+				<DateTime name="dt2" x="380" y="345+180*#__call" color="@t_color" size="32" format="ah:mm" value="#call_date_v[#__call]" visibility="not(#time_format)*lt(#time_sys-#call_date_v[#__call],86400000)"/> 
+				<DateTime name="dt3" x="380" y="345+180*#__call" color="@t_color" size="32" format="MM月dd日 H:mm" value="#call_date_v[#__call]" visibility="#time_format*ge(#time_sys-#call_date_v[#__call],86400000)"/>
+				<DateTime name="dt4" x="380" y="345+180*#__call" color="@t_color" size="32" format="MM月dd日 ah:mm" value="#call_date_v[#__call]" visibility="not(#time_format)*ge(#time_sys-#call_date_v[#__call],86400000)"/>
+				<Var name="dt_widt" index="#__call" size="9" expression="ifelse(#time_format*lt(#time_sys-#call_date_v[#__call],86400000),495,not(#time_format)*lt(#time_sys-#call_date_v[#__call],86400000),560,#time_format*ge(#time_sys-#call_date_v[#__call],86400000),645,690)" type="number[]"/>
+				<Text name="cr" x="#dt_widt[#__call]" y="345+180*#__call" color="@t_color" size="32" textExp="ifelse(eq(#call_type_v[#__call],1),'呼入'+ifelse(lt(#duration_time_v[#__call],60),#duration_time_v[#__call]+'秒',#duration_time_vf[#__call]+'分'+#duration_time_vm[#__call]+'秒'),eq(#call_type_v[#__call],2),'呼出'+ifelse(lt(#duration_time_v[#__call],60),#duration_time_v[#__call]+'秒',#duration_time_vf[#__call]+'分'+#duration_time_vm[#__call]+'秒'),eq(#call_type_v[#__call],3),'响铃'+#duration_time_v[#__call]+'秒','新建联系人')"/>
+				<Image x="980" y="300+180*#__call" src="item/mess/tb.png" srcid="#call_type_v[#__call]"/>
+				<Image x="185" y="390+180*#__call" w="882" h="2" alignV="center" src="item/white.9.png" alpha="100"/>
+				<Button x="180" y="300+180*#__call" w="908" h="180" alignV="center" visibility="ne(#call_sms_ani,180)*eq(#left_ani,390)">
+					<Triggers>
+						<Trigger action="up">
+							<VariableCommand name="callsms_n" expression="#__call" />
+							<Command target="call_sms_ani.animation" value="play(0,500)"/>
+						</Trigger>
+					</Triggers>
+					<Pressed>
+						<Image x="172" y="300+180*#__call" alignV="center" w="908" h="180" src="item/white.9.png" alpha="80"/>
+					</Pressed>
+				</Button>
+				<Button x="0" y="0" w="1080" h="1920" visibility="ne(#call_sms_ani,0)*eq(#left_ani,390)">
+					<Triggers>
+						<Trigger action="up">
+							<Command target="call_sms_ani.animation" value="play(600,1000)"/>
+						</Trigger>
+					</Triggers>
+				</Button>
+				<Group alpha="#call_sms_ani*2" visibility="#call_sms_ani*eq(#callsms_n,#__call)">
+					<Rectangle x="172" y="300+180*#__call" w="908" h="180" alignV="center" cornerRadius="5,5" fillColor="#ffffff" alpha="120"/>
+					<Image x="1290-#call_sms_ani*3" y="300+180*#__call" align="center" alignV="center" src="item/mess/call_n.png"/>
+					<Image x="1290-#call_sms_ani*2" y="300+180*#__call" align="center" alignV="center" src="item/mess/mess_n.png"/>
+				</Group>
+				<Button x="750" y="300+180*#__call" w="120" h="120" align="center" alignV="center" visibility="eq(#call_sms_ani,180)*eq(#callsms_n,#__call)*eq(#left_ani,390)">
+					<Triggers>
+						<Trigger action="up">
+							<IntentCommand action="android.intent.action.CALL" uriExp="'tel:'+@call_number_v[#__call]" />
+						</Trigger>
+					</Triggers>
+					<Pressed>
+						<image x="750" y="300+180*#__call" align="center" alignV="center" src="item/mess/call_p.png"/>
+					</Pressed>
+				</Button>
+				<Button x="930" y="300+180*#__call" w="120" h="120" align="center" alignV="center" visibility="eq(#call_sms_ani,180)*eq(#callsms_n,#__call)*eq(#left_ani,390)">
+					<Triggers>
+						<Trigger action="up">
+							<IntentCommand action="android.intent.action.SENDTO" uriExp="'smsto:'+@call_number_v[#__call]" />
+							<ExternCommand command="unlock" />
+						</Trigger>
+					</Triggers>
+					<Pressed>
+						<image x="930" y="300+180*#__call" align="center" alignV="center" src="item/mess/mess_p.png"/>
+					</Pressed>
+				</Button>
+			</Group>
+		</Array>
+		<Group alpha="1816+#mess_ani">
+			<Var name="set_text_tx_ani">
+				<VariableAnimation initPause="true" loop="false">
+					<AniFrame value="#set_text_tx_ani" time="0" easeType="QuartEaseOut"/>
+					<AniFrame value="255" time="200"/>
+					<AniFrame value="#set_text_tx_ani" time="300" easeType="QuartEaseOut"/>
+					<AniFrame value="0" time="500"/>
+				</VariableAnimation>
+			</Var>
+			<Button x="1009" y="120" w="80" h="80" align="center" alignV="center" visibility="eq(#set_text_tx_ani,0)*ne(#mess_ani,-1816)*eq(#left_ani,390)">
+				<Triggers>
+					<Trigger action="up">
+						<Command target="set_text_tx_ani.animation" value="play(0,200)"/>
+					</Trigger>
+				</Triggers>
+				<Pressed>
+					<image x="1009" y="120" align="center" alignV="center" src="item/p.png"/>
+				</Pressed>
+			</Button>
+			<Image x="1009" y="120" align="center" alignV="center" src="item/menu.png" alpha="255-#set_text_tx_ani"/>
+			<Image x="626" y="120" align="center" alignV="center" src="item/mess/text_tx.png" srcid="not(#set_text_tx_mode)" alpha="#set_text_tx_ani"/>
+			<Button x="626" y="120" w="320" h="60" align="center" alignV="center" visibility="#set_text_tx_ani*ne(#mess_ani,-1816)*eq(#left_ani,390)">
+				<Triggers>
+					<Trigger action="up">
+						<VariableCommand name="set_text_tx_mode" expression="ifelse(#set_text_tx_mode,0,1)" persist="true"/>
+						<Command target="set_text_tx_ani.animation" value="play(300,500)" condition="ne(#set_text_tx_ani,0)" delay="300"/>
+					</Trigger>
+				</Triggers>
+			</Button>
+		</Group>
+		<Var name="sms_name_v" index="0" size="9" expression="ifelse(isnull(@sms_name1),@sms_num1+@sms_location1,@sms_name1+@sms_location1)" type="string[]"/>
+		<Var name="sms_name_v" index="1" expression="ifelse(isnull(@sms_name2),@sms_num2+@sms_location2,@sms_name2+@sms_location2)" type="string[]"/>
+		<Var name="sms_name_v" index="2" expression="ifelse(isnull(@sms_name3),@sms_num3+@sms_location3,@sms_name3+@sms_location3)" type="string[]"/>
+		<Var name="sms_name_v" index="3" expression="ifelse(isnull(@sms_name4),@sms_num4+@sms_location3,@sms_name4+@sms_location3)" type="string[]"/>
+		<Var name="sms_name_v" index="4" expression="ifelse(isnull(@sms_name5),@sms_num5+@sms_location3,@sms_name5+@sms_location3)" type="string[]"/>
+		<Var name="sms_name_v" index="5" expression="ifelse(isnull(@sms_name6),@sms_num6+@sms_location3,@sms_name6+@sms_location3)" type="string[]"/>
+		<Var name="sms_name_v" index="6" expression="ifelse(isnull(@sms_name7),@sms_num7+@sms_location3,@sms_name7+@sms_location3)" type="string[]"/>
+		<Var name="sms_name_v" index="7" expression="ifelse(isnull(@sms_name8),@sms_num8+@sms_location3,@sms_name8+@sms_location3)" type="string[]"/>
+		<Var name="sms_name_v" index="8" expression="ifelse(isnull(@sms_name9),@sms_num9+@sms_location3,@sms_name9+@sms_location3)" type="string[]"/>
+		<Var name="sms_name_vn" index="0" size="9" expression="@sms_name1" type="string[]"/>
+		<Var name="sms_name_vn" index="1" expression="@sms_name2" type="string[]"/>
+		<Var name="sms_name_vn" index="2" expression="@sms_name3" type="string[]"/>
+		<Var name="sms_name_vn" index="3" expression="@sms_name4" type="string[]"/>
+		<Var name="sms_name_vn" index="4" expression="@sms_name5" type="string[]"/>
+		<Var name="sms_name_vn" index="5" expression="@sms_name6" type="string[]"/>
+		<Var name="sms_name_vn" index="6" expression="@sms_name7" type="string[]"/>
+		<Var name="sms_name_vn" index="7" expression="@sms_name8" type="string[]"/>
+		<Var name="sms_name_vn" index="8" expression="@sms_name9" type="string[]"/>
+		<Var name="sms_num_v" index="0" size="9" expression="@sms_num1" type="string[]"/>
+		<Var name="sms_num_v" index="1" expression="@sms_num2" type="string[]"/>
+		<Var name="sms_num_v" index="2" expression="@sms_num3" type="string[]"/>
+		<Var name="sms_num_v" index="3" expression="@sms_num4" type="string[]"/>
+		<Var name="sms_num_v" index="4" expression="@sms_num5" type="string[]"/>
+		<Var name="sms_num_v" index="5" expression="@sms_num6" type="string[]"/>
+		<Var name="sms_num_v" index="6" expression="@sms_num7" type="string[]"/>
+		<Var name="sms_num_v" index="7" expression="@sms_num8" type="string[]"/>
+		<Var name="sms_num_v" index="8" expression="@sms_num9" type="string[]"/>
+		<Var name="sms_detail_v" index="0" size="9" expression="ifelse(ne(#__password_mode,0),'手机已加密，请解锁手机后查看',@sms_detail1)" type="string[]"/>
+		<Var name="sms_detail_v" index="1" expression="ifelse(ne(#__password_mode,0),'手机已加密，请解锁手机后查看',@sms_detail2)" type="string[]"/>
+		<Var name="sms_detail_v" index="2" expression="ifelse(ne(#__password_mode,0),'手机已加密，请解锁手机后查看',@sms_detail3)" type="string[]"/>
+		<Var name="sms_detail_v" index="3" expression="ifelse(ne(#__password_mode,0),'手机已加密，请解锁手机后查看',@sms_detail4)" type="string[]"/>
+		<Var name="sms_detail_v" index="4" expression="ifelse(ne(#__password_mode,0),'手机已加密，请解锁手机后查看',@sms_detail5)" type="string[]"/>	
+		<Var name="sms_detail_v" index="5" expression="ifelse(ne(#__password_mode,0),'手机已加密，请解锁手机后查看',@sms_detail6)" type="string[]"/>	
+		<Var name="sms_detail_v" index="6" expression="ifelse(ne(#__password_mode,0),'手机已加密，请解锁手机后查看',@sms_detail7)" type="string[]"/>	
+		<Var name="sms_detail_v" index="7" expression="ifelse(ne(#__password_mode,0),'手机已加密，请解锁手机后查看',@sms_detail8)" type="string[]"/>	
+		<Var name="sms_detail_v" index="8" expression="ifelse(ne(#__password_mode,0),'手机已加密，请解锁手机后查看',@sms_detail9)" type="string[]"/>
+		<Var name="sms_date_v" index="0" size="9" expression="#sms_date1" type="number[]"/>
+		<Var name="sms_date_v" index="1" expression="#sms_date2" type="number[]"/>
+		<Var name="sms_date_v" index="2" expression="#sms_date3" type="number[]"/>
+		<Var name="sms_date_v" index="3" expression="#sms_date4" type="number[]"/>
+		<Var name="sms_date_v" index="4" expression="#sms_date5" type="number[]"/>
+		<Var name="sms_date_v" index="5" expression="#sms_date6" type="number[]"/>
+		<Var name="sms_date_v" index="6" expression="#sms_date7" type="number[]"/>
+		<Var name="sms_date_v" index="7" expression="#sms_date8" type="number[]"/>
+		<Var name="sms_date_v" index="8" expression="#sms_date9" type="number[]"/>
+			<Var name="view_call_sms_ani">
+				<VariableAnimation initPause="true" loop="false">
+					<AniFrame value="#view_call_sms_ani" time="0" easeType="BackEaseOut"/>
+					<AniFrame value="180" time="500"/>
+					<AniFrame value="#view_call_sms_ani" time="600"/>
+					<AniFrame value="0" time="1000"/>
+				</VariableAnimation>
+			</Var>
+			<Var name="judge_mms_null" expression="ifelse(isnull(@sms_num1)*isnull(@sms_detail1),0,isnull(@sms_num2)*isnull(@sms_detail2),1,isnull(@sms_num3)*isnull(@sms_detail3),2,isnull(@sms_num4)*isnull(@sms_detail4),3,isnull(@sms_num5)*isnull(@sms_detail5),4,isnull(@sms_num6)*isnull(@sms_detail6),5,isnull(@sms_num7)*isnull(@sms_detail7),6,isnull(@sms_num8)*isnull(@sms_detail8),7,isnull(@sms_num9)*isnull(@sms_detail9),8,9)"/>
+				<Text x="626+908+#mess_ani" y="960" align="center" alignV="center" size="50" color="@t_color" alpha="150" text="暂无短信" visibility="eq(#judge_mms_null,0)*eq(#__password_mode,0)"/>
+				<Text x="626+908+#mess_ani" y="960" align="center" alignV="center" size="50" color="@t_color" alpha="150" text="手机已加密，请解锁手机查看" visibility="ne(#__password_mode,0)*0"/>
+		<Array count="9" indexName="__sms" > 
+			<Group x="ifelse(#mess_mode,(908+#mess_ani)*(1+#__sms*0.2),908+#mess_ani)" alpha="-#mess_ani/3" visibility="ne(#mess_ani,0)*lt(#__sms,#judge_mms_null)">
+				<Image x="270" y="300+180*#__sms" align="center" alignV="center" src="item/mess/lxr.png" visibility="isnull(@sms_name_vn[#__sms])+#set_text_tx_mode"/>
+				<Group visibility="len(@sms_name_vn[#__sms])*not(#set_text_tx_mode)">
+					<Image x="270" y="300+180*#__sms" align="center" alignV="center" src="item/mess/text_bg.png"/>
+					<Text x="270" y="300+180*#__sms" align="center" alignV="center" color="@t_color" size="60" textExp="substr(@sms_name_vn[#__sms],0,1)"/>
+				</Group>
+				<Text x="380" y="250+180*#__sms" w="ifelse(lt(#time_sys-#sms_date_v[#__sms],86400000),500,380)" marqueeSpeed="30" color="@t_color" size="45" bold="true" textExp="@sms_name_v[#__sms]"/>
+				<Text x="380" y="310+180*#__sms" color="@t_color" size="40" w="670" marqueeSpeed="30" textExp="@sms_detail_v[#__sms]"/>
+				<DateTime x="1050" y="300+180*#__sms" align="right" color="@t_color" size="30" format="H:mm" alignV="bottom" value="#sms_date_v[#__sms]" visibility="#time_format*lt(#time_sys-#sms_date_v[#__sms],86400000)"/>
+				<DateTime x="1050" y="300+180*#__sms" align="right" color="@t_color" size="30" format="MM月dd日 H:mm" alignV="bottom" value="#sms_date_v[#__sms]" visibility="#time_format*ge(#time_sys-#sms_date_v[#__sms],86400000)"/>
+				<DateTime x="1050" y="300+180*#__sms" align="right" color="@t_color" size="30" format="ah:mm" alignV="bottom" value="#sms_date_v[#__sms]" visibility="not(#time_format)*lt(#time_sys-#sms_date_v[#__sms],86400000)"/>
+				<DateTime x="1050" y="300+180*#__sms" align="right" color="@t_color" size="30" format="MM月dd日 ah:mm" alignV="bottom" value="#sms_date_v[#__sms]" visibility="not(#time_format)*ge(#time_sys-#sms_date_v[#__sms],86400000)"/>
+				<Image x="185" y="390+180*#__sms" w="882" h="2" alignV="center" src="item/white.9.png" alpha="100"/>
+				<Button x="180" y="300+180*#__sms" w="908" h="180" alignV="center" visibility="ne(#view_call_sms_ani,180)*eq(#left_ani,390)">
+					<Triggers>
+						<Trigger action="up" condition="eq(#left_ani,390)">
+							<VariableCommand name="viewcallsms_n" expression="#__sms" />
+							<Command target="view_call_sms_ani.animation" value="play(0,500)"/>
+						</Trigger>
+					</Triggers>
+					<Pressed>
+						<Image x="172" y="300+180*#__sms" alignV="center" w="908" h="180" src="item/white.9.png" alpha="80"/>
+					</Pressed>
+				</Button>
+				<Button x="0" y="0" w="1080" h="1920" visibility="ne(#view_call_sms_ani,0)*eq(#left_ani,390)">
+					<Triggers>
+						<Trigger action="up">
+							<Command target="view_call_sms_ani.animation" value="play(600,1000)"/>
+						</Trigger>
+					</Triggers>
+				</Button>
+				<Group alpha="#view_call_sms_ani*2" visibility="#view_call_sms_ani*eq(#viewcallsms_n,#__sms)">
+					<Rectangle x="172" y="300+180*#__sms" w="908" h="180" alignV="center" cornerRadius="5,5" fillColor="#ffffff" alpha="120"/>
+					<Image x="1290-#view_call_sms_ani*4" y="300+180*#__sms" align="center" alignV="center" src="item/mess/view_n.png"/>
+					<Image x="1290-#view_call_sms_ani*3" y="300+180*#__sms" align="center" alignV="center" src="item/mess/call_n.png"/>
+					<Image x="1290-#view_call_sms_ani*2" y="300+180*#__sms" align="center" alignV="center" src="item/mess/mess_n.png"/>
+				</Group>
+				<Array count="3" indexName="__3btn">
+					<Button x="570+180*#__3btn" y="300+180*#__sms" w="120" h="120" align="center" alignV="center" visibility="eq(#view_call_sms_ani,180)*eq(#viewcallsms_n,#__sms)">
+						<Triggers>
+							<Trigger action="up" condition="eq(#__3btn,0)*eq(#left_ani,390)">
+								<Command target="mess_ani.animation" value="play(1400,2000)"/>
+								<Command target="kjhf_btn_ani.animation" value="play(0,1000)"/>
+							</Trigger>
+							<Trigger action="up" condition="eq(#__3btn,1)">
+								<IntentCommand action="android.intent.action.CALL" uriExp="'tel:'+@sms_num_v[#__sms]" />
+							</Trigger>
+							<Trigger action="up" condition="eq(#__3btn,2)">
+								<IntentCommand action="android.intent.action.SENDTO" uriExp="'smsto:'+@sms_num_v[#__sms]" />
+								<ExternCommand command="unlock" />
+							</Trigger>
+						</Triggers>
+						<Pressed>
+							<image x="570+180*#__3btn" y="300+180*#__sms" align="center" alignV="center" src="item/mess/view_p.png" visibility="eq(#__3btn,0)"/>
+							<image x="570+180*#__3btn" y="300+180*#__sms" align="center" alignV="center" src="item/mess/call_p.png" visibility="eq(#__3btn,1)"/>
+							<image x="570+180*#__3btn" y="300+180*#__sms" align="center" alignV="center" src="item/mess/mess_p.png" visibility="eq(#__3btn,2)"/>
+						</Pressed>
+					</Button>
+				</Array>
+			</Group>
+		</Array>
+		<Var name="kjhf_text" index="0" size="6" expression="@kjhf_text1" type="string[]"/>
+		<Var name="kjhf_text" index="1" expression="@kjhf_text2" type="string[]"/>
+		<Var name="kjhf_text" index="2" expression="@kjhf_text3" type="string[]"/>
+		<Var name="kjhf_text" index="3" expression="@kjhf_text4" type="string[]"/>
+		<Var name="kjhf_text" index="4" expression="@kjhf_text5" type="string[]"/>
+		<Var name="kjhf_text" index="5" expression="'编辑快捷回复短语'" type="string[]"/>
+			<Var name="kjhf_btn_ani">
+				<VariableAnimation initPause="true" loop="false">
+					<AniFrame value="800" time="0" easeType="QuadEaseOut"/>
+					<AniFrame value="0" time="1000"/>
+					<AniFrame value="#kjhf_btn_ani" time="2000"/>
+					<AniFrame value="800" time="3000"/>
+				</VariableAnimation>
+			</Var>
+			<Group x="1816+#mess_ani" alpha="-#mess_ani" visibility="le(#mess_ani,-908)">
+				<Image x="240" y="175" align="center" alignV="center" src="item/note_back.png"/>
+				<Text x="320" y="172" alignV="bottom" size="50" color="@t_color" textExp="@sms_name_v[#viewcallsms_n]"/>
+				<Text x="320" y="177" alignV="top" size="40" color="@t_color" textExp="@sms_num_v[#viewcallsms_n]"/>
+				<Button x="240" y="175" w="80" h="80" align="center" alignV="center">
+					<Triggers>
+						<Trigger action="up">
+							<Command target="mess_ani.animation" value="play(0,600)" condition="eq(#left_ani,390)"/>
+						</Trigger>
+					</Triggers>
+					<Pressed>
+						<Image x="240" y="175" align="center" alignV="center" src="item/p.png"/>
+					</Pressed>
+				</Button>
+				<Button x="975" y="175" w="100" h="100" align="center" alignV="center" visibility="eq(#menu_ani,0)">
+					<Triggers>
+						<Trigger action="up">
+							<IntentCommand action="android.intent.action.CALL" uriExp="'tel:'+@sms_num_v[#__sms]" condition="eq(#left_ani,390)"/>
+						</Trigger>
+					</Triggers>
+					<Image x="975" y="175" w="80" h="80" align="center" alignV="center" src="item/mess/call_n.png"/>
+					<Pressed>
+						<Image x="975" y="175" align="center" alignV="center" src="item/p.png"/>
+					</Pressed>
+				</Button>
+				<Var name="sms_w" expression="min(#sms_detail1_text.text_width,630)"/>
+				<Var name="sms_h" expression="min(#sms_detail1_text.text_height,1220)"/>
+				<Var name="img_and_text_h" expression="ifelse(eq(#kjhf_text_ani,0)+lt(#sms_h,600),#sms_h,#kjhf_text_ani)"/>
+				<Group name="kjhf_ani">
+					<Var name="kjhf_text_ani">
+						<VariableAnimation initPause="true" loop="false">
+							<AniFrame value="#sms_h" time="0" easeType="QuartEaseOut"/>
+							<AniFrame value="600" time="500"/>
+							<AniFrame value="#kjhf_text_ani" time="600" easeType="QuartEaseOut"/>
+							<AniFrame value="#sms_h" time="1000"/>
+						</VariableAnimation>
+					</Var>
+					<Var name="kjhf_text_bg_ani">
+						<VariableAnimation initPause="true" loop="false">
+							<AniFrame value="0" time="0" easeType="QuartEaseOut"/>
+							<AniFrame value="619" time="500"/>
+							<AniFrame value="#kjhf_text_bg_ani" time="600" easeType="QuartEaseOut"/>
+							<AniFrame value="0" time="1000"/>
+						</VariableAnimation>
+					</Var>
+				</Group>
+				<DateTime x="280" y="390" color="@t_color" size="32" alignV="bottom" format="H:mm" value="#sms_date_v[#viewcallsms_n]" visibility="#time_format*lt(#time_sys-#sms_date_v[#viewcallsms_n],86400000)"/>
+				<DateTime x="280" y="390" color="@t_color" size="32" alignV="bottom" format="ah:mm" value="#sms_date_v[#viewcallsms_n]" visibility="not(#time_format)*lt(#time_sys-#sms_date_v[#viewcallsms_n],86400000)"/> 
+				<DateTime x="280" y="390" color="@t_color" size="32" alignV="bottom" format="MM月dd日 H:mm" value="#sms_date_v[#viewcallsms_n]" visibility="#time_format*ge(#time_sys-#sms_date_v[#viewcallsms_n],86400000)"/>
+				<DateTime x="280" y="390" color="@t_color" size="32" alignV="bottom" format="MM月dd日 ah:mm" value="#sms_date_v[#viewcallsms_n]" visibility="not(#time_format)*ge(#time_sys-#sms_date_v[#viewcallsms_n],86400000)"/>
+				<Text name="sms_detail1_text" x="280" y="444" w="650" h="#img_and_text_h" color="@t_color" size="45" textExp="@sms_detail_v[#viewcallsms_n]" multiLine="true" spacingMult="1.3"/>
+				<Image x="172" y="400" w="167+#sms_w" h="90+#img_and_text_h" src="item/mess/detail_bg.9.png"/>
+				<Button x="172" y="400" w="167+#sms_w" h="90+#img_and_text_h">
+					<Triggers>
+						<Trigger action="up">
+							<Command target="kjhf_ani.animation" value="play(600,1000)" condition="ne(#kjhf_text_bg_ani,0)*eq(#left_ani,390)"/>
+						</Trigger>
+					</Triggers>
+					<Pressed>
+						<Image x="172" y="400" w="167+#sms_w" h="90+#img_and_text_h" src="item/mess/detail_bg.9.png"/>
+					</Pressed>
+				</Button>
+				<Image x="170" y="1920" w="910" h="171+#kjhf_text_bg_ani" alignV="bottom" src="item/white.9.png" alpha="70"/>
+				<Array count="6" indexName="__send">
+					<Group y="(619-#kjhf_text_bg_ani)*(1+#__send*0.5)" alpha="#kjhf_text_bg_ani/2.5">
+						<Text x="270" y="1190+100*#__send" alignV="center" size="40" color="@t_color" alpha="200" textExp="@kjhf_text[#__send]"/>
+						<Image x="200" y="1240+100*#__send" w="852" alpha="100" src="item/white.9.png"/>
+					</Group>
+					<Button x="200" y="1190+100*#__send" alignV="center" w="852" h="100" visibility="eq(#kjhf_text_bg_ani,619)">
+						<Triggers>
+							<Trigger action="up" condition="eq(#left_ani,390)">
+								<IntentCommand action="android.intent.action.SENDTO" uriExp="'smsto:'+@sms_num_v[min(#viewcallsms_n,3)]" >
+									<Extra name="sms_body" type="string" expression="@kjhf_text[min(#__send,3)]" />
+								</IntentCommand>
+								<ExternCommand command="unlock" />
+							</Trigger>
+							<Trigger action="up" condition="eq(#__send,5)">
+								<IntentCommand action="android.intent.action.MAIN" package="com.android.thememanager" class="com.android.thememanager.view.MamlConfigSettings">
+								<Extra name="maml_code" type="string" expression="'lockstyle'" />
+								</IntentCommand>
+								<IntentCommand action="android.intent.action.MAIN" package="com.android.thememanager" class="miui.maml.MamlConfigSettings">
+								<Extra name="maml_code" type="string" expression="'lockstyle'" />
+								</IntentCommand>
+								<Intent action="android.intent.action.MAIN" package="com.android.thememanager" class="com.android.thememanager.view.LockscreenConfigSettings" />
+								<ExternCommand command="unlock" />
+							</Trigger>
+						</Triggers>
+						<Pressed>
+							<Image x="170" y="1240+100*#__send" w="910" h="100" alignV="bottom" alpha="100" src="item/white.9.png"/>
+						</Pressed>
+					</Button>
+				</Array>
+				<Button x="626-70" y="1835" w="270" h="90" align="right" alignV="center">
+					<Triggers>
+						<Trigger action="up" condition="eq(#kjhf_btn_ani,0)*eq(#left_ani,390)">
+							<Command target="kjhf_ani.animation" value="play(0,500)" condition="ne(#kjhf_text_bg_ani,619)"/>
+							<Command target="kjhf_ani.animation" value="play(600,1000)" condition="ne(#kjhf_text_bg_ani,0)"/>
+						</Trigger>
+					</Triggers>
+					<Normal>
+						<Image x="626-70" y="1835+#kjhf_btn_ani" align="right" alignV="center" src="item/mess/kjhf.png"/>
+					</Normal>
+					<Pressed>
+						<Image x="626-70" y="1835" align="right" alignV="center" src="item/mess/kjhf_p.png"/>
+					</Pressed>
+				</Button>
+				<Button x="626+70" y="1835" w="270" h="90" align="left" alignV="center">
+					<Triggers>
+						<Trigger action="up" condition="eq(#kjhf_btn_ani,0)*eq(#left_ani,390)">
+							<IntentCommand action="android.intent.action.SENDTO" uriExp="'smsto:'+@sms_num_v[min(#viewcallsms_n,3)]"/>
+							<ExternCommand command="unlock" />
+						</Trigger>
+					</Triggers>
+					<Normal>
+						<Image x="626+70" y="1835+#kjhf_btn_ani*2" align="left" alignV="center" src="item/mess/hf.png"/>
+					</Normal>
+					<Pressed>
+						<Image x="626+70" y="1835" align="left" alignV="center" src="item/mess/hf_p.png"/>
+					</Pressed>
+				</Button>
+			</Group>
+		*(1+#__sms*0.2)
+		908*1
+		908*1.4
+		908*1.8
+	</Group>
+	<Group visibility="eq(#change_list,7)"> 726  258
+		<Image x="243" y="88" src="item/left/level/zt.png" srcid="#vip_mode"/>
+		<Group y="150" pivotX="626" pivotY="410" scale="2">
+			<Image x="626" y="410"  align="center" alignV="center" src="item/left/txbg.png"/>
+		<Group w="#screen_width" h="#screen_height" layered="true">
+			<Image x="626" y="410"  align="center" alignV="center" src="item/left/default.png" visibility="isnull(@set_tx)"/>
+			<Image x="626" y="410" w="227" h="227" align="center" alignV="center" src="@set_tx" srcType="Uri" visibility="len(@set_tx)"/>
+			<Image x="626" y="410" align="center" alignV="center" src="item/left/tx_mask.png" xfermode="dst_in"/>
+			<Image x="626" y="410" w="282" h="381" align="center" alignV="center" src="item/tx/tx.png" srcid="#txgj"/>
+			<Image x="626" y="410" w="282" h="381" align="center" alignV="center" src="@set_dzgj" srcType="Uri" visibility="len(@set_dzgj)*eq(#txgj,0)"/>
+		</Group>
+		</Group>
+		<Image x="626" y="194" align="center" src="item/tx/ts2.png" visibility="#ts2"/>
+		<Button x="785" y="113" w="100" h="100" align="center" alignV="center">
+			<Triggers>
+				<Trigger action="up">
+					<VariableCommand name="ts2" expression="1"/>
+					<VariableCommand name="ts2" expression="0" delay="5000"/>
+				</Trigger>
+			</Triggers>
+		</Button>
+		<Image x="1038" y="856" align="right" src="item/tx/ts.png" visibility="not(#ts_gj)"/>
+		<Button x="1038" y="856" w="100" h="100" align="right">
+			<Triggers>
+				<Trigger action="up">
+					<VariableCommand name="ts_gj" expression="1" persist="true"/>
+				</Trigger>
+			</Triggers>
+		</Button>
+		<Group y="400">
+			<Image x="626" y="830" align="center" alignV="center" src="item/tx/view.png"/>
+			<Image x="301" y="591" align="center" alignV="center" w="114" h="155" src="@set_dzgj" srcType="Uri" visibility="len(@set_dzgj)"/>
+			<Button x="301" y="591"	w="160" h="160" align="center" alignV="center" visibility="isnull(@set_dzgj)">
+				<Triggers>
+					<Trigger action="up">
+						<IntentCommand action="android.intent.action.MAIN" package="com.android.thememanager" class="com.android.thememanager.view.MamlConfigSettings">
+							<Extra name="maml_code" type="string" expression="'lockstyle'" />
+						</IntentCommand>
+						<IntentCommand action="android.intent.action.MAIN" package="com.android.thememanager" class="miui.maml.MamlConfigSettings">
+							<Extra name="maml_code" type="string" expression="'lockstyle'" />
+						</IntentCommand>
+						<Intent action="android.intent.action.MAIN" package="com.android.thememanager" class="com.android.thememanager.view.LockscreenConfigSettings" />
+						<ExternCommand command="unlock" />
+					</Trigger>
+				</Triggers>
+				<Normal>
+					<Image x="301" y="591" align="center" alignV="center" src="item/tx/set.png" visibility="isnull(@set_dzgj)"/>
+				</Normal>
+				<Pressed>
+					<Image x="301" y="591" align="center" alignV="center" src="item/tx/set.png" alpha="100" visibility="isnull(@set_dzgj)"/>
+				</Pressed>
+			</Button>
+			<Array count="20" indexName="__tx">
+				<Var name="vip" expression=""/>
+				<Button x="301+160*int(#__tx%5)" y="591+160*int(#__tx/5)" w="154" h="154" align="center" alignV="center" visibility="eq(#ewm_ani,0)*eq(#left_ani,390)*ifelse(isnull(@set_dzgj),ne(#__tx,0),ne(#__tx,-1))">
+				*ifelse(eq(#vip_mode,1),ne(#__tx,16)*ne(#__tx,17)*ne(#__tx,18)*ne(#__tx,19),eq(#vip_mode,0),ne(#__tx,11)*ne(#__tx,14)*ne(#__tx,16)*ne(#__tx,17)*ne(#__tx,18)*ne(#__tx,19),1)
+					<Triggers>
+						<Trigger action="up">
+							<VariableCommand name="txgj" expression="#__tx" persist="true"/>
+							<IntentCommand action="wallpaper_set" broadcast="true">
+								<Extra name="wallpaper_idv" type="number" expression="#wallpaper_idv"/>
+								<Extra name="btn_change" type="number" expression="#btn_change"/>
+								<Extra name="txgj" type="number" expression="#txgj"/>
+								<Extra name="set_tx" type="string" expression="@set_tx" />
+								<Extra name="set_dzgj" type="string" expression="@set_dzgj" />
+								<Extra name="set_zyzm1" type="string" expression="@set_zyzm1" />
+								<Extra name="set_zyzm2" type="string" expression="@set_zyzm2" />
+							</IntentCommand>
+						</Trigger>
+					</Triggers>
+				</Button>
+				<Image x="347+160*int(#__tx%5)" y="637+160*int(#__tx/5)" align="center" alignV="center" src="item/tx/xz.png" visibility="eq(#txgj,#__tx)"/>
+			</Array>
+		</Group>
+		<Var name="ewm_ani">
+			<VariableAnimation initPause="true" loop="false">
+				<AniFrame value="0" time="0" easeType="BackEaseOut"/>
+				<AniFrame value="1" time="500"/>
+				<AniFrame value="0" time="800"/>
+			</VariableAnimation>
+		</Var>
+		<Button x="996" y="125" w="100" h="100" align="center" alignV="center" visibility="eq(#ewm_ani,0)">
+			<Triggers>
+				<Trigger action="up">
+					<Command target="ewm_ani.animation" value="play(0,500)"/>
+				</Trigger>
+			</Triggers>
+			<Image x="996" y="125" align="center" alignV="center" src="item/tx/ewm.png"/>
+		</Button>
+		<Button x="0" y="0" w="1080" h="1920" visibility="eq(#ewm_ani,1)">
+			<Triggers>
+				<Trigger action="up">
+					<Command target="ewm_ani.animation" value="play(500,800)"/>
+				</Trigger>
+			</Triggers>
+		</Button>
+		<Var name="battery_ani">
+			<VariableAnimation>
+				<AniFrame value="700" time="0" easeType="QuadEaseOut"/>
+				<AniFrame value="#battery_level*7-10" time="2000"/>
+				<AniFrame value="#battery_level*7-10" time="2500"/>
+			</VariableAnimation>
+		</Var>
+		<Image x="626" y="1701" align="center" alignV="center" src="item/battery/bg.png"/>
+		<Image x="276" y="1700" w="#battery_level*7" alignV="center" src="item/battery/lock_screen_battery_bar_progress.9.png"/>
+		<Image x="276+#battery_ani" y="1700" alignV="center" src="item/battery/lock_screen_battery_charging_bar_arrow.png" alpha="#battery_ani-#battery_level*6" visibility="eq(#battery_state,1)"/>
+		<DateTime x="626" y="1800" align="center" alignV="center" color="@t_color" size="40" format="手机已开机:H小时mm分ss秒" value="#time-115200000" />
+	</Group>
+	<Group alpha="#left_ani/1.5" visibility="ne(#left_ani,0)+#ready_left_visibility" frameRate="60" >
+		<!--x两个状态执行，优化视觉体验-->
+		<Group x="-800+#left_ani" y="0" w="582" h="1920" clip="true" visibility="eq(#tm_mode,0)">
+			<Image x="800-#left_ani" y="0" w="1080" h="1920" align="left" src="bgblur/default_w.jpg" srcid="#wallpaper_id" visibility="not(#btn_diy)"/>
+			<Wallpaper x="800-#left_ani" blur="30" visibility="#btn_diy"/>
+		</Group>
+		<Group x="-800+#left_ani" y="0" w="582" h="1920" clip="true" visibility="eq(#tm_mode,1)">
+			<Image x="800-#left_ani" y="0" w="1080" h="1920" align="left" src="bg/default_w.jpg" srcid="#wallpaper_id" visibility="not(#btn_diy)"/>
+			<Wallpaper x="800-#left_ani" visibility="#btn_diy"/>
+		</Group>
+		<Image x="-800+#left_ani" y="0" align="left" src="item/left/bg.png"/>
+		<!--list元素-->
+		<Image x="ifelse(#change_list,52,52-ifelse(#judge_back_left,(800-#left_ani)*3,800-#left_ani))+32" y="717+543+46" align="center" alignV="center" src="item/left/sicons.png"/>
+		<Image x="180-ifelse(#judge_back_left,(800-#left_ani)*2,800-#left_ani)" alpha="#left_ani-390" y="723+46" src="item/left/text.png" visibility="ne(#left_ani,390)"/>
+		<!--4按键-->
+		<Group alpha="800-#left_ani" y="-20" visibility="#change_list">
+			<Image x="279-#left_ani/2" y="150" align="center" alignV="center" src="item/setting.png"/>
+			<Image x="344-#left_ani/1.5" y="300" align="center" alignV="center" src="item/home.png"/>
+			<Image x="474-#left_ani" y="450" align="center" alignV="center" src="item/zk.png"/>
+			<Image x="864-#left_ani/0.5" y="600" align="center" alignV="center" src="item/app.png" visibility="ne(#change_list,7)"/>
+		</Group>
+		<!--头像-->
+			<Image x="-509.4+#left_ani)" y="320"  align="center" alignV="center" src="item/left/txbg.png" alpha="#left_ani-390" visibility="ne(#left_ani,390)"/>
+		<Group x="-(800-#left_ani)" w="#screen_width" h="#screen_height" layered="true" alpha="#left_ani-390" visibility="ne(#left_ani,390)">
+			<Image x="290.6" y="320"  align="center" alignV="center" src="item/left/default.png" visibility="isnull(@set_tx)"/>
+			<Image x="290.6" y="320" w="227" h="227" align="center" alignV="center" src="@set_tx" srcType="Uri" visibility="len(@set_tx)"/>
+			<Image x="290.6" y="320" align="center" alignV="center" src="item/left/tx_mask.png" xfermode="dst_in"/>
+			<Image x="290.6" y="320" w="282" h="381" align="center" alignV="center" src="item/tx/tx.png" srcid="#txgj"/>
+			<Image x="290.6" y="320" w="282" h="381" align="center" alignV="center" src="@set_dzgj" srcType="Uri" visibility="len(@set_dzgj)*eq(#txgj,0)"/>
+		</Group>
+		<!--昵称-->
+		<Group visibility="ne(#left_ani,390)">
+			<Text x="-509.4+#left_ani" y="530" w="520" marqueeSpeed="30" align="center" alignV="center" size="45" color="@t_color" text="@set_name"/>
+			<Text x="-509.4+#left_ani" y="590" w="520" marqueeSpeed="30" align="center" alignV="center" size="35" color="@t_color" text="@set_gx"/>
+		</Group>
+		<Group x="-(800-#left_ani)" alpha="#left_ani-390" >
+			<Image name="hg" x="80+#level_img.bmp_width" y="670" alignV="center" src="item/left/level/hg.png" srcid="ifelse(ge(#vip_level,256),4,int(#vip_level%256/64))"/>
+			<Image name="ty" x="80+#level_img.bmp_width+#hg.bmp_width " y="670" alignV="center" src="item/left/level/ty.png" srcid="int(#vip_level%64/16)"/>
+			<Image name="yl" x="80+#level_img.bmp_width+#hg.bmp_width+#ty.bmp_width" y="670" alignV="center" src="item/left/level/yl.png" srcid="int(#vip_level%16/4)"/>
+			<Image name="xx" x="80+#level_img.bmp_width+#hg.bmp_width+#ty.bmp_width+#yl.bmp_width" y="670" alignV="center" src="item/left/level/xx.png" srcid="#vip_level%4"/>
+			<Image x="115" y="670" alignV="center" src="item/left/level/level_0.png" visibility="le(#vip_level,0)"/>
+			<Image name="level_bg" x="15" y="668" w="63+#level_img.bmp_width" alignV="center" src="item/left/level/level_bg.9.png" srcid="ge(#vip_level,5)"/>
+			<ImageNumber name="level_img" x="69" y="670" alignV="center" src="item/left/level/level/level.png" number="#vip_level"/>
+			<Var name="vip_code_v" expression="#hq_num*4321+1234"/>
+			<Var name="svip_code_v" expression="#hq_num*1234+4321"/>
+			<Var name="vip_mode" expression="ifelse(eq(#scode_sunny,#vip_code_v)+ge(#vip_level,20)*lt(#vip_level,40),1,eq(#scode_sunny,#svip_code_v)+ge(#vip_level,40),2,0)"/>
+			<Image x="340" y="400" src="item/left/level/vip.9.png" srcid="#vip_mode"/>
+		</Group>
+		<!--list flag y have 2 modes-->
+		<Image x="-(800-#left_ani)" y="ifelse(eq(#left_ani,800)+eq(#left_ani,390),748+46+#change_list_ani,748+46+#button_flag)" w="582" h="146" alignV="center" src="item/white.9.png" visibility="#change_list"/>
+		<!--TM-->
+		<Button x="40" y="100" w="110" h="40" alignV="center">
+			<Triggers>
+				<Trigger action="up" condition="eq(#left_ani,800)">
+					<VariableCommand name="tm_mode" expression="ifelse(#tm_mode,0,1)" persist="true"/>
+				</Trigger>
+			</Triggers>
+			<Image x="-760+#left_ani" y="100" alignV="center" src="item/left/tm.png" srcid="#tm_mode"/>
+		</Button>
+		<!--3按键-->
+		<Button x="40" y="1840" w="130" h="55" alignV="center">
+			<Triggers>
+				<Trigger action="up" condition="eq(#left_ani,800)">
+					<Command target="left_ani.animation" value="play(1700,2100)"/>
+					<VariableCommand name="judge_back_left" expression="0"/>
+					<VariableCommand name="change_list" expression="0"/>
+				</Trigger>
+			</Triggers>
+			<Normal>
+				<Image x="-760+#left_ani" y="1840" alignV="center" src="item/left/home_btn.png"/>
+			</Normal>
+			<Pressed>
+				<Image x="-760+#left_ani" y="1840" alignV="center" src="item/left/home_btn.png" alpha="100"/>
+			</Pressed>
+		</Button>
+		<Button x="212" y="1840" w="130" h="55" alignV="center">
+			<Triggers>
+				<Trigger action="up" condition="eq(#left_ani,800)">
+					<IntentCommand action="android.intent.action.MAIN" package="com.android.thememanager" class="com.android.thememanager.view.MamlConfigSettings">
+					<Extra name="maml_code" type="string" expression="'lockstyle'" />
+					</IntentCommand>
+					<IntentCommand action="android.intent.action.MAIN" package="com.android.thememanager" class="miui.maml.MamlConfigSettings">
+					<Extra name="maml_code" type="string" expression="'lockstyle'" />
+					</IntentCommand>
+					<Intent action="android.intent.action.MAIN" package="com.android.thememanager" class="com.android.thememanager.view.LockscreenConfigSettings" />
+					<ExternCommand command="unlock" />
+				</Trigger>
+			</Triggers>
+			<Normal>
+			<Image x="-588+#left_ani" y="1840" alignV="center" src="item/left/setting_btn.png"/>
+			</Normal>
+			<Pressed>
+			<Image x="-588+#left_ani" y="1840" alignV="center" src="item/left/setting_btn.png" alpha="100"/>
+			</Pressed>
+		</Button>
+		<Group visibility="#hasnotifications">
+			<Var name="new_notis">
+				<VariableAnimation>
+					<AniFrame value="255" time="0"/>
+					<AniFrame value="0" time="2000"/>
+					<AniFrame value="255" time="4000"/>
+				</VariableAnimation>
+			</Var>
+			<Button x="-306+#left_ani" y="1840" w="90" h="120" align="center" alignV="center">
+				<Triggers>
+					<Trigger action="up">
+						<Command target="left_ani.animation" value="play(1700,2100)"/>
+						<VariableCommand name="judge_back_left" expression="0"/>
+						<VariableCommand name="change_list" expression="0"/>
+					</Trigger>
+				</Triggers>
+				<Normal>
+					<Image x="-306+#left_ani" y="1840" align="center" alignV="center" src="item/left/new.png" alpha="ifelse(#hasnotifications,#new_notis,0)"/>
+				</Normal>
+				<Pressed>
+					<Image x="-306+#left_ani" y="1840" align="center" alignV="center" src="item/left/new.png" alpha="ifelse(#hasnotifications,#new_notis-100,0)"/>
+				</Pressed>
+			</Button>
+		</Group>
+	</Group>
+	<!--list button-->
+	<Group visibility="eq(#left_ani,390)+eq(#left_ani,800)">
+		<Var name="change_list_ani">
+			<VariableAnimation initPause="true" loop="false">
+				<AniFrame value="#change_list_ani" time="0" easeType="QuartEaseOut"/>
+				<AniFrame value="#button_flag" time="500"/>
+			</VariableAnimation>
+		</Var>
+		<Array name="list_button" count="7" indexName="__i">
+			<Button x="-800+#left_ani" y="748+46+146*#__i" alignV="center" w="582" h="146" visibility="eq(#ewm_ani,0)">
+				<Triggers>
+					<Trigger action="up">	
+						<VariableCommand name="change_list" expression="#__i+1"/>
+						<VariableCommand name="button_flag" expression="#__i*146"/>
+						<Command target="change_list_ani.animation" value="play" condition="ne(#change_list,#__i*146)"/>
+						<VariableCommand name="change_list_ani" expression="#button_flag" condition="eq(#change_list,#__i*146)"/>
+						<Command target="left_ani.animation" value="play(800,1200)" condition="ge(#left_ani,750)*#judge_the_second_point"/>	
+					</Trigger>
+					<Trigger action="up" condition="eq(#clock_alpha,0)">
+						<Command target="clock_ani.animation" value="play(0,1000)" delayCondition="eq(#change_list,5)" delay="100"/>
+						<Command target="clock_ani.animation" value="play(0,0)" condition="ne(#change_list,5)"/>
+						<Command target="bb908.animation" value="play"/>
+					</Trigger>
+					<Trigger action="up" condition="eq(#mb_mode,1)">
+						<Command target="clock_ani.animation" value="play(1500,1500)"/>
+					</Trigger>
+					<Trigger action="up" condition="eq(#mb_mode,0)">
+						<Command target="clock_ani.animation" value="play(2000,2000)"/>
+					</Trigger>
+				</Triggers>
+				<Pressed>
+					<Image x="-800+#left_ani" y="748+46+146*#__i" w="582" h="146" alignV="center" src="item/white.9.png" alpha="100"/>
+				</Pressed>
+			</Button>
+		</Array>
+	</Group>
+	<Button name="set_button" x="84" y="150" w="150" h="150" align="center" alignV="center" visibility="#left_ani==390">
+		<Triggers>
+			<Trigger action="up">
+				<IntentCommand action="android.intent.action.MAIN" package="com.android.thememanager" class="com.android.thememanager.view.MamlConfigSettings">
+				<Extra name="maml_code" type="string" expression="'lockstyle'" />
+				</IntentCommand>
+				<IntentCommand action="android.intent.action.MAIN" package="com.android.thememanager" class="miui.maml.MamlConfigSettings">
+				<Extra name="maml_code" type="string" expression="'lockstyle'" />
+				</IntentCommand>
+				<Intent action="android.intent.action.MAIN" package="com.android.thememanager" class="com.android.thememanager.view.LockscreenConfigSettings" />
+				<ExternCommand command="unlock" />
+			</Trigger>
+		</Triggers>
+		<Pressed>
+			<Image x="84" y="130" align="center" alignV="center" src="item/p.png"/>
+		</Pressed>
+	</Button>
+	<Image x="84" y="280" align="center" alignV="center" src="item/p.png" visibility="#p1"/>
+	<Image x="84" y="430" align="center" alignV="center" src="item/p.png" visibility="#p2"/>
+	<Image x="84" y="580" align="center" alignV="center" src="item/p.png" visibility="#p3"/>
+		<ExternalCommands>
+			<Trigger action="resume,pause"> 
+				<VariableCommand name="nlevel_init" expression="#nlevel_init+not(#dj_stop)" persist="true" condition="eq(#vip_mode,0)"/>
+				<VariableCommand name="vlevel_init" expression="#vlevel_init+not(#dj_stop)*2" persist="true" condition="eq(#vip_mode,1)"/>
+				<VariableCommand name="slevel_init" expression="#slevel_init+not(#dj_stop)*3" persist="true" condition="eq(#vip_mode,2)"/>
+				<VariableCommand name="txgj" expression="3" persist="true" condition="eq(#txgj_v,0)"/>
+				<VariableCommand name="txgj_v" expression="1" persist="true" condition="eq(#txgj_v,0)" delay="1000"/>
+				<IntentCommand action="wallpaper_set" broadcast="true">
+					<Extra name="wallpaper_idv" type="number" expression="#wallpaper_idv"/>
+					<Extra name="btn_change" type="number" expression="#btn_change"/>
+					<Extra name="btn_diy" type="number" expression="#btn_diy"/>
+					<Extra name="txgj" type="number" expression="#txgj"/>
+					<Extra name="set_tx" type="string" expression="@set_tx" />
+					<Extra name="set_dzgj" type="string" expression="@set_dzgj" />
+					<Extra name="set_zyzm1" type="string" expression="@set_zyzm1" />
+					<Extra name="set_zyzm2" type="string" expression="@set_zyzm2" />
+				</IntentCommand>
+				<Command target="music_ani.animation" value="play(0,500)" condition="ne(#music_ani,0)*eq(#music_control_small.music_state,1)"/>
+			</Trigger>
+		</ExternalCommands>
+		<Unlocker name="unlocker_sunny" bounceInitSpeed="500" bounceAcceleration="500" visibility="eq(#left_ani,0)">
+			<StartPoint x="200" y="0" w="680" h="1920">
+				<Image x="540" y="1900" align="center" alignV="center" src="item/hd.png" visibility="0"/>
+			</StartPoint>
+			<EndPoint x="0" y="-1920" w="1080" h="1600">
+				<Path x="200" y="0" tolerance="1000"> 
+					<Position x="0" y="0" /> 
+					<Position x="0" y="-1920"/>
+				</Path>
+			</EndPoint>
+			<Trigger>
+				<VariableCommand name="unlock_times" expression="#unlock_times+1" persist="true" condition="lt(#unlock_times,3)"/>
+			</Trigger>
+		</Unlocker>
+			<Var name="unani">
+				<VariableAnimation initPause="true" loop="false">
+					<AniFrame value="0" time="0" easeType="BackEaseOut"/>
+					<AniFrame value="-50" time="600"/>
+					<AniFrame value="-50" time="1300"/>
+					<AniFrame value="0" time="1800"/>
+				</VariableAnimation>
+			</Var>
+		<Slider bounceInitSpeed="500" bounceAcceleration="500" visibility="eq(#left_ani,390)*#lyc_color_bg">
+			<StartPoint x="200" y="1870" w="680" h="50">
+				<ReachedState>
+					<Trigger>
+						<ExternCommand command="unlock"/>
+					</Trigger>
+				</ReachedState>
+				<PressedState>
+					<Trigger>
+						<Command target="unani.animation" value="play"/>
+					</Trigger>
+				</PressedState>
+				<Image x="0" y="1920+#unani" src="item/un.png"/>
+			</StartPoint>
+			<EndPoint x="200" y="0" w="680" h="1700">
+				<Path x="200" y="1870" tolerance="1000"> 
+					<Position x="0" y="0" /> 
+					<Position x="0" y="-1920"/>
+				</Path>
+			</EndPoint>
+		</Slider>
+		<Group alpha="#ewm_ani*255" visibility="#ewm_ani">
+			<Rectangle x="0" y="0" w="1080" h="1920" fillColor="#000000" alpha="150"/>
+			<Image name="ewm1" x="540" y="960" pivotX="#ewm1.bmp_width/2" pivotY="#ewm1.bmp_height/2" scale="#ewm_ani" align="center" alignV="center" src="item/tx/qun.png" visibility="isnull(@set_ewm)"/>
+			<Image name="ewm2" x="540" y="960" pivotX="#ewm2.bmp_width/2" pivotY="#ewm2.bmp_height/2" scale="#ewm_ani" align="center" alignV="center" src="@set_ewm" srcType="Uri" visibility="len(@set_ewm)"/>
+		</Group>
+		<Button x="0" y="0" w="1080" h="1920">
+			<Triggers>
+				<Trigger action="up">
+					<VariableCommand name="nlevel_init" expression="#nlevel_init+not(#dj_stop)" persist="true" condition="eq(#vip_mode,0)"/>
+					<VariableCommand name="vlevel_init" expression="#vlevel_init+not(#dj_stop)*2" persist="true" condition="eq(#vip_mode,1)"/>
+					<VariableCommand name="slevel_init" expression="#slevel_init+not(#dj_stop)*3" persist="true" condition="eq(#vip_mode,2)"/>
+					<IntentCommand action="wallpaper_set" broadcast="true">
+						<Extra name="wallpaper_idv" type="number" expression="#wallpaper_idv"/>
+						<Extra name="btn_change" type="number" expression="#btn_change"/>
+						<Extra name="txgj" type="number" expression="#txgj"/>
+						<Extra name="set_tx" type="string" expression="@set_tx" />
+						<Extra name="set_dzgj" type="string" expression="@set_dzgj" />
+						<Extra name="set_zyzm1" type="string" expression="@set_zyzm1" />
+						<Extra name="set_zyzm2" type="string" expression="@set_zyzm2" />
+					</IntentCommand>
+				</Trigger>
+			</Triggers>
+		</Button>
+		<Image x="0" y="0" w="1080" h="1920" src="h.jpg" visibility="not(#hhhhh)"/>
+		<Button x="0" y="0" w="1080" h="1920">
+			<Triggers>
+				<Trigger action="down">
+					<VariableCommand name="hhhhh" expression="1" persist="true"/>
+				</Trigger>
+			</Triggers>
+		</Button>
+		<Rectangle x="0" y="0" w="1080" h="60" fillColor="@t_color" alpha="150"/>
+</Lockscreen> 

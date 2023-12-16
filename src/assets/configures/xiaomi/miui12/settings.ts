@@ -12,13 +12,42 @@ import contact_edit_content_bg from "./resource/com.android.contacts/res/drawabl
 import default_wallpaper from "./resource/wallpaper/default_wallpaper.jpg";
 import XMLContactsThemeValues from "./resource/com.android.contacts/theme_values.xml?raw";
 import XMLContactsThemeFallback from "./resource/com.android.contacts/theme_fallback.xml?raw";
+import XmlLocationManifest from "./resource/lockscreen/advance/manifest.xml?raw";
 
-export const settings: IdeSettings<"desktop" | "contacts" | "mms"> = {
+export const settings: IdeSettings<
+  "lockscreen" | "desktop" | "contacts" | "mms"
+> = {
   meta: {
     name: "小米主题",
     description: "本插件适用于小米手机MIUI12主题",
   },
   modules: [
+    {
+      key: "lockscreen",
+      name: "动态",
+      icon: IconThemeManager,
+      views: [
+        {
+          name: "百变锁屏",
+          description: "MAML 百变锁屏",
+          preview: default_wallpaper,
+          resources: [
+            {
+              name: "锁屏脚本",
+              use: "file",
+              resource: {
+                name: "",
+                description: "",
+                mimeType: "application/xml",
+                origin: XmlLocationManifest,
+                targets: ["com.android.contacts/theme_values.xml"],
+              },
+            },
+          ],
+        },
+      ],
+    },
+
     {
       key: "desktop",
       name: "桌面和壁纸",
@@ -34,7 +63,7 @@ export const settings: IdeSettings<"desktop" | "contacts" | "mms"> = {
               use: "file-list",
               resources: [
                 {
-                  title: "图标和壁纸",
+                  title: "",
                   resources: [
                     {
                       name: "壁纸",

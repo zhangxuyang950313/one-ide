@@ -45,7 +45,7 @@ watchEffect(() => {
   cursor: pointer;
   &[data-active="true"] {
     .icon-bg {
-      background-color: var(--color-primary-light-4);
+      background-color: rgb(var(--primary-6));
       transition: 0.2s all;
     }
   }

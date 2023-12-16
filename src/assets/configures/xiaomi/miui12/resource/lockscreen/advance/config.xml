@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Config>
+
+
+	<Group text="感谢你使用此主题！若使用中有问任何问题请在主题页面主题介绍中查看使用帮助！" />
+	
+	<Group text="界面配置">
+		<StringInput text="设置用户名" id="set_name" default="小米主题"/>
+		<StringInput text="设置个性签名" id="set_gx" default="让生活丰富多彩"/>
+		<NumberChoice text="各第二级菜单背景" id="tm_mode" default="0">
+		 <Item value="0" text="高斯模糊"/>
+		 <Item value="1" text="透明玻璃"/>
+		 </NumberChoice>
+		 <NumberChoice text="维持当前等级不再增加" summary="某些机型不稳定可能导致等级清零，谨慎使用" id="dj_stop" default="0">
+		 <Item value="1" text="是"/>
+		 <Item value="0" text="否"/>
+		 </NumberChoice>
+		<StringInput text="设置自由桌面短语1" id="set_zyzm1" default=""/>
+		<StringInput text="设置自由桌面短语2" id="set_zyzm2" default=""/>
+		<AppPicker text="右侧边快捷APP1" id="app_1"/>
+		<AppPicker text="右侧边快捷APP2" id="app_2"/>
+		<AppPicker text="右侧边快捷APP3" id="app_3"/>
+		<AppPicker text="右侧边快捷APP4" id="app_4"/>
+		<AppPicker text="右侧边快捷APP5" id="app_5"/>
+		<AppPicker text="右侧边快捷APP6" id="app_6"/>
+		<AppPicker text="右侧边快捷APP7" id="app_7"/>
+	</Group>
+	<Group text="设置头像：请图片裁剪为为512*512分辨率左右的正方形以确保显示效果，尺寸过大的照片请先缩小至屏幕大小，否则可能不能正常显示或浪费系统资源">
+		<ImagePicker text="请选择头像" id="set_tx"/>
+	</Group>
+	<Group text="设置头像挂件：如果这款主题里面没有你喜欢的挂件，可以联系下方QQ群，群内相册也有大量精美挂件供你选择，然后从这里设置你的专属挂件">
+		<ImagePicker text="请选择头像挂件" id="set_dzgj"/>
+	</Group>
+	<Group text="甩动调出壁纸侧边功能">
+		<NumberChoice text="摇晃控触发壁纸右侧边" summary="开启可通过向左晃动手机来调出右边壁纸侧边，同时也可滑动控制 ps:这个功能要多加练习才能好用哦~" id="set_auto" default="1">
+		 <Item value="1" text="开启"/>
+		 <Item value="0" text="关闭"/>
+		 </NumberChoice>
+		<NumberChoice text="摇晃控制灵敏度" summary="灵敏度越高越容易触发，反之越困难(请根据实际体验调试)" id="set_lm" default="1100">
+		 <Item value="500" text="灵敏"/>
+		 <Item value="1100" text="适中"/>
+		 <Item value="1800" text="困难"/>
+		 </NumberChoice>
+	</Group>
+	
+	<Group text="设置短信快捷回复短语">
+		<StringInput text="短语1" id="kjhf_text1" default="嗯，好的。"/>
+		<StringInput text="短语2" id="kjhf_text2" default="知道了。"/>
+		<StringInput text="短语3" id="kjhf_text3" default="请晚一些打我手机！"/>
+		<StringInput text="短语4" id="kjhf_text4" default="你好，我正在开会，晚会儿打给你。"/>
+		<StringInput text="短语5" id="kjhf_text5" default="你好，我正在开车，晚会儿打给你。"/>
+	</Group>
+	<!--
+	<Group text="请将兑换的S码输入下框即可开通VIP会员服务，加速升级。">
+		<NumberInput text="请输入S码" id="scode" default="0"/>
+	</Group>
+	-->
+	<!--数字选择-->
+	<Group text="设置倒计时">
+		<StringInput text="纪念日" id="djr1" default="圣诞节"/>
+		<NumberInput text="年" id="y1111111" default="2016"/>
+		<NumberInput text="月" id="m1" default="12"/>
+		<NumberInput text="日" id="d1" default="26"/>
+	</Group>
+	
+	<Group text="设置二维码，方便朋友添加为好友！在锁屏菜单-->更多中显示">
+		<ImagePicker text="选择二维码图片" id="set_ewm"/>
+	</Group>
+	
+	<Group text="进入锁屏设置的两种方法：1、调出锁屏左侧边下方设置按钮。2、主题风格-->分类-->混搭-->锁屏样式-->我的-->个性化定制当前锁屏">
+	</Group>
+	
+	<Group>
+		<StringInput text="反馈交流群（点击可复制）" id="123" default="309086344"/>
+		<StringInput text="返现活动群（点击可复制）" id="321" default="56214986"/>
+	</Group>
+</Config>

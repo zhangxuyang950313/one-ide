@@ -57,7 +57,7 @@ const select = useVModel(props, "select", emit);
         color: var(--color-text-2);
 
         &[data-selected="true"] {
-          color: var(--color-primary-light-4);
+          color: rgb(var(--primary-6));
           font-weight: bold;
         }
       }
@@ -68,7 +68,7 @@ const select = useVModel(props, "select", emit);
         object-fit: contain;
         &[data-selected="true"] {
           opacity: 1;
-          outline: 2px solid var(--color-primary-light-4);
+          outline: 2px solid rgb(var(--primary-6));
         }
       }
     }

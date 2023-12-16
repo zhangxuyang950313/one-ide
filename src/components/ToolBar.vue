@@ -23,17 +23,17 @@ const { panelVisible } = storeToRefs(toolbarStore);
         name="模块"
         v-model:active="panelVisible.module"
       >
-        <IconApps class="icon" />
+        <IconApps class="icon" :data-active="panelVisible.module" />
       </IconButton>
       <IconButton class="button" name="页面" v-model:active="panelVisible.view">
-        <IconMenu class="icon" />
+        <IconMenu class="icon" :data-active="panelVisible.view" />
       </IconButton>
       <IconButton
         class="button"
         name="预览"
         v-model:active="panelVisible.preview"
       >
-        <IconMobile class="icon" />
+        <IconMobile class="icon" :data-active="panelVisible.preview" />
       </IconButton>
     </div>
     <div>
@@ -63,6 +63,10 @@ const { panelVisible } = storeToRefs(toolbarStore);
   }
   .icon {
     font-size: 15px;
+    color: white;
+    &[data-active="true"] {
+      color: black;
+    }
   }
 }
 </style>

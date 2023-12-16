@@ -1,6 +1,6 @@
 <script lang="tsx">
 import { defineComponent, toRefs, type PropType } from "vue";
-import { IconCode, IconMindMapping } from "@arco-design/web-vue/es/icon";
+// import { IconCode, IconMindMapping } from "@arco-design/web-vue/es/icon";
 import { useToggle } from "@vueuse/core";
 import { Resource } from "@/schema/schema.ts";
 import XmlUI from "./XmlUI.vue";
@@ -17,18 +17,18 @@ export default defineComponent({
     "update:modelValue": (_v: string) => true,
   },
   setup(props) {
-    const { origin, name } = toRefs(props.resource);
-    const [useEditor, toggle] = useToggle(false);
+    const { origin } = toRefs(props.resource);
+    const [useEditor] = useToggle(true);
     return () => (
       <div class="c-xml-handler">
-        <div class="title-bar">
+        {/* <div class="title-bar">
           <span class="title">{name.value}</span>
           {useEditor.value ? (
             <IconMindMapping class="icon" onClick={() => toggle(false)} />
           ) : (
             <IconCode class="icon" onClick={() => toggle(true)} />
           )}
-        </div>
+        </div> */}
         {useEditor.value ? (
           <MonacoEditor
             value={origin.value}
