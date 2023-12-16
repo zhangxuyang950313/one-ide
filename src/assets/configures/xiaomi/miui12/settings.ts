@@ -24,12 +24,12 @@ export const settings: IdeSettings<
   modules: [
     {
       key: "lockscreen",
-      name: "动态",
+      name: "百变引擎",
       icon: IconThemeManager,
       views: [
         {
           name: "百变锁屏",
-          description: "MAML 百变锁屏",
+          description: "MAML百变锁屏",
           preview: default_wallpaper,
           resources: [
             {

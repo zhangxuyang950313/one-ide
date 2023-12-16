@@ -8,6 +8,17 @@ import path from "path";
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  root: path.resolve(__dirname, "src/views"),
+
+  build: {
+    rollupOptions: {
+      input: {
+        home: path.resolve(__dirname, "views/home/index.html"),
+        ide: path.resolve(__dirname, "views/ide/index.html"),
+        create: path.resolve(__dirname, "views/create/index.html"),
+      },
+    },
+  },
   plugins: [
     vue(),
     vueJsxPlugin(),
@@ -34,10 +45,13 @@ export default defineConfig({
     },
   },
   css: {
+    postcss: {
+      plugins: [require("tailwindcss"), require("autoprefixer")],
+    },
     preprocessorOptions: {
       less: {
         modifyVars: {
-          "arcoblue-6": "#ffd700",
+          "arcoblue-6": "#fdcf4c",
         },
       },
     },

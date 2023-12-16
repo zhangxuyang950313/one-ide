@@ -1,6 +1,6 @@
 <script lang="tsx">
 import { computed, defineComponent, type PropType, toRef } from "vue";
-import { Input, Select } from "@arco-design/web-vue";
+import { Input } from "@arco-design/web-vue";
 import { type Element } from "xml-js";
 
 const XmlUIElement = defineComponent({

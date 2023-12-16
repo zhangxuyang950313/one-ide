@@ -1,46 +1,26 @@
-<script lang="tsx">
-import { defineComponent, toRefs, type PropType } from "vue";
-// import { IconCode, IconMindMapping } from "@arco-design/web-vue/es/icon";
-import { useToggle } from "@vueuse/core";
+<template>
+  <div class="c-xml-handler">
+    <MonacoEditor
+      v-model:value="modelValue"
+      :options="{ language: 'xml', theme: 'vs-dark' }"
+    />
+  </div>
+</template>
+<script setup lang="tsx">
+import { ref, watchEffect } from "vue";
 import { Resource } from "@/schema/schema.ts";
-import XmlUI from "./XmlUI.vue";
 import MonacoEditor from "../Monaco/Index.vue";
 
-export default defineComponent({
-  props: {
-    resource: {
-      type: Object as PropType<Resource>,
-      required: true,
-    },
-  },
-  emits: {
-    "update:modelValue": (_v: string) => true,
-  },
-  setup(props) {
-    const { origin } = toRefs(props.resource);
-    const [useEditor] = useToggle(true);
-    return () => (
-      <div class="c-xml-handler">
-        {/* <div class="title-bar">
-          <span class="title">{name.value}</span>
-          {useEditor.value ? (
-            <IconMindMapping class="icon" onClick={() => toggle(false)} />
-          ) : (
-            <IconCode class="icon" onClick={() => toggle(true)} />
-          )}
-        </div> */}
-        {useEditor.value ? (
-          <MonacoEditor
-            value={origin.value}
-            options={{ language: "xml", theme: "vs-dark" }}
-          />
-        ) : (
-          <XmlUI xml={origin.value} />
-        )}
-      </div>
-    );
-  },
+const props = defineProps<{ resource: Resource }>();
+
+const modelValue = ref(props.resource.origin);
+watchEffect(() => {
+  modelValue.value = props.resource.origin;
 });
+
+// watch(modelValue, (value) => {
+//   fs.writeFileSync(value)
+// });
 </script>
 
 <style lang="less" scoped>

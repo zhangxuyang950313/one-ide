@@ -8,9 +8,11 @@ import {
   IconInfoCircle,
 } from "@arco-design/web-vue/es/icon";
 import { storeToRefs } from "pinia";
+import { useRouter } from "vue-router";
 import { useToolbarStore } from "@/store/useToolbar";
 import IconButton from "./ui/IconButton.vue";
 
+const router = useRouter();
 const toolbarStore = useToolbarStore();
 const { panelVisible } = storeToRefs(toolbarStore);
 </script>
@@ -18,6 +20,13 @@ const { panelVisible } = storeToRefs(toolbarStore);
 <template>
   <div class="toolbar-container">
     <div>
+      <IconButton
+        class="button"
+        name="返回"
+        @click="() => router.replace({ path: '/' })"
+      >
+        <IconBackward />
+      </IconButton>
       <IconButton
         class="button"
         name="模块"

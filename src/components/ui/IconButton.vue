@@ -26,7 +26,7 @@ watchEffect(() => {
   <div
     class="c-icon-button"
     :data-active="active"
-    @click="$emit('update:active', !active)"
+    @click="$emit('update:active', !active), $emit('click')"
   >
     <div class="icon-bg">
       <div class="icon">

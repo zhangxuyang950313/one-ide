@@ -1,13 +1,13 @@
 <script setup lang="ts">
-import { Empty } from "@arco-design/web-vue";
 import { storeToRefs } from "pinia";
+import { Empty } from "@arco-design/web-vue";
 import { useToolbarStore } from "@/store/useToolbar";
-import ToolBar from "../components/ToolBar.vue";
-import ModuleSelector from "../components/ModuleSelector/Index.vue";
-import ViewSelector from "../components/ViewSelector/Index.vue";
-import ViewPreview from "../components/ViewPreview/Index.vue";
-import ViewResource from "../components/ViewResource/Index.vue";
-import { useIdeStateStore } from "../store/useIdeStateStore.ts";
+import { useIdeStateStore } from "@/store/useIdeStateStore.ts";
+import ToolBar from "@/components/ToolBar.vue";
+import ModuleSelector from "@/components/ModuleSelector/Index.vue";
+import ViewSelector from "@/components/ViewSelector/Index.vue";
+import ViewPreview from "@/components/ViewPreview/Index.vue";
+import ViewResource from "@/components/ViewResource/Index.vue";
 
 const ideStateStore = useIdeStateStore();
 const toolbarStore = useToolbarStore();
