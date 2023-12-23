@@ -2,14 +2,13 @@ import {
   app,
   session,
   BrowserWindow,
-  ipcMain,
   BrowserWindowConstructorOptions,
-  dialog,
-  OpenDialogOptions,
-  webContents,
+  ipcMain,
 } from "electron";
 import path from "node:path";
+import { registerCustomProtocol } from "./customProtocol";
 import { ViewPath } from "../common/enums";
+import "./ipcMainOn";
 
 // The built directory structure
 //
@@ -44,16 +43,19 @@ async function setupDevTools() {
 }
 
 const windowsSet = new Set<BrowserWindow>();
+const partition = "persist:one";
 async function createWindow(
   view = ViewPath.HOME,
   options?: BrowserWindowConstructorOptions,
 ) {
-  const win = new BrowserWindow({
+  const mergedOptions: BrowserWindowConstructorOptions = {
     icon: path.join(process.env.VITE_PUBLIC, "favicon.ico"),
-    width: 800,
-    height: 600,
-    minWidth: 800,
-    minHeight: 600,
+    // width: 800,
+    // height: 600,
+    // minWidth: 800,
+    // minHeight: 600,
+    width: 1200,
+    height: 800,
     center: true,
     zoomToPageWidth: true,
     titleBarOverlay: true,
@@ -61,12 +63,18 @@ async function createWindow(
     backgroundColor: "#242424",
     titleBarStyle: "hiddenInset",
     webPreferences: {
+      // sandbox: false,
       spellcheck: false,
       scrollBounce: true,
       preload: path.join(__dirname, "preload.js"),
+      partition,
     },
     ...(options || {}),
-  });
+  };
+  if (VITE_DEV_SERVER_URL && mergedOptions.width) {
+    mergedOptions.width += 500;
+  }
+  const win = new BrowserWindow(mergedOptions);
 
   // Test active push message to Renderer-process.
   win.webContents.on("did-finish-load", () => {
@@ -74,13 +82,13 @@ async function createWindow(
   });
 
   if (VITE_DEV_SERVER_URL) {
-    win.loadURL(`${VITE_DEV_SERVER_URL}${view}/index.html`);
+    win.loadURL(`${VITE_DEV_SERVER_URL}${view}`);
     if ([ViewPath.HOME, ViewPath.IDE].includes(view)) {
       win.webContents.openDevTools();
     }
   } else {
-    // win.loadFile('dist/index.html')
-    win.loadFile(path.join(process.env.DIST, `views/${view}/index.html`));
+    win.loadFile("dist/index.html");
+    // win.loadFile(path.join(process.env.DIST, `views/${view}/index.html#/`));
   }
   windowsSet.add(win);
   win.on("closed", () => {
@@ -103,20 +111,31 @@ app.on("window-all-closed", () => {
 app.on("activate", async () => {
   // On OS X it's common to re-create a window in the app when the
   // dock icon is clicked and there are no other windows open.
-  if (BrowserWindow.getAllWindows().length === 0) {
-    await createWindow(ViewPath.HOME);
-  }
+  // if (BrowserWindow.getAllWindows().length === 0) {
+  //   await createWindow(ViewPath.HOME);
+  // }
 });
 
 app.whenReady().then(async () => {
-  await createWindow();
+  const ses = session.fromPartition(partition, { cache: true });
+  registerCustomProtocol(ses);
+  // await createWindow(ViewPath.IDE, {
+  //   width: 1200,
+  //   height: 800,
+  //   webPreferences: {
+  //     spellcheck: false,
+  //     scrollBounce: true,
+  //     preload: path.join(__dirname, "preload.js"),
+  //     partition,
+  //   },
+  // });
+  await createWindow(ViewPath.HOME);
   if (VITE_DEV_SERVER_URL) {
     await setupDevTools();
   }
 });
 
 ipcMain.on("openWindow", (_event, name: ViewPath) => {
-  console.log(_event);
   switch (name) {
     case ViewPath.IDE: {
       createWindow(name, {
@@ -138,9 +157,4 @@ ipcMain.on("openWindow", (_event, name: ViewPath) => {
       });
     }
   }
-});
-
-ipcMain.on("showOpenDialog", async (event, options: OpenDialogOptions) => {
-  const files = await dialog.showOpenDialog(options);
-  event.sender.send("showOpenDialog", files);
 });

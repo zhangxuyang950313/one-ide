@@ -8,17 +8,16 @@ import path from "path";
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  root: path.resolve(__dirname, "src/views"),
-
-  build: {
-    rollupOptions: {
-      input: {
-        home: path.resolve(__dirname, "views/home/index.html"),
-        ide: path.resolve(__dirname, "views/ide/index.html"),
-        create: path.resolve(__dirname, "views/create/index.html"),
-      },
-    },
-  },
+  root: path.resolve(__dirname, "src"),
+  // build: {
+  //   rollupOptions: {
+  //     input: {
+  //       home: path.resolve(__dirname, "views/home/index.html"),
+  //       ide: path.resolve(__dirname, "views/ide/index.html"),
+  //       create: path.resolve(__dirname, "views/create/index.html"),
+  //     },
+  //   },
+  // },
   plugins: [
     vue(),
     vueJsxPlugin(),

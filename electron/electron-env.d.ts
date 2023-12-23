@@ -25,7 +25,8 @@ declare namespace NodeJS {
 interface Window {
   electron: {
     ipcRenderer: import("electron").IpcRenderer;
-    showOpenDialog: import("electron").Dialog["showOpenDialog"];
+    shell: import("electron").Shell;
+    dialog: import("electron").Dialog;
     openWindow: (name: import("./main").ViewPath) => void;
   };
 }

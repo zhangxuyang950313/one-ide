@@ -23,32 +23,6 @@ export const settings: IdeSettings<
   },
   modules: [
     {
-      key: "lockscreen",
-      name: "百变引擎",
-      icon: IconThemeManager,
-      views: [
-        {
-          name: "百变锁屏",
-          description: "MAML百变锁屏",
-          preview: default_wallpaper,
-          resources: [
-            {
-              name: "锁屏脚本",
-              use: "file",
-              resource: {
-                name: "",
-                description: "",
-                mimeType: "application/xml",
-                origin: XmlLocationManifest,
-                targets: ["com.android.contacts/theme_values.xml"],
-              },
-            },
-          ],
-        },
-      ],
-    },
-
-    {
       key: "desktop",
       name: "桌面和壁纸",
       icon: IconThemeManager,
@@ -70,14 +44,14 @@ export const settings: IdeSettings<
                       description: "",
                       mimeType: "image/jpeg",
                       origin: default_wallpaper,
-                      targets: ["wallpaper/default_wallpaper.jpg"],
+                      release: ["wallpaper/default_wallpaper.jpg"],
                     },
                     {
                       name: "锁屏壁纸",
                       description: "",
                       mimeType: "image/jpeg",
                       origin: default_wallpaper,
-                      targets: ["wallpaper/default_lock_wallpaper.jpg"],
+                      release: ["wallpaper/default_lock_wallpaper.jpg"],
                     },
                   ],
                 },
@@ -95,7 +69,7 @@ export const settings: IdeSettings<
                       description: "",
                       mimeType: "image/jpeg",
                       origin: IconTwelveKeyDialer,
-                      targets: [
+                      release: [
                         "icons/res/drawable-xxhdpi/com.android.contacts.png",
                       ],
                     },
@@ -104,7 +78,7 @@ export const settings: IdeSettings<
                       description: "",
                       mimeType: "image/jpeg",
                       origin: IconContacts,
-                      targets: [
+                      release: [
                         "icons/res/drawable-xxhdpi/com.android.contacts.activities.TwelveKeyDialer.png",
                         "icons/res/drawable-xxhdpi/com.android.providers.contacts.png",
                       ],
@@ -121,7 +95,7 @@ export const settings: IdeSettings<
                 description: "",
                 mimeType: "application/xml",
                 origin: XMLContactsThemeValues,
-                targets: ["com.android.contacts/theme_values.xml"],
+                release: ["com.android.contacts/theme_values.xml"],
                 // origin: `<color name="action_bar_title_text_color_light" package="miui">class_color_top_title</color>`,
                 // targets: [`<color name="$1" package="$2">$3</color>`],
               },
@@ -134,9 +108,34 @@ export const settings: IdeSettings<
                 description: "",
                 mimeType: "application/xml",
                 origin: XMLContactsThemeFallback,
-                targets: ["com.android.contacts/theme_values.xml"],
+                release: ["com.android.contacts/theme_values.xml"],
                 // origin: `<color name="action_bar_title_text_color_light" package="miui">class_color_top_title</color>`,
                 // targets: [`<color name="$1" package="$2">$3</color>`],
+              },
+            },
+          ],
+        },
+      ],
+    },
+    {
+      key: "lockscreen",
+      name: "百变引擎",
+      icon: IconThemeManager,
+      views: [
+        {
+          name: "百变锁屏",
+          description: "MAML百变锁屏",
+          preview: default_wallpaper,
+          resources: [
+            {
+              name: "锁屏脚本",
+              use: "file",
+              resource: {
+                name: "",
+                description: "",
+                mimeType: "application/xml",
+                origin: XmlLocationManifest,
+                release: ["com.android.contacts/theme_values.xml"],
               },
             },
           ],
@@ -165,7 +164,7 @@ export const settings: IdeSettings<
                       description: "",
                       mimeType: "image/jpeg",
                       origin: contact_edit_content_bg,
-                      targets: ["wallpaper/default_wallpaper.jpg"],
+                      release: ["wallpaper/default_wallpaper.jpg"],
                     },
                   ],
                 },
@@ -190,7 +189,7 @@ export const settings: IdeSettings<
                       description: "",
                       mimeType: "image/jpeg",
                       origin: contact_edit_content_bg,
-                      targets: ["wallpaper/default_wallpaper.jpg"],
+                      release: ["wallpaper/default_wallpaper.jpg"],
                     },
                   ],
                 },

@@ -15,8 +15,8 @@
         v-show="!creatorVisible"
         class="flex flex-col overflow-hidden h-full"
       >
-        <div class="flex justify-between items-end my-[40px] mx-[20px]">
-          <h1 class="m-0 leading-[1]">我的创作</h1>
+        <div class="flex justify-between items-center my-[40px] mx-[20px]">
+          <h1 class="m-0 mr-4 leading-[1] flex-shrink-0">我的创作</h1>
           <Space>
             <Button @click="handleStart">新的创作</Button>
             <Button @click="handleImport">导 入</Button>
@@ -24,7 +24,7 @@
         </div>
         <section
           v-show="!creatorVisible"
-          class="flex flex-col overflow-auto pl-[20px]"
+          class="flex flex-col overflow-auto px-[20px]"
         >
           <div
             v-for="(project, k) in projects"
@@ -92,7 +92,7 @@ async function handleStart() {
 
 // 导入
 async function handleImport() {
-  const values = await window.electron.showOpenDialog({
+  const values = await window.electron.dialog.showOpenDialog({
     message: "打开项目",
     properties: ["openDirectory", "createDirectory", "promptToCreate"],
   });
@@ -119,6 +119,6 @@ function handleOk() {
 // 进入编辑器
 function handleOpenEditor(p: string) {
   openEditor(p);
-  window.close();
+  // window.close();
 }
 </script>

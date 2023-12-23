@@ -1,4 +1,4 @@
-import { contextBridge, ipcRenderer } from "electron";
+import { Dialog, Shell, contextBridge, ipcRenderer } from "electron";
 
 // `exposeInMainWorld` can't detect attributes and methods of `prototype`, manually patching it.
 function withPrototype(obj: Record<string, any>) {
@@ -22,15 +22,22 @@ function withPrototype(obj: Record<string, any>) {
 // --------- Expose some API to the Renderer process ---------
 contextBridge.exposeInMainWorld("electron", {
   ipcRenderer: withPrototype(ipcRenderer),
+  shell: {
+    showItemInFolder: (fullPath) => {
+      ipcRenderer.send("shell.showItemInFolder", fullPath);
+    },
+  } as Shell,
+  dialog: {
+    showOpenDialog: (...args: any[]) => {
+      ipcRenderer.send("dialog.showOpenDialog", ...args);
+      return new Promise((resolve) => {
+        ipcRenderer.on("dialog.showOpenDialog", (_event, result) => {
+          resolve(result);
+        });
+      });
+    },
+  } as Dialog,
   openWindow: (...args: any[]) => {
     ipcRenderer.send("openWindow", ...args);
-  },
-  showOpenDialog: (...args: any[]) => {
-    ipcRenderer.send("showOpenDialog", ...args);
-    return new Promise((resolve) => {
-      ipcRenderer.on("showOpenDialog", (_event, result) => {
-        resolve(result);
-      });
-    });
   },
 });

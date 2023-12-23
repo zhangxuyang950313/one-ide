@@ -37,7 +37,7 @@ export type View = {
 export type Resource = {
   mimeType: MimeType; // 文件类型
   origin: string; // 资源位置
-  targets: string[]; // 目标位置
+  release: string[]; // 目标位置
   name: string;
   description: string;
 };

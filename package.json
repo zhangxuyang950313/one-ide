@@ -9,8 +9,10 @@
     "lint": "eslint --ext .jsx,.js,.ts,.tsx,.vue ./ --fix"
   },
   "dependencies": {
+    "@alova/adapter-xhr": "^1.0.2",
     "@arco-design/web-vue": "^2.53.3",
     "@vueuse/core": "^10.7.0",
+    "alova": "^2.16.1",
     "fast-xml-parser": "^4.3.2",
     "file-type": "^18.7.0",
     "htmlparser2": "^9.0.0",

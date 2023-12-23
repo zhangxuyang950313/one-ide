@@ -20,11 +20,7 @@ const { panelVisible } = storeToRefs(toolbarStore);
 <template>
   <div class="toolbar-container">
     <div>
-      <IconButton
-        class="button"
-        name="返回"
-        @click="() => router.replace({ path: '/' })"
-      >
+      <IconButton class="button" name="返回" @click="() => router.go(-1)">
         <IconBackward />
       </IconButton>
       <IconButton

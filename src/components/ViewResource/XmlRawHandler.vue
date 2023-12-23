@@ -1,47 +1,26 @@
 <template>
-  <div class="c-xml-handler">
+  <div class="w-full h-full flex flex-col">
     <MonacoEditor
-      v-model:value="modelValue"
+      v-if="value"
+      :value="value"
       :options="{ language: 'xml', theme: 'vs-dark' }"
     />
   </div>
 </template>
 <script setup lang="tsx">
-import { ref, watchEffect } from "vue";
+import { useRequest } from "alova";
+import { computed } from "vue";
 import { Resource } from "@/schema/schema.ts";
+import { serviceGetProjectFile } from "@/service/file";
 import MonacoEditor from "../Monaco/Index.vue";
 
 const props = defineProps<{ resource: Resource }>();
 
-const modelValue = ref(props.resource.origin);
-watchEffect(() => {
-  modelValue.value = props.resource.origin;
-});
+const { data } = useRequest(() =>
+  serviceGetProjectFile(props.resource.release[0]),
+);
 
-// watch(modelValue, (value) => {
-//   fs.writeFileSync(value)
-// });
+const value = computed(() =>
+  typeof data.value === "string" ? data.value : "",
+);
 </script>
-
-<style lang="less" scoped>
-.c-xml-handler {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  .title-bar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    color: var(--color-text-1);
-    margin-bottom: 20px;
-    .title {
-      font-size: 20px;
-    }
-    .icon {
-      font-size: 20px;
-      cursor: pointer;
-    }
-  }
-}
-</style>

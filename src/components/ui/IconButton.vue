@@ -1,7 +1,5 @@
 <script setup lang="ts">
-import { watchEffect } from "vue";
-
-const props = defineProps({
+defineProps({
   name: {
     type: String,
     default: "按钮",
@@ -15,10 +13,6 @@ const props = defineProps({
 defineEmits({
   click: () => true,
   "update:active": (_v: boolean) => true,
-});
-
-watchEffect(() => {
-  console.log(props.active);
 });
 </script>
 

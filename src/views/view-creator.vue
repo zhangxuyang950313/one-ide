@@ -40,7 +40,7 @@ const formModel = reactive({
 
 async function handleOpenFolder() {
   // https://electronjs.org/zh/docs/latest/api/dialog
-  const files = await window.electron.showOpenDialog({
+  const files = await window.electron.dialog.showOpenDialog({
     message: "选择创作目录",
     properties: ["openDirectory", "createDirectory", "promptToCreate"],
   });

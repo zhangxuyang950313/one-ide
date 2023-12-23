@@ -41,7 +41,7 @@ export default defineComponent({
   .resources {
     display: flex;
     grid-gap: 20px;
-    height: 100%;
+    // height: 100%;
   }
   .group-title {
     z-index: 1;
