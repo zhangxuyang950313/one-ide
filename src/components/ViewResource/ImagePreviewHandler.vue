@@ -2,6 +2,7 @@
 import { computed, ref } from "vue";
 import { IconImport } from "@arco-design/web-vue/es/icon";
 import { useFetcher } from "alova";
+import { Image, Spin } from "@arco-design/web-vue";
 import { useStorageData } from "@/use/useStorageData";
 import { Resource } from "@/schema/schema.ts";
 import { serviceCopyFile } from "@/service/file";
@@ -54,12 +55,28 @@ function handleOpenFolder() {
     <div
       class="inline-flex items-center justify-center w-[100px] h-[100px] rounded-[6px] cursor-pointer gird-bg"
     >
-      <img
-        class="w-[80%] h-[80%] object-contain"
+      <Image
+        class="flex items-center justify-center w-[80%] h-[80%]"
+        style="display: flex !important"
+        width="90%"
+        height="90%"
+        fit="contain"
+        show-loader
         :src="imgUrl"
+        @click="handleOpenFolder"
+      >
+        <template #loader>
+          <div class="w-full h-full flex items-center justify-center">
+            <Spin loading />
+          </div>
+        </template>
+      </Image>
+      <!-- <img
+        class="w-[80%] h-[80%] object-contain"
         alt=""
         @click="handleOpenFolder"
-      />
+        v-lazy="imgUrl"
+      /> -->
     </div>
     <div class="mx-[10px]">
       <IconImport

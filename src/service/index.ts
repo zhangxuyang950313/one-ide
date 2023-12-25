@@ -6,6 +6,11 @@ export const alovaFile = createAlova({
   baseURL: "one://",
   requestAdapter: xhrRequestAdapter(),
   statesHook: VueHooks,
+  localCache: {
+    GET: {
+      expire: 0,
+    },
+  },
   beforeRequest(method) {
     method.config.responseType = "text";
   },
