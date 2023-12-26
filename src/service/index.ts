@@ -2,7 +2,7 @@ import { createAlova } from "alova";
 import VueHooks from "alova/vue";
 import { xhrRequestAdapter } from "@alova/adapter-xhr";
 
-export const alovaFile = createAlova({
+export const alovaOne = createAlova({
   baseURL: "one://",
   requestAdapter: xhrRequestAdapter(),
   statesHook: VueHooks,

@@ -1,7 +1,7 @@
 <script lang="tsx">
 import {
-  defineComponent,
   ref,
+  defineComponent,
   watchEffect,
   type VNodeRef,
   type PropType,
@@ -26,7 +26,7 @@ export default defineComponent({
   emits: {
     "update:value": (_v: string) => true,
   },
-  setup(props) {
+  setup(props, ctx) {
     let editorIns: editor.IStandaloneCodeEditor;
     const modelValue = ref(props.value);
     const onVNodeMounted: VNodeRef = async (ref) => {
@@ -36,22 +36,16 @@ export default defineComponent({
         value: props.value,
         automaticLayout: true,
       });
+      editorIns.onDidChangeModelContent(() => {
+        ctx.emit("update:value", editorIns.getValue());
+      });
     };
 
     watchEffect(() => {
       editorIns?.setValue(modelValue.value);
     });
 
-    return () => <div ref={onVNodeMounted} class="c-monaco-editor"></div>;
+    return () => <div ref={onVNodeMounted} class="w-full h-full"></div>;
   },
 });
 </script>
-
-<style lang="less" scoped>
-.c-monaco-editor {
-  width: 100%;
-  height: 100%;
-  //min-width: 100px;
-  //min-height: 100px;
-}
-</style>
