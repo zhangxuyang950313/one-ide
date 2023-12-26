@@ -11,7 +11,7 @@
 <script setup lang="tsx">
 import { useRequest } from "alova";
 import { computed } from "vue";
-import { Resource } from "@/schema/schema.ts";
+import { Resource } from "@/schema/schema";
 import { serviceGetProjectFile, serviceWriteFile } from "@/service/file";
 import { useStorageData } from "@/use/useStorageData";
 import MonacoEditor from "../Monaco/Index.vue";

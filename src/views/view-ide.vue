@@ -8,6 +8,7 @@ import ModuleSelector from "@/components/ModuleSelector/Index.vue";
 import ViewSelector from "@/components/ViewSelector/Index.vue";
 import ViewPreview from "@/components/ViewPreview/Index.vue";
 import ViewResource from "@/components/ViewResource/Index.vue";
+import FileSystem from "@/components/FileSystem/Index.vue";
 
 const ideStateStore = useIdeStateStore();
 const toolbarStore = useToolbarStore();
@@ -39,6 +40,10 @@ const { panelVisible } = storeToRefs(toolbarStore);
         <template v-else>
           <Empty class="empty" description="未选择模块" />
         </template>
+        <!-- 文件管理器 -->
+        <section class="file-system">
+          <FileSystem />
+        </section>
       </section>
     </section>
   </main>
@@ -108,6 +113,12 @@ const { panelVisible } = storeToRefs(toolbarStore);
         width: 100%;
         height: 100%;
         overflow: hidden;
+      }
+      .file-system {
+        padding: 10px;
+        width: 500px;
+        overflow: auto;
+        border-left: 1px solid var(--color-border-2);
       }
     }
   }

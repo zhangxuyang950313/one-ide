@@ -1,6 +1,7 @@
 import { protocol, net, Session } from "electron";
+import dirTree from "directory-tree";
 import url from "node:url";
-import fs, { read } from "node:fs";
+import fs from "node:fs";
 
 protocol.registerSchemesAsPrivileged([
   {
@@ -59,6 +60,12 @@ export const registerCustomProtocol = (session?: Session) => {
         });
       });
       return new Response(response, {
+        headers: [["content-type", "application/json"]],
+      });
+    }
+    if (reqUrl.host === "dir-tree") {
+      const dir = reqUrl.searchParams.get("p") as string;
+      return new Response(JSON.stringify(dirTree(dir)), {
         headers: [["content-type", "application/json"]],
       });
     }
