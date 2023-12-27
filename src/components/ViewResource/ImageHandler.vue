@@ -5,6 +5,7 @@ import {
   IconFullscreen,
   IconImport,
   IconLaunch,
+  IconTool,
 } from "@arco-design/web-vue/es/icon";
 import { Image, ImagePreview, Spin } from "@arco-design/web-vue";
 import { useStorageData } from "@/use/useStorageData";
@@ -57,9 +58,9 @@ function handleOpenFolder() {
 </script>
 
 <template>
-  <div class="flex">
+  <div class="image-handler flex flex-col">
     <div
-      class="inline-flex items-center justify-center w-[100px] h-[100px] rounded-[6px] cursor-pointer gird-bg"
+      class="inline-flex items-center justify-center w-[126px] h-[126px] rounded-[6px] cursor-pointer gird-bg"
     >
       <Image
         class="flex items-center justify-center w-[80%] h-[80%]"
@@ -85,7 +86,9 @@ function handleOpenFolder() {
         v-lazy="imgUrl"
       /> -->
     </div>
-    <div class="mx-[10px] flex flex-col gap-2 justify-between">
+    <div
+      class="tools my-[4px] mt-[-30px] flex justify-center gap-[2px] bg-[--color-mask-bg] transition-all"
+    >
       <IconImport
         v-show="!fetching"
         class="icon-primary"
@@ -94,15 +97,41 @@ function handleOpenFolder() {
       <IconLoading v-show="fetching" class="icon-primary" />
       <IconFullscreen class="icon-primary" @click="previewVisible = true" />
       <ImagePreview v-model:visible="previewVisible" :src="imgUrl" />
+      <IconTool class="icon-primary" @click="handleOpenFolder" />
       <IconLaunch class="icon-primary" @click="handleOpenFolder" />
     </div>
   </div>
 </template>
 
 <style lang="less" scoped>
+.image-handler {
+  .tools {
+    transform: scale(0);
+    transform-origin: 50% 100%;
+    opacity: 0;
+  }
+  &:hover {
+    .tools {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+}
 .icon-primary {
-  @apply text-lg cursor-pointer;
-  @apply hover:opacity-50;
+  width: 30px;
+  height: 30px;
+  padding: 5px;
+  @apply text-base cursor-pointer;
+  @apply transition-all;
+  // background-color: var(--color-border-2);
+  border-radius: 50%;
+  overflow: hidden;
+  &:hover {
+    // background-color: var(--color-border-4);
+    background-color: rgb(var(--primary-5));
+    color: black;
+    @apply transition-all;
+  }
 }
 
 .gird-bg {
