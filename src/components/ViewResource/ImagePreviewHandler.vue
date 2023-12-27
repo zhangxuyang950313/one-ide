@@ -1,8 +1,12 @@
 <script lang="ts" setup>
 import { computed, ref } from "vue";
-import { IconImport } from "@arco-design/web-vue/es/icon";
 import { useFetcher } from "alova";
-import { Image, Spin } from "@arco-design/web-vue";
+import {
+  IconFullscreen,
+  IconImport,
+  IconLaunch,
+} from "@arco-design/web-vue/es/icon";
+import { Image, ImagePreview, Spin } from "@arco-design/web-vue";
 import { useStorageData } from "@/use/useStorageData";
 import { Resource } from "@/schema/schema.ts";
 import { serviceCopyFile } from "@/service/file";
@@ -14,6 +18,8 @@ const props = defineProps<{
 const { editor } = useStorageData();
 
 const time = ref(Date.now());
+
+const previewVisible = ref(false);
 
 const releasePath = computed(
   () => `${editor.value.current || ""}/${props.resource.release[0] || ""}`,
@@ -62,6 +68,7 @@ function handleOpenFolder() {
         height="90%"
         fit="contain"
         show-loader
+        :preview="false"
         :src="imgUrl"
         @click="handleOpenFolder"
       >
@@ -78,13 +85,16 @@ function handleOpenFolder() {
         v-lazy="imgUrl"
       /> -->
     </div>
-    <div class="mx-[10px]">
+    <div class="mx-[10px] flex flex-col gap-2 justify-between">
       <IconImport
         v-show="!fetching"
         class="icon-primary"
         @click="handleImport"
       />
       <IconLoading v-show="fetching" class="icon-primary" />
+      <IconFullscreen class="icon-primary" @click="previewVisible = true" />
+      <ImagePreview v-model:visible="previewVisible" :src="imgUrl" />
+      <IconLaunch class="icon-primary" @click="handleOpenFolder" />
     </div>
   </div>
 </template>
