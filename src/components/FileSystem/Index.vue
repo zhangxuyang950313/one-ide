@@ -17,12 +17,20 @@
 
 <script setup lang="tsx">
 import { watchEffect, computed, VNode } from "vue";
+import { storeToRefs } from "pinia";
+import { DirectoryTree } from "directory-tree";
 import { Tree, type TreeFieldNames } from "@arco-design/web-vue";
 import { IconFile, IconFolder } from "@arco-design/web-vue/es/icon";
-import { DirectoryTree } from "directory-tree";
 import { useDirTree } from "@/use/useDirTree";
+import { useStorageData } from "@/use/useStorageData";
+import { useIdeStateStore } from "@/store/useIdeStateStore";
 
-const { data } = useDirTree();
+const storageData = useStorageData();
+const ideStateStore = useIdeStateStore();
+const { modules, selectModule } = storeToRefs(ideStateStore);
+
+const rootDir = computed(() => storageData.editor.value.current || "");
+const { data } = useDirTree(rootDir);
 
 const fieldNames: TreeFieldNames = {
   key: "path",

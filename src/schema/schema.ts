@@ -11,6 +11,7 @@ export type Module<MK extends PropertyKey = PropertyKey> = {
   key: MK;
   name: string;
   icon: string;
+  dir: string[];
   views: View[];
 };
 

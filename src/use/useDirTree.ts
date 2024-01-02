@@ -1,18 +1,15 @@
 import { useRequest } from "alova";
-import { watchEffect } from "vue";
+import { watch, MaybeRefOrGetter, toValue } from "vue";
 import { type DirectoryTree } from "directory-tree";
 import { serviceGetDirTree } from "@/service/file";
-import { useStorageData } from "@/use/useStorageData";
 
-export function useDirTree() {
-  const storageData = useStorageData();
-
+export function useDirTree(root: MaybeRefOrGetter<string>) {
   const { data, send: fetch } = useRequest(
-    () => serviceGetDirTree({ p: storageData.editor.value.current || "" }),
+    () => serviceGetDirTree({ p: toValue(root) }),
     {
-      immediate: true,
+      immediate: false,
       initialData: {
-        name: "",
+        name: "root",
         children: [],
         custom: {},
         path: "",
@@ -22,10 +19,14 @@ export function useDirTree() {
     },
   );
 
-  watchEffect(() => {
-    if (!storageData.editor.value.current) return;
-    fetch();
-  });
+  watch(
+    () => toValue(root),
+    (v) => {
+      if (!v) return;
+      fetch();
+    },
+    { immediate: true },
+  );
 
   return {
     data,

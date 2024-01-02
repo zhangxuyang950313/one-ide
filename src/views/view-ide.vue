@@ -41,9 +41,9 @@ const { panelVisible } = storeToRefs(toolbarStore);
           <Empty class="empty" description="未选择模块" />
         </template>
         <!-- 文件管理器 -->
-        <section class="file-system">
+        <!-- <section class="file-system">
           <FileSystem />
-        </section>
+        </section> -->
       </section>
     </section>
   </main>
@@ -82,6 +82,7 @@ const { panelVisible } = storeToRefs(toolbarStore);
       position: relative;
       display: flex;
       width: 100%;
+      overflow: hidden;
 
       .empty {
         position: absolute;

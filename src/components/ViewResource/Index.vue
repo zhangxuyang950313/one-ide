@@ -26,10 +26,10 @@ watchEffect(() => {
 </script>
 
 <template>
-  <div class="c-resource-container" v-if="selectView">
+  <div v-if="selectView" class="flex flex-col h-full overflow-hidden">
     <Radio.Group
       v-model="selectKey"
-      class="select-radios"
+      class="select-radios flex-shrink-0"
       type="button"
       size="large"
     >
@@ -60,12 +60,6 @@ watchEffect(() => {
 </template>
 
 <style lang="less" scoped>
-.c-resource-container {
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-  overflow: hidden;
-}
 .select-radios {
   width: 100%;
   overflow-x: auto;

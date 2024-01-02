@@ -26,6 +26,7 @@ export const settings: IdeSettings<
       key: "desktop",
       name: "桌面和壁纸",
       icon: IconThemeManager,
+      dir: ["com.miui.home"],
       views: [
         {
           name: "壁纸和图标",
@@ -121,6 +122,7 @@ export const settings: IdeSettings<
       key: "lockscreen",
       name: "百变引擎",
       icon: IconThemeManager,
+      dir: ["lockscreen"],
       views: [
         {
           name: "百变锁屏",
@@ -168,6 +170,7 @@ export const settings: IdeSettings<
       key: "contacts",
       name: "拨号",
       icon: IconContacts,
+      dir: ["com.android.contacts"],
       views: [
         {
           name: "拨号与联系人",
@@ -225,6 +228,7 @@ export const settings: IdeSettings<
       key: "mms",
       name: "短信",
       icon: IconMms,
+      dir: ["com.android.mms"],
       views: [
         {
           name: "短信列表",

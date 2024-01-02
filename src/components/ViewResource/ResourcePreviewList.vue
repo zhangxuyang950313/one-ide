@@ -12,11 +12,11 @@ export default defineComponent({
   },
   setup(props) {
     return () => (
-      <div class="c-file-list">
+      <div class="flex flex-col max-w-full w-full overflow-hidden">
         {props.list.map((group) => (
           <>
             {group.title && <h3 class="group-title">{group.title}</h3>}
-            <div class="resources">
+            <div class="flex gap-[20px] max-w-full">
               {group.resources.map((resource) => (
                 <ResourceHandler resource={resource} />
               ))}
@@ -30,26 +30,12 @@ export default defineComponent({
 </script>
 
 <style lang="less" scoped>
-.c-file-list {
-  display: flex;
-  flex-direction: column;
-  // padding: 10px;
-  width: 100%;
-  .divide {
-    color: var(--color-text-1);
-  }
-  .resources {
-    display: flex;
-    grid-gap: 20px;
-    // height: 100%;
-  }
-  .group-title {
-    z-index: 1;
-    margin: 10px 0;
-    color: var(--color-text-2);
-    position: sticky;
-    top: 0;
-    background: var(--color-bg-1);
-  }
+.group-title {
+  z-index: 1;
+  margin: 10px 0;
+  color: var(--color-text-2);
+  position: sticky;
+  top: 0;
+  background: var(--color-bg-1);
 }
 </style>

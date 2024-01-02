@@ -28,7 +28,7 @@ process.env.VITE_PUBLIC = app.isPackaged
 const VITE_DEV_SERVER_URL = process.env["VITE_DEV_SERVER_URL"];
 
 // 用于添加Chromium插件
-async function setupDevTools() {
+async function setupDevTools(ses = session.defaultSession) {
   // // 安装 vue 开发者工具
   // const {
   //     default: installExtension,
@@ -37,7 +37,7 @@ async function setupDevTools() {
   // return installExtension([
   //     VUEJS3_DEVTOOLS
   // ]);
-  return await session.defaultSession.loadExtension(
+  return await ses.loadExtension(
     path.resolve("electron/extensions/vue3_devtools_6.5.1_0"),
   );
 }
@@ -131,7 +131,7 @@ app.whenReady().then(async () => {
   // });
   await createWindow(ViewPath.HOME);
   if (VITE_DEV_SERVER_URL) {
-    await setupDevTools();
+    await setupDevTools(ses);
   }
 });
 
