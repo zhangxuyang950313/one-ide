@@ -108,6 +108,7 @@ const { panelVisible } = storeToRefs(toolbarStore);
         padding: 15px;
         flex-shrink: 0;
         border-right: 1px solid var(--color-border-2);
+        overflow: auto;
       }
 
       .view-resource {
