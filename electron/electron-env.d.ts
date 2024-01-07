@@ -28,5 +28,6 @@ interface Window {
     shell: import("electron").Shell;
     dialog: import("electron").Dialog;
     openWindow: (name: import("./main").ViewPath) => void;
+    app: import("electron").App;
   };
 }
